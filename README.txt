@@ -4,6 +4,9 @@ PopIn
 To get started with PopIn, clone the repository, then run Matlab, and cd into the folder containing this README file.
 Finally you can start the launcher by typing "GUI_popin_analysis_from_indentation_test" at the Matlab command prompt.
 
+See the full documentation at http://popin.readthedocs.org/en/latest/.
+
+
 Features
 --------
 This Matlab toolbox has been developed to :
