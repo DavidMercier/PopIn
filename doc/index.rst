@@ -19,7 +19,7 @@ With this Matlab toolbox, it is possible to :
     * and finally to assess the Weibull parameters (mean critical load or displacement and Weibull modulus).
    
 .. figure:: ./_pictures/GUI_Main_Window_overview.png
-   :scale: 50 %
+   :scale: 35 %
    :align: center
    
    *Screenshot of the main window of the PopIn toolbox.*
