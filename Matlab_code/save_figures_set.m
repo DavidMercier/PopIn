@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function save_figures_set
 %% Function to save the main window with the 2 plots
-%% Get data from the GUI
 gui = guidata(gcf);
 
 str_title_pict = strcat(datestr(datenum(clock), 'yyyy.mm.dd_HH_MM'), '_Weibull_fit.png');

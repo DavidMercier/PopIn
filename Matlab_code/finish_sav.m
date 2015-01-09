@@ -1,6 +1,7 @@
 %% Copyright 2014 MERCIER David
-%% Script to open an exit dialog box and to save all data before to close all figures
 function finish_sav
+%% Function to open an exit dialog box and to save all data before to close all figures
+
 pushbutton = questdlg('Ready to quit?', ...
     'Exit Dialog','Yes','No','No');
 

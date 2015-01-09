@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function clean_data(ii_sheet)
 %% Function used to correct data (minimum displacement, CSM correction...)
-%% Get data from the GUI
 gui = guidata(gcf);
 
 % Correction of data (minimum and maximum depths)

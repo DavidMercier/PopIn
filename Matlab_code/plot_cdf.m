@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function plot_cdf
 %% Function to plot the probability density function or the cumulative distribution function
-%% Get data from the GUI
 gui = guidata(gcf);
 
 % Clear axis

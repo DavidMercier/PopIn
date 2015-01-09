@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function plot_get_values
 %% Function used to get values
-%% Get data from the GUI
 gui = guidata(gcf);
 
 if gui.flag.flag_data == 0

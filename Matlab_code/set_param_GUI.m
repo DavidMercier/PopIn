@@ -1,7 +1,7 @@
 %% Copyright 2014 MERCIER David
 function set_param_GUI
 %% Function used to set the pop-up menu in the GUI
-%% Get data from the GUI
+% Get data from the GUI
 gui = guidata(gcf);
 
 if get(gui.handles.value_modeldistr_GUI, 'Value') == 1

@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function get_param_GUI
 %% Function to get values of different variables from the GUI
-%% Get data from the GUI
 gui = guidata(gcf);
 
 %% Initialization

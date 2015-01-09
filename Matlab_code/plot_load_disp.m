@@ -1,7 +1,7 @@
 %% Copyright 2014 MERCIER David
 function plot_load_disp
 %% Function to plot load vs. displacement curves on main window
-%% Get data from the GUI
+% Get data from the GUI
 gui = guidata(gcf);
 
 for ii_sheet = 1:1:length(gui.data_xls.sheets_xls)

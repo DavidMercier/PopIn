@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function get_and_plot
 %% Function used to get and plot data
-%% Get data from the GUI
 gui = guidata(gcf);
 
 if gui.flag.flag_data == 0

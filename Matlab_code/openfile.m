@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function openfile
 %% Function used to open a data file and assign experimental results to variables
-%% Get data from the GUI
 gui = guidata(gcf);
 
 %% Open window to select file

@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function func_Weibull_cdf
 %% Function giving the Weibull probability density function and the Weibull cumulative distribution function
-%% Get data from the GUI
 gui = guidata(gcf);
 
 % Definition of tolerances % Initialization
