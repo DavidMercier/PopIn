@@ -1,11 +1,9 @@
 PopIn
 =====
-
 To get started with PopIn, clone the repository, then run Matlab, and cd into the folder containing this README file.
 Finally you can start the launcher by typing "GUI_popin_analysis_from_indentation_test" at the Matlab command prompt.
 
 See the full documentation at http://popin.readthedocs.org/en/latest/.
-
 
 Features
 --------
@@ -19,6 +17,12 @@ Authors
 Written by D. Mercier [1].
 
 [1] Max-Planck-Institut für Eisenforschung, 40237 Düsseldorf, Germany
+
+Acknowledgements
+----------------
+The author is grateful to V. Mandrillon from CEA Grenoble and to M. Verdier from SIMaP.
+CEA: http://www.cea.fr/le-cea/les-centres-cea/grenoble
+SIMaP: http://simap.grenoble-inp.fr
 
 Keywords
 --------
