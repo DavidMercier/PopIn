@@ -1,6 +1,8 @@
 ﻿Models for bulk material
 ==========================
 
+.. include:: includes.rst
+
 The pop-in event
 #################################
 

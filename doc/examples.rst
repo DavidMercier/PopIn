@@ -1,6 +1,8 @@
 ﻿Examples of nanoindentation data
 ==================================
 
+.. include:: includes.rst
+
 Format of data
 ###############
 

@@ -1,7 +1,7 @@
 ﻿Getting started
-===============
-..  include:: <isonum.txt>
-..  |matlab| replace:: Matlab\ :sup:`TM` \
+================
+
+.. include:: includes.rst
 
 First of all, download the source code of the |matlab| toolbox.
 
@@ -63,6 +63,6 @@ How to use the GUI for "pop-in" analysis from indentation tests ?
    *Plot of the load-displacement curve after loading of data.*
 
 Links
-#####
+#######
 
 `Guidata on Matlab website. <http://www.mathworks.fr/fr/help/matlab/ref/guidata.html>`_   

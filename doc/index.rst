@@ -3,13 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
    
-..  include:: <isonum.txt>
-..  |matlab| replace:: Matlab\ :sup:`TM` \
-   
-PopIn |matlab| toolbox
-======================
+.. include:: includes.rst
 
-How to use the GUI for pop-in analysis from indentation tests ?
+PopIn |matlab| toolbox
+=======================
 
 This toolbox has been developed to plot (nano)indentation data and to analyze the pop-in distribution.
 
@@ -25,7 +22,7 @@ With this Matlab toolbox, it is possible to :
    *Screenshot of the main window of the PopIn toolbox.*
 
 Contents
-========
+=========
    
 .. toctree::
    :maxdepth: 3
@@ -44,4 +41,5 @@ Contact
 
 Keywords
 ========
-|matlab| Toolbox; Graphical User Interface (GUI); Nanoindentation; pop-in; cumulative distribution; Weibull; statistics; load-displacement curve.
+|matlab| toolbox ; Graphical User Interface (GUI) ; nanoindentation ; pop-in ; cumulative distribution ; Weibull ; 
+statistics ; load-displacement curve ; survival probability ; critical load ; critical displacement.
