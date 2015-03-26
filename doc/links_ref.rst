@@ -4,14 +4,19 @@
 ..  |matlab| replace:: Matlab\ :sup:`TM` \
 
 Links
-#####
+######
 
 * `Matlab GUI. <http://www.yaml.org/>`_
 
 * `Coding GUI behavior. <http://www.mathworks.fr/fr/help/matlab/code-to-run-the-gui.html?searchHighlight=gui>`_
 
+Reference paper
+################
+
+* `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies", PhD thesis (2013) <https://tel.archives-ouvertes.fr/tel-01127940>`_
+
 References
-##########
+###########
 
 * `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
 

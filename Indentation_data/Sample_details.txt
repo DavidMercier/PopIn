@@ -1,3 +1,25 @@
 This datasheets .xls file has been obtained through nanoindentation test on a sample of ALD-Alumina (40nm),
 on a substrate of PVD-Aluminum (500nm) deposited on a oxidized silicon substrate.
-Tests were performed on a Nanoindenter XP MTS with a sphero-conical indenter (radius 5microns).
+
+Tests were performed on a Nanoindenter XP MTS with a sphero-conical indenter (radius 5microns), without CSM mode.
+
+
+
+Scheme of the multilayer sample
+##################################
+
+------------------------------------------|
+            Al2O3 ALD (40nm)              |
+------------------------------------------|
+                                          |
+             Al PVD (500nm)               |
+                                          |
+------------------------------------------|
+                                          |
+         Thermal SiO2 (500nm)             |
+                                          |
+------------------------------------------|
+                                          |
+            Si substrate                  |
+                                          |
+------------------------------------------|

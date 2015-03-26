@@ -32,6 +32,8 @@ Contents
    
    getting_started
    overview_of_the_toolbox
+   models
+   examples.rst
    links_ref
    
 Contact
