@@ -26,7 +26,9 @@ Reference papers
 Acknowledgements
 ----------------
 The author is grateful to V. Mandrillon from CEA Grenoble and to M. Verdier from SIMaP.
+
 CEA: http://www.cea.fr/le-cea/les-centres-cea/grenoble
+
 SIMaP: http://simap.grenoble-inp.fr
 
 Keywords
