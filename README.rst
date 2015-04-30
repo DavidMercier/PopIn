@@ -18,6 +18,11 @@ Written by D. Mercier [1].
 
 [1] Max-Planck-Institut für Eisenforschung, 40237 Düsseldorf, Germany (http://www.mpie.de/)
 
+Reference papers
+------------------
+
+* `Mercier D., "Lois de comportement des matériaux utilisés dans les contacts électriques pour application " flip chip "" (2013). <http://www.theses.fr/2013GRENI083>`_
+
 Acknowledgements
 ----------------
 The author is grateful to V. Mandrillon from CEA Grenoble and to M. Verdier from SIMaP.
@@ -26,7 +31,7 @@ SIMaP: http://simap.grenoble-inp.fr
 
 Keywords
 --------
-MATLAB; Graphical User Interface (GUI); pop-in; nanoindentation; statistics; Weibull; cumulative distribution; 
+MATLAB ; Graphical User Interface (GUI) ; pop-in; nanoindentation ; statistics ; Weibull ; cumulative distribution.
 
 Links
 -----
