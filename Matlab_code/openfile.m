@@ -91,6 +91,8 @@ elseif strcmp (ext, '.xls') == 1
     
     gui.settings.min_bound_h = max(min_data_h(:));
     gui.settings.max_bound_h = min(max_data_h(:));
+    gui.settings.min_bound_h_init = max(min_data_h(:));
+    gui.settings.max_bound_h_init = min(max_data_h(:));
     guidata(gcf, gui);
     
     % Settings of the GUI

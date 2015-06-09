@@ -4,6 +4,7 @@ function get_and_plot_set
 gui = guidata(gcf);
 
 gui.flag.flag_plot = 0;
+gui.flag.flag_cleaned_data = 1;
 guidata(gcf, gui);
 
 get_and_plot;
