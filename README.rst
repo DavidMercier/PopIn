@@ -1,7 +1,7 @@
 PopIn
 =====
 To get started with PopIn, clone the repository, then run Matlab, and cd into the folder containing this README file.
-Finally you can start the launcher by typing "GUI_popin_analysis_from_indentation_test" at the Matlab command prompt.
+Finally you can start the launcher by typing "demo" at the Matlab command prompt.
 
 See the full documentation at http://popin.readthedocs.org/en/latest/.
 
@@ -21,7 +21,7 @@ Written by D. Mercier [1].
 Reference papers
 ------------------
 
-* `Mercier D., "Lois de comportement des matériaux utilisés dans les contacts électriques pour application " flip chip "" (2013). <http://www.theses.fr/2013GRENI083>`_
+* `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies" (2013). <http://www.theses.fr/2013GRENI083>`_
 
 Acknowledgements
 ----------------
@@ -33,8 +33,8 @@ SIMaP: http://simap.grenoble-inp.fr
 
 Keywords
 --------
-MATLAB ; Graphical User Interface (GUI) ; pop-in; nanoindentation ; statistics ; Weibull ; cumulative distribution.
+MATLAB ; Graphical User Interface (GUI) ; pop-in ; nanoindentation ; statistics ; Weibull ; cumulative distribution.
 
 Links
------
+------
 http://www.mathworks.fr/matlabcentral/fileexchange/45376--pop-in--analysis-from-indentation-tests
