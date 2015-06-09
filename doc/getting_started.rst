@@ -20,7 +20,7 @@ How to use the GUI for "pop-in" analysis from indentation tests ?
 
 .. code-block:: matlab
 
-   GUI_popin_analysis_from_indentation_test.m
+   demo.m
 
 * The following window opens:
 
@@ -60,7 +60,7 @@ How to use the GUI for "pop-in" analysis from indentation tests ?
    :scale: 30 %
    :align: center
    
-   *Plot of the load-displacement curve after loading of data.*
+   *Plot of the load-displacement curves after loading of data.*
 
 Links
 #######
