@@ -25,7 +25,8 @@ startingVals = [3 1];
 
 % Estimation of coefficients to fit
 try
-    [coefEsts, R, J, COVB, MSE]  = nlinfit(sort([gui.results(:).binCtrs]), [gui.results(:).data_to_plot], weibull_cdf_s, startingVals);
+    [coefEsts, R, J, COVB, MSE] = nlinfit(sort([gui.results(:).binCtrs]), ...
+        [gui.results(:).data_to_plot], weibull_cdf_s, startingVals);
     
 catch err
     display(err.message);
@@ -45,13 +46,18 @@ coefEsts(1) = real(coefEsts(1));
 coefEsts(2) = real(coefEsts(2));
 
 if gui.settings.value_crit_param == 1
-    str_title_Weibull = strcat('Mean critical parameter= ', num2str(coefEsts(2) * mean([gui.data(:).mean_sum_L])), ' & Weibull modulus = ', num2str(coefEsts(1)));
+    str_title_Weibull = strcat('Mean critical parameter= ', ...
+        num2str(coefEsts(2) * mean([gui.data(:).mean_sum_L])), ...
+        ' & Weibull modulus = ', num2str(coefEsts(1)));
 elseif gui.settings.value_crit_param == 2
-    str_title_Weibull = strcat('Mean critical parameter= ', num2str(coefEsts(2) * mean([gui.data(:).mean_sum_h])), ' & Weibull modulus = ', num2str(coefEsts(1)));
+    str_title_Weibull = strcat('Mean critical parameter= ', ...
+        num2str(coefEsts(2) * mean([gui.data(:).mean_sum_h])), ...
+        ' & Weibull modulus = ', num2str(coefEsts(1)));
 end
 
 xgrid_cdf = linspace(0, max([gui.results.binCtrs]), 200);
-line(xgrid_cdf, weibull_cdf_s(coefEsts, xgrid_cdf), 'Color', 'r', 'LineWidth', 2);
+line(xgrid_cdf, weibull_cdf_s(coefEsts, xgrid_cdf), ...
+    'Color', 'r', 'LineWidth', 2);
 
 legend({'Row data' 'Weibull model'}, 'Location', 'NorthWest');
 xlabel('Critical parameter / Mean value of critical parameter');
