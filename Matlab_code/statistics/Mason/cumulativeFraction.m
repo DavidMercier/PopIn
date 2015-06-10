@@ -1,6 +1,7 @@
 %% Copyright 2014 MERCIER David
 function cumFrac = cumulativeFraction(load, loadrate, R1, R2, E1, E2, ...
     T, Vact, epsilon_var, neta_var, K, varargin)
+%% Calculation of the cumulative fraction function
 % See Mason et al. (2006) DOI: 10.1103/PhysRevB.73.054102
 
 % load: Applied load in mN
