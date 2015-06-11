@@ -1,8 +1,9 @@
 %% Copyright 2014 MERCIER David
-function he = elastic_disp(load, R1, R2, E1, E2, varargin)
+function he = elasticDisp(load, R1, R2, E1, E2, varargin)
 %% Function giving the Hertzian elastic contact depth in microns
 % See K. L. Johnson, "Contact Mechanics" (1987) - ISBN: 9780521347969
 
+% he: Elastic displacement in microns
 % load: Applied load in mN
 % R1: radius of the 1st body in microns
 % R2: radius of the 2nd body in microns
@@ -31,7 +32,7 @@ end
 
 Rred = reducedValue(R1, R2);
 
-ae = elastic_radius(load, R1, R2, E1, E2);
+ae = elasticRadius(load, R1, R2, E1, E2);
 
 he = (ae.^2)./Rred;
 

@@ -9,10 +9,10 @@ function beta_var = betaMason(load, R1, R2, E1, E2, T, Vact, varargin)
 % E1: Young's modulus of the 1st body in GPa
 % E1: Young's modulus of the 2nd body in GPa
 % T: Temperature of experiments in K
-% Vact: Activation volume in Angstrom^3
+% Vact: Activation volume in Angstrom3
 
 if nargin < 7
-    Vact = 10; % in Angstrom^3
+    Vact = 10; % in Angstrom3
 end
 
 if nargin < 6

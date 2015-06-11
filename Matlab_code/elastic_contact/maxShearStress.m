@@ -1,8 +1,12 @@
 %% Copyright 2014 MERCIER David
-function ae = elastic_radius(load, R1, R2, E1, E2, varargin)
-%% Function giving the Hertzian elastic contact radius in microns
+function tau_max = maxShearStress(load, R1, R2, E1, E2, varargin)
+%% Function giving the maximum shear stress beneath the indenter in GPa
+% at a rough position of (0.48-0.5)times elastic radius beneath the indenter
+% for a material with a Poisson's coefficient of 0.33
 % See K. L. Johnson, "Contact Mechanics" (1987) - ISBN: 9780521347969
+% Details p.95
 
+% tau_max: Maximum shear stress in GPa
 % load: Applied load in mN
 % R1: radius of the 1st body in microns
 % R2: radius of the 2nd body in microns
@@ -29,9 +33,8 @@ if nargin < 1
     load = 0.1; % in mN
 end
 
-Rred = reducedValue(R1, R2);
-Ered = reducedValue(E1, E2);
-
-ae = ((3/4).*(Rred*load./Ered)).^(1/3);
+% tau_max = 0.31 * maxPressure(load, R1, R2, E1, E2);
+% tau_max = 0.31 * (3/2) * meanPressure(load, R1, R2, E1, E2);
+tau_max = 0.47 * meanPressure(load, R1, R2, E1, E2);
 
 end

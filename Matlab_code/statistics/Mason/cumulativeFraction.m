@@ -11,7 +11,7 @@ function cumFrac = cumulativeFraction(load, loadrate, R1, R2, E1, E2, ...
 % E1: Young's modulus of the 1st body in GPa
 % E1: Young's modulus of the 2nd body in GPa
 % T: Temperature of experiments in K
-% Vact: Activation volume in Angstrom^3
+% Vact: Activation volume in Angstrom3
 % epsilon_var: Activation enthalpy in eV
 % neta_var: Pre-exponential frequency factor in s-1.m-3
 % K: Proportionality constant
@@ -29,11 +29,11 @@ if nargin < 9
 end
 
 if nargin < 8
-    Vact = 10; % in Angstrom^3
+    Vact = 10; % in Angstrom3
 end
 
 if nargin < 7
-    T = 293; % in K (20°C)
+    T = 293; % in K (=20°C)
 end
 
 if nargin < 6
@@ -67,7 +67,7 @@ Rred = reducedValue(R1, R2) * 1e-6; % in m
 Ered = reducedValue(E1, E2) * 1e9; % in N/m2
 
 loadrate = loadrate * 1e-3; % in N/s
-epsilon_var = epsilon_var * 1.60217657*1e-19;  % in J = in kg?m2?s-2
+epsilon_var = epsilon_var * 1.60217657*1e-19;  % in J = in kg.m2.s-2
 
 k = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
 

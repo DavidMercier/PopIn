@@ -1,10 +1,10 @@
 %% Copyright 2014 MERCIER David
-function tau_max = max_shear_stress(load, R1, R2, E1, E2, varargin)
-%% Function giving the maximum shear stress beneath the indenter in GPa
-% at a rough position of 0.48 times elastic radius beneath the indenter
+function Pe = elasticLoad(ht, R1, R2, E1, E2, varargin)
+%% Function giving the Hertzian elastic contact depth in microns
 % See K. L. Johnson, "Contact Mechanics" (1987) - ISBN: 9780521347969
 
-% load: Applied load in mN
+% Pe: Applied load in mN
+% ht: Total displacement in microns
 % R1: radius of the 1st body in microns
 % R2: radius of the 2nd body in microns
 % E1: Young's modulus of the 1st body in GPa
@@ -27,11 +27,12 @@ if nargin < 2
 end
 
 if nargin < 1
-    load = 0.1; % in mN
+    ht = 0.1; % in microns
 end
 
-% tau_max = 0.31 * maxPressure(load, R1, R2, E1, E2);
-% tau_max = 0.31 * (3/2) * meanPressure(load, R1, R2, E1, E2);
-tau_max = 0.47 * meanPressure(load, R1, R2, E1, E2);
+Ered = reducedValue(E1, E2);
+Rred = reducedValue(R1, R2);
+
+Pe = (4/3) .* Ered * Rred.^(0.5) .* ht.^(1.5);
 
 end

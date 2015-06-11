@@ -8,10 +8,10 @@ function alpha_var = alphaMason(R1, R2, E1, E2, T, Vact, varargin)
 % E1: Young's modulus of the 1st body in GPa
 % E1: Young's modulus of the 2nd body in GPa
 % T: Temperature of experiments in K
-% Vact: Activation volume in Angstrom^3
+% Vact: Activation volume in Angstrom3
 
 if nargin < 6
-    Vact = 10; % in Angstrom^3
+    Vact = 10; % in Angstrom3
 end
 
 if nargin < 5
@@ -39,7 +39,7 @@ k = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
 Rred = reducedValue(R1, R2) * 1e-6; % in m
 Ered = reducedValue(E1, E2) * 1e9; % in N/m2
 
-Vact = Vact * 1e-30; % in m^3
+Vact = Vact * 1e-30; % in m3
 
 alpha_var = (0.47/pi) * ((4*Ered)/(3*Rred))^(2/3) * Vact/(k * T);
 
