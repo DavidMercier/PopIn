@@ -1,6 +1,7 @@
 %% Copyright 2014 MERCIER David
 function plot_load_disp_set
 %% Function to plot load vs. displacement curves on main window
+
 gui = guidata(gcf);
 
 if gui.flag.flag_data == 0

@@ -4,17 +4,15 @@ function set_param_GUI
 % Get data from the GUI
 gui = guidata(gcf);
 
-if get(gui.handles.value_modeldistr_GUI, 'Value') == 1
-    
-    list_functions = {'Probability_density_function' ; 'Cumulative_distribution_function' ; 'Both_functions'};
-    
-else
-    list_functions = {'Probability_density_function'};
-    
-end
+% Settings of units
+gui.settings.LoadUnitSelected = ...
+    gui.settings.ListLoadUnits(gui.settings.unitLoad_GUI, :);
 
-set(gui.handles.value_function_GUI, 'String', list_functions);
-set(gui.handles.value_function_GUI, 'Value', 1);
+gui.settings.DispUnitSelected = ...
+    gui.settings.ListDispUnits(gui.settings.unitDisp_GUI, :);
+
+set(gui.handles.unit_mindepth_GUI, 'String', gui.settings.DispUnitSelected);
+set(gui.handles.unit_maxdepth_GUI, 'String', gui.settings.DispUnitSelected);
 
 guidata(gcf, gui);
 

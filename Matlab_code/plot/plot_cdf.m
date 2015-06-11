@@ -16,7 +16,8 @@ elseif max([gui.results.data_to_plot]) == 0
 end
 
 % New plot
-plot(gui.handles.AxisPlot_GUI_2, sort([gui.results(:).binCtrs]), [gui.results(:).data_to_plot], 'b+', 'MarkerSize', 10);
+plot(gui.handles.AxisPlot_GUI_2, sort([gui.results(:).binCtrs]), ...
+    [gui.results(:).data_to_plot], 'b+', 'MarkerSize', 10);
 xlim('manual');
 ylim('manual');
 xlim([0 max_gui_results_binCtrs]);

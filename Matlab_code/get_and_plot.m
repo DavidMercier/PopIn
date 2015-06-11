@@ -13,10 +13,12 @@ else
     get_param_GUI;
     gui = guidata(gcf); guidata(gcf, gui);
     
+    set_param_GUI;
+    gui = guidata(gcf); guidata(gcf, gui);
+    
     % Preallocation
     umax = NaN(length(gui.data_xls.sheets_xls));
     
-    gui.data = rmfield(gui.data, 'num_popin_int');
     guidata(gcf, gui);
     %% Import data
     for ii_sheet = 1:1:length(gui.data_xls.sheets_xls)

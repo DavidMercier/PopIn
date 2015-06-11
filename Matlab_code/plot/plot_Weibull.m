@@ -2,6 +2,7 @@
 function plot_Weibull
 %% Function to plot the probability density function or the cumulative distribution function
 % obtained with Gauss or Weibull models...
+
 gui = guidata(gcf);
 
 set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_GUI_2);
