@@ -16,7 +16,7 @@ bulk materials from indentation experiments with conical indenters.
 
 Parameters such as contact load :math:`F_\text{c}` and depth of penetration :math:`h` are recorded
 at a rapid rate (normally 10Hz) during loading and unloading steps of the indentation test.
-Usually, the depth resolution is around the :math:`\angstrom` level and the load resolution is around :math:`\text{nN}`-level.
+Usually, the depth resolution is around the :math:`{\AA}` level and the load resolution is around :math:`\text{nN}`-level.
 
 During the loading step of nanoindentation, a discontinuity in the measured depth is commonly referred to as a pop-in event.
 
@@ -91,10 +91,10 @@ Statistical investigation of the onset of plasticity
 ######################################################
 
 .. figure:: ./_pictures/popin_mechanisms_1.png
-   :scale: 60 %
+   :scale: 20 %
    :align: center
    
-   *Figure 3 : Schematic cross section of deformation profile of an elastic-plastic substrate under indentation.*
+   *Figure 3 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation : 1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
 
 ==> rate dependence and temperature dependence of incipient plasticity
 
@@ -109,10 +109,10 @@ Strain transfer across grain boundaries
 See Figure 3-3...
 
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
-   :scale: 60 %
+   :scale: 20 %
    :align: center
    
-   *Figure 4 : Schematics of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary.*
+   *Figure 4 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary.*
 
 References
 #############
