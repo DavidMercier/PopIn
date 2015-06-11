@@ -8,8 +8,11 @@ See the full documentation at http://popin.readthedocs.org/en/latest/.
 Features
 --------
 This Matlab toolbox has been developed to :
-- to plot load-displacement curves; 
-- to plot Weibull distribution (with 2 parameters) of the 1st or of the 2nd pop-in; 
+
+- to plot load-displacement curves;
+
+- to plot Weibull distribution (with 2 parameters) of the 1st or of the 2nd pop-in;
+
 - and finally to assess the Weibull parameters (mean critical load or mean critical displacement and Weibull modulus).
 
 Authors
