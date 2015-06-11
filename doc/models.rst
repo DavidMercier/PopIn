@@ -16,7 +16,7 @@ bulk materials from indentation experiments with conical indenters.
 
 Parameters such as contact load :math:`F_\text{c}` and depth of penetration :math:`h` are recorded
 at a rapid rate (normally 10Hz) during loading and unloading steps of the indentation test.
-Usually, the depth resolution is around the :math:`{\AA}` level and the load resolution is around :math:`\text{nN}`-level.
+Usually, the depth resolution is around the fraction of :math:`\text{nm}`level and the load resolution is around :math:`\text{nN}`-level.
 
 During the loading step of nanoindentation, a discontinuity in the measured depth is commonly referred to as a pop-in event.
 
@@ -43,15 +43,11 @@ Many authors observed pop-in events on metals or metallic thin films, ceramics, 
 The pop-in event is often explained by on of the following mechanisms in function of the indented specimen
 and the experimental conditions :
 
-- dislocations nucleation (= sudden yielding of a material under load) ;
-
-- rupture of a hard brittle film on an elastic-plastic substrate ;
-
-- crack(s) formation ; 
-
-- phase transformation ;
-
-- strain transfer across a grain boundary.
+    * dislocations nucleation (= sudden yielding of a material under load) ;
+    * rupture of a hard brittle film on an elastic-plastic substrate ;
+    * crack(s) formation ; 
+    * phase transformation ;
+    * strain transfer across a grain boundary.
 
 Weibull-type distribution
 #################################
@@ -81,7 +77,7 @@ Rupture of a hard brittle film on an elastic-plastic substrate
             :label: plastic_zone_radius
 
 .. figure:: ./_pictures/popin_mechanisms_2.png
-   :scale: 60 %
+   :scale: 20 %
    :align: center
    
    *Figure 2 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
@@ -109,10 +105,10 @@ Strain transfer across grain boundaries
 See Figure 3-3...
 
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
-   :scale: 20 %
+   :scale: 60 %
    :align: center
    
-   *Figure 4 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary.*
+   *Figure 4 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
 
 References
 #############
