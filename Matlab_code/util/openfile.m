@@ -4,7 +4,8 @@ function openfile
 gui = guidata(gcf);
 
 %% Open window to select file
-[filename_data, pathname_data, filterindex_data] = uigetfile('*.xls', 'File Selector');
+[filename_data, pathname_data, filterindex_data] = ...
+    uigetfile('*.xls', 'File Selector');
 gui.data_xls.filename_data = filename_data;
 gui.data_xls.pathname_data = pathname_data;
 
@@ -32,6 +33,7 @@ end
 if strcmp (ext, '.nul') == 1
     gui.flag.flag_data = 0;
     helpdlg('Please, select results (.xls file)...', 'Info');
+    set(gui.handles.run_calc, 'BackgroundColor', [0.745 0.745 0.745]);
     
 elseif strcmp (ext, '.xls') == 1
     sheet = 1;
@@ -74,11 +76,13 @@ elseif strcmp (ext, '.xls') == 1
         raw_str_endsegment = txt(:,1);
         
         % Set the y index to crop data in function of chosen segment
-        y_index = find(strcmp(raw_str_endsegment, str_endsegment_true(s__endsegment)) == 1);
+        y_index = find(strcmp(raw_str_endsegment, ...
+            str_endsegment_true(s__endsegment)) == 1);
         
         data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index);
         
-        [data_cropped, txt_cropped] = xlsread(filename_data, ii_sheet, data_index);
+        [data_cropped, txt_cropped] = ...
+            xlsread(filename_data, ii_sheet, data_index);
         
         % Import data
         gui.data(ii_sheet).data_h = data_cropped(:, 1);
@@ -96,13 +100,16 @@ elseif strcmp (ext, '.xls') == 1
     guidata(gcf, gui);
     
     % Settings of the GUI
-    set(gui.handles.value_mindepth_GUI, 'String', num2str(round(gui.settings.min_bound_h)));
-    set(gui.handles.value_maxdepth_GUI, 'String', num2str(round(gui.settings.max_bound_h)));
-    set(gui.handles.opendata_str_GUI, 'String', filename_data);
+    set(gui.handles.value_mindepth, 'String', ...
+        num2str(round(gui.settings.min_bound_h)));
+    set(gui.handles.value_maxdepth, 'String', ...
+        num2str(round(gui.settings.max_bound_h)));
+    set(gui.handles.opendata_str, 'String', filename_data);
     
     % Message to the user
     helpdlg('Data imported ! Set parameters for statistic analysis and run the calculations...', 'Info');
     gui.flag.flag_cleaned_data = 0;
+    set(gui.handles.run_calc, 'BackgroundColor', [0 204/256 0]);
     
 end
 

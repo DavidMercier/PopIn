@@ -5,7 +5,7 @@ function plot_Weibull
 
 gui = guidata(gcf);
 
-set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_GUI_2);
+set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_2);
 
 %% Set the data to plot
 if gui.settings.value_crit_param == 1

@@ -4,7 +4,7 @@ function plot_cdf
 gui = guidata(gcf);
 
 % Clear axis
-cla(gui.handles.AxisPlot_GUI_2, 'reset');
+cla(gui.handles.AxisPlot_2, 'reset');
 
 max_gui_results_binCtrs = max([gui.results.binCtrs]);
 max_gui_results_data_to_plot = max([gui.results.data_to_plot]);
@@ -16,7 +16,7 @@ elseif max([gui.results.data_to_plot]) == 0
 end
 
 % New plot
-plot(gui.handles.AxisPlot_GUI_2, sort([gui.results(:).binCtrs]), ...
+plot(gui.handles.AxisPlot_2, sort([gui.results(:).binCtrs]), ...
     [gui.results(:).data_to_plot], 'b+', 'MarkerSize', 10);
 xlim('manual');
 ylim('manual');

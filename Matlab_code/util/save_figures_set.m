@@ -5,13 +5,15 @@ gui = guidata(gcf);
 
 cd(gui.data_xls.pathname_data);
 
-str_title_pict = strcat(datestr(datenum(clock), 'yyyy.mm.dd_HH_MM'), '_Weibull_fit.png');
+str_title_pict = strcat(datestr(datenum(clock), 'yyyy.mm.dd_HH_MM'), ...
+    '_Weibull_fit.png');
 
 saveas(gcf, str_title_pict);
 
 %% Script to save the principles variables obtained for the Weibull distribution
 
-str_title_var = strcat(datestr(datenum(clock), 'yyyy.mm.dd_HH_MM'), '_Weibull_data.txt');
+str_title_var = strcat(datestr(datenum(clock), 'yyyy.mm.dd_HH_MM'), ...
+    '_Weibull_data.txt');
 
 data2save(:,1) = gui.results.binCtrs;
 data2save(:,2) = gui.results.data_to_plot;

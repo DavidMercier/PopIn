@@ -5,7 +5,7 @@ gui = guidata(gcf);
 
 if gui.flag.flag_data == 0
     helpdlg('Please, select results (.xls file)...', 'Info');
-    
+    set(gui.handles.run_calc, 'BackgroundColor', [0.745 0.745 0.745]);
 else
     gui.handles.h_waitbar = waitbar(0, 'Calculations in progress...');
     guidata(gcf, gui);
@@ -22,7 +22,7 @@ else
     guidata(gcf, gui);
     %% Import data
     for ii_sheet = 1:1:length(gui.data_xls.sheets_xls)
-        gui = guidata(gcf); 
+        gui = guidata(gcf);
         if gui.flag.flag_cleaned_data
             if ishandle(gui.handles.h_waitbar)
                 waitbar(ii_sheet / length(gui.data_xls.sheets_xls), gui.handles.h_waitbar);

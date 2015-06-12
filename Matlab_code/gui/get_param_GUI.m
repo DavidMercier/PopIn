@@ -8,15 +8,18 @@ if gui.flag.flag_data == 0
     helpdlg('Please, select results (.xls file)...', 'Info');
 else
     %% Getting parameters from the GUI
-    gui.settings.unitLoad_GUI       = get(gui.handles.unitLoad_GUI, 'Value');
-    gui.settings.unitDisp_GUI       = get(gui.handles.unitDisp_GUI, 'Value');
-    gui.settings.value_temperature  = get(gui.handles.value_temperature, 'Value');
-    gui.settings.value_loadrate     = get(gui.handles.value_loadrate, 'Value');
-    gui.settings.set_popin          = get(gui.handles.value_num_popin_GUI, 'Value');
-    gui.settings.set_popin          = get(gui.handles.value_num_popin_GUI, 'Value');
-    gui.settings.min_data_h_average = str2double(get(gui.handles.value_mindepth_GUI, 'String'));
-    gui.settings.max_data_h_average = str2double(get(gui.handles.value_maxdepth_GUI, 'String'));
-    gui.settings.value_crit_param   = get(gui.handles.value_crit_param_GUI, 'Value');
+    gui.settings.unitLoad           = get(gui.handles.unitLoad, 'Value');
+    gui.settings.unitDisp           = get(gui.handles.unitDisp, 'Value');
+    gui.settings.value_temperature  = str2double(get(gui.handles.value_temperature, 'String'));
+    gui.settings.value_loadrate     = str2double(get(gui.handles.value_loadrate, 'String'));
+    gui.settings.cb_Hertzian_plot   = get(gui.handles.cb_Hertzian_plot, 'Value');
+    gui.settings.value_YoungModulus = str2double(get(gui.handles.value_YoungModulus, 'String'));
+    gui.settings.value_TipRadius    = str2double(get(gui.handles.value_TipRadius, 'String'));
+    gui.settings.set_popin          = get(gui.handles.value_num_popin, 'Value');
+    gui.settings.set_popin          = get(gui.handles.value_num_popin, 'Value');
+    gui.settings.min_data_h_average = str2double(get(gui.handles.value_mindepth, 'String'));
+    gui.settings.max_data_h_average = str2double(get(gui.handles.value_maxdepth, 'String'));
+    gui.settings.value_crit_param   = get(gui.handles.value_crit_param, 'Value');
 end
 
 guidata(gcf, gui);

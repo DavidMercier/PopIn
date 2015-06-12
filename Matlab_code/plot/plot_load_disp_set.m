@@ -17,13 +17,13 @@ elseif gui.flag.flag_cleaned_data == 0
 else
     
     %% Get parameters from the GUI
-    gui.settings.log_plot_value  = get(gui.handles.cb_log_plot_GUI,             'Value');
-    gui.settings.grid_plot_value = get(gui.handles.cb_grid_plot_GUI,            'Value');
-    gui.settings.x_value_GUI     = get(gui.handles.value_param2plotinxaxis_GUI, 'Value');
-    gui.settings.y_value_GUI     = get(gui.handles.value_param2plotinyaxis_GUI, 'Value');
+    gui.settings.log_plot_value = get(gui.handles.cb_log_plot, 'Value');
+    gui.settings.grid_plot_value = get(gui.handles.cb_grid_plot, 'Value');
+    gui.settings.x_value = get(gui.handles.value_param2plotinxaxis, 'Value');
+    gui.settings.y_value = get(gui.handles.value_param2plotinyaxis, 'Value');
     
-    cla(gui.handles.AxisPlot_GUI_1, 'reset');
-    set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_GUI_1);
+    cla(gui.handles.AxisPlot_1, 'reset');
+    set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_1);
     
     guidata(gcf, gui);
     plot_load_disp;

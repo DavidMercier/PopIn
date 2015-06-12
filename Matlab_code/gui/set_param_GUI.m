@@ -6,13 +6,13 @@ gui = guidata(gcf);
 
 % Settings of units
 gui.settings.LoadUnitSelected = ...
-    gui.settings.ListLoadUnits(gui.settings.unitLoad_GUI, :);
+    gui.settings.ListLoadUnits(gui.settings.unitLoad, :);
 
 gui.settings.DispUnitSelected = ...
-    gui.settings.ListDispUnits(gui.settings.unitDisp_GUI, :);
+    gui.settings.ListDispUnits(gui.settings.unitDisp, :);
 
-set(gui.handles.unit_mindepth_GUI, 'String', gui.settings.DispUnitSelected);
-set(gui.handles.unit_maxdepth_GUI, 'String', gui.settings.DispUnitSelected);
+set(gui.handles.unit_mindepth, 'String', gui.settings.DispUnitSelected);
+set(gui.handles.unit_maxdepth, 'String', gui.settings.DispUnitSelected);
 
 guidata(gcf, gui);
 
