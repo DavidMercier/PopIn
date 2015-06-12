@@ -118,13 +118,31 @@ else
                     
                     gui.data(ii_sheet).mean_sum_h = ...
                         mean(gui.data(ii_sheet).sum_h);
-                    
                 end
                 guidata(gcf, gui);
             end
             delete(gui.handles.h_waitbar);
             
+            % Calculations of Hertzian displacement and Hertzian load
+            gui.Hertz.elasticDisp_init = ...
+                gui.settings.min_bound_h:0.1:gui.settings.max_bound_h;
+            
+            if strcat(gui.settings.unitDisp, 'nm');
+                gui.Hertz.elasticDispUnit = 'nm';
+                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e-3;
+            elseif strcat(gui.settings.unitDisp, 'um');
+                gui.Hertz.elasticDispUnit = 'um';
+                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init;
+            elseif strcat(gui.settings.unitDisp, 'mm');
+                gui.Hertz.elasticDispUnit = 'mm';
+                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e3;
+            end
+            
+            gui.Hertz.elasticLoad = elasticLoad(gui.Hertz.elasticDisp, ...
+                gui.settings.value_TipRadius, 0, ...
+                gui.settings.value_YoungModulus);
         end
+        
         %% Plot of L-h curves
         guidata(gcf, gui);
         plot_load_disp_set;

@@ -118,6 +118,12 @@ for ii_sheet = 1:1:length(gui.data_xls.sheets_xls)
     
 end
 
+if gui.settings.cb_Hertzian_plot == 1
+    HertzianHandle = plot(gui.handles.AxisPlot_1, gui.Hertz.elasticDisp_init, ...
+        gui.Hertz.elasticLoad, ':b', 'linewidth', 2.5);
+    legend(HertzianHandle, 'Hertzian fit', 'Location', 'northwest');
+end
+
 guidata(gcf, gui);
 plot_Weibull;
 gui = guidata(gcf);
