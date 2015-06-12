@@ -11,6 +11,7 @@ else
     gui.settings.unitLoad_GUI       = get(gui.handles.unitLoad_GUI, 'Value');
     gui.settings.unitDisp_GUI       = get(gui.handles.unitDisp_GUI, 'Value');
     gui.settings.value_temperature  = get(gui.handles.value_temperature, 'Value');
+    gui.settings.value_loadrate     = get(gui.handles.value_loadrate, 'Value');
     gui.settings.set_popin          = get(gui.handles.value_num_popin_GUI, 'Value');
     gui.settings.set_popin          = get(gui.handles.value_num_popin_GUI, 'Value');
     gui.settings.min_data_h_average = str2double(get(gui.handles.value_mindepth_GUI, 'String'));
