@@ -1,0 +1,7 @@
+# Copyright 2014 MERCIER David
+# Be careful to put a comma + a space between each data...! (YAML convention)
+#################################################################################
+# Material properties of indenter from A.C. Fischer-Cripps "Nanoindentation" - Springer 2nd Ed. (2004)
+# Young's modulus in GPa
+YoungModulus_Diamond: 1070
+PoissonRatio_Diamond: 0.07

@@ -1,0 +1,18 @@
+# Copyright 2014 MERCIER David
+# Be careful to put a comma + a space between each data...! (YAML convention)
+###########################################################################################
+# Constants used in the calculation of cumulative function of 
+# Mason et al. (2006) DOI:  10.1103/PhysRevB.73.054102
+K: 3.14 #pi
+neta_var: 8.9e23 #in s-1.m-3
+epsilon_var: 0.5 #in eV
+Vact: 10 #in Angstrom3
+k_Boltzmann: 1.3806488e-23 #Boltzmann's constant in  m2.kg.s-2.K-1
+
+###########################################################################################
+# Options for the least square method of Matlab used to fit experimental curves
+TolFun_value: 1e-20
+TolX_value: 1e-20
+MaxIter_value: 10000
+Min_YoungModulus: 0 #in GPa
+Max_YoungModulus: 1000 #in GPa
