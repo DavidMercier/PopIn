@@ -81,100 +81,98 @@ else
         end
         
         %% Sum of data for statistic analysis and plot of pop-in distribution + fit
-        if gui.flag.flag_plot ~=1
-            gui.handles.h_waitbar = waitbar(0, 'Plots in progress...');
+        gui.handles.h_waitbar = waitbar(0, 'Plots in progress...');
+        
+        for ii_sheet = 1:1:length(gui.data_xls.sheets_xls)
+            waitbar(ii_sheet / length(gui.data_xls.sheets_xls));
             
-            for ii_sheet = 1:1:length(gui.data_xls.sheets_xls)
-                waitbar(ii_sheet / length(gui.data_xls.sheets_xls));
-                
-                ind_popin_all = gui.data(ii_sheet).num_popin_int(:);
-                
-                if gui.settings.set_popin == 1
-                    if isempty(ind_popin_all)
-                        ind_popin_all(1) = gui.settings.max_bound_h_init;
-                    end
-                    ind_popin = ind_popin_all(1);
-                    
-                else
-                    if length(ind_popin_all) == 1
-                        ind_popin_all(2) = gui.settings.max_bound_h_init;
-                    end
-                    ind_popin = ind_popin_all(2);
-                    
+            ind_popin_all = gui.data(ii_sheet).num_popin_int(:);
+            
+            if gui.settings.set_popin == 1
+                if isempty(ind_popin_all)
+                    ind_popin_all(1) = gui.settings.max_bound_h_init;
                 end
+                ind_popin = ind_popin_all(1);
                 
-                if gui.settings.value_crit_param == 1
-                    gui.data(ii_sheet).sum_L = ...
-                        gui.data(ii_sheet).data_L_cleaned(ind_popin);
-                    
-                    gui.data(ii_sheet).mean_sum_L = ...
-                        mean(gui.data(ii_sheet).sum_L);
-                    
-                elseif gui.settings.value_crit_param == 2
-                    gui.data(ii_sheet).sum_h = ...
-                        gui.data(ii_sheet).data_h_cleaned(ind_popin);
-                    
-                    gui.data(ii_sheet).mean_sum_h = ...
-                        mean(gui.data(ii_sheet).sum_h);
+            else
+                if length(ind_popin_all) == 1
+                    ind_popin_all(2) = gui.settings.max_bound_h_init;
                 end
-                guidata(gcf, gui);
+                ind_popin = ind_popin_all(2);
+                
             end
-            delete(gui.handles.h_waitbar);
             
-            % Set data
-            %% Set the data to plot
             if gui.settings.value_crit_param == 1
-                for ii = 1:1:length(gui.data)
-                    gui.results(ii).binCtrs = gui.data(ii).sum_L / mean([gui.data.mean_sum_L]);
-                    gui.results(ii).max_binCtrs = max([gui.data(ii).sum_L]);
-                end
+                gui.data(ii_sheet).sum_L = ...
+                    gui.data(ii_sheet).data_L_cleaned(ind_popin);
                 
-            elseif gui.settings.value_crit_param  == 2
-                for ii = 1:1:length(gui.data)
-                    gui.results(ii).binCtrs = gui.data(ii).sum_h / mean([gui.data.mean_sum_h]);
-                    gui.results(ii).max_binCtrs = max([gui.data(ii).sum_h]);
-                end
+                gui.data(ii_sheet).mean_sum_L = ...
+                    mean(gui.data(ii_sheet).sum_L);
                 
-            end
-            
-            for ii = 1:1:length(gui.data)
-                gui.results(ii).data_to_plot = gui.results(ii).prob;
+            elseif gui.settings.value_crit_param == 2
+                gui.data(ii_sheet).sum_h = ...
+                    gui.data(ii_sheet).data_h_cleaned(ind_popin);
+                
+                gui.data(ii_sheet).mean_sum_h = ...
+                    mean(gui.data(ii_sheet).sum_h);
             end
             guidata(gcf, gui);
-            
-            % Calculations of the cumulative function
-            if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
-                Weibull_cdf;
-            elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-                Weibull_modified_cdf;
-            elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
-                
-            end
-            gui = guidata(gcf); guidata(gcf, gui);
-            
-            % Calculations of Hertzian displacement and Hertzian load
-            gui.Hertz.elasticDisp_init = ...
-                gui.settings.min_bound_h:0.1:gui.settings.max_bound_h;
-            
-            if strcat(gui.settings.unitDisp, 'nm');
-                gui.Hertz.elasticDispUnit = 'nm';
-                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e-3;
-            elseif strcat(gui.settings.unitDisp, 'um');
-                gui.Hertz.elasticDispUnit = 'um';
-                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init;
-            elseif strcat(gui.settings.unitDisp, 'mm');
-                gui.Hertz.elasticDispUnit = 'mm';
-                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e3;
-            end
-            
-            gui.Hertz.elasticLoad = elasticLoad(gui.Hertz.elasticDisp, ...
-                gui.settings.value_TipRadius, 0, ...
-                gui.settings.value_YoungModulus);
         end
+        delete(gui.handles.h_waitbar);
+        
+        % Set data
+        %% Set the data to plot
+        if gui.settings.value_crit_param == 1
+            for ii = 1:1:length(gui.data)
+                gui.results(ii).binCtrs = gui.data(ii).sum_L / mean([gui.data.mean_sum_L]);
+                gui.results(ii).max_binCtrs = max([gui.data(ii).sum_L]);
+            end
+            
+        elseif gui.settings.value_crit_param  == 2
+            for ii = 1:1:length(gui.data)
+                gui.results(ii).binCtrs = gui.data(ii).sum_h / mean([gui.data.mean_sum_h]);
+                gui.results(ii).max_binCtrs = max([gui.data(ii).sum_h]);
+            end
+            
+        end
+        
+        for ii = 1:1:length(gui.data)
+            gui.results(ii).data_to_plot = gui.results(ii).prob;
+        end
+        guidata(gcf, gui);
+        
+        % Calculations of the cumulative function
+        if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
+            Weibull_cdf;
+        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
+            Weibull_modified_cdf;
+        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
+            
+        end
+        gui = guidata(gcf); guidata(gcf, gui);
+        
+        % Calculations of Hertzian displacement and Hertzian load
+        gui.Hertz.elasticDisp_init = ...
+            gui.settings.min_bound_h:0.1:gui.settings.max_bound_h;
+        
+        if strcat(gui.settings.unitDisp, 'nm');
+            gui.Hertz.elasticDispUnit = 'nm';
+            gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e-3;
+        elseif strcat(gui.settings.unitDisp, 'um');
+            gui.Hertz.elasticDispUnit = 'um';
+            gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init;
+        elseif strcat(gui.settings.unitDisp, 'mm');
+            gui.Hertz.elasticDispUnit = 'mm';
+            gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e3;
+        end
+        
+        gui.Hertz.elasticLoad = elasticLoad(gui.Hertz.elasticDisp, ...
+            gui.settings.value_TipRadius, 0, ...
+            gui.settings.value_YoungModulus);
         
         %% Plot of L-h curves
         guidata(gcf, gui);
-        plot_load_disp_set;
+        plot_load_disp;
         gui = guidata(gcf); guidata(gcf, gui);
         
     end
