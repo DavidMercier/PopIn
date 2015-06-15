@@ -24,6 +24,12 @@ else
     gui.settings.cumulFunctionList  = get(gui.handles.value_cumulFunction, 'String');
     gui.settings.cumulFunctionVal   = get(gui.handles.value_cumulFunction, 'Value');
     gui.settings.cumulFunction      = gui.settings.cumulFunctionList(gui.settings.cumulFunctionVal, :);
+    
+    % Plot
+    gui.settings.log_plot_value = get(gui.handles.cb_log_plot, 'Value');
+    gui.settings.grid_plot_value = get(gui.handles.cb_grid_plot, 'Value');
+    gui.settings.x_value = get(gui.handles.value_param2plotinxaxis, 'Value');
+    gui.settings.y_value = get(gui.handles.value_param2plotinyaxis, 'Value');
 end
 
 guidata(gcf, gui);

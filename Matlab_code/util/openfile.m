@@ -31,7 +31,6 @@ end
 
 %% Set data from .xls file (segments, number of sheets...)
 if strcmp (ext, '.nul') == 1
-    gui.flag.flag_data = 0;
     errorLoadingData;
     
 elseif strcmp (ext, '.xls') == 1
@@ -55,12 +54,11 @@ elseif strcmp (ext, '.xls') == 1
         [status_xls, sheets_xls] = xlsfinfo(filename_data);
         gui.data_xls.status_xls = status_xls;
         gui.data_xls.sheets_xls = sheets_xls;
-        
     end
+    guidata(gcf, gui);
     
     %% Import data from .xls file
-    gui.flag.flag_data = 1;
-    guidata(gcf, gui);
+    
     gui.handles.h_waitbar = waitbar(0, 'Import of data in progress...');
     
     % Preallocation and initialization
@@ -89,14 +87,12 @@ elseif strcmp (ext, '.xls') == 1
         min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
         max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
     end
-    guidata(gcf, gui);
-    delete(gui.handles.h_waitbar);
     
+    delete(gui.handles.h_waitbar);
     gui.settings.min_bound_h = max(min_data_h(:));
     gui.settings.max_bound_h = min(max_data_h(:));
     gui.settings.min_bound_h_init = max(min_data_h(:));
     gui.settings.max_bound_h_init = min(max_data_h(:));
-    guidata(gcf, gui);
     
     % Settings of the GUI
     set(gui.handles.value_mindepth, 'String', ...
@@ -105,13 +101,15 @@ elseif strcmp (ext, '.xls') == 1
         num2str(round(gui.settings.max_bound_h)));
     set(gui.handles.opendata_str, 'String', filename_data);
     
+    % Flag settings
+    gui.flag.flag_data = 1;
+    gui.flag.flag_cleaned_data = 1;
+    set(gui.handles.run_calc, 'BackgroundColor', [0 204/256 0]);
+    guidata(gcf, gui);
+    
     % Message to the user
     helpdlg('Data imported ! Set parameters for statistic analysis and run the calculations...', 'Info');
-    gui.flag.flag_cleaned_data = 0;
-    set(gui.handles.run_calc, 'BackgroundColor', [0 204/256 0]);
     
 end
-
-guidata(gcf, gui);
 
 end
