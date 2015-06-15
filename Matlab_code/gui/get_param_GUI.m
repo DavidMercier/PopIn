@@ -14,6 +14,7 @@ else
     gui.settings.value_loadrate     = str2double(get(gui.handles.value_loadrate, 'String'));
     gui.settings.cb_Hertzian_plot   = get(gui.handles.cb_Hertzian_plot, 'Value');
     gui.settings.value_YoungModulus = str2double(get(gui.handles.value_YoungModulus, 'String'));
+    gui.settings.value_PoissonRatio = str2double(get(gui.handles.value_PoissonRatio, 'String'));
     gui.settings.value_TipRadius    = str2double(get(gui.handles.value_TipRadius, 'String'));
     gui.settings.set_popin          = get(gui.handles.value_num_popin, 'Value');
     gui.settings.set_popin          = get(gui.handles.value_num_popin, 'Value');
