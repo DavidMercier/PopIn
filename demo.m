@@ -1,7 +1,6 @@
 %% Copyright 2014 MERCIER David
 function gui_handle = demo
 %% Function to run the Matlab GUI for the analysis of the pop-in statistics
-% through Weibull or Gauss distributions
 gui = struct();
 gui.config = struct();
 gui.config.indenter = struct();
@@ -28,7 +27,7 @@ gui.config.url_help = 'http://popin.readthedocs.org/en/latest/';
 gui.config.pdf_help = 'https://media.readthedocs.org/pdf/popin/latest/popin.pdf';
 
 %% Main Window Coordinates Configuration
-scrsize = get(0, 'ScreenSize'); % Get screen size
+scrsize = get(0, 'ScreenSize');   % Get screen size
 WX = 0.05 * scrsize(3);           % X Position (bottom)
 WY = 0.10 * scrsize(4);           % Y Position (left)
 WW = 0.90 * scrsize(3);           % Width
@@ -170,7 +169,7 @@ gui.settings.ListDispUnits = {'nm';'um';'mm'};
 %% Set the critical parameter
 [gui.handles.title_cumulFunction, gui.handles.value_cumulFunction] = ...
     set_popupmenu('Which cumulative function ?', ...
-    [x_coord 0.52 0.15 0.03], 1, 'Weibull|Mason', '', gcf);
+    [x_coord 0.52 0.15 0.03], 1, 'Weibull|Chechenin|Mason', '', gcf);
 
 %% Run calculation if new parameters set
 gui.handles.run_calc = set_pushbutton(...
@@ -234,15 +233,24 @@ gui.handles.AxisPlot_1 = subplot('Position', positionVector1);
 positionVector2 = [0.65 0.06 0.325 0.8];
 gui.handles.AxisPlot_2 = subplot('Position', positionVector2);
 
-%% Help menu
+%% YAML and Help menus
 customized_menu(gcf);
 
 %% Set flags;
 gui.flag.flag_data = 0;
 gui.flag.flag_cleaned_data = 0;
 
-%% Encapsulation of data into the GUI
-guidata(gcf, gui);
-gui_handle = ishandle(gcf);
+if flag_YAML
+    %% Encapsulation of data into the GUI
+    guidata(gcf, gui);
+    gui_handle = ishandle(gcf);
+
+else
+    fprintf(['<a href="https://code.google.com/p/yamlmatlab/">', ...
+        'Please download YAML Matlab code first...!</a>']);
+    dos('start https://code.google.com/p/yamlmatlab/ ');
+    errordlg(['Please download YAML Matlab code first... --> ', ...
+        'https://code.google.com/p/yamlmatlab/'], 'Error');
+end
 
 end

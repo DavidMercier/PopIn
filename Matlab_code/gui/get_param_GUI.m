@@ -21,6 +21,9 @@ else
     gui.settings.min_data_h_average = str2double(get(gui.handles.value_mindepth, 'String'));
     gui.settings.max_data_h_average = str2double(get(gui.handles.value_maxdepth, 'String'));
     gui.settings.value_crit_param   = get(gui.handles.value_crit_param, 'Value');
+    gui.settings.cumulFunctionList  = get(gui.handles.value_cumulFunction, 'String');
+    gui.settings.cumulFunctionVal   = get(gui.handles.value_cumulFunction, 'Value');
+    gui.settings.cumulFunction      = gui.settings.cumulFunctionList(gui.settings.cumulFunctionVal, :);
 end
 
 guidata(gcf, gui);

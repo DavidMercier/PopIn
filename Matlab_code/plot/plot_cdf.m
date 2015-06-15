@@ -3,7 +3,8 @@ function plot_cdf
 %% Function to plot the probability density function or the cumulative distribution function
 gui = guidata(gcf);
 
-% Clear axis
+set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_2);
+
 cla(gui.handles.AxisPlot_2, 'reset');
 
 max_gui_results_binCtrs = max([gui.results.binCtrs]);
@@ -28,12 +29,27 @@ if gui.settings.grid_plot_value == 1
 else
     grid off;
 end
-
 hold on;
 
-guidata(gcf, gui);
-func_Weibull_cdf;
-gui = guidata(gcf);
+coefEsts = gui.cumulativeFunction.coefEsts;
+
+if gui.settings.value_crit_param == 1
+    str_title_Weibull = strcat('Mean critical parameter= ', ...
+        num2str(coefEsts(2) * mean([gui.data(:).mean_sum_L])), ...
+        ' & Weibull modulus = ', num2str(coefEsts(1)));
+elseif gui.settings.value_crit_param == 2
+    str_title_Weibull = strcat('Mean critical parameter= ', ...
+        num2str(coefEsts(2) * mean([gui.data(:).mean_sum_h])), ...
+        ' & Weibull modulus = ', num2str(coefEsts(1)));
+end
+
+line(gui.cumulativeFunction.xdata_cdf, gui.cumulativeFunction.ydata_cdf, ...
+    'Color', 'r', 'LineWidth', 2);
+
+legend({'Row data' 'Weibull model'}, 'Location', 'NorthWest');
+xlabel('Critical parameter / Mean value of critical parameter');
+ylabel('Weibull probability');
+title(str_title_Weibull);
 
 guidata(gcf, gui);
 
