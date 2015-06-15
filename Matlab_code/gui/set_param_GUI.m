@@ -14,23 +14,6 @@ gui.settings.DispUnitSelected = ...
 set(gui.handles.unit_mindepth, 'String', gui.settings.DispUnitSelected);
 set(gui.handles.unit_maxdepth, 'String', gui.settings.DispUnitSelected);
 
-%% Settings of Hertzian fit
-if gui.settings.cb_Hertzian_plot == 1
-    set(gui.handles.title_YoungModulus, 'Visible', 'on');
-    set(gui.handles.value_YoungModulus, 'Visible', 'on');
-    set(gui.handles.unit_YoungModulus, 'Visible', 'on');
-    set(gui.handles.title_TipRadius, 'Visible', 'on');
-    set(gui.handles.value_TipRadius, 'Visible', 'on');
-    set(gui.handles.unit_TipRadius, 'Visible', 'on');
-else
-    set(gui.handles.title_YoungModulus, 'Visible', 'off');
-    set(gui.handles.value_YoungModulus, 'Visible', 'off');
-    set(gui.handles.unit_YoungModulus, 'Visible', 'off');
-    set(gui.handles.title_TipRadius, 'Visible', 'off');
-    set(gui.handles.value_TipRadius, 'Visible', 'off');
-    set(gui.handles.unit_TipRadius, 'Visible', 'off');
-end
-
 guidata(gcf, gui);
 
 end
