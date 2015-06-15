@@ -14,6 +14,13 @@ gui.settings.DispUnitSelected = ...
 set(gui.handles.unit_mindepth, 'String', gui.settings.DispUnitSelected);
 set(gui.handles.unit_maxdepth, 'String', gui.settings.DispUnitSelected);
 
+if gui.settings.x_value == 1 && gui.settings.y_value == 2
+    set(gui.handles.cb_Hertzian_plot, 'Visible', 'on');
+else
+    set(gui.handles.cb_Hertzian_plot, 'Visible', 'off');
+    gui.settings.cb_Hertzian_plot = 0;
+end
+
 guidata(gcf, gui);
 
 end
