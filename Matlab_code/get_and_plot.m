@@ -4,8 +4,7 @@ function get_and_plot
 gui = guidata(gcf);
 
 if gui.flag.flag_data == 0
-    helpdlg('Please, select results (.xls file)...', 'Info');
-    set(gui.handles.run_calc, 'BackgroundColor', [0.745 0.745 0.745]);
+    errorLoadingData;
 else
     gui.handles.h_waitbar = waitbar(0, 'Calculations in progress...');
     guidata(gcf, gui);

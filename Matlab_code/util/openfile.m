@@ -32,8 +32,7 @@ end
 %% Set data from .xls file (segments, number of sheets...)
 if strcmp (ext, '.nul') == 1
     gui.flag.flag_data = 0;
-    helpdlg('Please, select results (.xls file)...', 'Info');
-    set(gui.handles.run_calc, 'BackgroundColor', [0.745 0.745 0.745]);
+    errorLoadingData;
     
 elseif strcmp (ext, '.xls') == 1
     sheet = 1;
@@ -42,7 +41,7 @@ elseif strcmp (ext, '.xls') == 1
     
     if isempty(str_endsegment)
         helpdlg('No segment found', 'Info');
-    
+        
     else
         val_endsegment_true = find(strcmp(str_endsegment(:), '') ~= 1);
         str_endsegment_true = str_endsegment(val_endsegment_true);

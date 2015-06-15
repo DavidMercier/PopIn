@@ -10,8 +10,6 @@ function [string, edit_box, unit_string] = ...
 % ratio: ratio betweem string box and edit box
 % parent: handle of the parent
 
-% authors: d.mercier@mpie.de / c.zambaldi@mpie.de
-
 if nargin < 7
     parent = gcf;
 end

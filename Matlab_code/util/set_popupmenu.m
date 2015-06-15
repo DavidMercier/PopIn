@@ -9,8 +9,6 @@ function [string, popupmenu] = ...
 % callback : callback function or script to assess to the popupmenu
 % parent: handle of the parent
 
-% author: d.mercier@mpie.de
-
 if nargin < 6
     parent = gcf;
 end

@@ -7,8 +7,6 @@ function [pushbutton] = ...
 % callback : callback function or script to assess to the pushbutton
 % parent: handle of the parent
 
-% author: d.mercier@mpie.de
-
 if nargin < 4
     parent = gcf;
 end

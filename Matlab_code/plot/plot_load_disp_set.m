@@ -5,7 +5,7 @@ function plot_load_disp_set
 gui = guidata(gcf);
 
 if gui.flag.flag_data == 0
-    helpdlg('Please, select results (.xls file)...', 'Info');
+    errorLoadingData;
     
 elseif gui.flag.flag_cleaned_data == 0
     % Calculations have to be performed once at least !

@@ -4,7 +4,7 @@ function plot_get_values
 gui = guidata(gcf);
 
 if gui.flag.flag_data == 0
-    helpdlg('Import data first !', '!!!');
+    errorLoadingData;
     
 else
     [x_value, y_value] = ginput(1);

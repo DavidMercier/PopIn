@@ -5,7 +5,7 @@ gui = guidata(gcf);
 
 %% Initialization
 if gui.flag.flag_data == 0
-    helpdlg('Please, select results (.xls file)...', 'Info');
+    errorLoadingData;
 else
     %% Getting parameters from the GUI
     gui.settings.unitLoad           = get(gui.handles.unitLoad, 'Value');
