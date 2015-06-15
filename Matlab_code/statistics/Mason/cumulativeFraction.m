@@ -69,9 +69,9 @@ Ered = reducedValue(E1, E2) * 1e9; % in N/m2
 loadrate = loadrate * 1e-3; % in N/s
 epsilon_var = epsilon_var * 1.60217657*1e-19;  % in J = in kg.m2.s-2
 
-k = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
+k_Boltzmann = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
 
 cumFrac = 1 - exp(-((9*K*Rred*neta_var)/(4*Ered*loadrate*alpha_var^6)) * ...
-    exp(-(epsilon_var/(k*T))) * beta_var);
+    exp(-(epsilon_var/(k_Boltzmann*T))) * beta_var);
 
 end

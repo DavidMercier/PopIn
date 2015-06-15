@@ -34,13 +34,13 @@ if nargin < 1
     R1 = 0; % in microns
 end
 
-k = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
+k_Boltzmann = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
 
 Rred = reducedValue(R1, R2) * 1e-6; % in m
 Ered = reducedValue(E1, E2) * 1e9; % in N/m2
 
 Vact = Vact * 1e-30; % in m3
 
-alpha_var = (0.47/pi) * ((4*Ered)/(3*Rred))^(2/3) * Vact/(k * T);
+alpha_var = (0.47/pi) * ((4*Ered)/(3*Rred))^(2/3) * Vact/(k_Boltzmann * T);
 
 end
