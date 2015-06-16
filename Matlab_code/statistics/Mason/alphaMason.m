@@ -23,18 +23,18 @@ if nargin < 4
 end
 
 if nargin < 3
-    E1 = 60; % in GPa
+    E1 = 160; % in GPa
 end
 
 if nargin < 2
-    R2 = 0.45; % in microns
+    R2 = 1; % in microns
 end
 
 if nargin < 1
-    R1 = 0; % in microns
+    R1 = +inf; % in microns
 end
 
-k_Boltzmann = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
+k_Boltzmann = 1.3806488e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
 
 Rred = reducedValue(R1, R2) * 1e-6; % in m
 Ered = reducedValue(E1, E2) * 1e9; % in N/m2

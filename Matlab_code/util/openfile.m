@@ -65,6 +65,8 @@ elseif strcmp (ext, '.xls') == 1
     gui.data = struct();
     min_data_h = NaN(length(sheets_xls));
     max_data_h = NaN(length(sheets_xls));
+    min_data_L = NaN(length(sheets_xls));
+    max_data_L = NaN(length(sheets_xls));
     
     for ii_sheet = 1:1:length(sheets_xls)
         waitbar(ii_sheet / length(sheets_xls), gui.handles.h_waitbar);
@@ -86,6 +88,8 @@ elseif strcmp (ext, '.xls') == 1
         gui.data(ii_sheet).data_L = data_cropped(:, 2);
         min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
         max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
+        min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
+        max_data_L(ii_sheet) = max(gui.data(ii_sheet).data_L);
     end
     
     delete(gui.handles.h_waitbar);
@@ -93,6 +97,10 @@ elseif strcmp (ext, '.xls') == 1
     gui.settings.max_bound_h = min(max_data_h(:));
     gui.settings.min_bound_h_init = max(min_data_h(:));
     gui.settings.max_bound_h_init = min(max_data_h(:));
+    gui.settings.min_bound_L = mean(min_data_L(:));
+    gui.settings.max_bound_L = mean(max_data_L(:));
+    gui.settings.min_bound_L_init = min(min_data_L(:));
+    gui.settings.max_bound_L_init = max(max_data_L(:));
     
     % Settings of the GUI
     set(gui.handles.value_mindepth, 'String', ...

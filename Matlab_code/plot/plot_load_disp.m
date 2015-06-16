@@ -128,9 +128,5 @@ if gui.settings.cb_Hertzian_plot == 1
 end
 
 guidata(gcf, gui);
-plot_cdf;
-gui = guidata(gcf);
-
-guidata(gcf, gui);
 
 end

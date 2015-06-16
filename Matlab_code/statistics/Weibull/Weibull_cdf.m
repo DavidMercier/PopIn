@@ -1,22 +1,45 @@
 %% Copyright 2014 MERCIER David
-function Weibull_cdf
+function Weibull_cdf(OPTIONS, xdata_fit, ydata_fit)
 %% Function giving the Weibull cumulative distribution function
-% See http://de.mathworks.com/help/stats/cdf.html
+% See http://de.mathworks.com/help/stats/wblcdf.html
+% See Weibull W., “A statistical distribution function of wide applicability”, J. Appl. Mech.-Trans. ASME (1951), 18(3).
+
 gui = guidata(gcf);
 
-[coefEsts_1, coefEsts_2] = wblfit([gui.results(:).data_to_plot]);
+gui.cumulativeFunction.xdata_cdf = xdata_fit;
 
-gui.cumulativeFunction.xdata_cdf = ...
-    linspace(0, max([gui.results.binCtrs]), 200);
+% Model (survival function)
+weibull_cdf_s = @(p,x) (1 - exp(-(x./p(2)).^p(1)));
+
+% Model (mortality function)
+%weibull_cdf_m = @(p,x) (exp(-(x./p(2)).^p(1)));
+
+% Make a starting guess of coefficients p(1) and p(2)
+% p(1) = Weibull modulus --> 10 when good homogeneity in size defect distribution
+% p(2) = Mean critical value
+gui.cumulativeFunction.p0 = [1 ; mean(ydata_fit)];
+
+[gui.cumulativeFunction.coefEsts, ...
+    gui.cumulativeFunction.resnorm, ...
+    gui.cumulativeFunction.residual, ...
+    gui.cumulativeFunction.exitflag, ...
+    gui.cumulativeFunction.output, ...
+    gui.cumulativeFunction.lambda, ...
+    gui.cumulativeFunction.jacobian] =...
+    lsqcurvefit(weibull_cdf_s, gui.cumulativeFunction.p0, ...
+    gui.cumulativeFunction.xdata_cdf, ydata_fit, ...
+    [gui.config.numerics.Min_mWeibull ; 0], ...
+    [gui.config.numerics.Max_mWeibull ; max(ydata_fit)], ...
+    OPTIONS);
+
+gui.cumulativeFunction.coefEsts(1) = ...
+    real(gui.cumulativeFunction.coefEsts(1));
+gui.cumulativeFunction.coefEsts(2) = ...
+    real(gui.cumulativeFunction.coefEsts(2));
+
 gui.cumulativeFunction.ydata_cdf = ...
-    cdf('Weibull', gui.cumulativeFunction.xdata_cdf, coefEsts_1(1), coefEsts_1(2));
-
-if gui.flag.flag_error
-    helpdlg(err.message);
-end
-
-gui.Weibull.coefEsts = coefEsts_1;
-gui.Weibull.coefEsts2 = coefEsts_2;
+    (1 - exp(-(gui.cumulativeFunction.xdata_cdf./gui.cumulativeFunction.coefEsts(2)) ...
+    .^ gui.cumulativeFunction.coefEsts(1)));
 
 guidata(gcf, gui);
 

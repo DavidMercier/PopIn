@@ -24,15 +24,15 @@ if nargin < 5
 end
 
 if nargin < 4
-    E1 = 60; % in GPa
+    E1 = 160; % in GPa
 end
 
 if nargin < 3
-    R2 = 0.45; % in microns
+    R2 = 1; % in microns
 end
 
 if nargin < 2
-    R1 = 0; % in microns
+    R1 = +inf; % in microns
 end
 
 if nargin < 1
@@ -43,7 +43,7 @@ load = load * 1e-3; % in N
 
 alpha_var = alphaMason(R1, R2, E1, E2, T, Vact);
 
-beta_var = 120 + exp(load.^(1/3) .* alpha_var) .* ...
+beta_var = 120 .* exp(-load.^(1/3) .* alpha_var) + ...
     ((load.^(5/3) .* alpha_var.^5) - (5*load.^(4/3) .* alpha_var.^4) + ...
     (20*load .* alpha_var.^3) - (60*load.^(2/3) .* alpha_var.^2)  + ...
     (120*load.^(1/3) .* alpha_var) - 120);

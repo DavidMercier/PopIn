@@ -127,52 +127,79 @@ else
                 gui.results(ii).binCtrs = gui.data(ii).sum_L / mean([gui.data.mean_sum_L]);
                 gui.results(ii).max_binCtrs = max([gui.data(ii).sum_L]);
             end
-            
         elseif gui.settings.value_crit_param  == 2
             for ii = 1:1:length(gui.data)
                 gui.results(ii).binCtrs = gui.data(ii).sum_h / mean([gui.data.mean_sum_h]);
                 gui.results(ii).max_binCtrs = max([gui.data(ii).sum_h]);
             end
-            
+        end
+        
+        if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:)) || ...
+                strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
+            xdata = sort([gui.results(:).binCtrs]);
+            for ii = 1:1:length(gui.data)
+                gui.results(ii).xdata = xdata(ii);
+            end
+        else
+            xdata = sort([gui.data(:).sum_L]);
+            for ii = 1:1:length(gui.data)
+                if xdata(ii) < 0
+                    xdata(ii) = 0;
+                end
+                gui.results(ii).xdata = xdata(ii);
+            end
         end
         
         for ii = 1:1:length(gui.data)
-            gui.results(ii).data_to_plot = gui.results(ii).prob;
+            gui.results(ii).ydata = gui.results(ii).prob;
         end
         guidata(gcf, gui);
+        
+        % Options settings
+        OPTIONS = optimset('lsqcurvefit');
+        OPTIONS = optimset(OPTIONS, 'TolFun',  gui.config.numerics.TolFun_value);
+        OPTIONS = optimset(OPTIONS, 'TolX',    gui.config.numerics.TolX_value);
+        OPTIONS = optimset(OPTIONS, 'MaxIter', gui.config.numerics.MaxIter_value);
         
         % Calculations of the cumulative function
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
-            Weibull_cdf;
+            Weibull_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-            Weibull_modified_cdf;
+            Weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
-            
+            Mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         end
         gui = guidata(gcf); guidata(gcf, gui);
         
-        % Calculations of Hertzian displacement and Hertzian load
-        gui.Hertz.elasticDisp_init = ...
-            gui.settings.min_bound_h:0.1:gui.settings.max_bound_h;
-        
-        if strcat(gui.settings.unitDisp, 'nm');
-            gui.Hertz.elasticDispUnit = 'nm';
-            gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e-3;
-        elseif strcat(gui.settings.unitDisp, 'um');
-            gui.Hertz.elasticDispUnit = 'um';
-            gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init;
-        elseif strcat(gui.settings.unitDisp, 'mm');
-            gui.Hertz.elasticDispUnit = 'mm';
-            gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e3;
-        end
-        
-        gui.Hertz.elasticLoad = elasticLoad(gui.Hertz.elasticDisp, ...
-            gui.settings.value_TipRadius, 0, ...
-            gui.settings.value_YoungModulus);
-        
         %% Plot of L-h curves
+        % Calculations of Hertzian displacement and Hertzian load
+        if gui.settings.cb_Hertzian_plot == 1
+            gui.Hertz.elasticDisp_init = ...
+                gui.settings.min_bound_h:0.1:gui.settings.max_bound_h;
+            
+            if strcat(gui.settings.unitDisp, 'nm');
+                gui.Hertz.elasticDispUnit = 'nm';
+                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e-3;
+            elseif strcat(gui.settings.unitDisp, 'um');
+                gui.Hertz.elasticDispUnit = 'um';
+                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init;
+            elseif strcat(gui.settings.unitDisp, 'mm');
+                gui.Hertz.elasticDispUnit = 'mm';
+                gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e3;
+            end
+            
+            gui.Hertz.elasticLoad = elasticLoad(gui.Hertz.elasticDisp, ...
+                gui.settings.value_TipRadius, 0, ...
+                gui.settings.value_YoungModulus);
+        end
         guidata(gcf, gui);
         plot_load_disp;
+        gui = guidata(gcf); guidata(gcf, gui);
+        
+        guidata(gcf, gui);
+        
+        %% Plot cumulative distribution curves
+        plot_cdf;
         gui = guidata(gcf); guidata(gcf, gui);
         
     end

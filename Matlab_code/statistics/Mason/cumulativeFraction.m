@@ -1,6 +1,6 @@
 %% Copyright 2014 MERCIER David
 function cumFrac = cumulativeFraction(load, loadrate, R1, R2, E1, E2, ...
-    T, Vact, epsilon_var, neta_var, K, varargin)
+    T, Vact, epsilon_var, eta_var, K, varargin)
 %% Calculation of the cumulative fraction function
 % See Mason et al. (2006) DOI: 10.1103/PhysRevB.73.054102
 
@@ -21,11 +21,11 @@ if nargin < 11
 end
 
 if nargin < 10
-    neta_var = 8.9 * 1e23; % in s-1.m-3
+    eta_var = 7e25; % in s-1.m-3
 end
 
 if nargin < 9
-    epsilon_var = 0.5; % in eV
+    epsilon_var = 0.34; % in eV
 end
 
 if nargin < 8
@@ -41,15 +41,15 @@ if nargin < 6
 end
 
 if nargin < 5
-    E1 = 60; % in GPa
+    E1 = 160; % in GPa
 end
 
 if nargin < 4
-    R2 = 0.45; % in microns
+    R2 = 1; % in microns
 end
 
 if nargin < 3
-    R1 = 0; % in microns
+    R1 = +inf; % in microns
 end
 
 if nargin < 2
@@ -57,7 +57,7 @@ if nargin < 2
 end
 
 if nargin < 1
-    load = 0.1; % in mN
+    load = 0.7; % in mN
 end
 
 alpha_var = alphaMason(R1, R2, E1, E2, T, Vact);
@@ -67,11 +67,11 @@ Rred = reducedValue(R1, R2) * 1e-6; % in m
 Ered = reducedValue(E1, E2) * 1e9; % in N/m2
 
 loadrate = loadrate * 1e-3; % in N/s
-epsilon_var = epsilon_var * 1.60217657*1e-19;  % in J = in kg.m2.s-2
+epsilon_var = epsilon_var * 1.60217657e-19;  % in J = in kg.m2.s-2
 
-k_Boltzmann = 1.3806488 * 1e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
+k_Boltzmann = 1.3806488e-23; % Boltzmann's constant in  m2.kg.s-2.K-1
 
-cumFrac = 1 - exp(-((9*K*Rred*neta_var)/(4*Ered*loadrate*alpha_var^6)) * ...
+cumFrac = 1 - exp(-((9*K*Rred*eta_var)/(4*Ered*loadrate*alpha_var^6)) * ...
     exp(-(epsilon_var/(k_Boltzmann*T))) * beta_var);
 
 end
