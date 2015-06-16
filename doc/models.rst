@@ -109,11 +109,18 @@ See Figure 3-3...
    :align: center
    
    *Figure 4 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
+   
+Matlab functions
+###################
+
+* `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
+* `fitdist - Fit probability distribution object to data <http://de.mathworks.com/help/stats/fitdist.html>`_
+* `dfittool - Open Distribution Fitting app <http://de.mathworks.com/help/stats/dfittool.html>`_
 
 References
 #############
 
 .. [#Weibull_1951] `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
-.. [#Chechenin_1995] `Chechenin N.G., Bøttiger J., Krog J.P., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates.", Thin Solid Films (1995), 261(1-2), pp.228-235. <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
+.. [#Chechenin_1995] `Chechenin N.G., Bøttiger J., Krog J.P., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates.", Thin Solid Films (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 .. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015) <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
 .. [#STABiX] `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
