@@ -116,7 +116,7 @@ Cracks formation
 ---------------------------
 
 * Lawn B.R. and Fuller E.R. Jr, "Equilibrium penny-like crack in indentation fracture" (1975).
-* `Field J.S. et al., "Nano-indentation fracture of fused silica and glassy carbon with a corner cube and 45°" (2001).`_
+* Field J.S. et al., "Nano-indentation fracture of fused silica and glassy carbon with a corner cube and 45°" (2001).
 * `Field J.S. et al., "Determination of fracture toughness from the extra penetration produced by indentation-induced pop-in" (2003). <http://dx.doi.org/10.1557/JMR.2003.0194>`_
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <http://dx.doi.org/10.1063/1.1711164>`_
 * Wilantewicz T., "Crack initiation behavior ofoptical glasses from Vickers indentation" PhD thesis (2005).
@@ -144,10 +144,9 @@ Strain transfer across grain boundaries
 ------------------------------------------------------
 
 * `Wang M.G. and Ngan A.H.W., "Indentation strain burst phenomenon induced by grain boundaries in niobium" (2004). <http://dx.doi.org/10.1557/JMR.2004.0316>`_
-* `Soer W.A. et al., "Incipient plasticity during nanoindentation at grain boundaries
-in body-centered cubic metals" (2005). <http://dx.doi.org/10.1016/j.actamat.2005.07.001>`_
-* `Soer W.A. De Hosson J. Th. M., "Detection of grain-boundary resistance to slip transfer using nanoindentation" (2005). <http://dx.doi.org/10.1016/j.matlet.2005.03.075>`_
-* Soer W.A, "Interactions between dislocations and grain boundaries" (2006).
+* `Soer W.A. et al., "Incipient plasticity during nanoindentation at grain boundaries in body-centered cubic metals" (2005). <http://dx.doi.org/10.1016/j.actamat.2005.07.001>`_
+* `Soer W.A. De Hosson J. Th. M., "Detection of grain-boundary resistance to slip transfer using nanoindentation" (2005). <http://dx.doi.org/10.1016/j.matlet.2005.03.075>`_ 
+* Soer W.A, "Interactions between dislocations and grain boundaries" PhD thesis (2006).
 * `Ohmura T. et al., "Nanoindentation-Induced Deformation Behavior in the Vicinity of Single Grain Boundary of Interstitial-Free Steel" (2005). <http://dx.doi.org/10.2320/matertrans.46.2026>`_
 * `Ohmura T. and Tsuzaki K., "Plasticity initiation and subsequent deformation behavior in the vicinity of single grain boundary investigated through nanoindentation technique" (2007). <http://dx.doi.org/10.1007/s10853-006-0885-y>`_
 * `Ohmura T. and Tsuzaki K., "Analysis of grain boundary effect of bulk polycrystalline materials through nanomechanical characterization" (2008). <http://dx.doi.org/10.1088/0022-3727/41/7/074015>`_
@@ -157,7 +156,6 @@ in body-centered cubic metals" (2005). <http://dx.doi.org/10.1016/j.actamat.2005
 * `Tsurekawa S. et al., "Local plastic deformation in the vicinity of grain boundaries in Fe–3 mass% Si alloy bicrystals and tricrystal" (2014). <http://dx.doi.org/10.1007/s10853-014-8150-2>`_
 * `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
 * `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
-
 
 Statistics of pop-in
 +++++++++++++++++++++

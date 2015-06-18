@@ -126,11 +126,20 @@ Statistical investigation of the onset of plasticity
 [#Wu_2014_2]_
 
 
+==> time / rate dependence and temperature dependence of incipient plasticity
+
     .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)F^{1/3}_{crit}
             :label: max_Hertzian_shearStress
 
 With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
 
+
+    .. math:: \dot{n} = \eta exp\left{-\frac{\epsilon-\sigma V}{kT}\right}
+            :label: rate_equation
+            
+    .. math:: \dot{N} = \eta exp\left{-\frac{\epsilon}{kT}\right}\cdot\int\int\limits_\Omega\int expleft{\frac{\sigma V}{kT}\right}d\Omega
+            :label: global_rate_equation
+            
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
    :scale: 60 %
    :align: center
@@ -143,9 +152,7 @@ With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath 
 
    *Figure 4 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation : 1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
 
-==> time / rate dependence and temperature dependence of incipient plasticity
 
-cumulative statistics
 
 Strain transfer across grain boundaries
 ######################################################
