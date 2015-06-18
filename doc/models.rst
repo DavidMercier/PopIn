@@ -134,7 +134,7 @@ Statistical investigation of the onset of plasticity
     .. math:: \dot{n} = \eta exp\left(-\frac{\epsilon-\sigma V}{kT}\right)
             :label: rate_equation
             
-    .. math:: \dot{N} = \eta exp\left{-\frac(\epsilon}{kT}\right}\cdot\int\int\limits_\Omega\int expleft{\frac{\sigma V}{kT}\right)d\Omega
+    .. math:: \dot{N} = \eta exp\left(-\frac{\epsilon}{kT}\right)\cdot\int\int\limits_\Omega\int exp \left(\frac{\sigma V}{kT}\right)d\Omega
             :label: global_rate_equation
 
     .. math:: \dot{F}(t) = \left[1-F(t)\right]{N}(t)
@@ -152,16 +152,14 @@ With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath 
             
     .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R}{4E^*}\right)
             :label: sampling_volume
-
-
             
     .. math:: P = \dot{P}\cdot t
             :label: loadrate
             
-    .. math:: F(P) = 1-exp\left(-\frac{9KR\eta}{4E^*\dot{P}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left\beta(\alpha, P\right)\right)
+    .. math:: F(P) = 1-exp\left(-\frac{9KR\eta}{4E^*\dot{P}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left\beta(\alpha,P\right)\right)
             :label: first_order_analytical_solution
             
-    .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)^{2/3}}\frac{V}{kT}
+    .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)^{2/3}\frac{V}{kT}
             :label: alpha_function
             
     .. math:: \beta = \left(120+exp(P^{1/3}\alpha))\cdot\left(P^{5/3}\alpha^5 - 5P^{4/3}\alpha^4 + 20P\alpha^3-60P^{2/3}\alpha^2+120P^{1/3}\alpha-120\right)))\right)
