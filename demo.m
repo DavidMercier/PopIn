@@ -1,14 +1,6 @@
 %% Copyright 2014 MERCIER David
 function gui_handle = demo
 %% Function to run the Matlab GUI for the analysis of the pop-in statistics
-gui = struct();
-gui.config = struct();
-gui.config.indenter = struct();
-gui.config.data = struct();
-gui.config.numerics = struct();
-
-[gui.config.indenter, gui.config.data, ...
-    gui.config.numerics, flag_YAML] = load_YAML_config_file;
 
 %% Paths Management
 try
@@ -20,9 +12,19 @@ catch
     path_management;
 end
 
+%% YAML config. files
+gui = struct();
+gui.config = struct();
+gui.config.indenter = struct();
+gui.config.data = struct();
+gui.config.numerics = struct();
+
+[gui.config.indenter, gui.config.data, ...
+    gui.config.numerics, flag_YAML] = load_YAML_config_file;
+
 %% Set Toolbox version and help paths
 gui.config.name_toolbox = 'PopIn';
-gui.config.version_toolbox = '2.3';
+gui.config.version_toolbox = '3.0';
 gui.config.url_help = 'http://popin.readthedocs.org/en/latest/';
 gui.config.pdf_help = 'https://media.readthedocs.org/pdf/popin/latest/popin.pdf';
 

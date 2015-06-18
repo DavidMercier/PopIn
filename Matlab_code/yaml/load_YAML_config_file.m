@@ -4,7 +4,7 @@ function [indenter, data, numerics, flag_YAML] = load_YAML_config_file
 
 flag_YAML = 1;
 
-configYAML = sprintf('indenters_config.yaml');
+configYAML = sprintf('indenter_config.yaml');
 if ~exist(configYAML, 'file')
     errordlg('indenters_config.yaml doesn''t exist !', 'File Error');
     flag_YAML = 0;
