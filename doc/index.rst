@@ -8,13 +8,12 @@
 PopIn |matlab| toolbox
 =======================
 
-This toolbox has been developed to plot (nano)indentation data and to analyze the pop-in distribution.
+This toolbox has been developed to plot (nano)indentation data and to analyze pop-in events distribution.
 
 With this Matlab toolbox, it is possible to :
     * plot load-displacement curves ;
-    * plot Weibull distribution (with 2 parameters) of the 1st or the 2nd pop-in ;
-    * and finally to assess the Weibull parameters (mean critical load or displacement and Weibull modulus).
-   
+    * plot cumulative (Weibull or time/temperature dependent) distribution of the 1st or the 2nd pop-in.
+
 .. figure:: ./_pictures/GUI_Main_Window_overview.png
    :scale: 35 %
    :align: center

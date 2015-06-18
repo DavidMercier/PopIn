@@ -156,7 +156,7 @@ With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath 
     .. math:: P = \dot{P}\cdot t
             :label: loadrate
             
-    .. math:: F(P) = 1-exp\left(-\frac{9KR\eta}{4E^*\dot{P}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left\beta(\alpha,P\right)\right)
+    .. math:: F(P) = 1-exp\left(-\frac{9KR\eta}{4E^*\dot{P}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,P\right)\right)
             :label: first_order_analytical_solution
             
     .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)^{2/3}\frac{V}{kT}
