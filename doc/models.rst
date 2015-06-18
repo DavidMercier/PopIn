@@ -128,17 +128,44 @@ Statistical investigation of the onset of plasticity
 
 ==> time / rate dependence and temperature dependence of incipient plasticity
 
+
+
+
+    .. math:: \dot{n} = \eta exp\left(-\frac{\epsilon-\sigma V}{kT}\right)
+            :label: rate_equation
+            
+    .. math:: \dot{N} = \eta exp\left{-\frac(\epsilon}{kT}\right}\cdot\int\int\limits_\Omega\int expleft{\frac{\sigma V}{kT}\right)d\Omega
+            :label: global_rate_equation
+
+    .. math:: \dot{F}(t) = \left[1-F(t)\right]{N}(t)
+            :label: cumulative fraction function
+            
+    .. math:: F(t) = 1- exp\left(-\int_{0}^{t}{\dot{N}(t')dt'}\right)
+            :label: integrated_cumulative fraction function
+            
+            
     .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)F^{1/3}_{crit}
             :label: max_Hertzian_shearStress
 
 With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
 
-
-    .. math:: \dot{n} = \eta exp\left{-\frac{\epsilon-\sigma V}{kT}\right}
-            :label: rate_equation
             
-    .. math:: \dot{N} = \eta exp\left{-\frac{\epsilon}{kT}\right}\cdot\int\int\limits_\Omega\int expleft{\frac{\sigma V}{kT}\right}d\Omega
-            :label: global_rate_equation
+    .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R}{4E^*}\right)
+            :label: sampling_volume
+
+
+            
+    .. math:: P = \dot{P}\cdot t
+            :label: loadrate
+            
+    .. math:: F(P) = 1-exp\left(-\frac{9KR\eta}{4E^*\dot{P}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left\beta(\alpha, P\right)\right)
+            :label: first_order_analytical_solution
+            
+    .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)^{2/3}}\frac{V}{kT}
+            :label: alpha_function
+            
+    .. math:: \beta = \left(120+exp(P^{1/3}\alpha))\cdot\left(P^{5/3}\alpha^5 - 5P^{4/3}\alpha^4 + 20P\alpha^3-60P^{2/3}\alpha^2+120P^{1/3}\alpha-120\right)))\right)
+            :label: beta_function
             
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
    :scale: 60 %
@@ -177,7 +204,7 @@ References
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
 .. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
-.. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102`_
+.. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
 .. [#Morris_2011] `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
 .. [#Ramalingam_2012] `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
 .. [#Schuh_2004] `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_

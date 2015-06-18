@@ -35,7 +35,7 @@ Dislocation nucleation
 * `Bahr D.F. et al., "Energy considerations regarding yield points during indentation" (1999). <http://dx.doi.org/10.1557/JMR.1999.0303>`_
 * `Suresh S. et al., "Nano-indentation of copper thin films on silicon substrates" (1999). <http://dx.doi.org/10.1016/S1359-6462(99)00245-6>`_
 * `Cáceres D. et al., "Nanoindentation on AlGaN thin films" (1999). <http://dx.doi.org/10.1063/1.371726>`_
-* `Göken M. et al., "Nanomechanical characterizations of metals and thin films" (1999). <http://dx.doi.org/10.1002/(SICI)1096-9918(199905/06)27:5/6<302::AID-SIA503>3.0.CO;2-D>`_
+* `Göken M. et al., "Nanomechanical characterizations of metals and thin films" (1999). <http://dx.doi.org/10.1016/S0921-5093(01)01086-3>`_
 * `Gouldstone A. et al., "Discrete and continuous deformation during nanoindentation of thin films" (2000). <http://dx.doi.org/10.1016/S1359-6454(00)00009-4>`_
 * `Bradby J.E. et al., "Mechanical deformation of InP and GaAs by spherical indentation" (2001). <http://dx.doi.org/10.1063/1.1372207>`_
 * `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
@@ -109,7 +109,7 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Bahr D.F. et al., "Indentation induced film fracture in hard film – soft substrate systems" (2003). <http://dx.doi.org/10.1023/A:1024979030155>`_
 * `Morash K.R. and Bahr D.F., "Nanomechanical testing for fracture of oxide films.", Journal of materials research" (2005). <http://dx.doi.org/10.1557/JMR.2005.0188>`_
 * `Morash K.R., "Nanoindentation induced thin film fracture" PhD Thesis (2005). <http://www.dissertations.wsu.edu/Thesis/Spring2005/k_morasch_042605.pdf>`_
-* `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <<http://dx.doi.org/10.1016/j.tsf.2006.01.043>`_
+* `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <http://dx.doi.org/10.1016/j.tsf.2006.01.043>`_
 * `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
 
 Cracks formation
@@ -129,7 +129,7 @@ Phase transformation
 * `Haberl B. et al., "Phase transformations induced by spherical indentation in ion-implanted amorphous silicon" (2006). <http://dx.doi.org/10.1063/1.2210767>`_
 * `Chrobak D. et al., "Nondislocation Origin of GaAs Nanoindentation Pop-In Event" (2007). <http://dx.doi.org/10.1103/PhysRevLett.98.045502>`_
 * `Oliver D.J. et al., "Giant pop-ins and amorphization in germanium during indentation" (2007). <http://dx.doi.org/10.1063/1.2490563>`_
-* `Yang B. and Vehoff H., "Dependence of nanohardness upon indentation size and grain size – A local examination of the interaction between dislocations and grain boundaries" (2007).
+* `Yang B. and Vehoff H., "Dependence of nanohardness upon indentation size and grain size – A local examination of the interaction between dislocations and grain boundaries" (2007). <http://dx.doi.org/10.1016/j.actamat.2006.09.004>`_
 * `Jian S.-R. et al., "Mechanical Deformation Induced in Si and GaN Under Berkovich Nanoindentation" (2007). <http://dx.doi.org/10.1007/s11671-007-9106-0>`_
 * `Chang L. and Zhang L., "Mechanical behaviour characterisation of silicon and effect of loading rate on pop-in: A nanoindentation study under ultra-low loads", (2009). <http://dx.doi.org/10.1016/j.msea.2008.11.021>`_
 * `Oliver D.J. et al., "Nanoindentation-induced phase transformation in relaxed and unrelaxed ion-implanted amorphous germanium" (2009). <http://dx.doi.org/10.1063/1.3255999>`_
@@ -165,7 +165,7 @@ Statistics of pop-in
 * `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
 * `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
 * `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <http://dx.doi.org/10.1557/JMR.2005.0056>`_
-* `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102`_
+* `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
 * `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
 * `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
 * `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
