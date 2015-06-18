@@ -23,7 +23,7 @@ During the loading step of nanoindentation, a discontinuity in the measured dept
 The pop-in event
 ###################
 
-A pop-in (event) is a sudden displacement burst during the loading of an indenter on a sample.
+A pop-in (event) is a sudden (load or displacement) burst during the loading of an indenter on a sample.
 If the nanoindentation experiment is load-controlled, an horizontal plateau is also observed on the 
 load-displacement curve, when a pop-in occurs at the critical load :math:`F_\text{crit}` and
 critical displacement :math:`h_\text{crit}` (see Figure 1). In the case of a displacement-controlled
@@ -39,12 +39,12 @@ nanoindentation experiments, a vertical drop of the load is observed on the load
 :math:`h_\text{r}` is the residual indentation depth.
 
 .. warning::
-    In this toolbox, only load controlled nanoindentation experiment are analyzed.
+    In this toolbox, only load-controlled nanoindentation experiments are analyzed.
 
-Many authors observed pop-in events on metals or metallic thin films, ceramics, semiconductors, hard brittle thin films deposited on a soff elastoplastic substrate...
+Many authors observed pop-in events on metals or metallic thin films, ceramics, semiconductors, hard brittle thin films deposited on a soft elastoplastic substrate...
 
-The pop-in event is often explained by on of the following mechanisms in function of the indented specimen
-and the experimental conditions :
+The pop-in event is often explained by on of the following mechanisms in function of the indented specimen (ceramic, metal, semiconductor, coated or multilayer specimen...)
+and the experimental conditions (time, temperature, geometry of the indenter...) :
 
     * dislocations nucleation (= sudden yielding of a material under load) ;
     * rupture of a hard brittle film on an elastic-plastic substrate ;
@@ -52,20 +52,19 @@ and the experimental conditions :
     * phase transformation ;
     * strain transfer across a grain boundary.
 
+Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
+
 Weibull-type distribution
 #################################
 
 The cumulative Weibull distribution function with 2 parameters :math:`(\lambda, m)` is a continuous probability distribution
 and is often used to describe particle size distributions and in survival or failure analysis [#Weibull_1951]_.
 
-    .. math:: V\left(x, \lambda, m) = exp\left(\left(\frac{x}{\lambda}\right)^m\right)
+    .. math:: V\left(x, \lambda, m\right) = exp\left(\left(\frac{x}{\lambda}\right)^m\right)
             :label: Weibull_mortality
 
-    .. math:: W\left(x, \lambda, m) = 1 - exp\left(\left(\frac{x}{\lambda}\right)^m\right)
+    .. math:: W\left(x, \lambda, m\right) = 1 - exp\left(\left(\frac{x}{\lambda}\right)^m\right)
             :label: Weibull_survival
-			
-    .. math:: \lambda = F^0_\text{crit}
-            :label: lambda
 
 With :math:`V` the mortal probability function and :math:`W` the survival probability function.
 :math:`m` is a dimensionless material-dependent constant, often named the Weibull modulus (from 0 to usually 50) [#Afferante_2006]_.
@@ -76,37 +75,30 @@ In the case of several indentations performed on the same sample,
 at which the pop-in events appear on the corresponding load-displacement curves. In this case, 
 higher is :math:`m`, more homogeneous is the distribution of the pop-in.
 
+:math:`\lambda` is the scale parameter of the cumulative Weibull distribution.
+In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^0_{crit}` or
+the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
 
-
-:math:`F^0_{cr}` is the mean critical load at which the pop-in event appears.
-
-
-in this toolbox for
-the description of the statistics of the pop-in event  and [#Chechenin_1995]_ :
-
-
-
-A cumulative Weibull-type distribution function is used as a survival probability in this toolbox for
-the description of the statistics of the pop-in event [#Weibull_1951]_ and [#Chechenin_1995]_ :
+Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
+the description of the statistics of the pop-in event [#Chechenin_1995]_.
+This function is set to have a probability of 0.5, when :math:`F_{crit}` (the critical load)
+is equal to :math:`F^0_{crit}` (the mean critical load).
 
     .. math:: W\left(\frac{F_\text{crit}}{F^0_\text{crit}}\right) = 1 - exp\left(-ln2\left(\frac{F_\text{crit}}{F^0_\text{crit}}\right)^m\right)
             :label: Weibull_modified
 
-
-
-This Weibull-type distribution is modified to have a probability of 0.5, when :math:`F_{crit}` (the critical load)
-is equal to :math:`F^0_{cr}` (the mean critical load).
-
-The same Weibull-type distribution can be used for the critical displacement :math:`h_{crit}`.
+The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative Weibull distribution [#Chechenin_1995]_
+are implemented in the PopIn toolbox.
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
 
+[#Bahr_2003]_
 
     .. math:: F_\text{crit,s} = Kh_\text{crit}^n
             :label: critical_load_substrate
 
-With :math:`F_\text{crit,s}`   and 
+With :math:`F_\text{crit,s}`   and :math:`K` :math:`n`
 
     .. math:: c = \sqrt{\frac{3F_\text{crit,s}}{2\pi\sigma_\text{e}}}
             :label: plastic_zone_radius
@@ -114,37 +106,54 @@ With :math:`F_\text{crit,s}`   and
 .. figure:: ./_pictures/popin_mechanisms_2.png
    :scale: 20 %
    :align: center
-   
+
    *Figure 2 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
 
 With :math:`\sigma_\text{e}` the yield stress of the metallic substrate.
-   
+
 Statistical investigation of the onset of plasticity
 ######################################################
+
+[#Schuh_2004]_ 
+[#Schuh_2005]_
+[#Schuh_2006]_
+[#Mason_2006]_
+[#Wo_2006]_
+[#Morris_2011]_
+[#Lu_2012]_
+[#Ramalingam_2012]_
+[#Wu_2014_1]_
+[#Wu_2014_2]_
+
+
+    .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)F^{1/3}_{crit}
+            :label: max_Hertzian_shearStress
+
+With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
+
+.. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
+   :scale: 60 %
+   :align: center
+   
+   *Figure 3 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
 
 .. figure:: ./_pictures/popin_mechanisms_1.png
    :scale: 20 %
    :align: center
-   
-   *Figure 3 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation : 1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
 
-==> rate dependence and temperature dependence of incipient plasticity
+   *Figure 4 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation : 1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
+
+==> time / rate dependence and temperature dependence of incipient plasticity
 
 cumulative statistics
 
 Strain transfer across grain boundaries
 ######################################################
 
-[#Mercier_2015]_
-[#STABiX]_
+[#Wang_2004]_
 
-See Figure 3-3...
+See Figure 3 and Figure 4
 
-.. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
-   :scale: 60 %
-   :align: center
-   
-   *Figure 4 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
    
 Matlab functions
 ###################
@@ -156,8 +165,19 @@ Matlab functions
 References
 #############
 
-.. [#Afferante_2006] `Afferante L. et al., "Is Weibull’s modulus really a material constant? Example case with interacting collinear cracks" (2006).<http://dx.doi.org/10.1016/j.ijsolstr.2005.08.002>`_
-.. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995).<http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
-.. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015).<http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
-.. [#STABiX] `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
-.. [#Weibull_1951] `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3).<http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
+.. [#Afferante_2006] `Afferante L. et al., "Is Weibull’s modulus really a material constant? Example case with interacting collinear cracks" (2006). <http://dx.doi.org/10.1016/j.ijsolstr.2005.08.002>`_
+.. [#Bahr_2003] `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <http://dx.doi.org/10.1016/S1359-6454(98)00024-X>`_
+.. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
+.. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
+.. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
+.. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102`_
+.. [#Morris_2011] `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
+.. [#Ramalingam_2012] `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
+.. [#Schuh_2004] `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
+.. [#Schuh_2005] `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
+.. [#Schuh_2006] `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
+.. [#Wang_2004] `Wang M.G. and Ngan A.H.W., "Indentation strain burst phenomenon induced by grain boundaries in niobium" (2004). <http://dx.doi.org/10.1557/JMR.2004.0316>`_
+.. [#Weibull_1951] `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
+.. [#Wo_2006] `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <http://dx.doi.org/10.1557/JMR.2005.0056>`_
+.. [#Wu_2014_1] `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" Scripta Materialia (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
+.. [#Wu_2014_2] `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" MaterialsScience&EngineeringA (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
