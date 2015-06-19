@@ -54,6 +54,14 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
 
 Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
 
+Pop-in detection
+#################################
+
+
+Find here the |matlab| function to quantify pop-in by peak detection:
+`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
+
+
 Weibull-type distribution
 #################################
 
@@ -79,6 +87,9 @@ higher is :math:`m`, more homogeneous is the distribution of the pop-in.
 In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^0_{crit}` or
 the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
 
+Find here the |matlab| function to calculate the cumulative survival Weibull distribution:
+`Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf.m>`_.
+
 Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
 the description of the statistics of the pop-in event [#Chechenin_1995]_.
 This function is set to have a probability of 0.5, when :math:`F_{crit}` (the critical load)
@@ -89,6 +100,9 @@ is equal to :math:`F^0_{crit}` (the mean critical load).
 
 The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative Weibull distribution [#Chechenin_1995]_
 are implemented in the PopIn toolbox.
+
+Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
+`Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
@@ -129,42 +143,6 @@ Statistical investigation of the onset of plasticity
 ==> time / rate dependence and temperature dependence of incipient plasticity
 
 
-
-
-    .. math:: \dot{n} = \eta exp\left(-\frac{\epsilon-\sigma V}{kT}\right)
-            :label: rate_equation
-            
-    .. math:: \dot{N} = \eta exp\left(-\frac{\epsilon}{kT}\right)\cdot\int\int\limits_\Omega\int exp \left(\frac{\sigma V}{kT}\right)d\Omega
-            :label: global_rate_equation
-
-    .. math:: \dot{F}(t) = \left[1-F(t)\right]{N}(t)
-            :label: cumulative fraction function
-            
-    .. math:: F(t) = 1- exp\left(-\int_{0}^{t}{\dot{N}(t')dt'}\right)
-            :label: integrated_cumulative fraction function
-            
-            
-    .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)F^{1/3}_{crit}
-            :label: max_Hertzian_shearStress
-
-With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
-
-            
-    .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R}{4E^*}\right)
-            :label: sampling_volume
-            
-    .. math:: P = \dot{P}\cdot t
-            :label: loadrate
-            
-    .. math:: F(P) = 1-exp\left(-\frac{9KR\eta}{4E^*\dot{P}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,P\right)\right)
-            :label: first_order_analytical_solution
-            
-    .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^*}{3R}\right)^{2/3}\frac{V}{kT}
-            :label: alpha_function
-            
-    .. math:: \beta = \left(120+exp(P^{1/3}\alpha))\cdot\left(P^{5/3}\alpha^5 - 5P^{4/3}\alpha^4 + 20P\alpha^3-60P^{2/3}\alpha^2+120P^{1/3}\alpha-120\right)))\right)
-            :label: beta_function
-            
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
    :scale: 60 %
    :align: center
@@ -177,7 +155,68 @@ With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath 
 
    *Figure 4 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation : 1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
 
+    .. math:: \dot{n} = \eta exp\left(-\frac{\epsilon-\sigma V}{kT}\right)
+            :label: rate_equation
+            
+    .. math:: \dot{N} = \eta exp\left(-\frac{\epsilon}{kT}\right)\cdot\int\int\limits_\Omega\int exp \left(\frac{\sigma V}{kT}\right)d\Omega
+            :label: global_rate_equation
 
+    .. math:: \dot{F}(t) = \left[1-F(t)\right]{N}(t)
+            :label: cumulative fraction function
+            
+    .. math:: F(t) = 1- exp\left(-\int_{0}^{t}{\dot{N}(t')dt'}\right)
+            :label: integrated_cumulative fraction function
+
+    .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)F^{1/3}_{crit}
+            :label: max_Hertzian_shearStress
+
+With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
+
+Find here the |matlab| function to calculate the maximum shear stress:
+`maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxShearStress.m>`_.
+
+Find here the |matlab| function to calculate the maximum pressure:
+`maxPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxPressure.m>`_.
+
+Find here the |matlab| function to calculate the mean pressure:
+`meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
+
+    .. math:: \frac{1}{E^{*}} = \frac{1}{E_\text{s}^{'}} + \frac{1}{E_\text{i}^{'}}
+            :label: reduced_youngs_modulus
+
+With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:`E_\text{i}^{'}` the reduced Young's modulus of the indenter.
+
+    .. math:: \frac{1}{R^{*}} = \frac{1}{R^\text{s}} + \frac{1}{R_\text{i}}
+            :label: reduced_radius
+
+With :math:`R_\text{s}` the radius of the sample (usually :math:`+\inf`) and :math:`R_\text{i}` the radius of the indenter.
+
+Find here the |matlab| function to calculate the reduced value of a variable:
+`reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
+
+    .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
+            :label: sampling_volume
+            
+    .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
+            :label: loadrate
+            
+    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c}\right)\right)
+            :label: first_order_analytical_solution
+            
+    .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)^{2/3}\frac{V}{kT}
+            :label: alpha_function
+            
+    .. math:: \beta = \left(120+exp(F_\text{c}^{1/3}\alpha))\cdot\left(F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120\right)\right)
+            :label: beta_function
+
+Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
+`Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/Mason_cdf.m>`_.
+
+Find here the |matlab| function to calculate the :math:`\alpha` function:
+`alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/alphaMason.m>`_.
+
+Find here the |matlab| function to calculate the :math:`\beta` function:
+`betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
 
 Strain transfer across grain boundaries
 ######################################################
