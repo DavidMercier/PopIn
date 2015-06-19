@@ -16,7 +16,7 @@ bulk materials from indentation experiments with conical indenters.
 
 Parameters such as contact load :math:`F_\text{c}` and depth of penetration :math:`h` are recorded
 at a rapid rate (normally 10Hz) during loading and unloading steps of the indentation test.
-Usually, the depth resolution is around the fraction of :math:`\text{nm}`-level and the load resolution is around :math:`\text{nN}`-level.
+Usually, the depth resolution is around the fraction of :math:`\text{nm}`-level and the ^{*}esolution is around :math:`\text{nN}`-level.
 
 During the loading step of nanoindentation, a discontinuity in the measured depth is commonly referred to as a pop-in event.
 
