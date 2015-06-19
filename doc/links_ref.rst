@@ -62,7 +62,7 @@ Dislocation nucleation
 * `Barnoush A., "Hydrogen embrittlement, revisited by in situ electrochemical nanoindentation" PhD thesis (2006). <http://scidok.sulb.uni-saarland.de/volltexte/2008/1542/pdf/A_Barnoush_PhD_thesis.pdf>`_
 * `Soer W.A. et al., "Incipient plasticity in metallic thin films" (2007). <http://dx.doi.org/10.1063/1.2736479>`_
 * `Yang B. and Vehoff H., "Dependence of nanohardness upon indentation size and grain size – A local examination of the interaction between dislocations and grain boundaries" (2007). <http://dx.doi.org/10.1016/j.actamat.2006.09.004>`_
-* `Navamathavan R. et al.,"Nanoindentation 'pop-in' phenomenon in epitaxial ZnO thin films on sapphire substrates" (2008). <http://dx.doi.org/10.1016/j.matchar.2007.01.020`_
+* `Navamathavan R. et al.,"Nanoindentation 'pop-in' phenomenon in epitaxial ZnO thin films on sapphire substrates" (2008). <http://dx.doi.org/10.1016/j.matchar.2007.01.020>`_
 * `Barnoush A. and Vehoff H., "Hydrogen embrittlement of aluminum in aqueous environments examined by in situ electrochemical nanoindentation" (2008). <http://dx.doi.org/10.1016/j.scriptamat.2007.12.019>`_
 * `Barnoush A. and Vehoff H., "In situ electrochemical nanoindentation: A technique for local examination of hydrogen embrittlement" (2008). <http://dx.doi.org/10.1016/j.corsci.2007.05.026>`_
 * `Kalidindi S.R. and Pathak S., "Determination of the effective zero-point and the extraction of spherical nanoindentation stress–strain curves" (2008). <http://dx.doi.org/10.1016/j.actamat.2008.03.036>`_
@@ -91,8 +91,8 @@ Dislocation nucleation
 * `Pathak S. et al., "Understanding pop-ins in spherical nanoindentation" (2014). <http://dx.doi.org/10.1063/1.4898698>`_
 * `Kalidindi S.R. and Vachhani S.J., "Mechanical characterization of grain boundaries using nanoindentation" (2014). <http://dx.doi.org/10.1016/j.cossms.2014.05.002>`_
 * `Šandera P. et al., "Modeling Load-displacement Curve and Pop-in Effect in Nanoindentation Tests" (2014). <http://dx.doi.org/10.1016/j.mspro.2014.06.181>`_
-* `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" Scripta Materialia (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
-* `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" MaterialsScience&EngineeringA (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
+* `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
+* `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
 * `Xia Y., "Investigation of deformation and failure mechanisms in nanoindentation mechanics" (2014). <http://trace.tennessee.edu/utk_graddiss/3183/>`_
 * `Jian S.-R., "Pop-in effects and dislocation nucleation of c-plane single-crystal ZnO by Berkovich nanoindentation" (2015). <http://dx.doi.org/10.1016/j.jallcom.2015.04.203>`_
 
@@ -171,5 +171,5 @@ Statistics of pop-in
 * `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
 * `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <http://dx.doi.org/10.1016/j.actamat.2011.11.034>`_
-* `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" Scripta Materialia (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
-* `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" MaterialsScience&EngineeringA (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
+* `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
+* `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
