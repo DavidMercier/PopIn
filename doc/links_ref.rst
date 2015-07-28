@@ -97,6 +97,7 @@ Dislocation nucleation
 * `Xia Y., "Investigation of deformation and failure mechanisms in nanoindentation mechanics" (2014). <http://trace.tennessee.edu/utk_graddiss/3183/>`_
 * `Jian S.-R., "Pop-in effects and dislocation nucleation of c-plane single-crystal ZnO by Berkovich nanoindentation" (2015). <http://dx.doi.org/10.1016/j.jallcom.2015.04.203>`_
 * `Barnoush A. et al., "Correlation between the hydrogen chemical potential and pop-in load during in situ electrochemical nanoindentation" (2015).<http://dx.doi.org/10.1016/j.scriptamat.2015.06.021>`_
+* `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ---------------------------------------------------------------------------------
@@ -175,3 +176,4 @@ Statistics of pop-in
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <http://dx.doi.org/10.1016/j.actamat.2011.11.034>`_
 * `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
 * `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
+* `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
