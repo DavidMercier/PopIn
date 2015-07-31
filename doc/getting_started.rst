@@ -86,4 +86,7 @@ You have to update these YAML config. files, if you want to change indenter prop
 Links
 #######
 
-`Guidata on Matlab website. <http://www.mathworks.fr/fr/help/matlab/ref/guidata.html>`_   
+* `Guidata on Matlab website. <http://www.mathworks.fr/fr/help/matlab/ref/guidata.html>`_   
+* `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
+* `fitdist - Fit probability distribution object to data <http://de.mathworks.com/help/stats/fitdist.html>`_
+* `dfittool - Open Distribution Fitting app <http://de.mathworks.com/help/stats/dfittool.html>`_

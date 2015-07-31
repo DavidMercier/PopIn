@@ -1,5 +1,5 @@
-﻿Statistical models
-======================
+﻿The 'pop-in' phenomenon
+==========================
 
 .. include:: includes.rst
 
@@ -16,7 +16,7 @@ bulk materials from indentation experiments with conical indenters.
 
 Parameters such as contact load :math:`F_\text{c}` and depth of penetration :math:`h` are recorded
 at a rapid rate (normally 10Hz) during loading and unloading steps of the indentation test.
-Usually, the depth resolution is around the fraction of :math:`\text{nm}`-level and the ^{*}esolution is around :math:`\text{nN}`-level.
+Usually, the depth resolution is around the fraction of :math:`\text{nm}`-level and the resolution is around :math:`\text{nN}`-level.
 
 During the loading step of nanoindentation, a discontinuity in the measured depth is commonly referred to as a pop-in event.
 
@@ -57,10 +57,8 @@ Some authors proposed to describe the statistics of the pop-in event with a cumu
 Pop-in detection
 #################################
 
-
 Find here the |matlab| function to quantify pop-in by peak detection:
 `peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
-
 
 Weibull-type distribution
 #################################
@@ -218,16 +216,22 @@ Find here the |matlab| function to calculate the :math:`\alpha` function:
 Find here the |matlab| function to calculate the :math:`\beta` function:
 `betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
 
-Strain transfer across grain boundaries
-######################################################
+Strain transfer across grain boundaries in metals
+####################################################
 
-[#Wang_2004]_
+Some authors observed sometimes two pop-in on the load-displacement curve during indentation performed close to a grain boundary (see Figure 3 and Figure 4).
+The first pop-in is usually attributed to the nucleation of dislocation in a metallic material (see previous section of this documentation),
+and the second pop-in is related to the presence nearby of the grain boundary.
+ 
+The occurrence of such a strain burst is found to be related to the slip activity (function of the phase material and the grain orientation),
+to the grain boundary resistance (function of the grain boundary misorientation [#Wang_2004]_, 
+to the local chemistry [#Britton_2011]_ (impurities, embrittled hydrogen...), to the prior plastic deformation [#Britton_2011]_, to
+the distance between the indenter and the grain boundary [#Wang_2004]_, or other experimental parameters like the shape of the indenter and the grain boundary inclination...
 
-See Figure 3 and Figure 4
+Recently, the STABiX Matlab toolbox was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_ and [#Stabix_2015]_.
 
-   
-Matlab functions
-###################
+Matlab functions to fit probability distributions
+###################################################
 
 * `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
 * `fitdist - Fit probability distribution object to data <http://de.mathworks.com/help/stats/fitdist.html>`_
@@ -238,15 +242,18 @@ References
 
 .. [#Afferante_2006] `Afferante L. et al., "Is Weibull’s modulus really a material constant? Example case with interacting collinear cracks" (2006). <http://dx.doi.org/10.1016/j.ijsolstr.2005.08.002>`_
 .. [#Bahr_2003] `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <http://dx.doi.org/10.1016/S1359-6454(98)00024-X>`_
+.. [#Britton_2011] `Britton T.B. et al., "Nanoindentation study of slip transfer phenomenon at grain boundaries" (2011). <http://dx.doi.org/10.1557/jmr.2009.0088>`_
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
 .. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 .. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
+.. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
 .. [#Morris_2011] `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
 .. [#Ramalingam_2012] `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
 .. [#Schuh_2004] `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
 .. [#Schuh_2005] `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
 .. [#Schuh_2006] `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
+.. [#Stabix_2015] `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
 .. [#Wang_2004] `Wang M.G. and Ngan A.H.W., "Indentation strain burst phenomenon induced by grain boundaries in niobium" (2004). <http://dx.doi.org/10.1557/JMR.2004.0316>`_
 .. [#Weibull_1951] `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
 .. [#Wo_2006] `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <http://dx.doi.org/10.1557/JMR.2005.0056>`_
