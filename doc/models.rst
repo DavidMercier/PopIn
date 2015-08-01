@@ -102,27 +102,6 @@ are implemented in the PopIn toolbox.
 Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
 `Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
 
-Rupture of a hard brittle film on an elastic-plastic substrate
-################################################################
-
-[#Bahr_2003]_
-
-    .. math:: F_\text{crit,s} = Kh_\text{crit}^n
-            :label: critical_load_substrate
-
-With :math:`F_\text{crit,s}`   and :math:`K` :math:`n`
-
-    .. math:: c = \sqrt{\frac{3F_\text{crit,s}}{2\pi\sigma_\text{e}}}
-            :label: plastic_zone_radius
-
-.. figure:: ./_pictures/popin_mechanisms_2.png
-   :scale: 20 %
-   :align: center
-
-   *Figure 2 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
-
-With :math:`\sigma_\text{e}` the yield stress of the metallic substrate.
-
 Statistical investigation of the onset of plasticity
 ######################################################
 
@@ -216,6 +195,11 @@ Find here the |matlab| function to calculate the :math:`\alpha` function:
 Find here the |matlab| function to calculate the :math:`\beta` function:
 `betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
 
+==> [#Wang_2012]_
+
+The surface mechanical state for each polishing step can be
+characterized by the detailed statistics of pop-in behavior.
+
 Strain transfer across grain boundaries in metals
 ####################################################
 
@@ -229,6 +213,29 @@ to the local chemistry [#Britton_2011]_ (impurities, embrittled hydrogen...), to
 the distance between the indenter and the grain boundary [#Wang_2004]_, or other experimental parameters like the shape of the indenter and the grain boundary inclination...
 
 Recently, the STABiX Matlab toolbox was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_ and [#Stabix_2015]_.
+
+Rupture of a hard brittle film on an elastic-plastic substrate
+################################################################
+
+In the case of indentation performed on bilayer system a hard brittle film on an elastic-plastic substrate
+
+[#Bahr_2003]_ [#Stauffer_2012]_  [#Morash_2007]_
+
+    .. math:: F_\text{crit,s} = Kh_\text{crit}^n
+            :label: critical_load_substrate
+
+With :math:`F_\text{crit,s}`   and :math:`K` :math:`n`
+
+    .. math:: c = \sqrt{\frac{3F_\text{crit,s}}{2\pi\sigma_\text{e}}}
+            :label: plastic_zone_radius
+
+.. figure:: ./_pictures/popin_mechanisms_2.png
+   :scale: 20 %
+   :align: center
+
+   *Figure 2 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
+
+With :math:`\sigma_\text{e}` the yield stress of the metallic substrate.
 
 Matlab functions to fit probability distributions
 ###################################################
@@ -248,13 +255,16 @@ References
 .. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 .. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
 .. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
+.. [#Morash_2007] `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <http://dx.doi.org/10.1016/j.tsf.2006.01.043>`_
 .. [#Morris_2011] `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
 .. [#Ramalingam_2012] `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
 .. [#Schuh_2004] `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
 .. [#Schuh_2005] `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
 .. [#Schuh_2006] `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
 .. [#Stabix_2015] `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
+.. [#Stauffer_2012] `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
 .. [#Wang_2004] `Wang M.G. and Ngan A.H.W., "Indentation strain burst phenomenon induced by grain boundaries in niobium" (2004). <http://dx.doi.org/10.1557/JMR.2004.0316>`_
+.. [#Wang_2012] `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
 .. [#Weibull_1951] `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
 .. [#Wo_2006] `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <http://dx.doi.org/10.1557/JMR.2005.0056>`_
 .. [#Wu_2014_1] `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
