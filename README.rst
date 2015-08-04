@@ -34,6 +34,15 @@ Keywords
 -----------
 MATLAB ; Graphical User Interface (GUI) ; pop-in ; nanoindentation ; statistics ; Weibull ; cumulative distribution.
 
+Screenshot
+-------------
+
+.. figure:: ./doc/_pictures/GUI_Main_Window.png
+   :scale: 40 %
+   :align: center
+   
+   *Plot of the evolution of the Young's modulus of the sample in function of the indentation depth.*
+
 Links
 --------
 http://www.mathworks.fr/matlabcentral/fileexchange/45376--pop-in--analysis-from-indentation-tests
