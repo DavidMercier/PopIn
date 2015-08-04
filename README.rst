@@ -41,7 +41,7 @@ Screenshot
    :scale: 40 %
    :align: center
    
-   *Plot of the evolution of the Young's modulus of the sample in function of the indentation depth.*
+   *Screenshot of the PopIn toolbox.*
 
 Links
 --------
