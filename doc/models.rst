@@ -57,8 +57,8 @@ Some authors proposed to describe the statistics of the pop-in event with a cumu
 Pop-in detection
 #################################
 
-Find here the |matlab| function to quantify pop-in by peak detection:
-`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
+    * Find here the |matlab| function to quantify pop-in by peak detection:
+    `peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
 
 Weibull-type distribution
 #################################
@@ -85,8 +85,8 @@ higher is :math:`m`, more homogeneous is the distribution of the pop-in.
 In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^0_{crit}` or
 the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
 
-Find here the |matlab| function to calculate the cumulative survival Weibull distribution:
-`Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf.m>`_.
+    * Find here the |matlab| function to calculate the cumulative survival Weibull distribution:
+    `Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf.m>`_.
 
 Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
 the description of the statistics of the pop-in event [#Chechenin_1995]_.
@@ -99,8 +99,8 @@ is equal to :math:`F^0_{crit}` (the mean critical load).
 The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative Weibull distribution [#Chechenin_1995]_
 are implemented in the PopIn toolbox.
 
-Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
-`Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
+    * Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
+    `Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
 
 Statistical investigation of the onset of plasticity
 ######################################################
@@ -126,17 +126,14 @@ With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:
 
 With :math:`R_\text{s}` the radius of the sample (usually :math:`+\infty`) and :math:`R_\text{i}` the radius of the indenter.
 
-Find here the |matlab| function to calculate the load with the Hertz equation:
-`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticLoad.m>`_.
-
-Find here the |matlab| function to calculate the displacement with the Hertz equation:
-`elasticDisp.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticDisp.m>`_.
-
-Find here the |matlab| function to calculate the contact radius with the Hertz equation:
-`elasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticRadius.m>`_.
-
-Find here the |matlab| function to calculate the reduced value of a variable:
-`reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
+    * Find here the |matlab| function to calculate the load with the Hertz equation:
+    `elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticLoad.m>`_.
+    * Find here the |matlab| function to calculate the displacement with the Hertz equation:
+    `elasticDisp.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticDisp.m>`_.
+    * Find here the |matlab| function to calculate the contact radius with the Hertz equation:
+    `elasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticRadius.m>`_.
+    * Find here the |matlab| function to calculate the reduced value of a variable:
+    `reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
 
 .. figure:: ./_pictures/popin_mechanisms_1.png
    :scale: 30 %
@@ -178,14 +175,12 @@ With :math:`\dot{n}` is the local rate at which the critical event occurs per un
 :math:`\eta` the pre-exponential frequency factor, :math:`k` the Boltzmann constant, :math:`\tau_\text{max}` the maximun shear stress
 obtained for the maximum pressure :math:`p_\text{max}`, at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
 
-Find here the |matlab| function to calculate the maximum shear stress:
-`maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxShearStress.m>`_.
-
-Find here the |matlab| function to calculate the maximum pressure:
-`maxPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxPressure.m>`_.
-
-Find here the |matlab| function to calculate the mean pressure:
-`meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
+    * Find here the |matlab| function to calculate the maximum shear stress:
+    `maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxShearStress.m>`_.
+    * Find here the |matlab| function to calculate the maximum pressure:
+    `maxPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxPressure.m>`_.
+    * Find here the |matlab| function to calculate the mean pressure:
+    `meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
 
     .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
             :label: sampling_volume
@@ -204,14 +199,12 @@ Find here the |matlab| function to calculate the mean pressure:
 
 With :math:`K` a proportionality constant of order :math:`\pi`.
             
-Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
-`Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/Mason_cdf.m>`_.
-
-Find here the |matlab| function to calculate the :math:`\alpha` function:
-`alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/alphaMason.m>`_.
-
-Find here the |matlab| function to calculate the :math:`\beta` function:
-`betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
+    * Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
+    `Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/Mason_cdf.m>`_.
+    * Find here the |matlab| function to calculate the :math:`\alpha` function:
+    `alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/alphaMason.m>`_.
+    * Find here the |matlab| function to calculate the :math:`\beta` function:
+    `betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
 
 .. note::
     The surface mechanical state (presence of dislocations after polishing steps or surface free of dislocation)
@@ -235,14 +228,14 @@ the distance between the indenter and the grain boundary [#Wang_2004]_,
 or other experimental parameters like the shape of the indenter and the grain boundary inclination...
 
 Recently, the `STABiX Matlab toolbox <https://github.com/stabix/stabix>`_
-was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_and [#StabixRepo_2015]_.
+was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_ and [#StabixRepo_2015]_.
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
 
 In the case of indentation made into a hard brittle film (e.g.: native or thermally/anodically grown oxide, ALD coatings ...)
 on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film (see Figure 4)
-[#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
+[#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
 
 Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
 The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation :
@@ -251,7 +244,7 @@ The radius :math:`c` of this plastic zone in the ductile substrate is defined by
             :label: plastic_zone_radius
 
 With :math:`F_\text{crit,s}` the load carried by the substrate obtained with the power law relationship :eq:`critical_load_substrate`,
-and :math:`\sigma_\text{e}` is the yield stress of the ductile substrate.
+and :math:`\sigma_\text{e}` is the yield stress of the ductile substrate [#Hainsworth_1995]_.
 
     .. math:: F_\text{crit,s} = Kh_\text{crit}^n
             :label: critical_load_substrate
@@ -283,7 +276,9 @@ References
 .. [#Bahr_2003] `Bahr D.F. et al., "Indentation induced film fracture in hard film – soft substrate systems" (2003). <http://dx.doi.org/10.1023/A:1024979030155>`_
 .. [#Britton_2011] `Britton T.B. et al., "Nanoindentation study of slip transfer phenomenon at grain boundaries" (2011). <http://dx.doi.org/10.1557/jmr.2009.0088>`_
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
+.. [#Hainsworth_1995] `Hainsworth S.V. et al., "Analysis of nanoindentation load-displacement loading curves.", (1996). <http://dx.doi.org/10.1557/JMR.1996.0250>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
+.. [#Kramer_2001] `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
 .. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 .. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
 .. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
