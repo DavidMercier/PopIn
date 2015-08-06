@@ -105,32 +105,59 @@ Find here the |matlab| function to calculate the cumulative modified survival We
 Statistical investigation of the onset of plasticity
 ######################################################
 
-[#Schuh_2004]_ 
-[#Schuh_2005]_
-[#Schuh_2006]_
-[#Mason_2006]_
-[#Wo_2006]_
-[#Morris_2011]_
-[#Lu_2012]_
-[#Ramalingam_2012]_
-[#Wu_2014_1]_
-[#Wu_2014_2]_
+According to many authors, pop-in corresponds to the nucleation of at least one dislocation, during indentation
+of crystalline materials (see Figure 2) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_, [#Wo_2006]_, [#Morris_2011]_,
+[#Lu_2012]_, [#Ramalingam_2012]_, [#Wu_2014_1]_ and [#Wu_2014_2]_. Before the pop-in event, the indentation load-displacement
+obtained with a spherical indenter, can be fitted with the Hertz equation (see Figure 3) [#Johnson_1987]_:
 
+    .. math:: F_\text{c}  = (4/3) * E^{*} * \sqrt{R^{*}} * F_\text{t}^1.5
+            :label: Hertz_equation
 
-==> time / rate dependence and temperature dependence of incipient plasticity
+With :math:`E^{*}` the reduced Young's modulus calculated form indentation test defined by :eq:`reduced_youngs_modulus` and 
+:math:`R^{*}` the reduced radius of the spherical indenter defined by :eq:`reduced_radius`.
 
+    .. math:: \frac{1}{E^{*}} = \frac{1}{E_\text{s}^{'}} + \frac{1}{E_\text{i}^{'}}
+            :label: reduced_youngs_modulus
 
+With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:`E_\text{i}^{'}` the reduced Young's modulus of the indenter.
+
+    .. math:: \frac{1}{R^{*}} = \frac{1}{R_\text{s}} + \frac{1}{R_\text{i}}
+            :label: reduced_radius
+
+With :math:`R_\text{s}` the radius of the sample (usually :math:`+\infty`) and :math:`R_\text{i}` the radius of the indenter.
+
+Find here the |matlab| function to calculate the load with the Hertz equation:
+`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact\elasticLoad.m>`_.
+
+Find here the |matlab| function to calculate the displacement with the Hertz equation:
+`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact\elasticDisp.m>`_.
+
+Find here the |matlab| function to calculate the contact radius with the Hertz equation:
+`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact\elasticRadius.m>`_.
+
+Find here the |matlab| function to calculate the reduced value of a variable:
+`reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
+
+.. figure:: ./_pictures/popin_mechanisms_1.png
+   :scale: 30 %
+   :align: center
+
+   *Figure 2 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation :
+   1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
+            
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
    :scale: 60 %
    :align: center
    
    *Figure 3 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
-
-.. figure:: ./_pictures/popin_mechanisms_1.png
-   :scale: 20 %
-   :align: center
-
-   *Figure 4 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation : 1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
+   
+The elastic-plastic transition is often studied statistically as a function of temperature :math:`T` and indentation rate :math:`F(t)`.
+Schuh C.A. et al. observed a good consistency between experimental results and a thermally activated mechanism of incipient plasticity 
+[#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_. They also proposed to use a statistical thermal activation model (see following equations) 
+with a stress-biasing term. Based on this model, it is possible to extract the activation energy :math:`\epsilon-\sigma V`, activation volume :math:`V`,
+and attempt frequency for the rate-limiting event that controls yield :math:`W(F_\text{c})`. The activation energy :math:`\epsilon-\sigma V` is separated into a
+term characterizing the activation enthalpy :math:`\epsilon`, and a term giving the stress bias :math:`\sigma V`,
+where :math:`\sigma` is the biasing stress over the activation volume :math:`V`.
 
     .. math:: \dot{n} = \eta exp\left(-\frac{\epsilon-\sigma V}{kT}\right)
             :label: rate_equation
@@ -147,7 +174,9 @@ Statistical investigation of the onset of plasticity
     .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)F^{1/3}_{crit}
             :label: max_Hertzian_shearStress
 
-With :math:`\tau_\text{max}` the maximun shear stress at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
+With :math:`\dot{n}` is the local rate at which the critical event occurs per unit volume of material, 
+:math:`\eta` the pre-exponential frequency factor, :math:`k` the Boltzmann constant, :math:`\tau_\text{max}` the maximun shear stress
+obtained for the maximum pressure :math:`p_\text{max}`, at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
 
 Find here the |matlab| function to calculate the maximum shear stress:
 `maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxShearStress.m>`_.
@@ -158,34 +187,23 @@ Find here the |matlab| function to calculate the maximum pressure:
 Find here the |matlab| function to calculate the mean pressure:
 `meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
 
-    .. math:: \frac{1}{E^{*}} = \frac{1}{E_\text{s}^{'}} + \frac{1}{E_\text{i}^{'}}
-            :label: reduced_youngs_modulus
-
-With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:`E_\text{i}^{'}` the reduced Young's modulus of the indenter.
-
-    .. math:: \frac{1}{R^{*}} = \frac{1}{R_\text{s}} + \frac{1}{R_\text{i}}
-            :label: reduced_radius
-
-With :math:`R_\text{s}` the radius of the sample (usually :math:`+\infty`) and :math:`R_\text{i}` the radius of the indenter.
-
-Find here the |matlab| function to calculate the reduced value of a variable:
-`reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
-
     .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
             :label: sampling_volume
             
     .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
             :label: loadrate
             
-    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c}\right)\right)
+    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c}\right)\right)\right)
             :label: first_order_analytical_solution
             
     .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)^{2/3}\frac{V}{kT}
             :label: alpha_function
             
-    .. math:: \beta = \left(120+exp(F_\text{c}^{1/3}\alpha))\cdot\left(F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120\right)\right)
+    .. math:: \beta = \left(120+exp(F_\text{c}^{1/3}\alpha)\right)\cdot\left(F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120\right)\right)
             :label: beta_function
 
+With :math:`K` a proportionality constant of order :math:`\pi`.
+            
 Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
 `Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/Mason_cdf.m>`_.
 
@@ -195,47 +213,57 @@ Find here the |matlab| function to calculate the :math:`\alpha` function:
 Find here the |matlab| function to calculate the :math:`\beta` function:
 `betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
 
-==> [#Wang_2012]_
-
-The surface mechanical state for each polishing step can be
-characterized by the detailed statistics of pop-in behavior.
+.. note::
+    The surface mechanical state (presence of dislocations after polishing steps or surface free of dislocation)
+    can modified the statistics of pop-in behavior [#Wang_2012]_.
 
 Strain transfer across grain boundaries in metals
 ####################################################
 
-Some authors observed sometimes two pop-in on the load-displacement curve during indentation performed close to a grain boundary (see Figure 3 and Figure 4).
-The first pop-in is usually attributed to the nucleation of dislocation in a metallic material (see previous section of this documentation),
-and the second pop-in is related to the presence nearby of the grain boundary.
+Some authors observed sometimes two pop-in on the load-displacement curve during indentation performed close to a grain boundary
+(see Figure 2 and Figure 3). The first pop-in is usually attributed to the nucleation of dislocation in a metallic material
+(see previous section of this documentation), and the second pop-in is related to the presence nearby of the grain boundary.
  
 The occurrence of such a strain burst is found to be related to the slip activity (function of the phase material and the grain orientation),
 to the grain boundary resistance (function of the grain boundary misorientation [#Wang_2004]_, 
 to the local chemistry [#Britton_2011]_ (impurities, embrittled hydrogen...), to the prior plastic deformation [#Britton_2011]_, to
-the distance between the indenter and the grain boundary [#Wang_2004]_, or other experimental parameters like the shape of the indenter and the grain boundary inclination...
+the distance between the indenter and the grain boundary [#Wang_2004]_,
+or other experimental parameters like the shape of the indenter and the grain boundary inclination...
 
-Recently, the STABiX Matlab toolbox was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_ and [#Stabix_2015]_.
+Recently, the `STABiX Matlab toolbox <STABiX toolbox <http://stabix.readthedocs.org/en/latest/>>`_
+was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_ and [#Stabix_2015]_.
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
 
-In the case of indentation performed on bilayer system a hard brittle film on an elastic-plastic substrate
+In the case of indentation made into a hard brittle film (e.g.: native or thermally/anodically grown oxide, ALD coatings ...)
+on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film (see Figure 4)
+[#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
 
-[#Bahr_2003]_ [#Stauffer_2012]_  [#Morash_2007]_
-
-    .. math:: F_\text{crit,s} = Kh_\text{crit}^n
-            :label: critical_load_substrate
-
-With :math:`F_\text{crit,s}`   and :math:`K` :math:`n`
+Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
+The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation :
 
     .. math:: c = \sqrt{\frac{3F_\text{crit,s}}{2\pi\sigma_\text{e}}}
             :label: plastic_zone_radius
 
+With :math:`F_\text{crit,s}` the load carried by the substrate obtained with the power law relationship :eq:`critical_load_substrate`,
+and :math:`\sigma_\text{e}` is the yield stress of the ductile substrate.
+
+    .. math:: F_\text{crit,s} = Kh_\text{crit}^n
+            :label: critical_load_substrate
+
+With :math:`h_\text{crit}` the critical displacement at which the pop-in appears.
+The two constants :math:`K` and :math:`n` are obtained from a fitting procedure of the load-displacement curve
+obtained from nanoindentation tests performed on the substrate without the brittle film.
+
 .. figure:: ./_pictures/popin_mechanisms_2.png
-   :scale: 20 %
+   :scale: 30 %
    :align: center
 
-   *Figure 2 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
-
-With :math:`\sigma_\text{e}` the yield stress of the metallic substrate.
+   *Figure 4 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
+   
+In the Figure 4, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
+:math:`h` is the indentation displacement, :math:`c` the radius of the plastic zone in the substrate and :math:`a_\text{c}` the contact radius between the indenter and the thin film.
 
 Matlab functions to fit probability distributions
 ###################################################
@@ -248,7 +276,7 @@ References
 #############
 
 .. [#Afferante_2006] `Afferante L. et al., "Is Weibull’s modulus really a material constant? Example case with interacting collinear cracks" (2006). <http://dx.doi.org/10.1016/j.ijsolstr.2005.08.002>`_
-.. [#Bahr_2003] `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <http://dx.doi.org/10.1016/S1359-6454(98)00024-X>`_
+.. [#Bahr_2003] `Bahr D.F. et al., "Indentation induced film fracture in hard film – soft substrate systems" (2003). <http://dx.doi.org/10.1023/A:1024979030155>`_
 .. [#Britton_2011] `Britton T.B. et al., "Nanoindentation study of slip transfer phenomenon at grain boundaries" (2011). <http://dx.doi.org/10.1557/jmr.2009.0088>`_
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_

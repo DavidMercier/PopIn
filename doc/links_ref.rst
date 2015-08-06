@@ -33,6 +33,7 @@ Dislocation nucleation
 * `Corcoran S.G. et al., "Anomalous plastic deformation at surfaces: Nanoindentation of gold single crystals" (1997). <http://dx.doi.org/10.1103/PhysRevB.55.R16057>`_
 * `Michalske T.A. and Houston J.E., "Dislocation nucleation at nano-scale mechanical contacts" (1998). <http://dx.doi.org/10.1016/S1359-6454(97)00270-X>`_
 * `Kelchner C.L. et al., "Dislocation nucleation and defect structure during surface indentation" (1998). <http://dx.doi.org/10.1103/PhysRevB.58.11085>`_
+* `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <http://dx.doi.org/10.1016/S1359-6454(98)00024-X>`_
 * `Bahr D.F. et al., "Energy considerations regarding yield points during indentation" (1999). <http://dx.doi.org/10.1557/JMR.1999.0303>`_
 * `Suresh S. et al., "Nano-indentation of copper thin films on silicon substrates" (1999). <http://dx.doi.org/10.1016/S1359-6462(99)00245-6>`_
 * `Cáceres D. et al., "Nanoindentation on AlGaN thin films" (1999). <http://dx.doi.org/10.1063/1.371726>`_
@@ -102,6 +103,7 @@ Dislocation nucleation
 * `Jian S.-R., "Pop-in effects and dislocation nucleation of c-plane single-crystal ZnO by Berkovich nanoindentation" (2015). <http://dx.doi.org/10.1016/j.jallcom.2015.04.203>`_
 * `Barnoush A. et al., "Correlation between the hydrogen chemical potential and pop-in load during in situ electrochemical nanoindentation" (2015).<http://dx.doi.org/10.1016/j.scriptamat.2015.06.021>`_
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
+* `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ---------------------------------------------------------------------------------
@@ -109,7 +111,6 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Pethica J.B. and Tabor D., "Contact of characterised metal surfaces at very low loads: Deformation and adhesion" (1979). <http://dx.doi.org/10.1016/0039-6028(79)90606-X>`_
 * `Chechenin N.G. et al. "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 * `Weppelmann E. and Swain M.V., "Investigation of the stresses and stress intensity factors responsible for fracture of thin protective films during ultra-micro indentation tests with spherical indenters" (1996). <http://dx.doi.org/10.1016/S0040-6090(95)08525-4>`_
-* `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <http://dx.doi.org/10.1016/S1359-6454(98)00024-X>`_
 * `Hainsworth S.V. et al., "The effect of coating cracking on the indentation response of thin hard-coated systems" (1998). <http://dx.doi.org/10.1016/S0257-8972(97)00683-X>`_
 * `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
 * `Pang M. and Bahr D.F., "Thin-film fracture during nanoindentation of a titanium oxide film–titanium system" (2001). <http://dx.doi.org/10.1557/JMR.2001.0362>`_
@@ -171,6 +172,7 @@ Statistics of pop-in
 * `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
 * `Chechenin N.G. et al. "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates" (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 * `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
+* `Morash K.R. and Bahr D.F., "Nanomechanical testing for fracture of oxide films.", Journal of materials research" (2005). <http://dx.doi.org/10.1557/JMR.2005.0188>`_
 * `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
 * `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <http://dx.doi.org/10.1557/JMR.2005.0056>`_
 * `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
@@ -184,3 +186,4 @@ on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
 * `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
 * `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
+* `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
