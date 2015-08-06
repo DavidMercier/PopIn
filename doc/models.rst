@@ -199,7 +199,7 @@ Find here the |matlab| function to calculate the mean pressure:
     .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)^{2/3}\frac{V}{kT}
             :label: alpha_function
             
-    .. math:: \beta = \left(120+exp(F_\text{c}^{1/3}\alpha)\right)\cdot\left(F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120\right)
+    .. math:: \beta = 120exp(-F_\text{c}^{1/3}\alpha) + F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120
             :label: beta_function
 
 With :math:`K` a proportionality constant of order :math:`\pi`.
@@ -234,8 +234,8 @@ to the local chemistry [#Britton_2011]_ (impurities, embrittled hydrogen...), to
 the distance between the indenter and the grain boundary [#Wang_2004]_,
 or other experimental parameters like the shape of the indenter and the grain boundary inclination...
 
-Recently, the `STABiX Matlab toolbox <STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
-was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_ and [#Stabix_2015]_.
+Recently, the `STABiX Matlab toolbox <https://github.com/stabix/stabix>`_
+was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_and [#StabixRepo_2015]_.
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
@@ -293,7 +293,8 @@ References
 .. [#Schuh_2004] `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
 .. [#Schuh_2005] `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
 .. [#Schuh_2006] `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
-.. [#Stabix_2015] `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
+.. [#StabixRepo_2015] `STABiX toolbox repository <https://github.com/stabix/stabix>`_
+.. [#StabixDoc_2015] `STABiX toolbox documentation <http://stabix.readthedocs.org/en/latest/>`_
 .. [#Stauffer_2012] `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
 .. [#Wang_2004] `Wang M.G. and Ngan A.H.W., "Indentation strain burst phenomenon induced by grain boundaries in niobium" (2004). <http://dx.doi.org/10.1557/JMR.2004.0316>`_
 .. [#Wang_2012] `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
