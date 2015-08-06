@@ -113,7 +113,7 @@ obtained with a spherical indenter, can be fitted with the Hertz equation (see F
     .. math:: F_\text{c}  = (4/3) E^{*} \sqrt{R^{*}} F_\text{c}^{1.5}
             :label: Hertz_equation
 
-With :math:`E^{*}` the reduced Young's modulus calculated form indentation test defined by :eq:`reduced_youngs_modulus` and 
+With :math:`E^{*}` the reduced Young's modulus calculated from indentation test defined by :eq:`reduced_youngs_modulus` and 
 :math:`R^{*}` the reduced radius of the spherical indenter defined by :eq:`reduced_radius`.
 
     .. math:: \frac{1}{E^{*}} = \frac{1}{E_\text{s}^{'}} + \frac{1}{E_\text{i}^{'}}
@@ -187,23 +187,19 @@ Find here the |matlab| function to calculate the maximum pressure:
 Find here the |matlab| function to calculate the mean pressure:
 `meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
 
-.. note::
-    See this `Github repository <https://github.com/DavidMercier/HertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
-    caused by Hertz pressure acting on a circular area radius.
-
     .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
             :label: sampling_volume
             
     .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
             :label: loadrate
             
-    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c}\)\right)\right)
+    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c})\right)\right)
             :label: first_order_analytical_solution
             
     .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)^{2/3}\frac{V}{kT}
             :label: alpha_function
             
-    .. math:: \beta = \left(120+exp(F_\text{c}^{1/3}\alpha)\right)\cdot\left(F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120\right)\right)
+    .. math:: \beta = \left(120+exp(F_\text{c}^{1/3}\alpha)\right)\cdot\left(F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120\right)
             :label: beta_function
 
 With :math:`K` a proportionality constant of order :math:`\pi`.
@@ -220,6 +216,10 @@ Find here the |matlab| function to calculate the :math:`\beta` function:
 .. note::
     The surface mechanical state (presence of dislocations after polishing steps or surface free of dislocation)
     can modified the statistics of pop-in behavior [#Wang_2012]_.
+    
+.. note::
+    See this `Github repository <https://github.com/DavidMercier/HertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
+    caused by Hertz pressure acting on a circular area radius.
 
 Strain transfer across grain boundaries in metals
 ####################################################
