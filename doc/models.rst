@@ -110,7 +110,7 @@ of crystalline materials (see Figure 2) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_
 [#Lu_2012]_, [#Ramalingam_2012]_, [#Wu_2014_1]_ and [#Wu_2014_2]_. Before the pop-in event, the indentation load-displacement
 obtained with a spherical indenter, can be fitted with the Hertz equation (see Figure 3) [#Johnson_1987]_:
 
-    .. math:: F_\text{c}  = (4/3) * E^{*} * \sqrt{R^{*}} * F_\text{t}^1.5
+    .. math:: F_\text{c}  = (4/3) E^{*} \sqrt{R^{*}} F_\text{c}^{1.5}
             :label: Hertz_equation
 
 With :math:`E^{*}` the reduced Young's modulus calculated form indentation test defined by :eq:`reduced_youngs_modulus` and 
@@ -127,13 +127,13 @@ With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:
 With :math:`R_\text{s}` the radius of the sample (usually :math:`+\infty`) and :math:`R_\text{i}` the radius of the indenter.
 
 Find here the |matlab| function to calculate the load with the Hertz equation:
-`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact\elasticLoad.m>`_.
+`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticLoad.m>`_.
 
 Find here the |matlab| function to calculate the displacement with the Hertz equation:
-`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact\elasticDisp.m>`_.
+`elasticDisp.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticDisp.m>`_.
 
 Find here the |matlab| function to calculate the contact radius with the Hertz equation:
-`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact\elasticRadius.m>`_.
+`elasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticRadius.m>`_.
 
 Find here the |matlab| function to calculate the reduced value of a variable:
 `reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
@@ -187,13 +187,17 @@ Find here the |matlab| function to calculate the maximum pressure:
 Find here the |matlab| function to calculate the mean pressure:
 `meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
 
+.. note::
+    See this `Github repository <https://github.com/DavidMercier/HertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
+    caused by Hertz pressure acting on a circular area radius.
+
     .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
             :label: sampling_volume
             
     .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
             :label: loadrate
             
-    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c}\right)\right)\right)
+    .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c}\)\right)\right)
             :label: first_order_analytical_solution
             
     .. math:: \alpha = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)^{2/3}\frac{V}{kT}
@@ -230,7 +234,7 @@ to the local chemistry [#Britton_2011]_ (impurities, embrittled hydrogen...), to
 the distance between the indenter and the grain boundary [#Wang_2004]_,
 or other experimental parameters like the shape of the indenter and the grain boundary inclination...
 
-Recently, the `STABiX Matlab toolbox <STABiX toolbox <http://stabix.readthedocs.org/en/latest/>>`_
+Recently, the `STABiX Matlab toolbox <STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
 was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_ and [#Stabix_2015]_.
 
 Rupture of a hard brittle film on an elastic-plastic substrate
