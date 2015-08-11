@@ -18,4 +18,4 @@ Example
 
 * `MTS-XP_Indcon5um_Al2O3-40nm.xls <https://github.com/DavidMercier/PopIn/blob/master/Indentation_data/MTS-XP_Indcon5um_Al2O3-40nm.xls>`_
     - Data obtained for a sample of ALD-Alumina (40nm) on a substrate of PVD-Aluminum (500nm) deposited on a oxidized silicon substrate.
-    - Tests were performed on a Nanoindenter XP MTS with a sphero-conical indenter (radius 5microns), without CSM mode.
+    - Tests were performed on a Nanoindenter XP MTS with a sphero-conical indenter (radius 5microns), without CSM mode at room temperature.

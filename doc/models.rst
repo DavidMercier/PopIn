@@ -3,9 +3,6 @@
 
 .. include:: includes.rst
 
-Nanoindentation experiment
-############################
-
 The nanoindentation (or instrumented or depth sensing indentation) is a variety
 of indentation hardness tests applied to small volumes. During nanoindentation,
 an indenter is brought into contact with a sample and mechanically loaded.
@@ -38,6 +35,9 @@ nanoindentation experiments, a vertical drop of the load is observed on the load
 :math:`F_\text{c,max}` is the maximum applied load, :math:`h_\text{t}` is the total indentation depth and
 :math:`h_\text{r}` is the residual indentation depth.
 
+Find here the |matlab| function to quantify pop-in by peak detection:
+`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
+
 .. warning::
     In this toolbox, only load-controlled nanoindentation experiments are analyzed.
 
@@ -46,19 +46,13 @@ Many authors observed pop-in events on metals or metallic thin films, ceramics, 
 The pop-in event is often explained by on of the following mechanisms in function of the indented specimen (ceramic, metal, semiconductor, coated or multilayer specimen...)
 and the experimental conditions (time, temperature, geometry of the indenter...) :
 
-    * dislocations nucleation (= sudden yielding of a material under load) ;
-    * rupture of a hard brittle film on an elastic-plastic substrate ;
+    * :ref:`dislocation_nucleation` (= sudden yielding of a material under load) ;
+    * :ref:`film_fracture:` ;
+    * :ref:`strain_transfer:` ;
     * crack(s) formation ; 
-    * phase transformation ;
-    * strain transfer across a grain boundary.
+    * phase transformation...
 
 Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
-
-Pop-in detection
-#################################
-
-Find here the |matlab| function to quantify pop-in by peak detection:
-`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
 
 Weibull-type distribution
 #################################
@@ -102,8 +96,10 @@ are implemented in the PopIn toolbox.
 Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
 `Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
 
-Statistical investigation of the onset of plasticity
-######################################################
+.. _dislocation_nucleation:
+
+Dislocations nucleation
+###############################
 
 According to many authors, pop-in corresponds to the nucleation of at least one dislocation, during indentation
 of crystalline materials (see Figure 2) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_, [#Wo_2006]_, [#Morris_2011]_,
@@ -173,10 +169,16 @@ where :math:`\sigma` is the biasing stress over the activation volume :math:`V`.
 
     .. math:: \tau_\text{max} = 0.31p_0 = 0.47p_\text{max} = \left(\frac{0.47}{\pi}\right)\left(\frac{4E^{*}}{3R^{*}}\right)F^{1/3}_{crit}
             :label: max_Hertzian_shearStress
+            
+    .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
+            :label: sampling_volume
+            
+    .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
+            :label: loadrate
 
 With :math:`\dot{n}` is the local rate at which the critical event occurs per unit volume of material, 
 :math:`\eta` the pre-exponential frequency factor, :math:`k` the Boltzmann constant, :math:`\tau_\text{max}` the maximun shear stress
-obtained for the maximum pressure :math:`p_\text{max}`, at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_.
+obtained for the maximum pressure :math:`p_\text{max}`, at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_. :math:`K` is a proportionality constant of order :math:`\pi`.
 
 Find here the |matlab| function to calculate the maximum shear stress:
 `maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxShearStress.m>`_.
@@ -187,12 +189,8 @@ Find here the |matlab| function to calculate the maximum pressure:
 Find here the |matlab| function to calculate the mean pressure:
 `meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
 
-    .. math:: \Omega \approx Ka^3 = K\left(\frac{3F_{crit}R^{*}}{4E^{*}}\right)
-            :label: sampling_volume
-            
-    .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
-            :label: loadrate
-            
+Finally, a statistical expression of the onset of plasticity can be formulated by combining previous equations, giving the cumulative fraction function :math:`W(F_\text{c})` :
+
     .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c})\right)\right)
             :label: first_order_analytical_solution
             
@@ -202,8 +200,6 @@ Find here the |matlab| function to calculate the mean pressure:
     .. math:: \beta = 120exp(-F_\text{c}^{1/3}\alpha) + F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120
             :label: beta_function
 
-With :math:`K` a proportionality constant of order :math:`\pi`.
-            
 Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
 `Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/Mason_cdf.m>`_.
 
@@ -221,6 +217,8 @@ Find here the |matlab| function to calculate the :math:`\beta` function:
     See this `Github repository <https://github.com/DavidMercier/HertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
     caused by Hertz pressure acting on a circular area radius.
 
+.. _strain_transfer:
+    
 Strain transfer across grain boundaries in metals
 ####################################################
 
@@ -236,6 +234,8 @@ or other experimental parameters like the shape of the indenter and the grain bo
 
 Recently, the `STABiX Matlab toolbox <https://github.com/stabix/stabix>`_
 was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_ and [#StabixRepo_2015]_.
+
+.. _film_fracture:
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################

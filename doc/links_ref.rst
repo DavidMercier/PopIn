@@ -125,6 +125,7 @@ Cracks formation
 ---------------------------
 
 * Lawn B.R. and Fuller E.R. Jr, "Equilibrium penny-like crack in indentation fracture" (1975).
+* Malzbender J. and de With  G., "The use of the indentation loading curve to detect fracture of coatings" (2001). <http://dx.doi.org/10.1016/S0257-8972(00)01091-4>`_
 * Field J.S. et al., "Nano-indentation fracture of fused silica and glassy carbon with a corner cube and 45°" (2001).
 * `Field J.S. et al., "Determination of fracture toughness from the extra penetration produced by indentation-induced pop-in" (2003). <http://dx.doi.org/10.1557/JMR.2003.0194>`_
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <http://dx.doi.org/10.1063/1.1711164>`_
