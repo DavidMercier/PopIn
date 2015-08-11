@@ -41,6 +41,7 @@ Dislocation nucleation
 * `Gouldstone A. et al., "Discrete and continuous deformation during nanoindentation of thin films" (2000). <http://dx.doi.org/10.1016/S1359-6454(00)00009-4>`_
 * `Bradby J.E. et al., "Mechanical deformation of InP and GaAs by spherical indentation" (2001). <http://dx.doi.org/10.1063/1.1372207>`_
 * `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
+* `Ohmura T. et al., "Nanoindentation load–displacement behavior of pure face centered cubic metal thin films on a hard substrate" (2001). <http://dx.doi.org/10.1016/S0040-6090(00)01907-6>`_
 * `Göken M. et al., "Microstructural mechanical properties and yield point effects in Mo alloys" (2001). <http://dx.doi.org/10.1016/S0921-5093(01)01086-3>`_
 * `Chiu Y.L. et al., "Time-dependent characteristics of incipient plasticity in nanoindentation of a Ni3Al single crystal" (2002). <http://dx.doi.org/10.1016/S1359-6454(02)00025-3>`_
 * `Lorenz D. et al., "Pop-in effect as homogeneous nucleation of dislocations during nanoindentation"(2003). <http://dx.doi.org/10.1103/PhysRevB.67.172101>`_
@@ -109,6 +110,8 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 ---------------------------------------------------------------------------------
 
 * `Pethica J.B. and Tabor D., "Contact of characterised metal surfaces at very low loads: Deformation and adhesion" (1979). <http://dx.doi.org/10.1016/0039-6028(79)90606-X>`_
+* `Whitehead A.J. and Page T.F., "Nanoindentation studies of thin film coated systems" (1992). <http://dx.doi.org/10.1016/0040-6090(92)90585-Y>`_
+* `Hainsworth S.V. et al., "The nanoindentation response of systems with thin hard carbon coatings" (1993). <http://dx.doi.org/10.1016/0040-6090(93)90672-C>`_
 * `Chechenin N.G. et al. "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 * `Weppelmann E. and Swain M.V., "Investigation of the stresses and stress intensity factors responsible for fracture of thin protective films during ultra-micro indentation tests with spherical indenters" (1996). <http://dx.doi.org/10.1016/S0040-6090(95)08525-4>`_
 * `Hainsworth S.V. et al., "The effect of coating cracking on the indentation response of thin hard-coated systems" (1998). <http://dx.doi.org/10.1016/S0257-8972(97)00683-X>`_
