@@ -47,8 +47,8 @@ The pop-in event is often explained by on of the following mechanisms in functio
 and the experimental conditions (time, temperature, geometry of the indenter...) :
 
     * :ref:`dislocation_nucleation` (= sudden yielding of a material under load) ;
-    * :ref:`film_fracture:` ;
-    * :ref:`strain_transfer:` ;
+    * :ref:`film_fracture` ;
+    * :ref:`strain_transfer` ;
     * crack(s) formation ; 
     * phase transformation...
 
