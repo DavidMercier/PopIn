@@ -102,7 +102,7 @@ Dislocation nucleation
 * `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
 * `Xia Y., "Investigation of deformation and failure mechanisms in nanoindentation mechanics" (2014). <http://trace.tennessee.edu/utk_graddiss/3183/>`_
 * `Jian S.-R., "Pop-in effects and dislocation nucleation of c-plane single-crystal ZnO by Berkovich nanoindentation" (2015). <http://dx.doi.org/10.1016/j.jallcom.2015.04.203>`_
-* `Barnoush A. et al., "Correlation between the hydrogen chemical potential and pop-in load during in situ electrochemical nanoindentation" (2015).<http://dx.doi.org/10.1016/j.scriptamat.2015.06.021>`_
+* `Barnoush A. et al., "Correlation between the hydrogen chemical potential and pop-in load during in situ electrochemical nanoindentation" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.06.021>`_
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 * `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
 
@@ -128,7 +128,7 @@ Cracks formation
 ---------------------------
 
 * Lawn B.R. and Fuller E.R. Jr, "Equilibrium penny-like crack in indentation fracture" (1975).
-* Malzbender J. and de With  G., "The use of the indentation loading curve to detect fracture of coatings" (2001). <http://dx.doi.org/10.1016/S0257-8972(00)01091-4>`_
+* `Malzbender J. and de With  G., "The use of the indentation loading curve to detect fracture of coatings" (2001). <http://dx.doi.org/10.1016/S0257-8972(00)01091-4>`_
 * Field J.S. et al., "Nano-indentation fracture of fused silica and glassy carbon with a corner cube and 45°" (2001).
 * `Field J.S. et al., "Determination of fracture toughness from the extra penetration produced by indentation-induced pop-in" (2003). <http://dx.doi.org/10.1557/JMR.2003.0194>`_
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <http://dx.doi.org/10.1063/1.1711164>`_
