@@ -185,8 +185,7 @@ Statistics of pop-in
 * `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
 * `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <http://dx.doi.org/10.1016/j.actamat.2011.11.034>`_
-* `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in
-on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
+* `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
 * `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <http://dx.doi.org/10.1016/j.scriptamat.2014.09.017>`_
 * `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <http://dx.doi.org/10.1016/j.msea.2014.04.107>`_
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
