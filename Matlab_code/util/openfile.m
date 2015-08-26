@@ -5,9 +5,10 @@ gui = guidata(gcf);
 
 %% Open window to select file
 [filename_data, pathname_data, filterindex_data] = ...
-    uigetfile('*.xls', 'File Selector');
+    uigetfile('*.xls', 'File Selector', gui.data_xls.pathname_data);
 gui.data_xls.filename_data = filename_data;
 gui.data_xls.pathname_data = pathname_data;
+fullname_data = fullfile(pathname_data, filename_data);
 
 %% Handle canceled file selection
 if filename_data == 0
@@ -24,7 +25,7 @@ if isequal(filename_data,'')
     ext = '.nul';
     
 else
-    disp(['User selected', fullfile(pathname_data, filename_data)]);
+    disp(['User selected', fullname_data]);
     [pathstr, name, ext] = fileparts(filename_data);
     
 end
@@ -35,7 +36,7 @@ if strcmp (ext, '.nul') == 1
     
 elseif strcmp (ext, '.xls') == 1
     sheet = 1;
-    [gui.data, txt] = xlsread(filename_data, sheet);
+    [gui.data, txt] = xlsread(fullname_data, sheet);
     str_endsegment = txt(:,1); %limite
     
     if isempty(str_endsegment)
@@ -51,7 +52,7 @@ elseif strcmp (ext, '.xls') == 1
             'ListString', str_endsegment_true);
         
         % Get the number of sheets in the .xls file
-        [status_xls, sheets_xls] = xlsfinfo(filename_data);
+        [status_xls, sheets_xls] = xlsfinfo(fullname_data);
         gui.data_xls.status_xls = status_xls;
         gui.data_xls.sheets_xls = sheets_xls;
     end
@@ -71,7 +72,7 @@ elseif strcmp (ext, '.xls') == 1
     for ii_sheet = 1:1:length(sheets_xls)
         waitbar(ii_sheet / length(sheets_xls), gui.handles.h_waitbar);
         
-        [data, txt] = xlsread(filename_data, ii_sheet);
+        [data, txt] = xlsread(fullname_data, ii_sheet);
         raw_str_endsegment = txt(:,1);
         
         % Set the y index to crop data in function of chosen segment
@@ -81,7 +82,7 @@ elseif strcmp (ext, '.xls') == 1
         data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index);
         
         [data_cropped, txt_cropped] = ...
-            xlsread(filename_data, ii_sheet, data_index);
+            xlsread(fullname_data, ii_sheet, data_index);
         
         % Import data
         gui.data(ii_sheet).data_h = data_cropped(:, 1);
