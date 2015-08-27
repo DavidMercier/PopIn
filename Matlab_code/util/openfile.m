@@ -5,7 +5,7 @@ gui = guidata(gcf);
 
 %% Open window to select file
 [filename_data, pathname_data, filterindex_data] = ...
-    uigetfile('*.xls', 'File Selector', gui.data_xls.pathname_data);
+    uigetfile('*.xls;*xlsx', 'File Selector', gui.data_xls.pathname_data);
 gui.data_xls.filename_data = filename_data;
 gui.data_xls.pathname_data = pathname_data;
 fullname_data = fullfile(pathname_data, filename_data);
@@ -23,18 +23,18 @@ if isequal(filename_data,'')
     disp('User selected Cancel');
     filename_data = 'no_data';
     ext = '.nul';
-    
 else
     disp(['User selected', fullname_data]);
     [pathstr, name, ext] = fileparts(filename_data);
-    
 end
 
-%% Set data from .xls file (segments, number of sheets...)
+set(gui.handles.opendata_str, 'String', fullname_data);
+
+%% Set data from .xls or xlsx file (segments, number of sheets...)
 if strcmp (ext, '.nul') == 1
     errorLoadingData;
     
-elseif strcmp (ext, '.xls') == 1
+elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     sheet = 1;
     [gui.data, txt] = xlsread(fullname_data, sheet);
     str_endsegment = txt(:,1); %limite
@@ -73,24 +73,29 @@ elseif strcmp (ext, '.xls') == 1
         waitbar(ii_sheet / length(sheets_xls), gui.handles.h_waitbar);
         
         [data, txt] = xlsread(fullname_data, ii_sheet);
-        raw_str_endsegment = txt(:,1);
         
-        % Set the y index to crop data in function of chosen segment
-        y_index = find(strcmp(raw_str_endsegment, ...
-            str_endsegment_true(s__endsegment)) == 1);
-        
-        data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index);
-        
-        [data_cropped, txt_cropped] = ...
-            xlsread(fullname_data, ii_sheet, data_index);
-        
-        % Import data
-        gui.data(ii_sheet).data_h = data_cropped(:, 1);
-        gui.data(ii_sheet).data_L = data_cropped(:, 2);
-        min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
-        max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
-        min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
-        max_data_L(ii_sheet) = max(gui.data(ii_sheet).data_L);
+        if ~isempty(txt)
+            raw_str_endsegment = txt(:,1);
+            
+            % Set the y index to crop data in function of chosen segment
+            y_index = find(strcmp(raw_str_endsegment, ...
+                str_endsegment_true(s__endsegment)) == 1);
+            
+            data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index);
+            
+            [data_cropped, txt_cropped] = ...
+                xlsread(fullname_data, ii_sheet, data_index);
+            
+            % Import data
+            gui.data(ii_sheet).data_h = data_cropped(:, 1);
+            gui.data(ii_sheet).data_L = data_cropped(:, 2);
+            min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
+            max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
+            min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
+            max_data_L(ii_sheet) = max(gui.data(ii_sheet).data_L);
+        else
+            display('Empty Excel sheet !');
+        end
     end
     
     delete(gui.handles.h_waitbar);

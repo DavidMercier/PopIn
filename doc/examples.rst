@@ -13,9 +13,6 @@ Format of data
 ..  warning::
     It is advised to do at least 30 indentation tests to have consistent results.
 
-..  warning::
-    Remove empty sheet in the Excel file.
-
 Example
 ########
 
