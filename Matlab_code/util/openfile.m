@@ -81,20 +81,31 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
             y_index = find(strcmp(raw_str_endsegment, ...
                 str_endsegment_true(s__endsegment)) == 1);
             
-            data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index);
+            if ~isempty(y_index)
+                data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index);
+                
+                [data_cropped, txt_cropped] = ...
+                    xlsread(fullname_data, ii_sheet, data_index);
+                
+                % Import data
+                gui.data(ii_sheet).data_h = data_cropped(:, 1);
+                gui.data(ii_sheet).data_L = data_cropped(:, 2);
+                min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
+                max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
+                min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
+                max_data_L(ii_sheet) = max(gui.data(ii_sheet).data_L);
+                
+            else
+                display(strcat('Missing segment for the sheet number_', ...
+                    num2str(ii_sheet)));
+                gui.data(ii_sheet).data_h = [];
+                gui.data(ii_sheet).data_L = [];
+            end
             
-            [data_cropped, txt_cropped] = ...
-                xlsread(fullname_data, ii_sheet, data_index);
-            
-            % Import data
-            gui.data(ii_sheet).data_h = data_cropped(:, 1);
-            gui.data(ii_sheet).data_L = data_cropped(:, 2);
-            min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
-            max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
-            min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
-            max_data_L(ii_sheet) = max(gui.data(ii_sheet).data_L);
         else
             display('Empty Excel sheet !');
+            gui.data(ii_sheet).data_h = [];
+            gui.data(ii_sheet).data_L = [];
         end
     end
     
