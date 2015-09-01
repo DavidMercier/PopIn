@@ -3,10 +3,6 @@
 
 .. include:: includes.rst
 
-.. figure:: ./_pictures/GUI_Main_Window_overview.png
-   :scale: 50 %
-   :align: left
-
 1) Import your (nano)indentation results. See here an `examples file <http://popin.readthedocs.org/en/latest/examples.html>`_.
 
 2) Set units, set temperature of experiments, set the minimum and maximum
@@ -22,6 +18,10 @@ to use for the Weibull distribution.
 6) Load-displacement curves with pop-in and Hertzian fit.
 
 7) Cumulative distribution of the pop-in.
+
+.. figure:: ./_pictures/GUI_Main_Window_overview.png
+   :scale: 65 %
+   :align: left
 
 ..  note::
     It is possible to modify YAML configuration files directly from the menu of this interface.
