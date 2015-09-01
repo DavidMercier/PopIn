@@ -3,7 +3,7 @@ function customized_menu(parent)
 %% Setting of customized menu
 % parent: handle of the GUI
 
-yaml_menu = uimenu(parent, 'Label', 'YAML File');
+yaml_menu = uimenu(parent, 'Label', 'YAML files');
 
 uimenu(yaml_menu, ...
     'Label', ...
