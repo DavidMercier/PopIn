@@ -16,6 +16,8 @@ To have more details about the use of the toolbox, please have a look to :
 How to use the GUI for "pop-in" analysis from indentation tests ?
 #################################################################
 
+First of all a GUI is a Graphical User Interface.
+
 * Run the following |matlab| script and answer 'y' or 'yes' to add path to the |matlab| search paths :
 
 .. code-block:: matlab

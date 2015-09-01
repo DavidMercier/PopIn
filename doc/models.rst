@@ -57,8 +57,9 @@ Some authors proposed to describe the statistics of the pop-in event with a cumu
 Weibull-type distribution
 #################################
 
-The cumulative Weibull distribution function with 2 parameters :math:`(\lambda, m)` is a continuous probability distribution
-and is often used to describe particle size distributions and in survival or failure analysis [#Weibull_1951]_.
+The `cumulative Weibull distribution function <https://en.wikipedia.org/wiki/Weibull_distribution>`_
+with 2 parameters :math:`(\lambda, m)` is a continuous probability distribution
+and is often used in the description of particle size distribution and in survival or failure analysis [#Weibull_1951]_.
 
     .. math:: V\left(x, \lambda, m\right) = exp\left(\left(\frac{x}{\lambda}\right)^m\right)
             :label: Weibull_mortality
