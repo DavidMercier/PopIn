@@ -24,7 +24,8 @@ else
         gui = guidata(gcf);
         if gui.flag.flag_cleaned_data
             if ishandle(gui.handles.h_waitbar)
-                waitbar(ii_sheet / gui.data_xls.sheets_xls_notEmpty, gui.handles.h_waitbar);
+                waitbar(ii_sheet / gui.data_xls.sheets_xls_notEmpty, ...
+                    gui.handles.h_waitbar);
             end
             
             % Cleaning and cropping of data from min and max depth set by user
@@ -34,27 +35,41 @@ else
             if gui.flag.flag_cleaned_data == 1
                 %% Calculation of the number of pop-in
                 % Determination of the maximum displacement from cleaned and cropped data
-                for uu = gui.settings.max_bound_h-2:1:gui.settings.max_bound_h
+                max_h = gui.settings.max_bound_h;
+                
+                for uu = max_h-2:1:max_h
                     if rem(uu, 1) == 0
                         umax(ii_sheet) = uu;
                     end
                 end
                 
                 % Calculation of 1st derivative
-                gui.data(ii_sheet).data_dh_cleaned = diff(gui.data(ii_sheet).data_h_cleaned);
-                gui.data(ii_sheet).data_dL_cleaned = diff(gui.data(ii_sheet).data_L_cleaned);
-                gui.data(ii_sheet).data_dh_cleaned(length(gui.data(ii_sheet).data_dh_cleaned)+1) = gui.data(ii_sheet).data_dh_cleaned(length(gui.data(ii_sheet).data_dh_cleaned));
-                gui.data(ii_sheet).data_dL_cleaned(length(gui.data(ii_sheet).data_dL_cleaned)+1) = gui.data(ii_sheet).data_dL_cleaned(length(gui.data(ii_sheet).data_dL_cleaned));
+                gui.data(ii_sheet).data_dh_cleaned = ...
+                    diff(gui.data(ii_sheet).data_h_cleaned);
+                gui.data(ii_sheet).data_dL_cleaned = ...
+                    diff(gui.data(ii_sheet).data_L_cleaned);
+                gui.data(ii_sheet).data_dh_cleaned(length(gui.data(ii_sheet).data_dh_cleaned)+1) = ...
+                    gui.data(ii_sheet).data_dh_cleaned(length(gui.data(ii_sheet).data_dh_cleaned));
+                gui.data(ii_sheet).data_dL_cleaned(length(gui.data(ii_sheet).data_dL_cleaned)+1) = ...
+                    gui.data(ii_sheet).data_dL_cleaned(length(gui.data(ii_sheet).data_dL_cleaned));
                 
                 % Calculation of 2nd derivative
-                gui.data(ii_sheet).data_ddh_cleaned = diff(gui.data(ii_sheet).data_dh_cleaned);
-                gui.data(ii_sheet).data_ddL_cleaned = diff(gui.data(ii_sheet).data_dL_cleaned);
-                gui.data(ii_sheet).data_ddh_cleaned(length(gui.data(ii_sheet).data_ddh_cleaned)+1) = gui.data(ii_sheet).data_ddh_cleaned(length(gui.data(ii_sheet).data_ddh_cleaned));
-                gui.data(ii_sheet).data_ddL_cleaned(length(gui.data(ii_sheet).data_ddL_cleaned)+1) = gui.data(ii_sheet).data_ddL_cleaned(length(gui.data(ii_sheet).data_ddL_cleaned));
+                gui.data(ii_sheet).data_ddh_cleaned = ...
+                    diff(gui.data(ii_sheet).data_dh_cleaned);
+                gui.data(ii_sheet).data_ddL_cleaned = ...
+                    diff(gui.data(ii_sheet).data_dL_cleaned);
+                gui.data(ii_sheet).data_ddh_cleaned(length(gui.data(ii_sheet).data_ddh_cleaned)+1) = ...
+                    gui.data(ii_sheet).data_ddh_cleaned(length(gui.data(ii_sheet).data_ddh_cleaned));
+                gui.data(ii_sheet).data_ddL_cleaned(length(gui.data(ii_sheet).data_ddL_cleaned)+1) = ...
+                    gui.data(ii_sheet).data_ddL_cleaned(length(gui.data(ii_sheet).data_ddL_cleaned));
                 
-                delta_data = max(gui.data(ii_sheet).data_ddh_cleaned(:)) - mean(gui.data(ii_sheet).data_ddh_cleaned(:));
+                delta_data = ...
+                    max(gui.data(ii_sheet).data_ddh_cleaned(:)) - ...
+                    mean(gui.data(ii_sheet).data_ddh_cleaned(:));
                 
-                [maxpeak, minpeak] = peakdet(gui.data(ii_sheet).data_ddh_cleaned(:), delta_data);
+                [maxpeak, minpeak] = ...
+                    peakdet(gui.data(ii_sheet).data_ddh_cleaned(:), ...
+                    delta_data);
                 
                 % Attribution of pop-in indice(s) for each load-disp curve
                 % (for each Excel sheet)...
@@ -79,7 +94,8 @@ else
         gui.results(1, 1).prob = (1/gui.data_xls.sheets_xls_notEmpty);
         for ii = 1:(gui.data_xls.sheets_xls_notEmpty-1),
             gui.results(ii+1, 1).prob = (((gui.results(ii, 1).prob * ...
-                (gui.data_xls.sheets_xls_notEmpty+1))+1)/(gui.data_xls.sheets_xls_notEmpty+1));
+                (gui.data_xls.sheets_xls_notEmpty+1))+1) / ...
+                (gui.data_xls.sheets_xls_notEmpty+1));
         end
         
         %% Sum of data for statistic analysis and plot of pop-in distribution + fit
@@ -118,29 +134,50 @@ else
         end
         delete(gui.handles.h_waitbar);
         
-        % Set data
         %% Set the data to plot
+        Func = gui.settings.cumulFunction;
+        FuncList = gui.settings.cumulFunctionList;
+        
         if gui.settings.value_crit_param == 1
+            
             for ii = 1:1:length(gui.data)
                 gui.results(ii).binCtrs_init = gui.data(ii).sum_L;
-                gui.results(ii).binCtrs = gui.data(ii).sum_L / mean([gui.data.sum_L]);
+                sorted_sumL = sort([gui.data.sum_L]);
+                if strcmp(Func, FuncList(1,:)) || ...
+                        strcmp(Func, FuncList(2,:))
+                    gui.results(ii).binCtrs = gui.data(ii).sum_L / ...
+                        mean([gui.data.sum_L]);
+                elseif strcmp(Func, FuncList(3,:)) || ...
+                        strcmp(Func, FuncList(4,:))
+                    gui.results(ii).binCtrs = gui.data(ii).sum_L / ...
+                        sorted_sumL(gui.data_xls.sheets_xls_notEmpty/2);
+                end
             end
             gui.resultsMax_binCtrs = max([gui.data.sum_L]);
         elseif gui.settings.value_crit_param  == 2
             for ii = 1:1:length(gui.data)
                 gui.results(ii).binCtrs_init = gui.data(ii).sum_h;
-                gui.results(ii).binCtrs = gui.data(ii).sum_h / mean([gui.data.sum_h]);
+                sorted_sumh = sort([gui.data.sum_h]);
+                if strcmp(Func, FuncList(1,:)) || ...
+                        strcmp(Func, FuncList(2,:))
+                    gui.results(ii).binCtrs = gui.data(ii).sum_h / ...
+                        mean([gui.data.sum_h]);
+                elseif strcmp(Func, FuncList(3,:)) || ...
+                        strcmp(Func, FuncList(4,:))
+                    gui.results(ii).binCtrs = gui.data(ii).sum_h / ...
+                        sorted_sumh(gui.data_xls.sheets_xls_notEmpty/2);
+                end
             end
             gui.resultsMax_binCtrs = max([gui.data.sum_h]);
         end
         
-        if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:)) || ...
-                strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
+        if strcmp(Func, FuncList(1,:)) || ...
+                strcmp(Func, FuncList(3,:))
             xdata_init = sort([gui.results(:).binCtrs_init]);
             xdata = sort([gui.results(:).binCtrs]);
             
-        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:)) || ...
-                strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
+        elseif strcmp(Func, FuncList(2,:)) || ...
+                strcmp(Func, FuncList(4,:))
             xdata_init = sort([gui.results(:).binCtrs_init],'descend');
             xdata = sort([gui.results(:).binCtrs],'descend');
             
@@ -166,21 +203,29 @@ else
         
         % Options settings
         OPTIONS = optimset('lsqcurvefit');
-        OPTIONS = optimset(OPTIONS, 'TolFun',  gui.config.numerics.TolFun_value);
-        OPTIONS = optimset(OPTIONS, 'TolX',    gui.config.numerics.TolX_value);
-        OPTIONS = optimset(OPTIONS, 'MaxIter', gui.config.numerics.MaxIter_value);
+        OPTIONS = optimset(OPTIONS, 'TolFun',  ...
+            gui.config.numerics.TolFun_value);
+        OPTIONS = optimset(OPTIONS, 'TolX',    ...
+            gui.config.numerics.TolX_value);
+        OPTIONS = optimset(OPTIONS, 'MaxIter', ...
+            gui.config.numerics.MaxIter_value);
         
         % Calculations of the cumulative function
-        if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
-            weibull_cdf(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
-        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-            weibull_cdf_survival(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
-        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
-            weibull_modified_cdf(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
-        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
-            weibull_modified_cdf_survival(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
-        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(5,:))
-            mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+        if strcmp(Func, FuncList(1,:))
+            weibull_cdf(OPTIONS, ...
+                [gui.results.xdata_init],[gui.results.ydata]);
+        elseif strcmp(Func, FuncList(2,:))
+            weibull_cdf_survival(OPTIONS, ...
+                [gui.results.xdata_init],[gui.results.ydata]);
+        elseif strcmp(Func, FuncList(3,:))
+            weibull_modified_cdf(OPTIONS, ...
+                [gui.results.xdata_init],[gui.results.ydata]);
+        elseif strcmp(Func, FuncList(4,:))
+            weibull_modified_cdf_survival(OPTIONS, ...
+                [gui.results.xdata_init],[gui.results.ydata]);
+        elseif strcmp(Func, FuncList(5,:))
+            mason_cdf(OPTIONS, ...
+                [gui.results.xdata],[gui.results.ydata]);
         end
         gui = guidata(gcf); guidata(gcf, gui);
         
@@ -201,7 +246,8 @@ else
                 gui.Hertz.elasticDisp = gui.Hertz.elasticDisp_init * 1e3;
             end
             
-            gui.Hertz.elasticLoad = elasticLoad(gui.Hertz.elasticDisp, ...
+            gui.Hertz.elasticLoad = elasticLoad(...
+                gui.Hertz.elasticDisp, ...
                 gui.settings.value_TipRadius, 0, ...
                 gui.settings.value_YoungModulus);
         end
