@@ -1,5 +1,5 @@
 %% Copyright 2014 MERCIER David
-function Mason_cdf(OPTIONS, xdata_fit, ydata_fit)
+function mason_cdf(OPTIONS, xdata_fit, ydata_fit)
 %% Function giving the cumulative distribution in function of the temperature and the loadrate
 % See Mason et al. (2006) - DOI: 10.1103/PhysRevB.73.054102
 
@@ -19,7 +19,7 @@ K = gui.config.numerics.K;
 Rred = reducedValue(R1, R2) * 1e-6; % in m
 Ered = reducedValue(E1, E2) * 1e9; % in N/m2
 
-T = Celsius2Kelvin(T);
+T = celsius2kelvin(T);
 loadrate = loadrate * 1e-3; % in N/s
 epsilon_var = gui.config.numerics.epsilon_var * 1.60217657*1e-19;  % in J = in kg.m2.s-2
 

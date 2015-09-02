@@ -1,5 +1,5 @@
 %% Copyright 2014 MERCIER David
-function Weibull_cdf(OPTIONS, xdata_fit, ydata_fit)
+function weibull_cdf(OPTIONS, xdata_fit, ydata_fit)
 %% Function giving the Weibull cumulative distribution function
 % See http://de.mathworks.com/help/stats/wblcdf.html
 % See Weibull W., “A statistical distribution function of wide applicability”, J. Appl. Mech.-Trans. ASME (1951), 18(3).
