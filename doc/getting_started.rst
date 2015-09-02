@@ -73,11 +73,11 @@ First of all a GUI is a Graphical User Interface.
 The YAML configuration files
 #################################
 
-Default YAML configuration files, stored in the folder `YAML_config_files <https://github.com/DavidMercier/PopIn/tree/master/YAML_config_files>`_, are loaded automatically to set the GUI:
+Default YAML configuration files, stored in the folder `yaml_config_files <https://github.com/DavidMercier/PopIn/tree/master/yaml_config_files>`_, are loaded automatically to set the GUI:
 
-* `data_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/YAML_config_files/data_config.yaml>`_
-* `indenters_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/YAML_config_files/indenter_config.yaml>`_
-* `numerics_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/YAML_config_files/numerics_config.yaml>`_
+* `data_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/data_config.yaml>`_
+* `indenters_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/indenter_config.yaml>`_
+* `numerics_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/numerics_config.yaml>`_
 
 You have to update these YAML config. files, if you want to change indenter properties, constant parameters of models and constant parameters of the least-square method used to solve nonlinear curve-fitting and the path to your datasets.
 

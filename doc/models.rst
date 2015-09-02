@@ -36,7 +36,7 @@ nanoindentation experiments, a vertical drop of the load is observed on the load
 :math:`h_\text{r}` is the residual indentation depth.
 
 Find here the |matlab| function to quantify pop-in by peak detection:
-`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/peakdet.m>`_.
+`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/peakdet.m>`_.
 
 .. warning::
     In this toolbox, only load-controlled nanoindentation experiments are analyzed.
@@ -81,10 +81,10 @@ In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^
 the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
 
 Find here the |matlab| function to calculate the cumulative mortal Weibull distribution:
-`Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf.m>`_.
+`Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf.m>`_.
 
 Find here the |matlab| function to calculate the complementary cumulative survival Weibull distribution:
-`Weibull_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf_survival.m>`_.
+`Weibull_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf_survival.m>`_.
 
 Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
 the description of the statistics of the pop-in event [#Chechenin_1995]_.
@@ -98,10 +98,10 @@ The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative
 are implemented in the PopIn toolbox.
 
 Find here the |matlab| function to calculate the cumulative modified mortal Weibull distribution:
-`Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
+`Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf.m>`_.
 
 Find here the |matlab| function to calculate the complementary cumulative modified survival Weibull distribution:
-`Weibull_modified_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf_survival.m>`_.
+`Weibull_modified_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf_survival.m>`_.
 
 .. _dislocation_nucleation:
 
@@ -130,16 +130,16 @@ With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:
 With :math:`R_\text{s}` the radius of the sample (usually :math:`+\infty`) and :math:`R_\text{i}` the radius of the indenter.
 
 Find here the |matlab| function to calculate the load with the Hertz equation:
-`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticLoad.m>`_.
+`elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/elasticLoad.m>`_.
 
 Find here the |matlab| function to calculate the displacement with the Hertz equation:
-`elasticDisp.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticDisp.m>`_.
+`elasticDisp.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/elasticDisp.m>`_.
 
 Find here the |matlab| function to calculate the contact radius with the Hertz equation:
-`elasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/elasticRadius.m>`_.
+`elasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/elasticRadius.m>`_.
 
 Find here the |matlab| function to calculate the reduced value of a variable:
-`reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/reducedValue.m>`_.
+`reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/reducedValue.m>`_.
 
 .. figure:: ./_pictures/popin_mechanisms_1.png
    :scale: 30 %
@@ -188,13 +188,13 @@ With :math:`\dot{n}` is the local rate at which the critical event occurs per un
 obtained for the maximum pressure :math:`p_\text{max}`, at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_. :math:`K` is a proportionality constant of order :math:`\pi`.
 
 Find here the |matlab| function to calculate the maximum shear stress:
-`maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxShearStress.m>`_.
+`maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/maxShearStress.m>`_.
 
 Find here the |matlab| function to calculate the maximum pressure:
-`maxPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/maxPressure.m>`_.
+`maxPressure.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/maxPressure.m>`_.
 
 Find here the |matlab| function to calculate the mean pressure:
-`meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/elastic_contact/meanPressure.m>`_.
+`meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/meanPressure.m>`_.
 
 Finally, a statistical expression of the onset of plasticity can be formulated by combining previous equations, giving the cumulative fraction function :math:`W(F_\text{c})` :
 
@@ -208,20 +208,20 @@ Finally, a statistical expression of the onset of plasticity can be formulated b
             :label: beta_function
 
 Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
-`Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/Mason_cdf.m>`_.
+`Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/mason_cdf.m>`_.
 
 Find here the |matlab| function to calculate the :math:`\alpha` function:
-`alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/alphaMason.m>`_.
+`alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/alphaMason.m>`_.
 
 Find here the |matlab| function to calculate the :math:`\beta` function:
-`betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Mason/betaMason.m>`_.
+`betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/betaMason.m>`_.
 
 .. note::
     The surface mechanical state (presence of dislocations after polishing steps or surface free of dislocation)
     can modified the statistics of pop-in behavior [#Wang_2012]_.
     
 .. note::
-    See this `Github repository <https://github.com/DavidMercier/HertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
+    See this `Github repository <https://github.com/DavidMercier/contact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
     caused by Hertz pressure acting on a circular area radius.
 
 .. _strain_transfer:
@@ -284,10 +284,10 @@ In the Figure 5, :math:`R` is the radius of the spherical indenter, :math:`t` is
 :math:`h` is the indentation displacement, :math:`c` the radius of the plastic zone in the substrate and :math:`a_\text{c}` the contact radius between the indenter and the thin film.
 
 Find here the |matlab| function to calculate the plastic radius :math:`c`:
-`plasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/plastic_contact/plasticRadius.m>`_.
+`plasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/plastic_contact/plasticRadius.m>`_.
 
 Find here the |matlab| function to fit a load-displacement curve:
-`load_displacement_fit.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/plastic_contact/load_displacement_fit.m>`_.
+`load_displacement_fit.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/plastic_contact/load_displacement_fit.m>`_.
 
 Matlab functions to fit probability distributions
 ###################################################
