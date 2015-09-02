@@ -2,16 +2,6 @@
 function gui_handle = demo
 %% Function to run the Matlab GUI for the analysis of the pop-in statistics
 
-%% Paths Management
-try
-    gui.config.POPINroot = get_popin_root; % ensure that environment is set
-catch
-    [startdir, dummy1, dummy2] = fileparts(mfilename('fullpath'));
-    cd(startdir);
-    commandwindow;
-    path_management;
-end
-
 %% YAML config. files
 gui = struct();
 gui.config = struct();
@@ -20,6 +10,17 @@ gui.config.data = struct();
 gui.config.numerics = struct();
 gui.data_xls.filename_data = 'mts-XP_Indcon5um_Al2O3-40nm.xls';
 gui.data_xls.pathname_data = fullfile(pwd, 'indentation_data');
+
+%% Paths Management
+% Don't move before definition of 'gui' as a struct()
+try
+    gui.config.POPINroot = get_popin_root; % ensure that environment is set
+catch
+    [startdir, dummy1, dummy2] = fileparts(mfilename('fullpath'));
+    cd(startdir);
+    commandwindow;
+    path_management;
+end
 
 [gui.config.indenter, gui.config.data, ...
     gui.config.numerics, flag_YAML] = load_YAML_config_file;
