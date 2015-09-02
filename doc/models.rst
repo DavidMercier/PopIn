@@ -221,7 +221,7 @@ Find here the |matlab| function to calculate the :math:`\beta` function:
     can modified the statistics of pop-in behavior [#Wang_2012]_.
     
 .. note::
-    See this `Github repository <https://github.com/DavidMercier/contact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
+    See this `Github repository <https://github.com/DavidMercier/Matlab_functions/tree/master/contact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
     caused by Hertz pressure acting on a circular area radius.
 
 .. _strain_transfer:
