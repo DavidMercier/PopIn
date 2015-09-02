@@ -62,12 +62,12 @@ with 2 parameters :math:`(\lambda, m)` is a continuous probability distribution
 and is often used in the description of particle size distribution and in survival or failure analysis [#Weibull_1951]_.
 
     .. math:: V\left(x, \lambda, m\right) = exp\left(\left(\frac{x}{\lambda}\right)^m\right)
-            :label: Weibull_mortality
-
-    .. math:: W\left(x, \lambda, m\right) = 1 - exp\left(\left(\frac{x}{\lambda}\right)^m\right)
             :label: Weibull_survival
 
-With :math:`V` the mortal probability function and :math:`W` the survival probability function.
+    .. math:: W\left(x, \lambda, m\right) = 1 - exp\left(\left(\frac{x}{\lambda}\right)^m\right)
+            :label: Weibull_mortality
+
+With :math:`V` the survival probability function and :math:`W` the mortal probability function.
 :math:`m` is a dimensionless material-dependent constant, often named the Weibull modulus (from 0 to usually 50) [#Afferante_2006]_.
 If :math:`m=1`, the rate of failure remains constant and there is random failure occurring.
 
@@ -80,11 +80,11 @@ higher is :math:`m`, more homogeneous is the distribution of the pop-in.
 In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^0_{crit}` or
 the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
 
-Find here the |matlab| function to calculate the cumulative survival Weibull distribution:
+Find here the |matlab| function to calculate the cumulative mortal Weibull distribution:
 `Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf.m>`_.
 
-Find here the |matlab| function to calculate the cumulative mortal Weibull distribution:
-`Weibull_cdf_mortal.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf_mortal.m>`_.
+Find here the |matlab| function to calculate the complementary cumulative survival Weibull distribution:
+`Weibull_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf_survival.m>`_.
 
 Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
 the description of the statistics of the pop-in event [#Chechenin_1995]_.
@@ -97,11 +97,11 @@ is equal to :math:`F^0_{crit}` (the mean critical load).
 The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative Weibull distribution [#Chechenin_1995]_
 are implemented in the PopIn toolbox.
 
-Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
+Find here the |matlab| function to calculate the cumulative modified mortal Weibull distribution:
 `Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
 
-Find here the |matlab| function to calculate the cumulative modified mortal Weibull distribution:
-`Weibull_modified_cdf_mortal.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf_mortal.m>`_.
+Find here the |matlab| function to calculate the complementary cumulative modified survival Weibull distribution:
+`Weibull_modified_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf_survival.m>`_.
 
 .. _dislocation_nucleation:
 
@@ -252,7 +252,7 @@ on an elastic-plastic (ductile) substrate, pop-in were observed experimentally a
 [#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
 
 .. figure:: ./_pictures/load-disp_curve_popin_load_sub.png
-   :scale: 30 %
+   :scale: 60 %
    :align: center
 
    *Figure 4 : Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
