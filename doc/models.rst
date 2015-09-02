@@ -208,7 +208,7 @@ Finally, a statistical expression of the onset of plasticity can be formulated b
             :label: beta_function
 
 Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
-`Mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/mason_cdf.m>`_.
+`mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/mason_cdf.m>`_.
 
 Find here the |matlab| function to calculate the :math:`\alpha` function:
 `alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/alphaMason.m>`_.

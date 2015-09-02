@@ -7,7 +7,7 @@
    :scale: 65 %
    :align: center
 
-* 1) Import your (nano)indentation results. See here an `examples file <http://popin.readthedocs.org/en/latest/examples.html>`_.
+* 1) Import your (nano)indentation results. See here an `example file <http://popin.readthedocs.org/en/latest/examples.html>`_.
 
 * 2) Set units, set temperature of experiments, set the minimum and maximum
 indentation depths, set the pop-in to analyze and select the critical parameter

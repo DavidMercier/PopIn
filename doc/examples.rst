@@ -8,8 +8,7 @@ Format of data
 
 * Only 'Sample' sheet of a .xls files obtained from MTS software - Analyst are accepted.
 
-* You data must only have the loading part from the load-displacement curves of your (nano)indentation results,
-or it is necessary to have a 'Hold Segment Type' to detect when the loading part is over.
+* You data must only have the loading part from the load-displacement curves of your (nano)indentation results, or it is necessary to have a 'Hold Segment Type' to detect when the loading part is over.
 
 ..  warning::
     It is advised to do at least 30 indentation tests to have consistent results.
