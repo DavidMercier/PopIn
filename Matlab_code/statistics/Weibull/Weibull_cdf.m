@@ -11,9 +11,6 @@ gui.cumulativeFunction.xdata_cdf = xdata_fit;
 % Model (survival function)
 weibull_cdf_s = @(p,x) (1 - exp(-(x./p(2)).^p(1)));
 
-% Model (mortality function)
-%weibull_cdf_m = @(p,x) (exp(-(x./p(2)).^p(1)));
-
 % Make a starting guess of coefficients p(1) and p(2)
 % p(1) = Weibull modulus --> 10 when good homogeneity in size defect distribution
 % p(2) = Mean critical value

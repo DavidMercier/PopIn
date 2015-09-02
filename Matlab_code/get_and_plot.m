@@ -81,7 +81,7 @@ else
         end
         
         %% Sum of data for statistic analysis and plot of pop-in distribution + fit
-        gui.handles.h_waitbar = waitbar(0, 'Plots in progress...');
+        gui.handles.h_waitbar = waitbar(0, 'Plots in progress...'); % Don't move into the loop !
         
         for ii_sheet = 1:1:gui.data_xls.sheets_xls_notEmpty
             waitbar(ii_sheet / gui.data_xls.sheets_xls_notEmpty);
@@ -134,11 +134,19 @@ else
         end
         
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:)) || ...
-                strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
+                strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
             xdata = sort([gui.results(:).binCtrs]);
             for ii = 1:1:length(gui.data)
                 gui.results(ii).xdata = xdata(ii);
             end
+            
+        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:)) || ...
+                strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
+            xdata = sort([gui.results(:).binCtrs],'descend');
+            for ii = 1:1:length(gui.data)
+                gui.results(ii).xdata = xdata(ii);
+            end
+            
         else
             xdata = sort([gui.data(:).sum_L]);
             for ii = 1:1:length(gui.data)
@@ -164,8 +172,12 @@ else
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
             Weibull_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-            Weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            Weibull_cdf_mortal(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
+            Weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
+            Weibull_modified_cdf_mortal(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+        elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(5,:))
             Mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         end
         gui = guidata(gcf); guidata(gcf, gui);
