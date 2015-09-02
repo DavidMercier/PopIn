@@ -83,6 +83,9 @@ the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appe
 Find here the |matlab| function to calculate the cumulative survival Weibull distribution:
 `Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf.m>`_.
 
+Find here the |matlab| function to calculate the cumulative mortal Weibull distribution:
+`Weibull_cdf_mortal.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_cdf_mortal.m>`_.
+
 Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
 the description of the statistics of the pop-in event [#Chechenin_1995]_.
 This function is set to have a probability of 0.5, when :math:`F_{crit}` (the critical load)
@@ -96,6 +99,9 @@ are implemented in the PopIn toolbox.
 
 Find here the |matlab| function to calculate the cumulative modified survival Weibull distribution:
 `Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf.m>`_.
+
+Find here the |matlab| function to calculate the cumulative modified mortal Weibull distribution:
+`Weibull_modified_cdf_mortal.m <https://github.com/DavidMercier/PopIn/blob/master/Matlab_code/statistics/Weibull/Weibull_modified_cdf_mortal.m>`_.
 
 .. _dislocation_nucleation:
 
@@ -242,8 +248,14 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
 
 In the case of indentation made into a hard brittle film (e.g.: native or thermally/anodically grown oxide, ALD coatings ...)
-on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film (see Figure 4)
+on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film (see Figures 4 and 5)
 [#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
+
+.. figure:: ./_pictures/load-disp_curve_popin_load_sub.png
+   :scale: 30 %
+   :align: center
+
+   *Figure 4 : Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
 
 Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
 The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation :
@@ -251,8 +263,9 @@ The radius :math:`c` of this plastic zone in the ductile substrate is defined by
     .. math:: c = \sqrt{\frac{3F_\text{crit,s}}{2\pi\sigma_\text{e}}}
             :label: plastic_zone_radius
 
-With :math:`F_\text{crit,s}` the load carried by the substrate obtained with the power law relationship :eq:`critical_load_substrate`,
-and :math:`\sigma_\text{e}` is the yield stress of the ductile substrate [#Hainsworth_1995]_.
+With :math:`F_\text{crit,s}` the load carried by the substrate at the critical indentation depth at which pop-in occurs,
+obtained usually with the power law relationship :eq:`critical_load_substrate`.
+:math:`\sigma_\text{e}` is the yield stress of the ductile substrate [#Hainsworth_1995]_.
 
     .. math:: F_\text{crit,s} = Kh_\text{crit}^n
             :label: critical_load_substrate
@@ -265,9 +278,9 @@ obtained from nanoindentation tests performed on the substrate without the britt
    :scale: 30 %
    :align: center
 
-   *Figure 4 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
+   *Figure 5 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
    
-In the Figure 4, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
+In the Figure 5, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
 :math:`h` is the indentation displacement, :math:`c` the radius of the plastic zone in the substrate and :math:`a_\text{c}` the contact radius between the indenter and the thin film.
 
 Find here the |matlab| function to calculate the plastic radius :math:`c`:
