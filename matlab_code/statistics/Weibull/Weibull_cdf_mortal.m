@@ -1,5 +1,5 @@
 %% Copyright 2014 MERCIER David
-function Weibull_cdf_mortal(OPTIONS, xdata_fit, ydata_fit)
+function Weibull_cdf_survival(OPTIONS, xdata_fit, ydata_fit)
 %% Function giving the Weibull cumulative distribution function
 % See http://de.mathworks.com/help/stats/wblcdf.html
 % See Weibull W., “A statistical distribution function of wide applicability”, J. Appl. Mech.-Trans. ASME (1951), 18(3).
@@ -8,8 +8,8 @@ gui = guidata(gcf);
 
 gui.cumulativeFunction.xdata_cdf = xdata_fit;
 
-% Model (mortality function)
-weibull_cdf_m = @(p,x) (exp(-(x./p(2)).^p(1)));
+% Model (survival function)
+weibull_cdf_s = @(p,x) (exp(-(x./p(2)).^p(1)));
 
 % Make a starting guess of coefficients p(1) and p(2)
 % p(1) = Weibull modulus --> 10 when good homogeneity in size defect distribution
@@ -23,7 +23,7 @@ gui.cumulativeFunction.p0 = [1 ; mean(ydata_fit)];
     gui.cumulativeFunction.output, ...
     gui.cumulativeFunction.lambda, ...
     gui.cumulativeFunction.jacobian] =...
-    lsqcurvefit(weibull_cdf_m, gui.cumulativeFunction.p0, ...
+    lsqcurvefit(weibull_cdf_s, gui.cumulativeFunction.p0, ...
     gui.cumulativeFunction.xdata_cdf, ydata_fit, ...
     [gui.config.numerics.Min_mWeibull ; 0], ...
     [gui.config.numerics.Max_mWeibull ; max(ydata_fit)], ...

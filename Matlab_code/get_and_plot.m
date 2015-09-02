@@ -172,11 +172,11 @@ else
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
             Weibull_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-            Weibull_cdf_mortal(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            Weibull_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
             Weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
-            Weibull_modified_cdf_mortal(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            Weibull_modified_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(5,:))
             Mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         end
