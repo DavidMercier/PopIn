@@ -56,6 +56,8 @@ else
                 
                 [maxpeak, minpeak] = peakdet(gui.data(ii_sheet).data_ddh_cleaned(:), delta_data);
                 
+                % Attribution of pop-in indice(s) for each load-disp curve
+                % (for each Excel sheet)...
                 gui.data(ii_sheet).num_popin_int = maxpeak(:, 1);
                 
                 if gui.data(ii_sheet).num_popin_int == -1;
@@ -101,19 +103,16 @@ else
                 
             end
             
+            % Extraction of values of load or disp at the pop-in
+            % indice obtained from peak detection (see above)
             if gui.settings.value_crit_param == 1
                 gui.data(ii_sheet).sum_L = ...
                     gui.data(ii_sheet).data_L_cleaned(ind_popin);
-                
-                gui.data(ii_sheet).mean_sum_L = ...
-                    mean(gui.data(ii_sheet).sum_L);
                 
             elseif gui.settings.value_crit_param == 2
                 gui.data(ii_sheet).sum_h = ...
                     gui.data(ii_sheet).data_h_cleaned(ind_popin);
                 
-                gui.data(ii_sheet).mean_sum_h = ...
-                    mean(gui.data(ii_sheet).sum_h);
             end
             guidata(gcf, gui);
         end
@@ -123,38 +122,41 @@ else
         %% Set the data to plot
         if gui.settings.value_crit_param == 1
             for ii = 1:1:length(gui.data)
-                gui.results(ii).binCtrs = gui.data(ii).sum_L / mean([gui.data.mean_sum_L]);
-                gui.results(ii).max_binCtrs = max([gui.data(ii).sum_L]);
+                gui.results(ii).binCtrs_init = gui.data(ii).sum_L;
+                gui.results(ii).binCtrs = gui.data(ii).sum_L / mean([gui.data.sum_L]);
             end
+            gui.resultsMax_binCtrs = max([gui.data.sum_L]);
         elseif gui.settings.value_crit_param  == 2
             for ii = 1:1:length(gui.data)
-                gui.results(ii).binCtrs = gui.data(ii).sum_h / mean([gui.data.mean_sum_h]);
-                gui.results(ii).max_binCtrs = max([gui.data(ii).sum_h]);
+                gui.results(ii).binCtrs_init = gui.data(ii).sum_h;
+                gui.results(ii).binCtrs = gui.data(ii).sum_h / mean([gui.data.sum_h]);
             end
+            gui.resultsMax_binCtrs = max([gui.data.sum_h]);
         end
         
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:)) || ...
                 strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
+            xdata_init = sort([gui.results(:).binCtrs_init]);
             xdata = sort([gui.results(:).binCtrs]);
-            for ii = 1:1:length(gui.data)
-                gui.results(ii).xdata = xdata(ii);
-            end
             
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:)) || ...
                 strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
+            xdata_init = sort([gui.results(:).binCtrs_init],'descend');
             xdata = sort([gui.results(:).binCtrs],'descend');
-            for ii = 1:1:length(gui.data)
-                gui.results(ii).xdata = xdata(ii);
-            end
             
         else
             xdata = sort([gui.data(:).sum_L]);
+            xdata_init = xdata;
             for ii = 1:1:length(gui.data)
                 if xdata(ii) < 0
                     xdata(ii) = 0;
                 end
-                gui.results(ii).xdata = xdata(ii);
             end
+            
+        end
+        for ii = 1:1:length(gui.data)
+            gui.results(ii).xdata_init = xdata_init(ii);
+            gui.results(ii).xdata = xdata(ii);
         end
         
         for ii = 1:1:length(gui.data)
@@ -170,13 +172,13 @@ else
         
         % Calculations of the cumulative function
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
-            weibull_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_cdf(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-            weibull_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_cdf_survival(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
-            weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_modified_cdf(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
-            weibull_modified_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_modified_cdf_survival(OPTIONS, [gui.results.xdata_init],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(5,:))
             mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         end
