@@ -13,7 +13,7 @@ function cumFrac = cumulativeFraction(load, loadrate, R1, R2, E1, E2, ...
 % T: Temperature of experiments in K
 % Vact: Activation volume in Angstrom3
 % epsilon_var: Activation enthalpy in eV
-% neta_var: Pre-exponential frequency factor in s-1.m-3
+% eta_var: Pre-exponential frequency factor in s-1.m-3
 % K: Proportionality constant
 
 if nargin < 11

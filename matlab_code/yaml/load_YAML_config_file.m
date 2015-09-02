@@ -48,8 +48,8 @@ else
         warning('Wrong input for K in numerics_config.yaml');
     end
     
-    if ~isfield(numerics, 'neta_var')
-        indenter.neta_var = 8.9 * 1e23; % in s-1.m-3
+    if ~isfield(numerics, 'eta_var')
+        indenter.eta_var = 8.9 * 1e23; % in s-1.m-3
         commandwindow;
         warning('Wrong input for neta_var in numerics_config.yaml');
     end
