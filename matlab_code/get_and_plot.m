@@ -170,15 +170,15 @@ else
         
         % Calculations of the cumulative function
         if strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(1,:))
-            Weibull_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(2,:))
-            Weibull_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(3,:))
-            Weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_modified_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(4,:))
-            Weibull_modified_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            weibull_modified_cdf_survival(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         elseif strcmp(gui.settings.cumulFunction, gui.settings.cumulFunctionList(5,:))
-            Mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
+            mason_cdf(OPTIONS, [gui.results.xdata],[gui.results.ydata]);
         end
         gui = guidata(gcf); guidata(gcf, gui);
         
