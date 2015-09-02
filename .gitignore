@@ -1,5 +1,6 @@
 # matlab autosave
 *.asv
+*.mat
 
 # sphinx documentation builds
 doc/_build
