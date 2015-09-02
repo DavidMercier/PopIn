@@ -62,10 +62,10 @@ with 2 parameters :math:`(\lambda, m)` is a continuous probability distribution
 and is often used in the description of particle size distribution and in survival or failure analysis [#Weibull_1951]_.
 
     .. math:: V\left(x, \lambda, m\right) = exp\left(\left(\frac{x}{\lambda}\right)^m\right)
-            :label: Weibull_survival
+            :label: weibull_survival
 
     .. math:: W\left(x, \lambda, m\right) = 1 - exp\left(\left(\frac{x}{\lambda}\right)^m\right)
-            :label: Weibull_mortality
+            :label: weibull_mortality
 
 With :math:`V` the survival probability function and :math:`W` the mortal probability function.
 :math:`m` is a dimensionless material-dependent constant, often named the Weibull modulus (from 0 to usually 50) [#Afferante_2006]_.
@@ -81,10 +81,10 @@ In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^
 the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
 
 Find here the |matlab| function to calculate the cumulative mortal Weibull distribution:
-`Weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf.m>`_.
+`weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf.m>`_.
 
 Find here the |matlab| function to calculate the complementary cumulative survival Weibull distribution:
-`Weibull_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf_survival.m>`_.
+`weibull_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf_survival.m>`_.
 
 Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
 the description of the statistics of the pop-in event [#Chechenin_1995]_.
@@ -92,16 +92,16 @@ This function is set to have a probability of 0.5, when :math:`F_{crit}` (the cr
 is equal to :math:`F^0_{crit}` (the mean critical load).
 
     .. math:: W\left(\frac{F_\text{crit}}{F^0_\text{crit}}\right) = 1 - exp\left(-ln2\left(\frac{F_\text{crit}}{F^0_\text{crit}}\right)^m\right)
-            :label: Weibull_modified
+            :label: weibull_modified
 
 The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative Weibull distribution [#Chechenin_1995]_
 are implemented in the PopIn toolbox.
 
 Find here the |matlab| function to calculate the cumulative modified mortal Weibull distribution:
-`Weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf.m>`_.
+`weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf.m>`_.
 
 Find here the |matlab| function to calculate the complementary cumulative modified survival Weibull distribution:
-`Weibull_modified_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf_survival.m>`_.
+`weibull_modified_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf_survival.m>`_.
 
 .. _dislocation_nucleation:
 

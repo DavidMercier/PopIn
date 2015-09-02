@@ -18,8 +18,8 @@ gui.config = struct();
 gui.config.indenter = struct();
 gui.config.data = struct();
 gui.config.numerics = struct();
-gui.data_xls.filename_data = 'MTS-XP_Indcon5um_Al2O3-40nm.xls';
-gui.data_xls.pathname_data = fullfile(pwd, 'Indentation_data');
+gui.data_xls.filename_data = 'mts-XP_Indcon5um_Al2O3-40nm.xls';
+gui.data_xls.pathname_data = fullfile(pwd, 'indentation_data');
 
 [gui.config.indenter, gui.config.data, ...
     gui.config.numerics, flag_YAML] = load_YAML_config_file;
