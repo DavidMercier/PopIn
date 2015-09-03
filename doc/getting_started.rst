@@ -40,8 +40,9 @@ First of all a GUI is a Graphical User Interface.
 
 * Import your (nano)indentation results (.xls file obtained from MTS software with at least more than 20 indentation tests for statistics), by pressing the button 'Select file'.
 * Select the end segment (if segments exist), in order to set the maximum indentation depth.
-* It is possible to plot the stiffness (raw data) without setting the GUI for Young's modulus calculation.
-* A picture of the main window as .png file is created and Weibull data are stored in a .txt file when you press the button 'SAVE'.
+* Once the dataset is loaded, run calculations by pressing the green button 'RUN CALCULATIONS and PLOT'.
+* Load-displacement curves and selected cumulative distribution function (cdf) are plotted respectively on the left graphic and the right graphic.
+* A picture of the main window as .png file is created and cdf fit results are stored in a .txt file when you press the button 'SAVE'.
 * Results are accessible by typing in the Matlab command window (here for 50 indentation tests) : 
 
 .. code-block:: matlab
@@ -49,14 +50,15 @@ First of all a GUI is a Graphical User Interface.
    gui = guidata(gcf)
    
    gui =
-        config: [1x1 struct]     % config. of the GUI
-        handles: [1x1 struct]    % handles of the GUI = buttons, boxes...
-        flag: [1x1 struct]       % flags for errors, calculations
-        data: [1x50 struct]      % data cropped
-        data_xls: [1x1 struct]   % details about .xls file
-        settings: [1x1 struct]   % settings for calculations
-        results: [50x1 struct]   % results obtained after calculations
-        Weibull: [1x1 struct]    % Weibull fit results
+        config: [1x1 struct]                % config. of the GUI
+        data_xls: [1x1 struct]              % details about .xls file
+        handles: [1x1 struct]               % handles of the GUI = buttons, boxes...
+        settings: [1x1 struct]              % settings of the GUI
+        flag: [1x1 struct]                  % flags for errors, calculations
+        data: [1x50 struct]                 % data cropped
+        results: [50x1 struct]              % results obtained after calculations
+        Hertz: [1x1 struct]                 % details about hertzian fit
+        cumulativeFunction: [1x1 struct]    % cdf fit results
 
 .. figure:: ./_pictures/GUI_select_segment.png
    :scale: 40 %
@@ -68,7 +70,19 @@ First of all a GUI is a Graphical User Interface.
    :scale: 30 %
    :align: center
    
-   *Plot of the load-displacement curves after loading of data.*
+   *Plot of the load-displacement curves and the mortal Weibull cdf after loading of data.*
+   
+.. figure:: ./_pictures/GUI_Main_Window_survival.png
+   :scale: 30 %
+   :align: center
+   
+   *Plot of the load-displacement curves and the survival Weibull cdf.*
+   
+.. figure:: ./_pictures/GUI_Main_Window_chechenin.png
+   :scale: 30 %
+   :align: center
+   
+   *Plot of the load-displacement curves and the mortal modified Weibull cdf (Chechenin's model).*
    
 The YAML configuration files
 #################################

@@ -80,6 +80,18 @@ xlabel(str_xlabel);
 ylabel('Cumulative distribution');
 title(str_title);
 
+
+%% Plot of lines
+if get(gui.handles.cb_cdf_lines, 'value') == 1
+    xBoundary_1 = zeros(1,11)+1;
+    yBoundary_1 = 0:0.1:1;
+    plot(xBoundary_1, yBoundary_1, '--k'); hold on;
+    
+    xBoundary_2 = 0:100:1000;
+    yBoundary_2 = zeros(1,11)+0.5;
+    plot(xBoundary_2, yBoundary_2, '--k'); hold on;
+end
+
 guidata(gcf, gui);
 
 end
