@@ -42,8 +42,8 @@ if strcmp (ext, '.nul') == 1
 elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     
     for ii_sheet = 1:1:length(sheets_xls)
-        [gui.data, txt] = xlsread(fullname_data, ii_sheet);
-        str_endsegment = txt(:,1); %limite
+        [data_ind, txt_ind] = xlsread(fullname_data, ii_sheet);
+        str_endsegment = txt_ind(:,1); %limite
         if ~isempty(str_endsegment)
             break
         end
@@ -51,32 +51,36 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     
     if isempty(str_endsegment)
         helpdlg('No segment found', 'Info');
-        
     else
         val_endsegment_true = find(strcmp(str_endsegment(:), '') ~= 1);
         str_endsegment_true = str_endsegment(val_endsegment_true);
         
         % Open a list dialog window to select the end segment to crop data
-        [s__endsegment, v__endsegment] = listdlg('PromptString', 'Select an end segment:', ...
+        [s__endsegment, v__endsegment] = ...
+            listdlg('PromptString', 'Select an end segment:', ...
             'SelectionMode', 'single',...
             'ListString', str_endsegment_true);
     end
     
     %% Import data from .xls file
-    
+
     %raw_str_endsegment = cell(length(sheets_xls),1);
     y_index = NaN(length(sheets_xls), 1);
     
     % Check and remove empty sheets
     notEmpty_data = NaN(length(sheets_xls));
-    gui.handles.h_waitbar_1 = waitbar(0, 'Check Excel file (remove empty sheets)...'); % Don't move into the for loop
+    gui.handles.h_waitbar = ...
+        waitbar(0, 'Check Excel file (remove empty sheets) and import data...'); % Don't move into the for loop
+    
     for ii_sheet = 1:1:length(sheets_xls)
-        waitbar(ii_sheet / length(sheets_xls), gui.handles.h_waitbar_1);
+        waitbar(ii_sheet / length(sheets_xls), gui.handles.h_waitbar);
         
-        [data, txt] = xlsread(fullname_data, ii_sheet);
+        [gui.raw_data(ii_sheet).data(:,:), ...
+            gui.raw_data(ii_sheet).txt(:,:)] = ...
+            xlsread(fullname_data, ii_sheet);
         
-        if ~isempty(txt)
-            raw_str_endsegment = txt(:,1);
+        if ~isempty(gui.raw_data(ii_sheet).txt)
+            raw_str_endsegment = gui.raw_data(ii_sheet).txt(:,1);
             
             if ~isempty(raw_str_endsegment)
                 % Set the y index to crop data in function of chosen segment
@@ -104,7 +108,7 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
             notEmpty_data(ii_sheet) = [];
         end
     end
-    delete(gui.handles.h_waitbar_1);
+    delete(gui.handles.h_waitbar);
     
     notEmpty_data(isnan(notEmpty_data)) = [];
     gui.data_xls.sheets_xls_notEmpty = length(notEmpty_data);
@@ -121,26 +125,20 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     max_data_L = NaN(gui.data_xls.sheets_xls_notEmpty);
     
     % Import data
-    gui.handles.h_waitbar_2 = waitbar(0, 'Import of data in progress...');
     for ii_sheet = 1:1:gui.data_xls.sheets_xls_notEmpty
-        waitbar(ii_sheet / gui.data_xls.sheets_xls_notEmpty, gui.handles.h_waitbar_2); % Don't move into the for loop
         
         ii_sheet2read = notEmpty_data(ii_sheet);
-
-        data_index = sprintf('%c%d:%c%d', 'B', 1, 'C', y_index(ii_sheet2read));
-        
-        [data_cropped, txt_cropped] = ...
-            xlsread(fullname_data, ii_sheet2read, data_index);
-        
-        gui.data(ii_sheet).data_h = data_cropped(:, 1);
-        gui.data(ii_sheet).data_L = data_cropped(:, 2);
+       
+        gui.data(ii_sheet).data_h = ...
+            gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),1);
+        gui.data(ii_sheet).data_L = ...
+            gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),2);
         min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
         max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
         min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
         max_data_L(ii_sheet) = max(gui.data(ii_sheet).data_L);
         
     end
-    delete(gui.handles.h_waitbar_2);
     
     gui.settings.min_bound_h = max(min_data_h(:));
     gui.settings.max_bound_h = min(max_data_h(:));
