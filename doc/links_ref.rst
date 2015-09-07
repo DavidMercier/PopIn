@@ -6,8 +6,12 @@
 Links
 ######
 
+* `Guidata on Matlab website. <http://www.mathworks.fr/fr/help/matlab/ref/guidata.html>`_ 
 * `Matlab GUI. <http://www.mathworks.com/discovery/matlab-gui.html>`_
 * `Coding GUI behavior. <http://www.mathworks.fr/fr/help/matlab/code-to-run-the-gui.html?searchHighlight=gui>`_
+* `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
+* `fitdist - Fit probability distribution object to data <http://de.mathworks.com/help/stats/fitdist.html>`_
+* `dfittool - Open Distribution Fitting app <http://de.mathworks.com/help/stats/dfittool.html>`_
 * `Visit the YAML website for more informations. <http://www.yaml.org/>`_
 * `Visit the YAML code for Matlab. <http://code.google.com/p/yamlmatlab/>`_
 
@@ -106,6 +110,7 @@ Dislocation nucleation
 * `Barnoush A. et al., "Correlation between the hydrogen chemical potential and pop-in load during in situ electrochemical nanoindentation" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.06.021>`_
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 * `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
+* `Xiong K. and Gu J., "Understanding pop-in phenomena in FeNi3 nanoindentation" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.08.007>`_
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ---------------------------------------------------------------------------------
