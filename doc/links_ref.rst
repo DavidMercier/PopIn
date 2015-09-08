@@ -37,8 +37,8 @@ References
 Pop-in event
 ++++++++++++++
 
-Dislocation nucleation
----------------------------
+Dislocation nucleation during (nano)indentation
+-------------------------------------------------
 
 * `Page T.F. et al., "The deformation behavior of ceramic crystals subjected to very low load (nano)indentations" (1992). <http://dx.doi.org/10.1557/JMR.1992.0450>
 * `Venkataraman S.K. et al., "Continuous microindentation of passivating surfaces" (1993). <http://dx.doi.org/10.1557/JMR.1993.0685>`_
@@ -103,12 +103,14 @@ Dislocation nucleation
 * `Bhattacharya M. et al., "New observations in micro-pop-in issues in nanoindentation of coarse grain alumina" (2012). <http://dx.doi.org/10.1016/j.ceramint.2012.07.020>`_
 * `Mao W.G. and Shen Y. "Nanoindentation Study of Pop-in Phenomenon Characteristics and Mechanical Properties of Sapphire (101¯2) Crystal" (2012). <http://dx.doi.org/0.1111/j.1551-2916.2012.05405.x>`_
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <http://dx.doi.org/10.1016/j.actamat.2011.11.034>`_
+* `Kwon J., "Characterization of deformation mechanisms in pre-strained NiAl-Mo composites and α-Ti alloy" Master thesis (2012). <http://rave.ohiolink.edu/etdc/view?acc_num=osu1343796987>`_
 * `Stauffer D.D., "Deformation Mechanisms in Nanoscale Brittle Materials" PhD Thesis (2011). <http://purl.umn.edu/108291>`_
 * `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
 * `Jian S.-R. et al., "Nanoindentation pop-in effects of Bi2Te3 thermoelectric thin films" (2012). <http://dx.doi.org/10.1016/j.jallcom.2014.10.133>`_
 * `Ma L. et al., "Effect of the Spherical Indenter Tip Assumption on the Initial Plastic Yield Stress" (2012). <http://dx.doi.org/10.5772/48106>`_
 * `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
 * `Lu J.-Y. et al., "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
+* `Gan B. et al., "Nanoindentation and nano-compression testing of Ni3Al precipitates" (2012). <http://dx.doi.org/10.1002/9781118516430.ch9>`_
 * `Oliver D.J. et al., "One-to-one spatially matched experiment and atomistic simulations of nanometre-scale indentation" (2014). <http://dx.doi.org/10.1088/0957-4484/25/2/025701>`_
 * `Pathak S. et al., "Understanding pop-ins in spherical nanoindentation" (2014). <http://dx.doi.org/10.1063/1.4898698>`_
 * `Kalidindi S.R. and Vachhani S.J., "Mechanical characterization of grain boundaries using nanoindentation" (2014). <http://dx.doi.org/10.1016/j.cossms.2014.05.002>`_
@@ -121,6 +123,30 @@ Dislocation nucleation
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 * `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
 * `Xiong K. and Gu J., "Understanding pop-in phenomena in FeNi3 nanoindentation" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.08.007>`_
+* `Bei H. and Gu J., "A tale of two mechanisms: Strain-softening versus strain-hardening in single crystals under small stressed volumes" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.043>`_
+
+Dislocation nucleation during compression of pillar
+-----------------------------------------------------
+
+* `Bei H. et al., "Compressive strengths of molybdenum alloy micro-pillars prepared using a new technique" (2007). <http://dx.doi.org/10.1016/j.scriptamat.2007.05.010>`_
+* `Bei H. et al., "Effects of pre-strain on the compressive stress–strain response of Mo-alloy single-crystal micropillars" (2008). <http://dx.doi.org/10.1016/j.actamat.2008.05.030>`_
+* `Uchic M.D. et al., "Plasticity of Micrometer-Scale Single Crystals in Compression" (2009). <http://dx.doi.org/10.1146/annurev-matsci-082908-145422>`_
+* `Barnoush A. et al., "Examination of hydrogen embrittlement in FeAl by means of in situ electrochemical micropillar compression and nanoindentation techniques" (2010). <http://dx.doi.org/10.1016/j.intermet.2010.01.001>`_
+* `Kheradmand N. et al., "Investigation of the role of grain boundary on the mechanical properties of metals" (2010). <http://dx.doi.org/10.1088/1742-6596/240/1/012017>`_
+* `Kraft O. et al., "Plasticity in Confined Dimensions" (2010). <http://dx.doi.org/10.1146/annurev-matsci-082908-145409>`_
+* `Korte S. et al., "High temperature microcompression and nanoindentation in vacuum" (2012). <http://dx.doi.org/10.1557/jmr.2011.268>`_
+* `Kwon J., "Characterization of deformation mechanisms in pre-strained NiAl-Mo composites and α-Ti alloy" Master thesis (2012). <http://rave.ohiolink.edu/etdc/view?acc_num=osu1343796987>`_
+* `Rogne B.R.S. et al., "Effect of crystal orientation on the strengthening of iron micro pillars" (2014). <http://dx.doi.org/10.1016/j.msea.2014.10.067>`_
+* `Zhang X. and Shang F., "A continuum model for intermittent deformation of single crystal micropillars" (2014). <http://dx.doi.org/10.1016/j.ijsolstr.2013.11.002>`_
+* `Maaß R. et al., "Independence of Slip Velocities on Applied Stress in Small Crystals" (2014). <http://dx.doi.org/10.1002/smll.201400849>`_
+* `Hagen A.B., "In-situ Compession Testing of Nanosized Pillars" Master thesis (2014). <http://brage.bibsys.no/xmlui/handle/11250/249510>`_
+* `Zhang X. et al., "Second-order work and strain burst in single-crystalline micropillar plasticity" (2015). <http://dx.doi.org/10.1016/j.ijplas.2015.08.007>`_
+* `Roa J.J. et al., "Deformation of polycrystalline TRIP stainless steel micropillars" (2015). <http://dx.doi.org/10.1016/j.msea.2015.08.082>`_
+* `Choi W.S. et al., "Size and orientation effects in partial dislocation-mediated deformation of twinning-induced plasticity steel micro-pillars" (2015). <http://dx.doi.org/10.1016/j.actamat.2015.06.065>`_
+* `Cui Y.N. et al., "Theoretical and numerical investigations on confined plasticity in micropillars" (2015). <http://dx.doi.org/10.1016/j.jmps.2014.12.008>`_
+* `Kim Y. et al., "Effect of a high angle grain boundary on deformation behavior of Al nanopillars" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.05.005>`_
+* `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <http://dx.doi.org/10.1016/10.1016/j.actamat.2015.02.003>`_
+* `Tarragó J.M. et al., "Mechanical deformation of WC–Co composite micropillars under uniaxial compression" (2016). <http://dx.doi.org/10.1016/j.ijrmhm.2015.07.015>`_
 
 Rupture of a hard brittle film on an elastic-plastic substrate
 ---------------------------------------------------------------------------------

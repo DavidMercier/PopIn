@@ -113,7 +113,7 @@ of crystalline materials (see Figure 2) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_
 [#Lu_2012]_, [#Ramalingam_2012]_, [#Wu_2014_1]_ and [#Wu_2014_2]_. Before the pop-in event, the indentation load-displacement
 obtained with a spherical indenter, can be fitted with the Hertz equation (see Figure 3) [#Johnson_1987]_:
 
-    .. math:: F_\text{c}  = (4/3) E^{*} \sqrt{R^{*}} F_\text{c}^{1.5}
+    .. math:: F_\text{c}  = (4/3) E^{*} \sqrt{R^{*}} h_\text{crit}^{1.5}
             :label: Hertz_equation
 
 With :math:`E^{*}` the reduced Young's modulus calculated from indentation test defined by :eq:`reduced_youngs_modulus` and 
@@ -224,6 +224,10 @@ Find here the |matlab| function to calculate the :math:`\beta` function:
     See this `Github repository <https://github.com/DavidMercier/Matlab_functions/tree/master/contact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
     caused by Hertz pressure acting on a circular area radius.
 
+Finally, after a short survey of the litterature, it appears that pop-in or strain burst are observed as well,
+on the load-displacement or stress-strain curves obtained during compression tests of metallic nano- or micro-pillar [#Bei_2008]_, [#Crosby_2015]_ and [#Kraft_2010]_.
+This strain burst is most of the time, attributed to the nucleation of dislocations into the pillar, initially dislocation-free.
+
 .. _strain_transfer:
     
 Strain transfer across grain boundaries in metals
@@ -301,10 +305,13 @@ References
 
 .. [#Afferante_2006] `Afferante L. et al., "Is Weibull’s modulus really a material constant? Example case with interacting collinear cracks" (2006). <http://dx.doi.org/10.1016/j.ijsolstr.2005.08.002>`_
 .. [#Bahr_2003] `Bahr D.F. et al., "Indentation induced film fracture in hard film – soft substrate systems" (2003). <http://dx.doi.org/10.1023/A:1024979030155>`_
+.. [#Bei_2008] `Bei H. et al., "Effects of pre-strain on the compressive stress–strain response of Mo-alloy single-crystal micropillars" (2008). <http://dx.doi.org/10.1016/j.actamat.2008.05.030>`_
 .. [#Britton_2011] `Britton T.B. et al., "Nanoindentation study of slip transfer phenomenon at grain boundaries" (2011). <http://dx.doi.org/10.1557/jmr.2009.0088>`_
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
+.. [#Crosby_2015] `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <http://dx.doi.org/10.1016/10.1016/j.actamat.2015.02.003>`_
 .. [#Hainsworth_1995] `Hainsworth S.V. et al., "Analysis of nanoindentation load-displacement loading curves.", (1996). <http://dx.doi.org/10.1557/JMR.1996.0250>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
+.. [#Kraft_2010] `Kraft O. et al., "Plasticity in Confined Dimensions" (2010). <http://dx.doi.org/10.1146/annurev-matsci-082908-145409>`_
 .. [#Kramer_2001] `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
 .. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 .. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
