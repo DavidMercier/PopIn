@@ -40,7 +40,7 @@ Pop-in event
 Dislocation nucleation during (nano)indentation
 -------------------------------------------------
 
-* `Page T.F. et al., "The deformation behavior of ceramic crystals subjected to very low load (nano)indentations" (1992). <http://dx.doi.org/10.1557/JMR.1992.0450>
+* `Page T.F. et al., "The deformation behavior of ceramic crystals subjected to very low load (nano)indentations" (1992). <http://dx.doi.org/10.1557/JMR.1992.0450>`_
 * `Venkataraman S.K. et al., "Continuous microindentation of passivating surfaces" (1993). <http://dx.doi.org/10.1557/JMR.1993.0685>`_
 * `Mann A.B. et al., "Nanoindentation of Epitaxial Films: A Study of Pop-in Events" (1994). <http://dx.doi.org/10.1557/PROC-356-271>`_
 * `Gerberich W.W. et al., "The injection of plasticity by millinewton contacts" (1995). <http://dx.doi.org/10.1016/0956-7151(94)00351-H>`_
