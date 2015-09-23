@@ -1,5 +1,5 @@
 %% Copyright 2014 MERCIER David
-function openfile
+function openfile_popin
 %% Function used to open a data file and assign experimental results to variables
 gui = guidata(gcf);
 
