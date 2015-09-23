@@ -110,8 +110,8 @@ for ii_sheet = 1:1:gui.data_xls.sheets_xls_notEmpty
         
     end
     
-    xlabel(xlabel_str);
-    ylabel(ylabel_str);
+    xlabel(xlabel_str, 'Interpreter', 'Latex');
+    ylabel(ylabel_str, 'Interpreter', 'Latex');
     
     if gui.settings.grid_plot_value == 1
         grid on;
@@ -123,7 +123,9 @@ end
 if gui.settings.cb_Hertzian_plot == 1
     HertzianHandle = plot(gui.handles.AxisPlot_1, gui.Hertz.elasticDisp_init, ...
         gui.Hertz.elasticLoad, ':b', 'linewidth', 2.5);
-    legend(HertzianHandle, 'Hertzian fit', 'Location', 'northwest');
+    h_legend = legend(HertzianHandle, 'Hertzian fit', 'Location', 'northwest');
+%    h_title = title('$R^2$ = ', num2str(gui.results.rSquare));
+    set(h_legend, 'Interpreter', 'Latex');
 end
 
 guidata(gcf, gui);
