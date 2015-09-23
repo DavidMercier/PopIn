@@ -4,7 +4,7 @@ function [indenter, data, numerics, flag_YAML] = load_YAML_configFile
 
 flag_YAML = 1;
 
-configYAML = sprintf('indenter_config.yaml');
+configYAML = sprintf('indenter_config_popin.yaml');
 if ~exist(configYAML, 'file')
     errordlg('indenters_config.yaml doesn''t exist !', 'File Error');
     flag_YAML = 0;
@@ -24,7 +24,7 @@ else
     end
 end
 
-configYAML = sprintf('data_config.yaml');
+configYAML = sprintf('data_config_popin.yaml');
 if ~exist(configYAML, 'file')
     errordlg('data_config.yaml doesn''t exist !', 'File Error');
     flag_YAML = 0;
@@ -35,7 +35,7 @@ else
     end
 end
 
-configYAML = sprintf('numerics_config.yaml');
+configYAML = sprintf('numerics_config_popin.yaml');
 if ~exist(configYAML, 'file')
     errordlg('numerics_config.yaml doesn''t exist !', 'File Error');
     flag_YAML = 0;
