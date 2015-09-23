@@ -23,7 +23,7 @@ catch
 end
 
 [gui.config.indenter, gui.config.data, ...
-    gui.config.numerics, flag_YAML] = load_YAMLconfigFile;
+    gui.config.numerics, flag_YAML] = load_YAML_configFile;
 
 %% Set Toolbox version and help paths
 gui.config.name_toolbox = 'PopIn';

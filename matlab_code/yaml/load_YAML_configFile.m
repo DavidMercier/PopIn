@@ -1,5 +1,5 @@
 %% Copyright 2014 MERCIER David
-function [indenter, data, numerics, flag_YAML] = load_YAMLconfigFile
+function [indenter, data, numerics, flag_YAML] = load_YAML_configFile
 %% Function used to load YAML configuration file
 
 flag_YAML = 1;
