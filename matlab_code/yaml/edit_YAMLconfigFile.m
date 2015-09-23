@@ -1,8 +1,8 @@
 %% Copyright 2014 MERCIER David
-function edit_YAML_config_file
+function edit_YAMLconfigFile
 %% Function used to edit YAML configuration file
 [YAML_filename, YAML_pathname] = ...
-    uigetfile(['YAML_config_files\', '*.yaml'], 'File Selector');
+    uigetfile(['yaml_config_files\', '*.yaml'], 'File Selector');
 
 if YAML_filename == 0
     YAML_filename = '';
