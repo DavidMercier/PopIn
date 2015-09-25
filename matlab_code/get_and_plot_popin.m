@@ -264,6 +264,10 @@ else
     end
 end
 
+% Update date and clock
+set(gui.handles.date, ...
+'String', datestr(datenum(clock),'mmm.dd,yyyy HH:MM'));
+
 guidata(gcf, gui);
 
 end
