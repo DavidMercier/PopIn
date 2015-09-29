@@ -75,7 +75,11 @@ line(gui.cumulativeFunction.xdata_cdf./gui.cumulativeFunction.coefEsts(2), ...
     gui.cumulativeFunction.ydata_cdf, ...
     'Color', 'r', 'LineWidth', 2);
 
-h_legend = legend({'Row data' 'Weibull model'}, 'Location', 'NorthWest');
+listLoc = listLocationLegend;
+value_legendLocation = get(gui.handles.value_legendLocation, 'Value');    
+
+h_legend = legend({'Row data' 'Weibull model'}, ...
+    'Location', char(listLoc(value_legendLocation)));
 h_xlabel = xlabel(str_xlabel);
 h_ylabel = ylabel('Cumulative distribution');
 h_title = title(str_title);
