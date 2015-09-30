@@ -83,4 +83,6 @@ else
         'https://code.google.com/p/yamlmatlab/'], 'Error');
 end
 
+java_icon_popin;
+
 end
