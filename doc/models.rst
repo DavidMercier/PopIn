@@ -23,14 +23,15 @@ The pop-in event
 A pop-in (event) is a sudden (load or displacement) burst during the loading of an indenter on a sample.
 If the nanoindentation experiment is load-controlled, an horizontal plateau is also observed on the 
 load-displacement curve, when a pop-in occurs at the critical load :math:`F_\text{crit}` and
-critical displacement :math:`h_\text{crit}` (see Figure 1). In the case of a displacement-controlled
+critical displacement :math:`h_\text{crit}` (see :refnum:`load_disp_curve_popin`). In the case of a displacement-controlled
 nanoindentation experiments, a vertical drop of the load is observed on the load-displacement curve.
 
 .. figure:: ./_pictures/load-disp_curve_popin.png
+   :name: load_disp_curve_popin
    :scale: 60 %
    :align: center
    
-   *Figure 1 : Schematics of indentation load-displacement curve with a pop-in: a) load-controlled and b) displacement-controlled nanoindentation experiments.*
+   *Schematics of indentation load-displacement curve with a pop-in: a) load-controlled and b) displacement-controlled nanoindentation experiments.*
 
 :math:`F_\text{c,max}` is the maximum applied load, :math:`h_\text{t}` is the total indentation depth and
 :math:`h_\text{r}` is the residual indentation depth.
@@ -109,9 +110,9 @@ Dislocations nucleation
 ###############################
 
 According to many authors, pop-in corresponds to the nucleation of at least one dislocation, during indentation
-of crystalline materials (see Figure 2) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_, [#Wo_2006]_, [#Morris_2011]_,
+of crystalline materials (see :numref:`popin_mechanisms_1`) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_, [#Wo_2006]_, [#Morris_2011]_,
 [#Lu_2012]_, [#Ramalingam_2012]_, [#Wu_2014_1]_ and [#Wu_2014_2]_. Before the pop-in event, the indentation load-displacement
-obtained with a spherical indenter, can be fitted with the Hertz equation (see Figure 3) [#Johnson_1987]_:
+obtained with a spherical indenter, can be fitted with the Hertz equation (see :numref:`load_disp_curve_two_popin_Hertzian_fit`) [#Johnson_1987]_:
 
     .. math:: F_\text{c}  = (4/3) E^{*} \sqrt{R^{*}} h_\text{crit}^{1.5}
             :label: Hertz_equation
@@ -142,17 +143,19 @@ Find here the |matlab| function to calculate the reduced value of a variable:
 `reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/reducedValue.m>`_.
 
 .. figure:: ./_pictures/popin_mechanisms_1.png
+   :name: popin_mechanisms_1
    :scale: 30 %
    :align: center
 
-   *Figure 2 : Schematics cross section of deformation profile of an elastic-plastic substrate under indentation :
+   *Schematics cross section of deformation profile of an elastic-plastic substrate under indentation :
    1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
             
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
+   :name: load_disp_curve_two_popin_Hertzian_fit
    :scale: 60 %
    :align: center
    
-   *Figure 3 : Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
+   *Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
    
 The elastic-plastic transition is often studied statistically as a function of temperature :math:`T` and indentation rate :math:`F(t)`.
 Schuh C.A. et al. observed a good consistency between experimental results and a thermally activated mechanism of incipient plasticity 
@@ -234,7 +237,8 @@ Strain transfer across grain boundaries in metals
 ####################################################
 
 Some authors observed sometimes two pop-in on the load-displacement curve during indentation performed close to a grain boundary
-(see Figure 2 and Figure 3). The first pop-in is usually attributed to the nucleation of dislocation in a metallic material
+(see :numref:`popin_mechanisms_1` and :numref:`load_disp_curve_two_popin_Hertzian_fit`).
+The first pop-in is usually attributed to the nucleation of dislocation in a metallic material
 (see previous section of this documentation), and the second pop-in is related to the presence nearby of the grain boundary.
  
 The occurrence of such a strain burst is found to be related to the slip activity (function of the phase material and the grain orientation),
@@ -259,7 +263,7 @@ on an elastic-plastic (ductile) substrate, pop-in were observed experimentally a
    :scale: 60 %
    :align: center
 
-   *Figure 4 : Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
+   *Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
 
 Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
 The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation :
@@ -279,12 +283,13 @@ The two constants :math:`K` and :math:`n` are obtained from a fitting procedure 
 obtained from nanoindentation tests performed on the substrate without the brittle film.
 
 .. figure:: ./_pictures/popin_mechanisms_2.png
+   :name: popin_mechanisms_2
    :scale: 30 %
    :align: center
 
-   *Figure 5 : Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
+   *Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
    
-In the Figure 5, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
+In the :numref:`popin_mechanisms_2`, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
 :math:`h` is the indentation displacement, :math:`c` the radius of the plastic zone in the substrate and :math:`a_\text{c}` the contact radius between the indenter and the thin film.
 
 Find here the |matlab| function to calculate the plastic radius :math:`c`:
