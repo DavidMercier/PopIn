@@ -23,7 +23,7 @@ The pop-in event
 A pop-in (event) is a sudden (load or displacement) burst during the loading of an indenter on a sample.
 If the nanoindentation experiment is load-controlled, an horizontal plateau is also observed on the 
 load-displacement curve, when a pop-in occurs at the critical load :math:`F_\text{crit}` and
-critical displacement :math:`h_\text{crit}` (see :refnum:`load_disp_curve_popin`). In the case of a displacement-controlled
+critical displacement :math:`h_\text{crit}` (see :numref:`load_disp_curve_popin`). In the case of a displacement-controlled
 nanoindentation experiments, a vertical drop of the load is observed on the load-displacement curve.
 
 .. figure:: ./_pictures/load-disp_curve_popin.png

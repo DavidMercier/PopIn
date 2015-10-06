@@ -42,7 +42,6 @@ Dislocation nucleation during (nano)indentation
 
 * `Page T.F. et al., "The deformation behavior of ceramic crystals subjected to very low load (nano)indentations" (1992). <http://dx.doi.org/10.1557/JMR.1992.0450>`_
 * `Venkataraman S.K. et al., "Continuous microindentation of passivating surfaces" (1993). <http://dx.doi.org/10.1557/JMR.1993.0685>`_
-* `Mann A.B. et al., "Nanoindentation of Epitaxial Films: A Study of Pop-in Events" (1994). <http://dx.doi.org/10.1557/PROC-356-271>`_
 * `Gerberich W.W. et al., "The injection of plasticity by millinewton contacts" (1995). <http://dx.doi.org/10.1016/0956-7151(94)00351-H>`_
 * `Gerberich W.W. et al., "Indentation induced dislocation nucleation: The initial yield point" (1996). <http://dx.doi.org/10.1016/1359-6454(96)00010-9>`_
 * `Corcoran S.G. et al., "Anomalous plastic deformation at surfaces: Nanoindentation of gold single crystals" (1997). <http://dx.doi.org/10.1103/PhysRevB.55.R16057>`_
@@ -217,6 +216,7 @@ Statistics of pop-in
 +++++++++++++++++++++
 
 * `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
+* `Mann A.B. et al., "Nanoindentation of Epitaxial Films: A Study of Pop-in Events" (1994). <http://dx.doi.org/10.1557/PROC-356-271>`_
 * `Chechenin N.G. et al. "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates" (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 * `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
 * `Morash K.R. and Bahr D.F., "Nanomechanical testing for fracture of oxide films.", Journal of materials research" (2005). <http://dx.doi.org/10.1557/JMR.2005.0188>`_
