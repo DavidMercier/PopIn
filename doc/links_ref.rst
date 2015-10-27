@@ -123,6 +123,7 @@ Dislocation nucleation during (nano)indentation
 * `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
 * `Xiong K. and Gu J., "Understanding pop-in phenomena in FeNi3 nanoindentation" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.08.007>`_
 * `Bei H. and Gu J., "A tale of two mechanisms: Strain-softening versus strain-hardening in single crystals under small stressed volumes" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.043>`_
+* `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
@@ -234,6 +235,7 @@ Statistics of pop-in
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 * `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
 * `Madsen N.D. et al., "Toughness measurement of thin films based on circumferential cracks induced at conical indentation" (2015). <http://dx.doi.org/10.1007/s10704-015-0022-5>`_
+* `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
 
 Softwares
 ###########
