@@ -124,6 +124,7 @@ Dislocation nucleation during (nano)indentation
 * `Xiong K. and Gu J., "Understanding pop-in phenomena in FeNi3 nanoindentation" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.08.007>`_
 * `Bei H. and Gu J., "A tale of two mechanisms: Strain-softening versus strain-hardening in single crystals under small stressed volumes" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.043>`_
 * `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
+* `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
