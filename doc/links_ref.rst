@@ -237,6 +237,7 @@ Statistics of pop-in
 * `Guo T. et al., "Distinguishing between slip and twinning events during nanoindentation of magnesium alloy AZ31" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.034>`_
 * `Madsen N.D. et al., "Toughness measurement of thin films based on circumferential cracks induced at conical indentation" (2015). <http://dx.doi.org/10.1007/s10704-015-0022-5>`_
 * `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
+* `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
 
 Softwares
 ###########
