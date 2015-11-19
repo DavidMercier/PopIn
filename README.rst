@@ -15,20 +15,17 @@ Authors
 ---------
 Written by D. Mercier [1].
 
-[1] Max-Planck-Institut für Eisenforschung, 40237 Düsseldorf, Germany (http://www.mpie.de/)
+[1] Max-Planck-Institut fÃ¼r Eisenforschung, 40237 DÃ¼sseldorf, Germany (http://www.mpie.de/)
 
 Reference papers
 ------------------
 
-* `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies" (2013). <http://www.theses.fr/2013GRENI083>`_
+* `Mercier D., "Behaviour laws of materials used in electrical contacts for Â« flip chip Â» technologies" (2013). <http://www.theses.fr/2013GRENI083>`_
 
 Acknowledgements
 ------------------
-The author is grateful to V. Mandrillon from CEA Grenoble and to M. Verdier from SIMaP.
-
-CEA: http://www.cea.fr/le-cea/les-centres-cea/grenoble
-
-SIMaP: http://simap.grenoble-inp.fr
+The author is grateful to `Dr. V. Mandrillon <https://www.researchgate.net/profile/Vincent_Mandrillon>`_ from (`CEA <http://www.cea.fr/le-cea/les-centres-cea/grenoble>`_, France (Grenoble))
+and to `Dr. M. Verdier <Marc.Verdier@simap.grenoble-inp.fr>`_ from (`SIMaP <http://simap.grenoble-inp.fr>`_, France (Grenoble)), for long discussions and many advices about nanoindentation.
 
 Keywords
 -----------
