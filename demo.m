@@ -20,6 +20,7 @@ catch
     cd(startdir);
     commandwindow;
     path_management;
+    gui.config.POPINroot = get_popin_root; % ensure that environment is set
 end
 
 [gui.config.indenter, gui.config.data, ...
