@@ -202,13 +202,7 @@ else
         guidata(gcf, gui);
         
         % Options settings
-        OPTIONS = optimset('lsqcurvefit');
-        OPTIONS = optimset(OPTIONS, 'TolFun',  ...
-            gui.config.numerics.TolFun_value);
-        OPTIONS = optimset(OPTIONS, 'TolX',    ...
-            gui.config.numerics.TolX_value);
-        OPTIONS = optimset(OPTIONS, 'MaxIter', ...
-            gui.config.numerics.MaxIter_value);
+        OPTIONS = algoMinimization;
         
         % Calculations of the cumulative function
         if strcmp(Func, FuncList(1,:))
