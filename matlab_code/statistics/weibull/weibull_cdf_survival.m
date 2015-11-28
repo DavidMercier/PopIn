@@ -16,9 +16,7 @@ weibull_cdf_s = @(p,x) (exp(-(x./p(2)).^p(1)));
 % p(2) = Mean critical value
 gui.cumulativeFunction.p0 = [1 ; mean(xdata_fit)];
 
-resultToolbox = isToolboxAvailable('Optimization Toolbox');
-
-if resultToolbox
+if gui.config.licenceFlag
     [gui.cumulativeFunction.coefEsts, ...
         gui.cumulativeFunction.resnorm, ...
         gui.cumulativeFunction.residual, ...
