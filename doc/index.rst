@@ -18,7 +18,7 @@ With this Matlab toolbox, it is possible to :
    :scale: 35 %
    :align: center
    
-   *: Screenshot of the main window of the PopIn toolbox.*
+   *Screenshot of the main window of the PopIn toolbox.*
 
 Contents
 =========

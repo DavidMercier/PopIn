@@ -36,7 +36,7 @@ First of all a GUI is a Graphical User Interface.
    :scale: 30 %
    :align: center
    
-   *: Screenshot of the main window of the PopIn toolbox.*
+   *Screenshot of the main window of the PopIn toolbox.*
 
 * Import your (nano)indentation results (.xls file obtained from MTS software with at least more than 20 indentation tests for statistics), by pressing the button 'Select file'.
 * Select the end segment (if segments exist), in order to set the maximum indentation depth.
@@ -64,25 +64,25 @@ First of all a GUI is a Graphical User Interface.
    :scale: 40 %
    :align: center
    
-   *: File selector.*
+   *File selector.*
 
 .. figure:: ./_pictures/GUI_Main_Window.png
    :scale: 30 %
    :align: center
    
-   *: Plot of the load-displacement curves and the mortal Weibull cdf after loading of data.*
+   *Plot of the load-displacement curves and the mortal Weibull cdf after loading of data.*
    
 .. figure:: ./_pictures/GUI_Main_Window_survival.png
    :scale: 30 %
    :align: center
    
-   *: Plot of the load-displacement curves and the survival Weibull cdf.*
+   *Plot of the load-displacement curves and the survival Weibull cdf.*
    
 .. figure:: ./_pictures/GUI_Main_Window_chechenin.png
    :scale: 30 %
    :align: center
    
-   *: Plot of the load-displacement curves and the mortal modified Weibull cdf (Chechenin's model).*
+   *Plot of the load-displacement curves and the mortal modified Weibull cdf (Chechenin's model).*
    
 The YAML configuration files
 #################################
