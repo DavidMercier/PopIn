@@ -31,7 +31,7 @@ nanoindentation experiments, a vertical drop of the load is observed on the load
    :scale: 60 %
    :align: center
    
-   *Schematics of indentation load-displacement curve with a pop-in: a) load-controlled and b) displacement-controlled nanoindentation experiments.*
+   *: Schematics of indentation load-displacement curve with a pop-in: a) load-controlled and b) displacement-controlled nanoindentation experiments.*
 
 :math:`F_\text{c,max}` is the maximum applied load, :math:`h_\text{t}` is the total indentation depth and
 :math:`h_\text{r}` is the residual indentation depth.
@@ -147,7 +147,7 @@ Find here the |matlab| function to calculate the reduced value of a variable:
    :scale: 30 %
    :align: center
 
-   *Schematics cross section of deformation profile of an elastic-plastic substrate under indentation :
+   *: Schematics cross section of deformation profile of an elastic-plastic substrate under indentation :
    1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
             
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
@@ -155,7 +155,7 @@ Find here the |matlab| function to calculate the reduced value of a variable:
    :scale: 60 %
    :align: center
    
-   *Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
+   *: Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
    
 The elastic-plastic transition is often studied statistically as a function of temperature :math:`T` and indentation rate :math:`F(t)`.
 Schuh C.A. et al. observed a good consistency between experimental results and a thermally activated mechanism of incipient plasticity 
@@ -256,14 +256,14 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 ################################################################
 
 In the case of indentation made into a hard brittle film (e.g.: native or thermally/anodically grown oxide, ALD coatings ...)
-on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film (see Figures 4 and 5)
+on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film 
 [#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
 
 .. figure:: ./_pictures/load-disp_curve_popin_load_sub.png
    :scale: 60 %
    :align: center
 
-   *Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
+   *: Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
 
 Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
 The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation :
@@ -287,7 +287,7 @@ obtained from nanoindentation tests performed on the substrate without the britt
    :scale: 30 %
    :align: center
 
-   *Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
+   *: Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
    
 In the :numref:`popin_mechanisms_2`, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
 :math:`h` is the indentation displacement, :math:`c` the radius of the plastic zone in the substrate and :math:`a_\text{c}` the contact radius between the indenter and the thin film.
