@@ -125,7 +125,7 @@ Dislocation nucleation during (nano)indentation
 * `Bei H. and Gu J., "A tale of two mechanisms: Strain-softening versus strain-hardening in single crystals under small stressed volumes" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.07.043>`_
 * `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
 * `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
-* `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.112116>`_
+* `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.1121166>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
@@ -239,7 +239,7 @@ Statistics of pop-in
 * `Madsen N.D. et al., "Toughness measurement of thin films based on circumferential cracks induced at conical indentation" (2015). <http://dx.doi.org/10.1007/s10704-015-0022-5>`_
 * `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
 * `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
-* `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.112116>`_
+* `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.1121166>`_
 
 Softwares
 ###########
