@@ -1,4 +1,4 @@
-% Copyright 2013 Max-Planck-Institut für Eisenforschung GmbH
+%% Copyright 2014 MERCIER David
 function cellstr_out = cellstr_filter(cellstring, filter_cell_or_str)
 %% Delete all entries of a cell array of string that math the filter
 % filter can be string or cellstr

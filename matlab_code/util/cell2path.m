@@ -1,4 +1,4 @@
-% Copyright 2013 Max-Planck-Institut für Eisenforschung GmbH
+%% Copyright 2014 MERCIER David
 function pstr = cell2path(p_cstr)
 %% Joins a Matlab search path cell string with the pathseparator and returns the
 % result as a string
