@@ -37,7 +37,7 @@ nanoindentation experiments, a vertical drop of the load is observed on the load
 :math:`h_\text{r}` is the residual indentation depth.
 
 Find here the |matlab| function to quantify pop-in by peak detection:
-`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/peakdet.m>`_.
+`peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/third_party_codes/peakdet.m>`_.
 
 .. warning::
     In this toolbox, only load-controlled nanoindentation experiments are analyzed.
