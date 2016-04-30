@@ -150,7 +150,8 @@ else
                 elseif strcmp(Func, FuncList(3,:)) || ...
                         strcmp(Func, FuncList(4,:))
                     gui.results(ii).binCtrs = gui.data(ii).sum_L / ...
-                        sorted_sumL(gui.data_xls.sheets_xls_notEmpty/2);
+                        sorted_sumL(round(gui.data_xls.sheets_xls_notEmpty/2));
+                    % round is used to avoid error when the Excel file contains odd number of sheets
                 end
             end
             gui.resultsMax_binCtrs = max([gui.data.sum_L]);
@@ -165,7 +166,8 @@ else
                 elseif strcmp(Func, FuncList(3,:)) || ...
                         strcmp(Func, FuncList(4,:))
                     gui.results(ii).binCtrs = gui.data(ii).sum_h / ...
-                        sorted_sumh(gui.data_xls.sheets_xls_notEmpty/2);
+                        sorted_sumh(round(gui.data_xls.sheets_xls_notEmpty/2));
+                    % round is used to avoid error when the Excel file contains odd number of sheets
                 end
             end
             gui.resultsMax_binCtrs = max([gui.data.sum_h]);

@@ -2,6 +2,7 @@
 function openfile_popin
 %% Function used to open a data file and assign experimental results to variables
 gui = guidata(gcf);
+gui.raw_data = struct();
 
 %% Open window to select file
 [filename_data, pathname_data, filterindex_data] = ...
