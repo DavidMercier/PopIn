@@ -245,4 +245,4 @@ Statistics of pop-in
 
 Softwares
 ###########
-* `Pop-in Detection by Askari H. et al. <https://nanohub.org/resources/20804>`_
+* `Pop-in Detection - An algorithm to analyze and detect pop-ins in indentation data generated from .hys (Hysitron) files, by Askari H. et al. <https://nanohub.org/resources/20804>`_

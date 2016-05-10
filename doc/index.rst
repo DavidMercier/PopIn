@@ -29,6 +29,7 @@ Contents
    getting_started
    overview_of_the_toolbox
    models
+   popin_detection
    examples.rst
    links_ref
    
