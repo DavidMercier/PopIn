@@ -179,6 +179,7 @@ Cracks formation
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <http://dx.doi.org/10.1063/1.1711164>`_
 * Wilantewicz T., "Crack initiation behavior ofoptical glasses from Vickers indentation" PhD thesis (2005).
 * `Kim J.H. et al., "Characterization of Mechanical Properties of Brittle Coating Systems by Various Indentation Techniques" (2007). <http://dx.doi.org/10.4028/www.scientific.net/KEM.352.53>`_
+* `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <http://dx.doi.org/10.1016/j.ceramint.2016.05.030>`_
 
 Phase transformation
 ---------------------------
@@ -240,6 +241,7 @@ Statistics of pop-in
 * `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
 * `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
 * `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.1121166>`_
+* `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <http://dx.doi.org/10.1016/j.ceramint.2016.05.030>`_
 
 Softwares
 ###########
