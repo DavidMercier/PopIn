@@ -21,16 +21,61 @@ If this step size exceeds a user defined number then it is considered as pop-in.
 The pop-in detection in the PopIn Matlab toolbox
 ###################################################
 
-In the PopIn Matlab toolbox, numerous criteria based on the `diff Matlab function <http://nl.mathworks.com/help/matlab/ref/diff.html>`_, are implemented to detect pop-in on the load-displacement curve:
+In the PopIn Matlab toolbox, numerous criteria based on the function `diff <http://nl.mathworks.com/help/matlab/ref/diff.html>`_, are implemented to detect pop-in on the load-displacement curve:
 
-    * Differences between adjacent depths: :math:`\Delta h = diff(h) = h(i+1) - h(i)`
-    * 2nd differences between adjacent elements (the diff operator is used 2 times): :math:`\Delta h = diff(diff(h)) = diff(h,2)
-    * 3rd differences between adjacent elements (the diff operator is used 3 times): :math:`\Delta h = diff(diff(diff(h))) = diff(h,3)
-    * 1st derivative of the load-displacement curve: :math:`dF/dh = diff(F)/diff(h)`
-    * 2nd derivative of the load-displacement curve: :math:`dF/dh = diff(dF/dh)/diff(h)`
-    * Derivative of the load-displacement curve: :math:`dF/dh^{2} = (diff(F)/diff(h))/diff(h)`
+    * Criterion 1 - Differences between adjacent depths: :math:`\Delta h = diff(h) = h(i+1) - h(i)`
+    * Criterion 2 - 2nd differences between adjacent elements (the diff operator is used 2 times): :math:`\Delta h = diff(diff(h)) = diff(h,2)
+    * Criterion 3 - 3rd differences between adjacent elements (the diff operator is used 3 times): :math:`\Delta h = diff(diff(diff(h))) = diff(h,3)
+    * Criterion 4 - 1st derivative of the load-displacement curve: :math:`dF/dh = diff(F)/diff(h)`
+    * Criterion 5 - 2nd derivative of the load-displacement curve: :math:`dF/dh = diff(dF/dh)/diff(h)`
+    * Criterion 6 - Derivative of the load-displacement curve: :math:`dF/dh^{2} = (diff(F)/diff(h))/diff(h)`
 
 When a pop-in occurs, a peak is observed on the plot of differences or derivatives. To have only positive peaks, derivatives are multiplied by -1. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). The last criterion is the one proposed by Malzbender et al. [#Malzbender_2001]_.
+
+Plot of differences or derivatives
+###################################################
+
+.. figure:: ./_pictures/load-disp_curve_popin_exp.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of an experimental load-displacement curve displaying a pop-in.*
+
+.. figure:: ./_pictures/load-disp_curve_popin_diff1.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of the 1st criterion.*
+
+.. figure:: ./_pictures/load-disp_curve_popin_diff2.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of the 2nd criterion.*
+
+.. figure:: ./_pictures/load-disp_curve_popin_diff3.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of the 3rd criterion.*
+   
+.. figure:: ./_pictures/load-disp_curve_popin_dfdh.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of the 4th criterion.*
+   
+.. figure:: ./_pictures/load-disp_curve_popin_d2fdh2.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of the 5th criterion.*
+   
+.. figure:: ./_pictures/load-disp_curve_popin_dfdh2.png
+   :scale: 75 %
+   :align: center
+   
+   *Plot of the 6th criterion.*
 
 References
 #############
