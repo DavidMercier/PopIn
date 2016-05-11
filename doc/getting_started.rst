@@ -40,7 +40,8 @@ First of all a GUI is a Graphical User Interface.
 
 * Import your (nano)indentation results (.xls file obtained from MTS software with at least more than 20 indentation tests for statistics), by pressing the button 'Select file'.
 * Select the end segment (if segments exist), in order to set the maximum indentation depth.
-* Once the dataset is loaded, run calculations by pressing the green button 'RUN CALCULATIONS and PLOT'.
+* Set units and criterion to detect pop-in.
+* Once the dataset is loaded and parameters set, run calculations by pressing the green button 'RUN CALCULATIONS and PLOT'.
 * Load-displacement curves and selected cumulative distribution function (cdf) are plotted respectively on the left graphic and the right graphic.
 * A picture of the main window as .png file is created and cdf fit results are stored in a .txt file when you press the button 'SAVE'.
 * Results are accessible by typing in the Matlab command window (here for 50 indentation tests) : 
