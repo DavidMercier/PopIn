@@ -9,7 +9,7 @@
 
 * 1) Import your (nano)indentation results. See here an `example file <http://popin.readthedocs.org/en/latest/examples.html>`_.
 
-* 2) Set units, set temperature of experiments, set the minimum and maximum indentation depths, set the pop-in to analyze and select the critical parameter to use for the Weibull distribution.
+* 2) Set units, set criterion, set temperature of experiments, set the minimum and maximum indentation depths, set the pop-in to analyze and select the critical parameter to use for the Weibull distribution.
 
 * 3) Run the calculations and plot results.
 
