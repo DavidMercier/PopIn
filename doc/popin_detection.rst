@@ -21,8 +21,8 @@ If this step size exceeds a user defined number then it is considered as pop-in.
 The pop-in detection in the PopIn Matlab toolbox
 ###################################################
 
-In the PopIn Matlab toolbox, a pop-in is detected when a peak is identifed on the 22nd derivative of the load-displacement curve.
-Peaks anaysis is performed using the function peakdet released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html).
+In the PopIn Matlab toolbox, a pop-in is detected when a peak is identifed on the 2nd derivative of the load-displacement curve.
+Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html).
 
 References
 #############
