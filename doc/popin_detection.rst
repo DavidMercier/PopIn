@@ -11,9 +11,9 @@ data for the pop-in detection [#Malzbender_2001]_. Minima on these curves corres
 
 In his algorithm, Askari H. et al. proposed the following criteria to detect a pop-in [#Askari]_:
 
-    * Absolute change in depth over 2 lines of data i.e.   :math:`\Delta h = h(i) -h(i-1)`
-    * Forward 2 pts avg - trailing 2 pts avg. i.e.         :math:`\Delta h = (h(i)+h(i+1))/2 -(h(i-1)+h(i-2))/2`
-    * Forward 3 pts avg - trailing 3 pts avg. i.e.         :math:`\Delta h = (h(i)+h(i+1)+h(i+2))/3 -(h(i-1)+h(i-2)+h(i-3))/3`
+    * Absolute change in depth over 2 lines of data: :math:`\Delta h = h(i) - h(i-1)`
+    * Forward 2 pts avg - trailing 2 pts average: :math:`\Delta h = (h(i)+h(i+1))/2 - (h(i-1)+h(i-2))/2`
+    * Forward 3 pts avg - trailing 3 pts average: :math:`\Delta h = (h(i)+h(i+1)+h(i+2))/3 - (h(i-1)+h(i-2)+h(i-3))/3`
 	
 The absolute step size is the difference beteen two (or more in case averaging is active) consecutive depth readings from the machine.
 If this step size exceeds a user defined number then it is considered as pop-in.
@@ -21,8 +21,16 @@ If this step size exceeds a user defined number then it is considered as pop-in.
 The pop-in detection in the PopIn Matlab toolbox
 ###################################################
 
-In the PopIn Matlab toolbox, a pop-in is detected when a peak is identifed on the 2nd derivative of the load-displacement curve.
-Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html).
+In the PopIn Matlab toolbox, numerous criteria based on the `diff Matlab function <http://nl.mathworks.com/help/matlab/ref/diff.html>`_, are implemented to detect pop-in on the load-displacement curve:
+
+    * Differences between adjacent depths: :math:`\Delta h = diff(h) = h(i+1) - h(i)`
+    * 2nd differences between adjacent elements (the diff operator is used 2 times): :math:`\Delta h = diff(diff(h)) = diff(h,2)
+    * 3rd differences between adjacent elements (the diff operator is used 3 times): :math:`\Delta h = diff(diff(diff(h))) = diff(h,3)
+    * 1st derivative of the load-displacement curve: :math:`dF/dh = diff(F)/diff(h)`
+    * 2nd derivative of the load-displacement curve: :math:`dF/dh = diff(dF/dh)/diff(h)`
+    * Derivative of the load-displacement curve: :math:`dF/dh^{2} = (diff(F)/diff(h))/diff(h)`
+
+When a pop-in occurs, a peak is observed on the plot of differences or derivatives. To have only positive peaks, derivatives are multiplied by -1. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). The last criterion is the one proposed by Malzbender et al. [#Malzbender_2001]_.
 
 References
 #############
