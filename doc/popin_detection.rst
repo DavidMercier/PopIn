@@ -44,37 +44,37 @@ Plot of the different criteria
    :scale: 75 %
    :align: center
    
-   *Plot of the 1st criterion.*
+   *Plot of the normalized 1st criterion.*
 
 .. figure:: ./_pictures/load-disp_curve_popin_diff2.png
    :scale: 75 %
    :align: center
    
-   *Plot of the 2nd criterion.*
+   *Plot of the normalized 2nd criterion.*
 
 .. figure:: ./_pictures/load-disp_curve_popin_diff3.png
    :scale: 75 %
    :align: center
    
-   *Plot of the 3rd criterion.*
+   *Plot of the normalized 3rd criterion.*
    
 .. figure:: ./_pictures/load-disp_curve_popin_dfdh.png
    :scale: 75 %
    :align: center
    
-   *Plot of the 4th criterion.*
+   *Plot of the normalized 4th criterion.*
    
 .. figure:: ./_pictures/load-disp_curve_popin_d2fdh2.png
    :scale: 75 %
    :align: center
    
-   *Plot of the 5th criterion.*
+   *Plot of the normalized 5th criterion.*
    
 .. figure:: ./_pictures/load-disp_curve_popin_dfdh2.png
    :scale: 75 %
    :align: center
    
-   *Plot of the 6th criterion.*
+   *Plot of the normalized 6th criterion.*
 
 References
 #############
