@@ -184,8 +184,12 @@ Cracks formation
 Phase transformation
 ---------------------------
 
+* `Furnémont Q. et al., "On the measurement of the nanohardness of the constitutive
+phases of TRIP-assisted multiphase steels" (2002). <http://dx.doi.org/10.1016/S0921-5093(01)01689-6>`_
+* `Furnémont Q., "The micromechanics of TRIP-assisted Multiphase Steels" PhD thesis (2003).`_
 * `Juliano T. et al., "Examining pressure-induced phase transformations in silicon by spherical indentation and Raman spectroscopy: A statistical study" (2004). <http://dx.doi.org/10.1557/JMR.2004.0403>`_
 * `Haberl B. et al., "Phase transformations induced by spherical indentation in ion-implanted amorphous silicon" (2006). <http://dx.doi.org/10.1063/1.2210767>`_
+* `Frick C.P. et al., "Stress-induced martensitic transformations and shape memory at nanometer scales" (2006). <http://dx.doi.org/10.1016/j.actamat.2006.01.030>`_
 * `Chrobak D. et al., "Nondislocation Origin of GaAs Nanoindentation Pop-In Event" (2007). <http://dx.doi.org/10.1103/PhysRevLett.98.045502>`_
 * `Oliver D.J. et al., "Giant pop-ins and amorphization in germanium during indentation" (2007). <http://dx.doi.org/10.1063/1.2490563>`_
 * `Yang B. and Vehoff H., "Dependence of nanohardness upon indentation size and grain size – A local examination of the interaction between dislocations and grain boundaries" (2007). <http://dx.doi.org/10.1016/j.actamat.2006.09.004>`_
@@ -197,7 +201,7 @@ Phase transformation
 * `Ahn T.-H. et al., "Investigation of strain-induced martensitic transformation in metastable austenite using nanoindentation" (2010). <http://dx.doi.org/10.1016/j.scriptamat.2010.05.024>`_
 * `Jian S.-R. et al., "Nanoindentation-induced phase transformation in (110)-oriented Si single-crystals" (2010). <http://dx.doi.org/10.1016/j.cossms.2009.11.002>`_
 * `Caër C. et al., "Stress induced pop-in and pop-out nanoindentation events in CuAlBe shape memory alloys" (2013). <http://dx.doi.org/10.1016/j.msea.2013.08.052>`_
-* `Huang H. and Yan J., "New insights into phase transformations in single crystal siliconby controlled cyclic nanoindentation" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.02.008>`_
+* `Huang H. and Yan J., "New insights into phase transformations in single crystal silicon by controlled cyclic nanoindentation" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.02.008>`_
 
 Strain transfer across grain boundaries
 ------------------------------------------------------
