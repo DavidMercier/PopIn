@@ -184,8 +184,7 @@ Cracks formation
 Phase transformation
 ---------------------------
 
-* `Furnémont Q. et al., "On the measurement of the nanohardness of the constitutive
-phases of TRIP-assisted multiphase steels" (2002). <http://dx.doi.org/10.1016/S0921-5093(01)01689-6>`_
+* `Furnémont Q. et al., "On the measurement of the nanohardness of the constitutive phases of TRIP-assisted multiphase steels" (2002). <http://dx.doi.org/10.1016/S0921-5093(01)01689-6>`_
 * `Furnémont Q., "The micromechanics of TRIP-assisted Multiphase Steels" PhD thesis (2003).`_
 * `Juliano T. et al., "Examining pressure-induced phase transformations in silicon by spherical indentation and Raman spectroscopy: A statistical study" (2004). <http://dx.doi.org/10.1557/JMR.2004.0403>`_
 * `Haberl B. et al., "Phase transformations induced by spherical indentation in ion-implanted amorphous silicon" (2006). <http://dx.doi.org/10.1063/1.2210767>`_
