@@ -202,6 +202,7 @@ Phase transformation
 * `Jian S.-R. et al., "Nanoindentation-induced phase transformation in (110)-oriented Si single-crystals" (2010). <http://dx.doi.org/10.1016/j.cossms.2009.11.002>`_
 * `Caër C. et al., "Stress induced pop-in and pop-out nanoindentation events in CuAlBe shape memory alloys" (2013). <http://dx.doi.org/10.1016/j.msea.2013.08.052>`_
 * `Huang H. and Yan J., "New insights into phase transformations in single crystal silicon by controlled cyclic nanoindentation" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.02.008>`_
+* `Park H.S. and Yan J., "Nano-scale observation on the transformation behavior and mechanical stability of individual retained austenite in CMnSiAl TRIP steels" (2015). <http://dx.doi.org/10.1016/j.msea.2015.01.005>`_
 
 Strain transfer across grain boundaries
 ------------------------------------------------------
