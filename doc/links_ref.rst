@@ -110,6 +110,7 @@ Dislocation nucleation during (nano)indentation
 * `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
 * `Lu J.-Y. et al., "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 * `Gan B. et al., "Nanoindentation and nano-compression testing of Ni3Al precipitates" (2012). <http://dx.doi.org/10.1002/9781118516430.ch9>`_
+* `Ahn T.H. et al., "Relationship between yield point phenomena and the nanoindentation pop-in behavior of steel" (2012). <http://dx.doi.org/10.1557/jmr.2011.208>`_
 * `Oliver D.J. et al., "One-to-one spatially matched experiment and atomistic simulations of nanometre-scale indentation" (2014). <http://dx.doi.org/10.1088/0957-4484/25/2/025701>`_
 * `Pathak S. et al., "Understanding pop-ins in spherical nanoindentation" (2014). <http://dx.doi.org/10.1063/1.4898698>`_
 * `Kalidindi S.R. and Vachhani S.J., "Mechanical characterization of grain boundaries using nanoindentation" (2014). <http://dx.doi.org/10.1016/j.cossms.2014.05.002>`_
