@@ -201,6 +201,7 @@ Phase transformation
 * `Ahn T.-H. et al., "Investigation of strain-induced martensitic transformation in metastable austenite using nanoindentation" (2010). <http://dx.doi.org/10.1016/j.scriptamat.2010.05.024>`_
 * `Jian S.-R. et al., "Nanoindentation-induced phase transformation in (110)-oriented Si single-crystals" (2010). <http://dx.doi.org/10.1016/j.cossms.2009.11.002>`_
 * `Caër C. et al., "Stress induced pop-in and pop-out nanoindentation events in CuAlBe shape memory alloys" (2013). <http://dx.doi.org/10.1016/j.msea.2013.08.052>`_
+* `Ahn T.-H. et al., "Strain-induced ε-martensite transformation during nanoindentation of high-nitrogen steel" (2014). <http://dx.doi.org/10.1016/j.msea.2014.01.030>`_
 * `Huang H. and Yan J., "New insights into phase transformations in single crystal silicon by controlled cyclic nanoindentation" (2015). <http://dx.doi.org/10.1016/j.scriptamat.2015.02.008>`_
 * `Park H.S. and Yan J., "Nano-scale observation on the transformation behavior and mechanical stability of individual retained austenite in CMnSiAl TRIP steels" (2015). <http://dx.doi.org/10.1016/j.msea.2015.01.005>`_
 
