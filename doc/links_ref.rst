@@ -130,6 +130,7 @@ Dislocation nucleation during (nano)indentation
 * `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
 * `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.1121166>`_
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
+* `Nayyeri G. et al., "An instrumented spherical indentation study on high purity magnesium loaded nearly parallel to the c-axis" (2016). <http://dx.doi.org/10.1016/j.msea.2016.05.112>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
