@@ -239,8 +239,8 @@ Statistics of pop-in
 * `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
 * `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
 * `Somekawa H. and Schuh C.A., "Effect of solid solution elements on nanoindentation hardness, rate dependence, and incipient plasticity in fine grained magnesium alloys" (2011). <http://dx.doi.org/10.1016/j.actamat.2011.08.047>`_
-* `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
-* `Choi I.C. et al. Estimation of the shear transformation zone size in a bulk metallic glass through statistical analysis of the first pop-in stresses during spherical nanoindentation" (2012). <http://dx.doi.org/10.1016/j.scriptamat.2012.02.032>`_
+* `Ramalingam S. et al., "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
+* `Choi I.C. et al., "Estimation of the shear transformation zone size in a bulk metallic glass through statistical analysis of the first pop-in stresses during spherical nanoindentation" (2012). <http://dx.doi.org/10.1016/j.scriptamat.2012.02.032>`_
 * `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <http://dx.doi.org/10.1016/j.actamat.2011.11.034>`_
 * `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
