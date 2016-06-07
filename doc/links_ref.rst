@@ -58,6 +58,7 @@ Dislocation nucleation during (nano)indentation
 * `Ohmura T. et al., "Nanoindentation load–displacement behavior of pure face centered cubic metal thin films on a hard substrate" (2001). <http://dx.doi.org/10.1016/S0040-6090(00)01907-6>`_
 * `Göken M. et al., "Microstructural mechanical properties and yield point effects in Mo alloys" (2001). <http://dx.doi.org/10.1016/S0921-5093(01)01086-3>`_
 * `Chiu Y.L. et al., "Time-dependent characteristics of incipient plasticity in nanoindentation of a Ni3Al single crystal" (2002). <http://dx.doi.org/10.1016/S1359-6454(02)00025-3>`_
+* `Nieh T.G. et al., "Strain rate-dependent deformation in bulk metallic glasses" (2011). <http://dx.doi.org/10.1016/S0966-9795(02)00146-2>`_
 * `Lorenz D. et al., "Pop-in effect as homogeneous nucleation of dislocations during nanoindentation"(2003). <http://dx.doi.org/10.1103/PhysRevB.67.172101>`_
 * `Liang H.Y. et al. "Dislocation nucleation in the initial stage during nanoindentation" (2003). <http://dx.doi.org/10.1080/14786430310001605579>`_
 * `Pang M. et al. "Effects of Zn addition and thermal annealing on yield phenomena of CdTe and Cd0.96Zn0.04Te single crystals by nanoindentation" (2003). <http://dx.doi.org/10.1063/1.1556573>`_
