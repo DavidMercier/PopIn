@@ -53,7 +53,7 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
     * crack(s) formation ; 
     * phase transformation...
     
-It is really important to mention that pop-in events are function of the indenter shape, the temperature [#Schuh_2005]_ and the strain rate [#Nieh_2002]_.
+It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004], [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004], [#Nieh_2002]_.
 
 Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
 
@@ -317,6 +317,7 @@ References
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 .. [#Crosby_2015] `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <http://dx.doi.org/10.1016/10.1016/j.actamat.2015.02.003>`_
 .. [#Hainsworth_1995] `Hainsworth S.V. et al., "Analysis of nanoindentation load-displacement loading curves.", (1996). <http://dx.doi.org/10.1557/JMR.1996.0250>`_
+.. [#Jang_2007] `Jang J.-I. et al., "Rate-dependent inhomogeneous-to-homogeneous transition of plastic flows during nanoindentation of bulk metallic glasses: Fact or artifact?", (2007). <http://dx.doi.org/10.1063/1.2742286>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
 .. [#Kraft_2010] `Kraft O. et al., "Plasticity in Confined Dimensions" (2010). <http://dx.doi.org/10.1146/annurev-matsci-082908-145409>`_
 .. [#Kramer_2001] `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
@@ -325,7 +326,7 @@ References
 .. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
 .. [#Morash_2007] `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <http://dx.doi.org/10.1016/j.tsf.2006.01.043>`_
 .. [#Morris_2011] `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
-.. [#Nieh_2002] `Nieh T.G. et al., "Strain rate-dependent deformation in bulk metallic glasses" (2011). <http://dx.doi.org/10.1016/S0966-9795(02)00146-2>`_
+.. [#Nieh_2002] `Nieh T.G. et al., "Strain rate-dependent deformation in bulk metallic glasses" (2002). <http://dx.doi.org/10.1016/S0966-9795(02)00146-2>`_
 .. [#Ramalingam_2012] `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
 .. [#Schuh_2004] `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
 .. [#Schuh_2005] `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
