@@ -96,6 +96,7 @@ Dislocation nucleation during (nano)indentation
 * `Rabkin E. et al., "On the nature of displacement bursts during nanoindentation of ultrathin Ni films on sapphire" (2010). <http://dx.doi.org/10.1016/j.actamat.2009.11.002>`_
 * `Basu S. et al., "Microscale deformation of (001) and (100) rutile single crystals under spherical nanoindentation" (2011). <http://dx.doi.org/10.1557/jmr.2011.337>`_
 * `Egberts R. and Bennewitz R., "Atomic-scale nanoindentation: detection and identification of single glide events in three dimensions by force microscopy" (2011). <http://dx.doi.org/10.1088/0957-4484/22/42/425703>`_
+* `Somekawa H. and Schuh C.A., "Effect of solid solution elements on nanoindentation hardness, rate dependence, and incipient plasticity in fine grained magnesium alloys" (2011). <http://dx.doi.org/10.1016/j.actamat.2011.08.047>`_
 * `Herbert F.W. et al., "Nanoindentation Induced Deformation Near Grain Boundaries of Corrosion Resistant Nickel Alloys" (2011). <http://dx.doi.org/10.1557/opl.2011.463>`_
 * `Li T.L. et al., "Indentation Schmid factor and orientation dependence of nanoindentation pop-in behavior of NiAl single crystals" (2011). <http://dx.doi.org/10.1016/j.jmps.2011.04.003>`_
 * `Mao W.G. et al., "Deformation behavior and mechanical properties of polycrystalline and single crystal alumina during nanoindentation" (2011). <http://dx.doi.org/10.1016/j.scriptamat.2011.03.022>`_
@@ -128,6 +129,7 @@ Dislocation nucleation during (nano)indentation
 * `Wu D. et al., "Elastic and plastic deformations in a high entropy alloy investigated using a nanoindentation method" (2015). <http://dx.doi.org/10.1016/j.intermet.2015.10.002>`_
 * `Franke O. et al., "Incipient plasticity of single-crystal tantalum as a function of temperature and orientation" (2015). <http://dx.doi.org/10.1080/14786435.2014.949324>`_
 * `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.1121166>`_
+* `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
@@ -236,7 +238,9 @@ Statistics of pop-in
 * `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
 * `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
 * `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <http://dx.doi.org/10.1103/PhysRevLett.106.165502>`_
+* `Somekawa H. and Schuh C.A., "Effect of solid solution elements on nanoindentation hardness, rate dependence, and incipient plasticity in fine grained magnesium alloys" (2011). <http://dx.doi.org/10.1016/j.actamat.2011.08.047>`_
 * `Ramalingam S. et al. "Determining Activation Volume for the Pressure-Induced Phase Transformation in β-Eucryptite Through Nanoindentation" (2012). <http://dx.doi.org/10.1111/j.1551-2916.2012.05180.x>`_
+* `Choi I.C. et al. Estimation of the shear transformation zone size in a bulk metallic glass through statistical analysis of the first pop-in stresses during spherical nanoindentation" (2012). <http://dx.doi.org/10.1016/j.scriptamat.2012.02.032>`_
 * `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <http://dx.doi.org/10.1016/j.actamat.2011.11.034>`_
 * `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
