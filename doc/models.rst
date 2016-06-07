@@ -53,7 +53,7 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
     * crack(s) formation ; 
     * phase transformation...
     
-It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004], [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004], [#Nieh_2002]_.
+It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004]_, [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004]_, [#Nieh_2002]_.
 
 Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
 
