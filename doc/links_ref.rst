@@ -65,6 +65,7 @@ Dislocation nucleation during (nano)indentation
 * `Bradby J.E. et al., "Pop-in events induced by spherical indentation in compound semiconductors" (2004). <http://dx.doi.org/10.1557/jmr.2004.0043>`_
 * `Minor A.M. et al., "Direct observations of incipient plasticity during nanoindentation of Al" (2004). <http://dx.doi.org/10.1557/jmr.2004.19.1.176>`_
 * `Schuh C.A. and Lund A.C., "Application of nucleation theory to the rate dependence of incipient plasticity during nanoindentation" (2004). <http://dx.doi.org/10.1557/JMR.2004.0276>`_
+* `Schuh C.A. and Nieh T.G., "A survey of instrumented indentation studies on metallic glasses" (2004). <http://dx.doi.org/10.1557/jmr.2004.19.1.46>`_
 * `Soer W.A. et al., "Effects of solute Mg on grain boundary and dislocation dynamics during nanoindentation of Al–Mg thin films" (2004). <http://dx.doi.org/10.1016/j.actamat.2004.08.032>`_
 * `Schuh C.A. et al., "Quantitative insight into dislocation nucleation from high-temperature nanoindentation experiments" (2005). <http://dx.doi.org/10.1038/nmat1429>`_
 * `Minor A.M. et al., "A new view of the onset of plasticity during the nanoindentation of aluminium" (2006). <http://dx.doi.org/10.1038/nmat1714>`_
