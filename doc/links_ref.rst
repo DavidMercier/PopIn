@@ -175,6 +175,7 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <http://dx.doi.org/10.1016/j.tsf.2006.01.043>`_
 * `Stauffer D.D., "Deformation Mechanisms in Nanoscale Brittle Materials" PhD Thesis (2011). <http://purl.umn.edu/108291>`_
 * `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
+* `Lawrence S.K. et al., "Deformation and Fracture of Oxides Fabricated on 304L Stainless Steel via Pulsed Laser Irradiation" (2012). <http://dx.doi.org/10.1557/opl.2012.819>`_
 * `Madsen N.D. et al., "Toughness measurement of thin films based on circumferential cracks induced at conical indentation" (2015). <http://dx.doi.org/10.1007/s10704-015-0022-5>`_
 
 Cracks formation
