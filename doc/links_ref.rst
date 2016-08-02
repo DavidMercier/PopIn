@@ -45,6 +45,7 @@ Dislocation nucleation during (nano)indentation
 * `Gerberich W.W. et al., "The injection of plasticity by millinewton contacts" (1995). <http://dx.doi.org/10.1016/0956-7151(94)00351-H>`_
 * `Gerberich W.W. et al., "Indentation induced dislocation nucleation: The initial yield point" (1996). <http://dx.doi.org/10.1016/1359-6454(96)00010-9>`_
 * `Corcoran S.G. et al., "Anomalous plastic deformation at surfaces: Nanoindentation of gold single crystals" (1997). <http://dx.doi.org/10.1103/PhysRevB.55.R16057>`_
+* `Bahr D.F. et al., "The mechanical behavior of a passivating surface under potentiostatic control" (1997). <http://dx.doi.org/10.1557/JMR.1997.0439>`_
 * `Michalske T.A. and Houston J.E., "Dislocation nucleation at nano-scale mechanical contacts" (1998). <http://dx.doi.org/10.1016/S1359-6454(97)00270-X>`_
 * `Kelchner C.L. et al., "Dislocation nucleation and defect structure during surface indentation" (1998). <http://dx.doi.org/10.1103/PhysRevB.58.11085>`_
 * `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <http://dx.doi.org/10.1016/S1359-6454(98)00024-X>`_
