@@ -86,6 +86,7 @@ Dislocation nucleation during (nano)indentation
 * `Barnoush A. and Vehoff H., "In situ electrochemical nanoindentation: A technique for local examination of hydrogen embrittlement" (2008). <http://dx.doi.org/10.1016/j.corsci.2007.05.026>`_
 * `Kalidindi S.R. and Pathak S., "Determination of the effective zero-point and the extraction of spherical nanoindentation stress–strain curves" (2008). <http://dx.doi.org/10.1016/j.actamat.2008.03.036>`_
 * `Shim S. et al., "A different type of indentation size effect" (2008). <http://dx.doi.org/10.1016/j.scriptamat.2008.07.026>`_
+* `Dietiker M. et al., "Nanoindentation of single-crystalline gold thin films: Correlating hardness and the onset of plasticity" (2008). <http://dx.doi.org/10.1016/j.actamat.2008.04.032>`_
 * `Tsuru T. and Shibutani Y., "Theoretical Investigation of the Displacement Burst Observed in Nanoindentation by Collective Dislocation Loops Nucleation Model" (2008). <http://dx.doi.org/10.1299/jcst.2.559>`_
 * `Armstrong R.W. and Elban W.L., "Macro- to Nano-indentation Hardness Stress–Strain Aspects of Crystal Elastic/Plastic/Cracking Behaviors" (2009). <http://dx.doi.org/10.1007/s11340-009-9246-5>`_
 * `Bahr D.F. et al., "Dislocation nucleation and multiplication in small volumes: The onset of plasticity during indentation testing" (2009). <http://dx.doi.org/10.1007/s11837-009-0029-3>`_
