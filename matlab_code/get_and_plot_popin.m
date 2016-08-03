@@ -44,6 +44,7 @@ else
                 end
                 
                 % Calculation of 1st difference = diff(h)
+                % First derivative
                 gui.data(ii_sheet).data_dh_cleaned = ...
                     diff(gui.data(ii_sheet).data_h_cleaned);
                 gui.data(ii_sheet).data_dL_cleaned = ...
@@ -54,6 +55,7 @@ else
                     gui.data(ii_sheet).data_dL_cleaned(length(gui.data(ii_sheet).data_dL_cleaned));
                 
                 % Calculation of 2nd difference = diff(diff(h)) = diff(h,2)
+                % Seconde derivative
                 gui.data(ii_sheet).data_ddh_cleaned = ...
                     diff(gui.data(ii_sheet).data_dh_cleaned);
                 gui.data(ii_sheet).data_ddL_cleaned = ...
@@ -73,60 +75,42 @@ else
                 gui.data(ii_sheet).data_dddL_cleaned(length(gui.data(ii_sheet).data_dddL_cleaned)+1) = ...
                     gui.data(ii_sheet).data_dddL_cleaned(length(gui.data(ii_sheet).data_dddL_cleaned));
                 
-                if get(gui.handles.popinDet, 'Value') == 1
-                    delta_data = ...
-                        max(gui.data(ii_sheet).data_dh_cleaned(:)) - ...
-                        2*nanmean(gui.data(ii_sheet).data_dh_cleaned(:));
+                if get(gui.handles.popinDet, 'Value') == 1 % Criterion #1
                     
-                    [maxpeak, minpeak] = ...
-                        peakdet(gui.data(ii_sheet).data_dh_cleaned(:), ...
-                        delta_data);
+                    data = gui.data(ii_sheet).data_dh_cleaned(:);
+                    peakData = data;
                     
-                elseif get(gui.handles.popinDet, 'Value') == 2
-                    delta_data = ...
-                        max(gui.data(ii_sheet).data_ddh_cleaned(:)) - ...
-                        2*nanmean(gui.data(ii_sheet).data_ddh_cleaned(:));
+                elseif get(gui.handles.popinDet, 'Value') == 2 % Criterion #2
                     
-                    [maxpeak, minpeak] = ...
-                        peakdet(gui.data(ii_sheet).data_ddh_cleaned(:), ...
-                        delta_data);
+                    data = gui.data(ii_sheet).data_ddh_cleaned(:);
+                    peakData = data;
                     
-                elseif get(gui.handles.popinDet, 'Value') == 3
-                    delta_data = ...
-                        max(gui.data(ii_sheet).data_dddh_cleaned(:)) - ...
-                        2*nanmean(gui.data(ii_sheet).data_dddh_cleaned(:));
+                elseif get(gui.handles.popinDet, 'Value') == 3 % Criterion #3
                     
-                    [maxpeak, minpeak] = ...
-                        peakdet(gui.data(ii_sheet).data_dddh_cleaned(:), ...
-                        delta_data);
+                    data = gui.data(ii_sheet).data_dddh_cleaned(:);
+                    peakData = data;
                     
-                elseif get(gui.handles.popinDet, 'Value') == 4
-                    delta_data = ...
-                        max(-gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:)) - ...
-                        2*nanmean(-gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:));
+                elseif get(gui.handles.popinDet, 'Value') == 4 % Criterion #4
                     
-                    [maxpeak, minpeak] = ...
-                        peakdet(-gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:), ...
-                        delta_data);
+                    data = 1./(gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:));
+                    peakData = data;
                     
-                elseif get(gui.handles.popinDet, 'Value') == 5
-                    delta_data = ...
-                        max(-gui.data(ii_sheet).data_ddL_cleaned(:)./gui.data(ii_sheet).data_ddh_cleaned(:)) - ...
-                        2*nanmean(-gui.data(ii_sheet).data_ddL_cleaned(:)./gui.data(ii_sheet).data_ddh_cleaned(:));
+                elseif get(gui.handles.popinDet, 'Value') == 5 % Criterion #5
                     
-                    [maxpeak, minpeak] = ...
-                        peakdet(-gui.data(ii_sheet).data_ddL_cleaned(:)./gui.data(ii_sheet).data_ddh_cleaned(:), ...
-                        delta_data);
+                    diffData = gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:);
+                    diffData(length(diffData)+1) = diffData(length(diffData));
+                    data = diff(diffData)./gui.data(ii_sheet).data_dh_cleaned(:);
+                    peakData = -1./data;
                     
-                elseif get(gui.handles.popinDet, 'Value') == 6
-                    delta_data = ...
-                        max((gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:))./gui.data(ii_sheet).data_dh_cleaned(:) - ...
-                        2*nanmean((gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:))./gui.data(ii_sheet).data_dh_cleaned(:)));
+                elseif get(gui.handles.popinDet, 'Value') == 6 % Criterion #6
                     
-                    [maxpeak, minpeak] = ...
-                        peakdet((gui.data(ii_sheet).data_dL_cleaned(:)./gui.data(ii_sheet).data_dh_cleaned(:))./gui.data(ii_sheet).data_dh_cleaned(:), ...
-                        delta_data);
+                    data = gui.data(ii_sheet).data_dL_cleaned(:)./(gui.data(ii_sheet).data_dh_cleaned(:).*gui.data(ii_sheet).data_dh_cleaned(:));
+                    peakData = data;
+                    
                 end
+                
+                delta_data = max(data(isfinite(data))) - 2*nanmean(data); % Problem with infinite value when max is calculated
+                [maxpeak, minpeak] = peakdet(peakData, delta_data);
                 
                 % Attribution of pop-in indice(s) for each load-disp curve
                 % (for each Excel sheet)...
