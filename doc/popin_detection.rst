@@ -30,7 +30,10 @@ In the PopIn Matlab toolbox, numerous criteria based on the function `diff <http
     * Criterion 5 - 2nd derivative of the load-displacement curve: :math:`-1/(d^{2}F/dh^{2}) = -1/(diff(dF/dh)/diff(h))`
     * Criterion 6 - Derivative of the load-displacement curve: :math:`(dF/dh^{2}) = ((diff(F)/diff(h))/diff(h))`
 
-When a pop-in occurs, a peak is observed on the plot of differences or derivatives. To have only positive peaks, derivatives are multiplied by -1. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). The last criterion is based on the one proposed by Malzbender et al. [#Malzbender_2001]_.
+The 6th criterion is based on the one proposed by Malzbender et al. [#Malzbender_2001]_.
+
+When a pop-in occurs, a peak is observed on the plot of differences or derivatives. To have only positive peaks, derivatives are multiplied by -1. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). Only positive peaks are counted. A point is considered a maximum peak if it has the maximal
+%        value, and was preceded (to the left) by a value lower by a given delta.
 
 Plot of the different criteria
 
