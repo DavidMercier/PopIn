@@ -32,8 +32,7 @@ In the PopIn Matlab toolbox, numerous criteria based on the function `diff <http
 
 The 6th criterion is based on the one proposed by Malzbender et al. [#Malzbender_2001]_.
 
-When a pop-in occurs, a peak is observed on the plot of differences or derivatives. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). Only positive peaks are counted. A point is considered a maximum peak if it has the maximal
-%        value, and was preceded (to the left) by a value lower by a given delta.
+When a pop-in occurs, a peak is observed on the plot of differences or derivatives. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). Only positive peaks are counted. A point is considered a maximum peak if it has the maximal value, and was preceded (to the left) by a value lower by a given delta. The delta value can be set by user from the GUI.
 
 Plot of the different criteria
 
