@@ -109,7 +109,15 @@ else
                     
                 end
                 
-                delta_data = max(data(isfinite(data))) - 2*nanmean(data); % Problem with infinite value when max is calculated
+                if get(gui.handles.popinDeltaDet, 'Value') == 1
+                    delta_data = max(data(isfinite(data))) - 2*nanmean(data); % Problem with infinite value when max is calculated
+                elseif get(gui.handles.popinDeltaDet, 'Value') == 2
+                    delta_data = max(data(isfinite(data))) - nanmean(data); % Problem with infinite value when max is calculated
+                elseif get(gui.handles.popinDeltaDet, 'Value') == 3
+                    delta_data = max(data(isfinite(data))) - nanmean(data)/2; % Problem with infinite value when max is calculated
+                elseif get(gui.handles.popinDeltaDet, 'Value') == 4
+                    delta_data = max(data(isfinite(data))); % Problem with infinite value when max is calculated
+                end
                 [maxpeak, minpeak] = peakdet(peakData, delta_data);
                 
                 % Attribution of pop-in indice(s) for each load-disp curve

@@ -38,7 +38,7 @@ end
 
 %% Set Toolbox version and help paths
 gui.config.name_toolbox = 'PopIn';
-gui.config.version_toolbox = '3.1';
+gui.config.version_toolbox = '3.2';
 gui.config.url_help = 'http://popin.readthedocs.org/en/latest/';
 gui.config.pdf_help = 'https://media.readthedocs.org/pdf/popin/latest/popin.pdf';
 gui.config.licenceFlag = licenceFlag;
