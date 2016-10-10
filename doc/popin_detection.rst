@@ -6,17 +6,25 @@
 The pop-in detection in the literature
 ###################################################
 
-In 2001, Malzbender J. et al. proposed to use the derivative :math:`dF/dh^{2}` vs. :math:`h^{2}` of the indentation load-displacement
-data for the pop-in detection [#Malzbender_2001]_. Minima on these curves correspond to pop-in on the load-displacement curve.
+In 2001, Malzbender J. et al. proposed to use the derivative :math:`dF/dh^{2}` vs. :math:`h^{2}` of the indentation load-displacement data for the pop-in detection [#Malzbender_2001]_. Minima on these curves correspond to pop-in on the load-displacement curve.
 
-In his algorithm, Askari H. et al. proposed the following criteria to detect a pop-in [#Askari]_:
+In 2004, Juliano T. et al. proposed to extract numerically the derivative behavior from  the  loading  and  unloading portions of the load-displacement curves [#Juliano_2004]_. The numerical first derivative at a depth :math:`h_\text{x}` was taken to be the slope of the least-squares fit between load-displacement data points and given as:
+
+    .. math:: {dF \over dh}_\text{h_x} = blabla
+            :label: Juliano_first_derivative
+	    
+In 2014, Askari H. et al. developed the following criteria in his algorithm, to detect a pop-in [#Askari]_:
 
     * Absolute change in depth over 2 lines of data: :math:`\Delta h = h(i) - h(i-1)`
     * Forward 2 pts avg - trailing 2 pts average: :math:`\Delta h = (h(i)+h(i+1))/2 - (h(i-1)+h(i-2))/2`
     * Forward 3 pts avg - trailing 3 pts average: :math:`\Delta h = (h(i)+h(i+1)+h(i+2))/3 - (h(i-1)+h(i-2)+h(i-3))/3`
 	
-The absolute step size is the difference beteen two (or more in case averaging is active) consecutive depth readings from the machine.
-If this step size exceeds a user defined number then it is considered as pop-in.
+The absolute step size is the difference beteen two (or more in case averaging is active) consecutive depth readings from the machine. If this step size exceeds a user defined number then it is considered as pop-in.
+
+In her PhD thesis, G. Nayyeri proposed to use the the first derivative at a depth :math:`h = h_0` of the load-dispalcement curve, to detect a pop-in [#Nayyeri_2016]_:
+
+    .. math:: {dF \over dh}_\text{h_0} = {F_{\text{h_0}+\text{\Deltah}} - F_\text{h_0} \over \Deltah}
+            :label: Nayyeri_first_derivative
 
 The pop-in detection in the PopIn Matlab toolbox
 ###################################################
@@ -81,5 +89,7 @@ Plot of the different criteria
 References
 #############
 
-.. [#Askari] `Pop-in Detection by Askari H. et al. <https://nanohub.org/resources/20804>`_
+.. [#Askari] `Pop-in Detection by Askari H. et al. (2014) <https://nanohub.org/resources/20804>`_
+.. [#Juliano_2004] `Juliano T. et al., "Numerical derivative analysis of load-displacement curves in depth-sensing indentation" (2004). <http://dx.doi.org/10.1557/PROC-791-Q7.5>`_
 .. [#Malzbender_2001] `Malzbender J. and de With  G., "The use of the indentation loading curve to detect fracture of coatings" (2001). <http://dx.doi.org/10.1016/S0257-8972(00)01091-4>`_
+.. [#Nayyeri_2016] Nayyeri G., "Examination of deformation in magnesium using instrumented spherical indentation", University of British Columbia, PhD thesis (2016).
