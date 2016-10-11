@@ -10,7 +10,7 @@ In 2001, Malzbender J. et al. proposed to use the derivative :math:`dF/dh^{2}` v
 
 In 2004, Juliano T. et al. proposed to extract numerically the derivative behavior from  the  loading  and  unloading portions of the load-displacement curves [#Juliano_2004]_. The numerical first derivative at a depth :math:`h_\text{x}` was taken to be the slope of the least-squares fit between load-displacement data points and given as:
 
-    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_\text{x}} = \frac{y\left(\sum_{F_{\text{x-(y-1)/2}},h_{\text{x-(y-1)/2}}}^{F_{\text{x+(y-1)/2}},h_{\text{x+(y-1)/2}}}{Fh}\right)-\left(\sum_{h_{\text{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h}\right)-\left(\sum_{F_{\text{x-(y-1)/2}}}^{F_{\text{x+(y-1)/2}}}{F}\right)}{y\left(\sum_{\text{h_{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h^2}\right)-\left(\sum_{\text{h_{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h}\right)}
+    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_\text{x}} = \frac{y\left(\sum_{F_{\text{x-(y-1)/2}},h_{\text{x-(y-1)/2}}}^{F_{\text{x+(y-1)/2}},h_{\text{x+(y-1)/2}}}{Fh}\right)-\left(\sum_{h_{\text{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h}\right)-\left(\sum_{F_{\text{x-(y-1)/2}}}^{F_{\text{x+(y-1)/2}}}{F}\right)}{y\left(\sum_{h_{\text{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h^2}\right)-\left(\sum_{h_{\text{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h}\right)}
             :label: Juliano_numerical_first_derivative
 
 with :math:`x` the data points number and :math:`y` a positive odd integer number of data points considered.
