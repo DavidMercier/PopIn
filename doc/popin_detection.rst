@@ -10,14 +10,14 @@ In 2001, Malzbender J. et al. proposed to use the derivative :math:`dF/dh^{2}` v
 
 In 2004, Juliano T. et al. proposed to extract numerically the derivative behavior from  the  loading  and  unloading portions of the load-displacement curves [#Juliano_2004]_. The numerical first derivative at a depth :math:`h_\text{x}` was taken to be the slope of the least-squares fit between load-displacement data points and given as:
 
-    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_\text{x}} = \frac{y\left(\sum_{F_{x-(y-1)/2},h_{x-(y-1)/2}}^{F_{x+(y-1)/2},h_{x+(y-1)/2}}{Fh}\right)-\left(\sum_{h_{x-(y-1)/2}}^{h_{x+(y-1)/2}}{h}\right)-\left(\sum_{F_{x-(y-1)/2}}^{F_{x+(y-1)/2}}{F}\right)}{y\left(\sum_{h_{x-(y-1)/2}}^{h_{x+(y-1)/2}}{h^2}\right)-\left(\sum_{h_{x-(y-1)/2}}^{h_{x+(y-1)/2}}{h}\right)}
+    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_\text{x}} = \frac{y\left(\sum_{F_{\text{x-(y-1)/2}},h_{\text{x-(y-1)/2}}}^{F_{\text{x+(y-1)/2}},h_{\text{x+(y-1)/2}}}{Fh}\right)-\left(\sum_{h_{\text{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h}\right)-\left(\sum_{F_{\text{x-(y-1)/2}}}^{F_{\text{x+(y-1)/2}}}{F}\right)}{y\left(\sum_{\text{h_{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h^2}\right)-\left(\sum_{\text{h_{x-(y-1)/2}}}^{h_{\text{x+(y-1)/2}}}{h}\right)}
             :label: Juliano_numerical_first_derivative
 
 with :math:`x` the data points number and :math:`y` a positive odd integer number of data points considered.
 
 Juliano T. et al. proposed also to take the derivative at a depth :math:`h_\text{x}`:
 
-    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_\text{x}} = \frac{F_{x+(y-1)/2}-F_{x-(y-1)/2}}{h_{x+(y-1)/2}-h_{x-(y-1)/2}}
+    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_\text{x}} = \frac{F_{\text{x+(y-1)/2}}-F_{\text{x-(y-1)/2}}}{h_{\text{x+(y-1)/2}}-h_{\text{x-(y-1)/2}}}
             :label: Juliano_first_derivative
 	    
 In 2014, Askari H. et al. developed the following criteria in his algorithm, to detect a pop-in [#Askari]_:
@@ -30,7 +30,7 @@ The absolute step size is the difference beteen two (or more in case averaging i
 
 In her PhD thesis, G. Nayyeri proposed to use the the first derivative at a depth :math:`h = h_0` of the load-dispalcement curve, to detect a pop-in [#Nayyeri_2016]_:
 
-    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_{0}} = {F_{_{\text{h}_{0}}+\Delta h} - F_{\text{h}_{0}} \over \Delta h}
+    .. math:: {\left(\frac{dF}{dh}\right)}_{\text{h}_{0}} = {F_{{\text{h}_{0}}+\Delta \text{h}} - F_{\text{h}_{0}} \over \Delta h}
             :label: Nayyeri_first_derivative
 
 The pop-in detection in the PopIn Matlab toolbox
