@@ -190,6 +190,7 @@ Cracks formation
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <http://dx.doi.org/10.1063/1.1711164>`_
 * Wilantewicz T., "Crack initiation behavior ofoptical glasses from Vickers indentation" PhD thesis (2005).
 * `Kim J.H. et al., "Characterization of Mechanical Properties of Brittle Coating Systems by Various Indentation Techniques" (2007). <http://dx.doi.org/10.4028/www.scientific.net/KEM.352.53>`_
+* `Bull S.J. et al., "Analysis methods and size effects in the indentation fracture toughness assessment of very thin oxide coatings on glass" (2011). <http://dx.doi.org/10.1016/j.crme.2011.05.009>`_
 * `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <http://dx.doi.org/10.1016/j.ceramint.2016.05.030>`_
 
 Phase transformation
