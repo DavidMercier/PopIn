@@ -74,7 +74,8 @@ Dislocation nucleation during (nano)indentation
 * `Syed Asif S.A. and Pethica J.B., "Nanoindentation creep of single-crystal tungsten and gallium arsenide" (2006). <http://dx.doi.org/10.1080/01418619708214217>`_
 * `Barnoush A. and Vehoff H., "Electrochemical nanoindentation: A new approach to probe hydrogen/deformation interaction" (2006). <http://dx.doi.org/10.1016/j.scriptamat.2006.03.041>`_
 * `Barnoush A. and Vehoff H., "In situ electrochemical nanoindentation of a nickel (111) single crystal: hydrogen effect on pop-in behaviour" (2006). <http://dx.doi.org/10.3139/146.101361>`_
-* `Durst K. et al., "Indentation size effect in metallic materials: Modeling strength from pop-in to macroscopic hardness using geometrically necessary dislocations (2006). <http://dx.doi.org/10.1016/j.actamat.2006.01.036>`_
+* `Durst K. et al., "Indentation size effect in metallic materials: Modeling strength from pop-in to macroscopic hardness using geometrically necessary dislocations" (2006). <http://dx.doi.org/10.1016/j.actamat.2006.01.036>`_
+* `Basu S. et al., "On the determination of spherical nanoindentation stress–strain curves" (2006). <http://dx.doi.org/10.1557/jmr.2006.0324>`_
 * `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <http://dx.doi.org/10.1103/PhysRevB.73.054102>`_
 * `Navamathavan R. et al.,"'Pop-in' phenomenon during nanoindentation in epitaxial GaN thin films on c-plane sapphire substrates" (2006). <http://dx.doi.org/10.1016/j.matchemphys.2005.11.021>`_
 * `Schuh C.A., "Nanoindentation studies of materials" (2006). <http://dx.doi.org/10.1016/S1369-7021(06)71495-X>`_
