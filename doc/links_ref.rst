@@ -113,6 +113,7 @@ Dislocation nucleation during (nano)indentation
 * `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
 * `Jian S.-R. et al., "Nanoindentation pop-in effects of Bi2Te3 thermoelectric thin films" (2012). <http://dx.doi.org/10.1016/j.jallcom.2014.10.133>`_
 * `Ma L. et al., "Effect of the Spherical Indenter Tip Assumption on the Initial Plastic Yield Stress" (2012). <http://dx.doi.org/10.5772/48106>`_
+* `Wang Z. et al., "Influences of surface preparation on nanoindentation pop-in in single-crystal Mo" (2011). <http://dx.doi.org/10.1016/j.scriptamat.2011.05.030>`_
 * `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
 * `Lu J.-Y. et al., "Thermally activated pop-in and indentation size effects in GaN films" (2012). <http://dx.doi.org/10.1088/0022-3727/45/8/085301>`_
 * `Gan B. et al., "Nanoindentation and nano-compression testing of Ni3Al precipitates" (2012). <http://dx.doi.org/10.1002/9781118516430.ch9>`_
