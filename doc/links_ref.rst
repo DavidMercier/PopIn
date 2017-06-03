@@ -264,6 +264,7 @@ Statistics of pop-in
 * `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <http://dx.doi.org/10.1080/21663831.2015.1121166>`_
 * Esterl R., "Cryogenic nanoindentation of single crystalline copper, chromium and tungsten.", Marshall Plan Scholarship Research Report (2015).
 * `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <http://dx.doi.org/10.1016/j.ceramint.2016.05.030>`_
+* `Zhang W. et al., "Indentation Schmid factor and incipient plasticity by nanoindentation pop-in tests in hexagonal close-packed single crystals" (2017). <http://dx.doi.org/10.1016/j.actamat.2017.05.058>`_
 
 Softwares
 ###########
