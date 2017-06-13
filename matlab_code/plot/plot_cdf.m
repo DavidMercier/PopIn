@@ -89,6 +89,9 @@ elseif strcmp(Func, FuncList(3,:)) || ...
         strcmp(Func, FuncList(4,:))
     h_legend = legend({'Row data' 'Weibull model modified by Chechenin'}, ...
         'Location', char(listLoc(value_legendLocation)));
+else
+    h_legend = legend({'Row data' 'Mason''s model'}, ...
+        'Location', char(listLoc(value_legendLocation)));
 end
 
 h_xlabel = xlabel(str_xlabel);
