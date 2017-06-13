@@ -88,7 +88,10 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
                 raw_index = find(strcmp(raw_str_endsegment, ...
                     str_endsegment_true(s__endsegment)) == 1);
                 if ~isempty(raw_index)
-                    y_index(ii_sheet) = raw_index;
+                    y_index(ii_sheet) = raw_index-2;
+                    if strcmp(char(str_endsegment_true(s__endsegment)), 'END')
+                        y_index(ii_sheet) = y_index(ii_sheet)-1;
+                    end
                 else
                     y_index(ii_sheet) = [];
                 end
