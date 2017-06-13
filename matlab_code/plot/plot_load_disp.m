@@ -124,7 +124,7 @@ if gui.settings.cb_Hertzian_plot == 1
     listLoc = listLocationLegend;
     value_legendLocation = get(gui.handles.value_legendLocation, 'Value');    
     HertzianHandle = plot(gui.handles.AxisPlot_1, gui.Hertz.elasticDisp_init, ...
-        gui.Hertz.elasticLoad, ':b', 'linewidth', 2.5);
+        gui.Hertz.elasticLoad, ':r', 'linewidth', 2.5);
     h_legend = legend(HertzianHandle, 'Hertzian fit', ...
         'Location', char(listLoc(value_legendLocation)));
 %    h_title = title('$R^2$ = ', num2str(gui.results.rSquare));
