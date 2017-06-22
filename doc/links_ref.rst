@@ -180,7 +180,10 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Stauffer D.D., "Deformation Mechanisms in Nanoscale Brittle Materials" PhD Thesis (2011). <http://purl.umn.edu/108291>`_
 * `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
 * `Lawrence S.K. et al., "Deformation and Fracture of Oxides Fabricated on 304L Stainless Steel via Pulsed Laser Irradiation" (2012). <http://dx.doi.org/10.1557/opl.2012.819>`_
+* `Fu K. et al., "Analysis on multiple ring-like cracks in thin amorphous carbon film on soft substrate under nanoindentation" (2013). <http://dx.doi.org/10.1088/0022-3727/46/50/505314>`_
+* `Fu K. et al., "Analysis on cracking in hard thin films on a soft substrate under Berkovich indentation" (2014). <http://dx.doi.org/10.1016/j.vacuum.2014.11.013>`_
 * `Madsen N.D. et al., "Toughness measurement of thin films based on circumferential cracks induced at conical indentation" (2015). <http://dx.doi.org/10.1007/s10704-015-0022-5>`_
+* `Fu K. et al., "Indentation stress-based models to predict fracture properties of brittle thin film on a ductile substrate" (2016). <http://dx.doi.org/10.1016/j.surfcoat.2016.03.067>`_
 
 Cracks formation
 ---------------------------
