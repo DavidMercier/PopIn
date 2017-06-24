@@ -55,6 +55,17 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
     
 It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004]_, [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004]_, [#Nieh_2002]_.
 
+In parallel, pop-in event is not always a perfect plateau on the load-displacement curve. Sometimes, sliding pop-in are occuring with no observable end point.
+
+.. figure:: ./_pictures/load-disp_curve_popin_sliding.png
+   :name: load_disp_curve_popin_sliding
+   :scale: 60 %
+   :align: center
+   
+   *Schematics of indentation load-displacement curve with a sliding pop-in.*
+
+According to the litterature, such sliding pop-in are detected during experiments given the high-resolution of transducer [#Fu_2016]_.
+
 Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
 
 Weibull-type distribution
@@ -316,6 +327,7 @@ References
 .. [#Britton_2011] `Britton T.B. et al., "Nanoindentation study of slip transfer phenomenon at grain boundaries" (2011). <http://dx.doi.org/10.1557/jmr.2009.0088>`_
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 .. [#Crosby_2015] `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <http://dx.doi.org/10.1016/10.1016/j.actamat.2015.02.003>`_
+.. [#Fu_2016] `Fu K. et al., "Toughness Assessment and Fracture Mechanism of Brittle Thin Films Under Nano-Indentation" (2016). <http://dx.doi.org/10.5772/64117 >`_
 .. [#Hainsworth_1995] `Hainsworth S.V. et al., "Analysis of nanoindentation load-displacement loading curves.", (1996). <http://dx.doi.org/10.1557/JMR.1996.0250>`_
 .. [#Jang_2007] `Jang J.-I. et al., "Rate-dependent inhomogeneous-to-homogeneous transition of plastic flows during nanoindentation of bulk metallic glasses: Fact or artifact?", (2007). <http://dx.doi.org/10.1063/1.2742286>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
