@@ -170,12 +170,15 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Hainsworth S.V. et al., "The nanoindentation response of systems with thin hard carbon coatings" (1993). <http://dx.doi.org/10.1016/0040-6090(93)90672-C>`_
 * `Chechenin N.G. et al. "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <http://dx.doi.org/10.1016/S0040-6090(94)06494-6>`_
 * `Weppelmann E. and Swain M.V., "Investigation of the stresses and stress intensity factors responsible for fracture of thin protective films during ultra-micro indentation tests with spherical indenters" (1996). <http://dx.doi.org/10.1016/S0040-6090(95)08525-4>`_
+* `Li X. et al., "Fracture mechanisms of thin amorphous carbon films in nanoindentation" (1997). <http://dx.doi.org/10.1016/S1359-6454(97)00143-2>`_
 * `Hainsworth S.V. et al., "The effect of coating cracking on the indentation response of thin hard-coated systems" (1998). <http://dx.doi.org/10.1016/S0257-8972(97)00683-X>`_
+* `Li X. and Bhushan B., "Measurement of fracture toughness of ultra-thin amorphous carbon films" (1998). <http://dx.doi.org/10.1016/S0040-6090(97)00788-8>`_
 * `Kramer D.E. et al., "Surface constrained plasticity: Oxide rupture and the yield point process" (2001). <http://dx.doi.org/10.1080/01418610108216651>`_
 * `Pang M. and Bahr D.F., "Thin-film fracture during nanoindentation of a titanium oxide film–titanium system" (2001). <http://dx.doi.org/10.1557/JMR.2001.0362>`_
 * `Bahr D.F. et al., "Indentation induced film fracture in hard film – soft substrate systems" (2003). <http://dx.doi.org/10.1023/A:1024979030155>`_
 * `Morash K.R. and Bahr D.F., "Nanomechanical testing for fracture of oxide films.", Journal of materials research" (2005). <http://dx.doi.org/10.1557/JMR.2005.0188>`_
 * `Morash K.R., "Nanoindentation induced thin film fracture" PhD Thesis (2005). <http://www.dissertations.wsu.edu/Thesis/Spring2005/k_morasch_042605.pdf>`_
+* `Xie Z.-H., "Deformation of a hard coating on ductile substrate system during nanoindentation: Role of the coating microstructure"  (2006). <http://dx.doi.org/10.1557/jmr.2006.0050>`_
 * `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <http://dx.doi.org/10.1016/j.tsf.2006.01.043>`_
 * `Stauffer D.D., "Deformation Mechanisms in Nanoscale Brittle Materials" PhD Thesis (2011). <http://purl.umn.edu/108291>`_
 * `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <http://dx.doi.org/10.1557/jmr.2011.432>`_
