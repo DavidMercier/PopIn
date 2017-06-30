@@ -186,6 +186,7 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Fu K. et al., "Analysis on multiple ring-like cracks in thin amorphous carbon film on soft substrate under nanoindentation" (2013). <http://dx.doi.org/10.1088/0022-3727/46/50/505314>`_
 * `Fu K. et al., "Analysis on cracking in hard thin films on a soft substrate under Berkovich indentation" (2014). <http://dx.doi.org/10.1016/j.vacuum.2014.11.013>`_
 * `Madsen N.D. et al., "Toughness measurement of thin films based on circumferential cracks induced at conical indentation" (2015). <http://dx.doi.org/10.1007/s10704-015-0022-5>`_
+* `Favache A. et al., "Fracture mechanics based analysis of the scratch resistance of thin brittle coatings on a soft interlayer" (2015). <http://dx.doi.org/10.1016/j.wear.2015.01.081>`_
 * `Fu K. et al., "Indentation stress-based models to predict fracture properties of brittle thin film on a ductile substrate" (2016). <http://dx.doi.org/10.1016/j.surfcoat.2016.03.067>`_
 
 Cracks formation
