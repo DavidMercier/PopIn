@@ -192,22 +192,26 @@ else
         delete(gui.handles.h_waitbar);
         
         % Get all, mean, min and max critical load
-        gui.popin.all_L = [gui.data(:).sum_L];
-        gui.popin.mean_L = mean(abs(gui.popin.all_L));
-        gui.popin.max_L = max(abs(gui.popin.all_L));
-        gui.popin.min_L = min(abs(gui.popin.all_L));
-        display('Mean, maximum and minimum critical load and standard deviation');
-        display([gui.popin.mean_L, gui.popin.max_L, gui.popin.min_L, ...
-            (gui.popin.max_L - gui.popin.min_L)/2]);
+        if gui.settings.value_crit_param == 1
+            gui.popin.all_L = [gui.data(:).sum_L];
+            gui.popin.mean_L = mean(abs(gui.popin.all_L));
+            gui.popin.max_L = max(abs(gui.popin.all_L));
+            gui.popin.min_L = min(abs(gui.popin.all_L));
+            display('Mean, maximum and minimum critical load and standard deviation');
+            display([gui.popin.mean_L, gui.popin.max_L, gui.popin.min_L, ...
+                (gui.popin.max_L - gui.popin.min_L)/2]);
+        end
         
         % Get all, mean, min and max critical displacement
-        gui.popin.all_h = [gui.data(:).sum_h];
-        gui.popin.mean_h = mean(abs(gui.popin.all_h));
-        gui.popin.max_h = max(abs(gui.popin.all_h));
-        gui.popin.min_h = min(abs(gui.popin.all_h));
-        display('Mean, maximum and minimum critical displacement and standard deviation');
-        display([gui.popin.mean_h, gui.popin.max_h, gui.popin.min_h, ...
-            (gui.popin.max_h - gui.popin.min_h)/2]);
+        if gui.settings.value_crit_param == 2
+            gui.popin.all_h = [gui.data(:).sum_h];
+            gui.popin.mean_h = mean(abs(gui.popin.all_h));
+            gui.popin.max_h = max(abs(gui.popin.all_h));
+            gui.popin.min_h = min(abs(gui.popin.all_h));
+            display('Mean, maximum and minimum critical displacement and standard deviation');
+            display([gui.popin.mean_h, gui.popin.max_h, gui.popin.min_h, ...
+                (gui.popin.max_h - gui.popin.min_h)/2]);
+        end
         
         %% Set the data to plot
         Func = gui.settings.cumulFunction;
