@@ -142,6 +142,7 @@ Dislocation nucleation during (nano)indentation
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <http://dx.doi.org/10.1002/pi.4967>`_
 * `Nayyeri G. et al., "An instrumented spherical indentation study on high purity magnesium loaded nearly parallel to the c-axis" (2016). <http://dx.doi.org/10.1016/j.msea.2016.05.112>`_
 * `Ye Y.X. et al., "Dislocation nucleation during nanoindentation in a body-centered cubic TiZrHfNb high-entropy alloy" (2016). <http://dx.doi.org/10.1016/j.scriptamat.2016.11.019>`_
+* `Borc J. et al., "Investigation of pop-in events and indentation size effect on the (001) and (100) faces of KDP crystals by nanoindentation deformation" (2017). <http://dx.doi.org/10.1016/j.msea.2017.09.069>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
