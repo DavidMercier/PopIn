@@ -62,6 +62,7 @@ Dislocation nucleation during (nano)indentation
 * `Patriarche G. and LeBourhis E., "Low-load deformation of InP under contact loading; comparison with GaAs" (2002). <http://dx.doi.org/10.1080/01418610208235707>`_
 * `Nieh T.G. et al., "Strain rate-dependent deformation in bulk metallic glasses" (2002). <http://dx.doi.org/10.1016/S0966-9795(02)00146-2>`_
 * `Lorenz D. et al., "Pop-in effect as homogeneous nucleation of dislocations during nanoindentation"(2003). <http://dx.doi.org/10.1103/PhysRevB.67.172101>`_
+* `Wang W. et al., "Deformation behavior of Ni3Al single crystals during nanoindentation"(2003). <http://dx.doi.org/10.1016/S1359-6454(03)00436-1>`_
 * `Liang H.Y. et al. "Dislocation nucleation in the initial stage during nanoindentation" (2003). <http://dx.doi.org/10.1080/14786430310001605579>`_
 * `LeBourhis E. and Patriarche G., "Plastic deformation of III-V semiconductors under concentrated load" (2003). <http://dx.doi.org/10.10 l 6/j.pcrysgrow.2004.09.001>`_
 * `Pang M. et al. "Effects of Zn addition and thermal annealing on yield phenomena of CdTe and Cd0.96Zn0.04Te single crystals by nanoindentation" (2003). <http://dx.doi.org/10.1063/1.1556573>`_
