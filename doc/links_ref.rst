@@ -252,8 +252,8 @@ Strain transfer across grain boundaries
 * `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <http://dx.doi.org/10.1088/1757-899X/82/1/012090>`_
 * `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
 
-Statistics of pop-in
-+++++++++++++++++++++
+Statistics and mathematical analysis of pop-in
++++++++++++++++++++++++++++++++++++++++++++++++
 
 * `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
 * `Mann A.B. et al., "Nanoindentation of Epitaxial Films: A Study of Pop-in Events" (1994). <http://dx.doi.org/10.1557/PROC-356-271>`_
@@ -282,6 +282,7 @@ Statistics of pop-in
 * Esterl R., "Cryogenic nanoindentation of single crystalline copper, chromium and tungsten.", Marshall Plan Scholarship Research Report (2015).
 * `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <http://dx.doi.org/10.1016/j.ceramint.2016.05.030>`_
 * `Zhang W. et al., "Indentation Schmid factor and incipient plasticity by nanoindentation pop-in tests in hexagonal close-packed single crystals" (2017). <http://dx.doi.org/10.1016/j.actamat.2017.05.058>`_
+* `K S. and Ananthakrishna G., "Dynamical approach to displacement jumps in nanoindentation experiments" (2017). <http://dx.doi.org/10.1103/PhysRevB.95.014107>`_
 
 Softwares
 ###########

@@ -44,7 +44,7 @@ Find here the |matlab| function to quantify pop-in by peak detection:
 
 Many authors observed pop-in events on metals or metallic thin films, ceramics, metallic glasses, semiconductors, hard brittle thin films deposited on a soft elastoplastic substrate...
 
-The pop-in event is often explained by on of the following mechanisms in function of the indented specimen (ceramic, metal, semiconductor, coated or multilayer specimen...)
+The pop-in event is often explained by on of the following mechanisms as a function of the indented specimen (ceramic, metal, semiconductor, coated or multilayer specimen...)
 and the experimental conditions (time, temperature, geometry of the indenter...) :
 
     * :ref:`dislocation_nucleation` (= sudden yielding of a material under load) ;
@@ -223,7 +223,6 @@ Finally, a statistical expression of the onset of plasticity can be formulated b
     .. math:: \beta = 120exp(-F_\text{c}^{1/3}\alpha) + F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120
             :label: beta_function
 
-Find here the |matlab| function to calculate the cumulative survival distribution in function of the loadrate and the temperature of nanoindentation tests:
 `mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/mason_cdf.m>`_.
 
 Find here the |matlab| function to calculate the :math:`\alpha` function:
