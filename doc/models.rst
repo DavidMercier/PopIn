@@ -223,6 +223,7 @@ Finally, a statistical expression of the onset of plasticity can be formulated b
     .. math:: \beta = 120exp(-F_\text{c}^{1/3}\alpha) + F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120
             :label: beta_function
 
+Find here the |matlab| function to calculate the cumulative survival distribution as a function of the load rate and the temperature of nanoindentation tests:
 `mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/mason_cdf.m>`_.
 
 Find here the |matlab| function to calculate the :math:`\alpha` function:
