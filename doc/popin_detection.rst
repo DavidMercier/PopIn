@@ -46,10 +46,12 @@ In the PopIn Matlab toolbox, numerous criteria based on the function `diff <http
     * Criterion 6 - Derivative of the load-displacement curve: :math:`(dF/dh^{2}) = ((diff(F)/diff(h))/diff(h))`
 
 The 6th criterion is based on the one proposed by Malzbender et al. [#Malzbender_2001]_.
+Malzbender proposed to plot the 6th criterion as a function of :math:`h^{2}` and not as a function of :math:`h`, like it is proposed in the PopIn toolbox.
 
-When a pop-in occurs, a peak is observed on the plot of differences or derivatives. Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). Only positive peaks are counted. A point is considered a maximum peak if it has the maximal value, and was preceded (to the left) by a value lower by a given delta. The delta value can be set by user from the GUI.
+When a pop-in occurs, a peak is observed on the plot of differences or derivatives.
+Peaks anaysis is performed using the function `peakdet <https://github.com/DavidMercier/PopIn/blob/master/third_party_codes/peakdet.m>`_ released by E. Billauer to the public domain (http://www.billauer.co.il/peakdet.html). Only positive peaks are counted. A point is considered a maximum peak if it has the maximal value, and was preceded (to the left) by a value lower by a given delta. The delta value can be set by user from the GUI.
 
-Plot of the different criteria
+Plots of the different criteria normalized by its maximum as a function of normalized indentation displacement (:math:`h/max(h)`).
 
 .. figure:: ./_pictures/load-disp_curve_popin_exp.png
    :scale: 75 %
