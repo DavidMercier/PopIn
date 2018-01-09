@@ -64,7 +64,7 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     end
     
     %% Import data from .xls file
-
+    
     %raw_str_endsegment = cell(length(sheets_xls),1);
     y_index = NaN(length(sheets_xls), 1);
     
@@ -132,11 +132,16 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     for ii_sheet = 1:1:gui.data_xls.sheets_xls_notEmpty
         
         ii_sheet2read = notEmpty_data(ii_sheet);
-       
-        gui.data(ii_sheet).data_h = ...
-            gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),1);
-        gui.data(ii_sheet).data_L = ...
-            gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),2);
+        
+        if y_index(ii_sheet) ~= 0 && ~isempty(gui.raw_data(ii_sheet2read).data)
+            gui.data(ii_sheet).data_h = ...
+                gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),1);
+            gui.data(ii_sheet).data_L = ...
+                gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),2);
+        else
+            gui.data(ii_sheet).data_h = NaN;
+            gui.data(ii_sheet).data_L = NaN;
+        end
         min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
         max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
         min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
