@@ -29,7 +29,12 @@ Reference paper
 ################
 
 * `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies", PhD thesis (2013) <https://tel.archives-ouvertes.fr/tel-01127940>`_
+<<<<<<< HEAD
 * `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies." PhD defense (2013). <https://doi.org/10.5281/zenodo.11753>`_
+=======
+* `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies." PhD defense (2013). <https://www.doi.org/10.5281/zenodo.11753>`_
+* `Mercier D. et al., "Investigation of the fracture of very thin amorphous alumina film during spherical nanoindentation." (2017). <https://www.doi.org/10.1016/j.tsf.2017.07.040>`_
+>>>>>>> origin/master
 
 References
 ###########
@@ -288,4 +293,4 @@ Softwares
 ###########
 * `Pop-in Detection - An algorithm to analyze and detect pop-ins in indentation data generated from .hys (Hysitron) files, by Askari H. et al. <https://nanohub.org/resources/20804>`_
 * `LAMMPS Molecular Dynamics Simulator <http://lammps.sandia.gov/>`_
-
+* `Niget: NanoIndentation General Evaluation Tool <http://www.nanometrologie.cz/niget/>`_
