@@ -256,6 +256,7 @@ Strain transfer across grain boundaries
 * `Tsurekawa S. et al., "Local plastic deformation in the vicinity of grain boundaries in Fe–3 mass% Si alloy bicrystals and tricrystal" (2014). <https://doi.org/10.1007/s10853-014-8150-2>`_
 * `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <https://doi.org/10.1088/1757-899X/82/1/012090>`_
 * `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
+* `Shen Z. et al. "Grain Boundary Pop-in, Yield Point Phenomenon and Carbon Segregation in Aged Low Carbon Steel" (2018). <https://doi.org/10.2355/isijinternational.ISIJINT-2017-426>`_
 
 Statistics and mathematical analysis of pop-in
 +++++++++++++++++++++++++++++++++++++++++++++++
