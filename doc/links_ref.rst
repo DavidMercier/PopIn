@@ -150,6 +150,7 @@ Dislocation nucleation during (nano)indentation
 * `Ye Y.X. et al., "Dislocation nucleation during nanoindentation in a body-centered cubic TiZrHfNb high-entropy alloy" (2016). <https://doi.org/10.1016/j.scriptamat.2016.11.019>`_
 * `Borc J. et al., "Investigation of pop-in events and indentation size effect on the (001) and (100) faces of KDP crystals by nanoindentation deformation" (2017). <https://doi.org/10.1016/j.msea.2017.09.069>`_
 * `Guo T. et al., "Initiation of basal slip and tensile twinning in magnesium alloys during nanoindentation" (2018). <https://doi.org/10.1016/j.jallcom.2017.10.088>`_
+* `Beake B.D. and Goel S., "Incipient plasticity in tungsten during nanoindentation: Dependence on surface roughness, probe radius and crystal orientation" (2018). <https://doi.org/10.1016/j.ijrmhm.2018.03.020>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
@@ -203,6 +204,7 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Favache A. et al., "Fracture mechanics based analysis of the scratch resistance of thin brittle coatings on a soft interlayer" (2015). <https://doi.org/10.1016/j.wear.2015.01.081>`_
 * `Fu K. et al., "Indentation stress-based models to predict fracture properties of brittle thin film on a ductile substrate" (2016). <https://doi.org/10.1016/j.surfcoat.2016.03.067>`_
 * `Mercier D. et al., "Investigation of the fracture of very thin amorphous alumina film during spherical nanoindentation" (2017). <https://doi.org/10.1016/j.tsf.2017.07.040>`_
+* `Kanders U. and Kanders K., "Mechanisms of Deformation and Fracture of Thin Coatings on Different Substrates in Instrumented Indentation" (2018). <https://doi.org/10.1515/lpts-2017-0011>`_
 
 Cracks formation
 ---------------------------
