@@ -18,17 +18,17 @@ How to use the GUI for "pop-in" analysis from indentation tests ?
 
 First of all a GUI is a Graphical User Interface.
 
-* Run the following |matlab| script and answer 'y' or 'yes' to add path to the |matlab| search paths :
-
-.. code-block:: matlab
-
-   path_management.m
-   
-* Then, run the following |matlab| script :
+* Run the following |matlab| script :
 
 .. code-block:: matlab
 
    demo.m
+   
+* Answer 'y' or 'yes' (or press 'Enter') to add path to the |matlab| search paths, using this script:
+
+.. code-block:: matlab
+
+   path_management.m
 
 * The following window opens:
 
