@@ -151,6 +151,7 @@ Dislocation nucleation during (nano)indentation
 * `Borc J. et al., "Investigation of pop-in events and indentation size effect on the (001) and (100) faces of KDP crystals by nanoindentation deformation" (2017). <https://doi.org/10.1016/j.msea.2017.09.069>`_
 * `Guo T. et al., "Initiation of basal slip and tensile twinning in magnesium alloys during nanoindentation" (2018). <https://doi.org/10.1016/j.jallcom.2017.10.088>`_
 * `Beake B.D. and Goel S., "Incipient plasticity in tungsten during nanoindentation: Dependence on surface roughness, probe radius and crystal orientation" (2018). <https://doi.org/10.1016/j.ijrmhm.2018.03.020>`_
+* `Lawrence S.K. et al., "Probing the Effect of Hydrogen on Elastic Properties and Plastic Deformation in Nickel Using Nanoindentation and Ultrasonic Methods" (2018). <https://doi.org/10.1007/s11837-018-2850-z>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
@@ -259,6 +260,13 @@ Strain transfer across grain boundaries
 * `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <https://doi.org/10.1088/1757-899X/82/1/012090>`_
 * `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
 * `Shen Z. et al. "Grain Boundary Pop-in, Yield Point Phenomenon and Carbon Segregation in Aged Low Carbon Steel" (2018). <https://doi.org/10.2355/isijinternational.ISIJINT-2017-426>`_
+* `Javaid F. and Durst K. "Stress-driven grain boundary movement during nanoindentation in tungsten at room temperature" (2018). <https://doi.org/10.1016/j.mtla.2018.04.002>`_
+
+Amorphization
++++++++++++++++++++++++++++++++++++++++++++++++
+
+* `Szlufarska I. et al., "Nanoindentation-induced amorphization in silicon carbide" (2004).  <https://doi.org/10.1063/1.1774252>`_
+* `Oliver D.J. et al., "Giant pop-ins and amorphization in germanium during indentation" (2007). <https://doi.org/10.1063/1.2490563>`_
 
 Statistics and mathematical analysis of pop-in
 +++++++++++++++++++++++++++++++++++++++++++++++

@@ -51,7 +51,8 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
     * :ref:`film_fracture` ;
     * :ref:`strain_transfer` ;
     * crack(s) formation ; 
-    * phase transformation...
+    * phase transformation ;
+	* amorphization, densification...
     
 It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004]_, [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004]_, [#Nieh_2002]_.
 
