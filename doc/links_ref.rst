@@ -53,6 +53,7 @@ Dislocation nucleation during (nano)indentation
 * `Bahr D.F. et al., "The mechanical behavior of a passivating surface under potentiostatic control" (1997). <https://doi.org/10.1557/JMR.1997.0439>`_
 * `Michalske T.A. and Houston J.E., "Dislocation nucleation at nano-scale mechanical contacts" (1998). <https://doi.org/10.1016/S1359-6454(97)00270-X>`_
 * `Kelchner C.L. et al., "Dislocation nucleation and defect structure during surface indentation" (1998). <https://doi.org/10.1103/PhysRevB.58.11085>`_
+* `Page T.F. et al., "The Plasticity Response Of 6H-Sic and Related Isostructural Materials to Nanoindentation: Slip vs Densification" (1998). <https://doi.org/10.1557/PROC-522-113>`_
 * `Bahr D.F. et al., "Non-linear deformation mechanisms during nanoindentation" (1998). <https://doi.org/10.1016/S1359-6454(98)00024-X>`_
 * `Bahr D.F. et al., "Energy considerations regarding yield points during indentation" (1999). <https://doi.org/10.1557/JMR.1999.0303>`_
 * `Suresh S. et al., "Nano-indentation of copper thin films on silicon substrates" (1999). <https://doi.org/10.1016/S1359-6462(99)00245-6>`_
@@ -217,6 +218,7 @@ Cracks formation
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <https://doi.org/10.1063/1.1711164>`_
 * Wilantewicz T., "Crack initiation behavior ofoptical glasses from Vickers indentation" PhD thesis (2005).
 * `Kim J.H. et al., "Characterization of Mechanical Properties of Brittle Coating Systems by Various Indentation Techniques" (2007). <https://doi.org/10.4028/www.scientific.net/KEM.352.53>`_
+* `Oliver D.J. et al., "Giant pop-ins in nanoindented silicon and germanium caused by lateral cracking" (2008). <https://doi.org/10.1557/JMR.2008.0070>`_
 * `Bull S.J. et al., "Analysis methods and size effects in the indentation fracture toughness assessment of very thin oxide coatings on glass" (2011). <https://doi.org/10.1016/j.crme.2011.05.009>`_
 * `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <https://doi.org/10.1016/j.ceramint.2016.05.030>`_
 
@@ -262,7 +264,7 @@ Strain transfer across grain boundaries
 * `Shen Z. et al. "Grain Boundary Pop-in, Yield Point Phenomenon and Carbon Segregation in Aged Low Carbon Steel" (2018). <https://doi.org/10.2355/isijinternational.ISIJINT-2017-426>`_
 * `Javaid F. and Durst K. "Stress-driven grain boundary movement during nanoindentation in tungsten at room temperature" (2018). <https://doi.org/10.1016/j.mtla.2018.04.002>`_
 
-Amorphization
+Amorphization / Densification
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 * `Szlufarska I. et al., "Nanoindentation-induced amorphization in silicon carbide" (2004).  <https://doi.org/10.1063/1.1774252>`_
