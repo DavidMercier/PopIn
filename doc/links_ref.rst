@@ -29,12 +29,8 @@ Reference paper
 ################
 
 * `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies", PhD thesis (2013) <https://tel.archives-ouvertes.fr/tel-01127940>`_
-<<<<<<< HEAD
-* `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies." PhD defense (2013). <https://doi.org/10.5281/zenodo.11753>`_
-=======
 * `Mercier D., "Behaviour laws of materials used in electrical contacts for « flip chip » technologies." PhD defense (2013). <https://doi.org/10.5281/zenodo.11753>`_
 * `Mercier D. et al., "Investigation of the fracture of very thin amorphous alumina film during spherical nanoindentation." (2017). <https://doi.org/10.1016/j.tsf.2017.07.040>`_
->>>>>>> origin/master
 
 References
 ###########
@@ -153,6 +149,7 @@ Dislocation nucleation during (nano)indentation
 * `Guo T. et al., "Initiation of basal slip and tensile twinning in magnesium alloys during nanoindentation" (2018). <https://doi.org/10.1016/j.jallcom.2017.10.088>`_
 * `Beake B.D. and Goel S., "Incipient plasticity in tungsten during nanoindentation: Dependence on surface roughness, probe radius and crystal orientation" (2018). <https://doi.org/10.1016/j.ijrmhm.2018.03.020>`_
 * `Lawrence S.K. et al., "Probing the Effect of Hydrogen on Elastic Properties and Plastic Deformation in Nickel Using Nanoindentation and Ultrasonic Methods" (2018). <https://doi.org/10.1007/s11837-018-2850-z>`_
+* `Jin K. et al., "Quantifying early stage irradiation damage from nanoindentation pop-in tests" (2018). <https://doi.org/10.1016/j.scriptamat.2018.07.035>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
