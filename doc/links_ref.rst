@@ -205,8 +205,8 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 * `Mercier D. et al., "Investigation of the fracture of very thin amorphous alumina film during spherical nanoindentation" (2017). <https://doi.org/10.1016/j.tsf.2017.07.040>`_
 * `Kanders U. and Kanders K., "Mechanisms of Deformation and Fracture of Thin Coatings on Different Substrates in Instrumented Indentation" (2018). <https://doi.org/10.1515/lpts-2017-0011>`_
 
-Cracks formation
----------------------------
+Cracks formation / Fracture
+------------------------------
 
 * Lawn B.R. and Fuller E.R. Jr, "Equilibrium penny-like crack in indentation fracture" (1975).
 * `Malzbender J. and de With  G., "The use of the indentation loading curve to detect fracture of coatings" (2001). <https://doi.org/10.1016/S0257-8972(00)01091-4>`_
@@ -214,6 +214,7 @@ Cracks formation
 * `Field J.S. et al., "Determination of fracture toughness from the extra penetration produced by indentation-induced pop-in" (2003). <https://doi.org/10.1557/JMR.2003.0194>`_
 * `Scholz T. et al., "Fracture toughness from submicron derived indentation cracks" (2004). <https://doi.org/10.1063/1.1711164>`_
 * Wilantewicz T., "Crack initiation behavior ofoptical glasses from Vickers indentation" PhD thesis (2005).
+* `Ureña A. et al., "Characterization of interfacial mechanical properties in carbon fiber/aluminium matrix composites by the nanoindentation technique" (2005). <https://doi.org/10.1016/j.compscitech.2005.04.013>`_
 * `Kim J.H. et al., "Characterization of Mechanical Properties of Brittle Coating Systems by Various Indentation Techniques" (2007). <https://doi.org/10.4028/www.scientific.net/KEM.352.53>`_
 * `Oliver D.J. et al., "Giant pop-ins in nanoindented silicon and germanium caused by lateral cracking" (2008). <https://doi.org/10.1557/JMR.2008.0070>`_
 * `Bull S.J. et al., "Analysis methods and size effects in the indentation fracture toughness assessment of very thin oxide coatings on glass" (2011). <https://doi.org/10.1016/j.crme.2011.05.009>`_
