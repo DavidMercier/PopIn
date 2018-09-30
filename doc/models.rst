@@ -238,7 +238,7 @@ Find here the |matlab| function to calculate the :math:`\beta` function:
     can modified the statistics of pop-in behavior [#Wang_2012]_.
     
 .. note::
-    See this `Github repository <https://github.com/DavidMercier/Matlab_functions/tree/master/contact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
+    See this `Github repository <https://github.com/DavidMercier/Matlab_functions/tree/master/mechanicalContact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
     caused by Hertz pressure acting on a circular area radius.
 
 Finally, after a short survey of the litterature, it appears that pop-in or strain burst are observed as well,
@@ -327,7 +327,7 @@ References
 .. [#Bei_2008] `Bei H. et al., "Effects of pre-strain on the compressive stress–strain response of Mo-alloy single-crystal micropillars" (2008). <https://doi.org/10.1016/j.actamat.2008.05.030>`_
 .. [#Britton_2011] `Britton T.B. et al., "Nanoindentation study of slip transfer phenomenon at grain boundaries" (2011). <https://doi.org/10.1557/jmr.2009.0088>`_
 .. [#Chechenin_1995] `Chechenin N.G. et al., "Nanoindentation of amorphous aluminum oxide films II. Critical parameters for the breakthrough and a membrane effect in thin hard films on soft substrates." (1995). <https://doi.org/10.1016/S0040-6090(94)06494-6>`_
-.. [#Crosby_2015] `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <https://doi.org/10.1016/10.1016/j.actamat.2015.02.003>`_
+.. [#Crosby_2015] `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <https://doi.org/10.1016/j.actamat.2015.02.003>`_
 .. [#Fu_2016] `Fu K. et al., "Toughness Assessment and Fracture Mechanism of Brittle Thin Films Under Nano-Indentation" (2016). <https://doi.org/10.5772/64117 >`_
 .. [#Hainsworth_1995] `Hainsworth S.V. et al., "Analysis of nanoindentation load-displacement loading curves.", (1996). <https://doi.org/10.1557/JMR.1996.0250>`_
 .. [#Jang_2007] `Jang J.-I. et al., "Rate-dependent inhomogeneous-to-homogeneous transition of plastic flows during nanoindentation of bulk metallic glasses: Fact or artifact?", (2007). <https://doi.org/10.1063/1.2742286>`_

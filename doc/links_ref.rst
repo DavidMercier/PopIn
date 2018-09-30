@@ -6,9 +6,7 @@
 Links
 ######
 
-* `Matlab GUI. <http://www.mathworks.com/discovery/matlab-gui.html>`_
 * `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
-* `fitdist - Fit probability distribution object to data <http://de.mathworks.com/help/stats/fitdist.html>`_
 * `dfittool - Open Distribution Fitting app <http://de.mathworks.com/help/stats/dfittool.html>`_
 * `Visit the YAML website for more informations. <http://www.yaml.org/>`_
 * `Visit the YAML code for Matlab. <http://code.google.com/p/yamlmatlab/>`_
@@ -111,7 +109,7 @@ Dislocation nucleation during (nano)indentation
 * `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <https://doi.org/10.1103/PhysRevLett.106.165502>`_
 * `Stauffer D.D., "Deformation Mechanisms in Nanoscale Brittle Materials" PhD Thesis (2011). <http://purl.umn.edu/108291>`_
 * `Bhattacharya M. et al., "New observations in micro-pop-in issues in nanoindentation of coarse grain alumina" (2012). <https://doi.org/10.1016/j.ceramint.2012.07.020>`_
-* `Mao W.G. and Shen Y. "Nanoindentation Study of Pop-in Phenomenon Characteristics and Mechanical Properties of Sapphire (101¯2) Crystal" (2012). <https://doi.org/0.1111/j.1551-2916.2012.05405.x>`_
+* `Mao W.G. and Shen Y. "Nanoindentation Study of Pop-in Phenomenon Characteristics and Mechanical Properties of Sapphire (101¯2) Crystal" (2012). <https://doi.org/10.1111/j.1551-2916.2012.05405.x>`_
 * `Barnoush A., "Correlation between dislocation density and nanomechanical response during nanoindentation" (2012). <https://doi.org/10.1016/j.actamat.2011.11.034>`_
 * `Kwon J., "Characterization of deformation mechanisms in pre-strained NiAl-Mo composites and α-Ti alloy" Master thesis (2012). <http://rave.ohiolink.edu/etdc/view?acc_num=osu1343796987>`_
 * `Huang J. et al., "Nanoscale anisotropic plastic deformation in single crystal GaN" (2012). <https://doi.org/10.1186/1556-276X-7-150>`_

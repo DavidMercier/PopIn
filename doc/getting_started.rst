@@ -90,9 +90,9 @@ The YAML configuration files
 
 Default YAML configuration files, stored in the folder `yaml_config_files <https://github.com/DavidMercier/PopIn/tree/master/yaml_config_files>`_, are loaded automatically to set the GUI:
 
-* `data_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/data_config.yaml>`_
-* `indenters_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/indenter_config.yaml>`_
-* `numerics_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/numerics_config.yaml>`_
+* `data_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/data_config_popin.yaml>`_
+* `indenters_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/indenter_config_popin.yaml>`_
+* `numerics_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/numerics_config_popin.yaml>`_
 
 You have to update these YAML config. files, if you want to change indenter properties, constant parameters of models and constant parameters of the least-square method used to solve nonlinear curve-fitting and the path to your datasets.
 
@@ -103,8 +103,6 @@ You have to update these YAML config. files, if you want to change indenter prop
 Links
 #######
 
-* `Guidata on Matlab website. <https://www.mathworks.com/help/matlab/ref/guidata.html>`_   
-* `Matlab GUI. <http://www.mathworks.com/discovery/matlab-gui.html>`_
-* `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
+* `Guidata on Matlab website. <https://www.mathworks.com/help/matlab/ref/guidata.html>`_
 * `fitdist - Fit probability distribution object to data <http://de.mathworks.com/help/stats/fitdist.html>`_
 * `dfittool - Open Distribution Fitting app <http://de.mathworks.com/help/stats/dfittool.html>`_
