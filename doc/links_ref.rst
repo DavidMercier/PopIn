@@ -301,7 +301,7 @@ Statistics and mathematical analysis of pop-in
 * `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <https://doi.org/10.1016/j.ceramint.2016.05.030>`_
 * `Zhang W. et al., "Indentation Schmid factor and incipient plasticity by nanoindentation pop-in tests in hexagonal close-packed single crystals" (2017). <https://doi.org/10.1016/j.actamat.2017.05.058>`_
 * `Srikanth K. and Ananthakrishna G., "Dynamical approach to displacement jumps in nanoindentation experiments" (2017). <https://doi.org/10.1103/PhysRevB.95.014107>`_
-* `Sudharshan Phani P. and Oliver W.C., "Dynamical approach to displacement jumps in nanoindentation experiments" (2017). <https://doi.org/10.1103/PhysRevB.95.014107>`_
+* `Sudharshan Phani P. and Oliver W.C., "Critical examination of experimental data on strain bursts(pop-in) during spherical indentation" (2020). <https://doi.org/10.1557/jmr.2019.416>`_
 
 Softwares
 ###########
