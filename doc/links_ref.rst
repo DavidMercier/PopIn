@@ -152,6 +152,7 @@ Dislocation nucleation during (nano)indentation
 * `Beake B.D. and Goel S., "Incipient plasticity in tungsten during nanoindentation: Dependence on surface roughness, probe radius and crystal orientation" (2018). <https://doi.org/10.1016/j.ijrmhm.2018.03.020>`_
 * `Lawrence S.K. et al., "Probing the Effect of Hydrogen on Elastic Properties and Plastic Deformation in Nickel Using Nanoindentation and Ultrasonic Methods" (2018). <https://doi.org/10.1007/s11837-018-2850-z>`_
 * `Jin K. et al., "Quantifying early stage irradiation damage from nanoindentation pop-in tests" (2018). <https://doi.org/10.1016/j.scriptamat.2018.07.035>`_
+* `Pöhl F., "Pop-in behavior and elastic-to-plastic transition of polycrystalline pure iron during sharp nanoindentation" (2019). <https://doi.org/10.1038/s41598-019-51644-5>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
