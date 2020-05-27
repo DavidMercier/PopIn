@@ -264,6 +264,7 @@ Strain transfer across grain boundaries
 * `STABiX toolbox <http://stabix.readthedocs.org/en/latest/>`_
 * `Shen Z. et al. "Grain Boundary Pop-in, Yield Point Phenomenon and Carbon Segregation in Aged Low Carbon Steel" (2018). <https://doi.org/10.2355/isijinternational.ISIJINT-2017-426>`_
 * `Javaid F. and Durst K. "Stress-driven grain boundary movement during nanoindentation in tungsten at room temperature" (2018). <https://doi.org/10.1016/j.mtla.2018.04.002>`_
+* `Javaid F. et al. "Local analysis on dislocation structure and hardening during grain boundary pop-ins in tungsten" (2020). <https://doi.org/10.1007/s10853-020-04655-x>`_
 
 Amorphization / Densification
 +++++++++++++++++++++++++++++++++++++++++++++++
