@@ -223,6 +223,7 @@ Cracks formation / Fracture
 * `Oliver D.J. et al., "Giant pop-ins in nanoindented silicon and germanium caused by lateral cracking" (2008). <https://doi.org/10.1557/JMR.2008.0070>`_
 * `Bull S.J. et al., "Analysis methods and size effects in the indentation fracture toughness assessment of very thin oxide coatings on glass" (2011). <https://doi.org/10.1016/j.crme.2011.05.009>`_
 * `Hervas I. et al., "Fracture toughness of glasses and hydroxyapatite: a comparative study of 7 methods by using Vickers indenter" (2016). <https://doi.org/10.1016/j.ceramint.2016.05.030>`_
+* `Chiu Y.-J. et al., "The Indentation-Induced Pop-in Phenomenon and Fracture Behaviors of GaP(100) Single-Crystal" (2019). <https://doi.org/10.3390/mi10110752>`_
 
 Phase transformation
 ---------------------------
