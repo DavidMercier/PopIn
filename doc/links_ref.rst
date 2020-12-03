@@ -88,6 +88,7 @@ Dislocation nucleation during (nano)indentation
 * `Schuh C.A., "Nanoindentation studies of materials" (2006). <https://doi.org/10.1016/S1369-7021(06)71495-X>`_
 * `Tsuru T. and Shibutani Y., "Atomistic simulations of elastic deformation and dislocation nucleation in Al under indentation-induced stress distribution" (2006). <https://doi.org/10.1088/0965-0393/14/5/S07>`_
 * `Barnoush A., "Hydrogen embrittlement, revisited by in situ electrochemical nanoindentation" PhD thesis (2006). <http://scidok.sulb.uni-saarland.de/volltexte/2008/1542/pdf/A_Barnoush_PhD_thesis.pdf>`_
+* `Barsoum M. and Sandip B., "Deformation Micromechanisms of ZnO Single Crystals as Determined from Spherical Nanoindentation Stress–Strain Curves" (2007). <https://doi.org/10.1557/jmr.2007.0305>`_
 * `Soer W.A. et al., "Incipient plasticity in metallic thin films" (2007). <https://doi.org/10.1063/1.2736479>`_
 * `Yang B. and Vehoff H., "Dependence of nanohardness upon indentation size and grain size – A local examination of the interaction between dislocations and grain boundaries" (2007). <https://doi.org/10.1016/j.actamat.2006.09.004>`_
 * `Navamathavan R. et al.,"Nanoindentation 'pop-in' phenomenon in epitaxial ZnO thin films on sapphire substrates" (2008). <https://doi.org/10.1016/j.matchar.2007.01.020>`_
