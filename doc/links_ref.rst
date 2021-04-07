@@ -40,6 +40,11 @@ References
 Pop-in event
 ++++++++++++++
 
+Plasticity or Fracture?
+-------------------------------------------------
+
+* `Fang X. et al., "Nanoindentation pop-in in oxides at room temperature: dislocation activation or crack formation?" (2021). <https://doi.org/10.1111/JACE.17806>`_
+
 Dislocation nucleation during (nano)indentation
 -------------------------------------------------
 
