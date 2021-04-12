@@ -161,6 +161,7 @@ Dislocation nucleation during (nano)indentation
 * `Pöhl F., "Pop-in behavior and elastic-to-plastic transition of polycrystalline pure iron during sharp nanoindentation" (2019). <https://doi.org/10.1038/s41598-019-51644-5>`_
 * `Wang Y. et al., "Dependence of pop-in behavior of a high-entropy alloy FeCoCrMnNi on tip radius" (2019). <https://doi.org/10.1007/s00339-019-2409-z>`_
 * `Pöhl F., "Orientation-Dependent Deformation Behavior of316L Steel Manufactured by Laser Metal Depositionand Casting under Local Scratch and Indentation Load" (2020). <https://doi.org/10.3390/ma13071765>`_
+* `Ohmura T. and Wakeda M., "Pop-In Phenomenon as a Fundamental Plasticity Probed by Nanoindentation Technique" (2021). <https://doi.org/10.3390/ma14081879>`_
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
