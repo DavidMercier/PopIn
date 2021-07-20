@@ -241,9 +241,10 @@ Find here the |matlab| function to calculate the :math:`\beta` function:
     See this `Github repository <https://github.com/DavidMercier/Matlab_functions/tree/master/mechanicalContact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
     caused by Hertz pressure acting on a circular area radius.
 
-Finally, after a short survey of the litterature, it appears that pop-in or strain burst are observed as well,
-on the load-displacement or stress-strain curves obtained during compression tests of metallic nano- or micro-pillar [#Bei_2008]_, [#Crosby_2015]_ and [#Kraft_2010]_.
-This strain burst is most of the time, attributed to the nucleation of dislocations into the pillar, initially dislocation-free.
+In the case of prismatic dislocation loops beneath the indenter generated during pop-in, an energy balance model was also proposed by Wang D. et al. in 2021 [#Wang_2021]_.
+
+Finally, after a short survey of the literature, it appears that pop-in or strain burst events are observed as well,
+on the load-displacement or stress-strain curves obtained during compression tests of metallic nano- or micro-pillar [#Bei_2008]_, [#Crosby_2015]_ and [#Kraft_2010]_. This strain burst is most of the time, attributed to the nucleation of dislocations into the pillar, initially dislocation-free.
 
 .. _strain_transfer:
     
@@ -349,6 +350,7 @@ References
 .. [#Stauffer_2012] `Stauffer D.D. et al., "Plastic response of the native oxide on Cr and Al thin films from in situ conductive nanoindentation" (2012). <https://doi.org/10.1557/jmr.2011.432>`_
 .. [#Wang_2004] `Wang M.G. and Ngan A.H.W., "Indentation strain burst phenomenon induced by grain boundaries in niobium" (2004). <https://doi.org/10.1557/JMR.2004.0316>`_
 .. [#Wang_2012] `Wang L., "Influences of sample preparation on the indentation size effect and nanoindentation pop-in on nickel" PhD Thesis (2012). <http://trace.tennessee.edu/utk_graddiss/1371>`_
+.. [#Wang_2021] `Wang D., "Understanding the hydrogen effect on pop-in behavior of an equiatomic high-entropy alloy during in-situ nanoindentation", Journal of Materials Science & Technology (2021). <https://doi.org/10.1016/j.jmst.2021.04.060>`_
 .. [#Weibull_1951] `Weibull W., "A statistical distribution function of wide applicability", J. Appl. Mech.-Trans. ASME (1951), 18(3). <http://www.barringer1.com/wa_files/Weibull-ASME-Paper-1951.pdf>`_
 .. [#Wo_2006] `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <https://doi.org/10.1557/JMR.2005.0056>`_
 .. [#Wu_2014_1] `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <https://doi.org/10.1016/j.scriptamat.2014.09.017>`_
