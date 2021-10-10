@@ -151,6 +151,7 @@ Dislocation nucleation during (nano)indentation
 * `Maughan M.R. and Bahr D.F., "Discontinuous Yield Behaviors Under Various Pre-Strain Conditions in Metals with Different Crystal Structures" (2015). <https://doi.org/10.1080/21663831.2015.1121166>`_
 * Esterl R., "Cryogenic nanoindentation of single crystalline copper, chromium and tungsten.", Marshall Plan Scholarship Research Report (2015).
 * `Zare Ghomsheh M. et al., "Analysis of strain bursts during nanoindentation creep of high-density polyethylene" (2015). <https://doi.org/10.1002/pi.4967>`_
+* `Xia Y. et al., "Single versus successive pop-in modes in nanoindentation tests of single crystals" (2016). <https://doi.org/10.1557/jmr.2016.193>`_
 * `Nayyeri G. et al., "An instrumented spherical indentation study on high purity magnesium loaded nearly parallel to the c-axis" (2016). <https://doi.org/10.1016/j.msea.2016.05.112>`_
 * `Ye Y.X. et al., "Dislocation nucleation during nanoindentation in a body-centered cubic TiZrHfNb high-entropy alloy" (2016). <https://doi.org/10.1016/j.scriptamat.2016.11.019>`_
 * `Borc J. et al., "Investigation of pop-in events and indentation size effect on the (001) and (100) faces of KDP crystals by nanoindentation deformation" (2017). <https://doi.org/10.1016/j.msea.2017.09.069>`_

@@ -56,7 +56,13 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
     
 It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004]_, [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004]_, [#Nieh_2002]_.
 
-In parallel, pop-in event is not always a perfect plateau on the load-displacement curve. Sometimes, sliding pop-in are occuring with no observable end point.
+In parallel, pop-in event is not always a perfect plateau (with a null slope) on the load-displacement curve. Sometimes, sliding pop-in are occuring with no observable end point, or for example pop-in can be
+a serie of little plateaus. In the literature, some authors classified the different pop-in shapes [#Hull_2021]_ (in the case of load-controlled measurement):
+    * Type I = slope dF/dh = 0, wwhch are often described as a sudden instantaneous elastic perfectly plastic “Coulomb-type” failure and sudden grain dislodging
+    * Type II = slope dF/dh > 0, which can be related to shear band progressive failure and/or grain sliding or progressive pile-up
+    * Type III = slope dF/dh < 0, which should not appears given the load-control of the indentation test. If it is happening, it should be more related to wrong setting of the control loop.
+
+According to the litterature, such sliding pop-in are detected during experiments given the high-resolution of transducer [#Fu_2016]_.	
 
 .. figure:: ./_pictures/load-disp_curve_popin_sliding.png
    :name: load_disp_curve_popin_sliding
@@ -64,8 +70,16 @@ In parallel, pop-in event is not always a perfect plateau on the load-displaceme
    :align: center
    
    *Schematics of indentation load-displacement curve with a sliding pop-in.*
+	
+For the serie of little plateaus, it is more often observed in the case of successive failures of brittle thin film on elastic-plastic substrate [#Mercier_2017]_ (see picture below),
+but it can be also observed for crystals deformation [#Xia_2016]_.
 
-According to the litterature, such sliding pop-in are detected during experiments given the high-resolution of transducer [#Fu_2016]_.
+.. figure:: ./_pictures/load-disp_curve_popin_sliding.png
+   :name: load_disp_curve_multiple_popin
+   :scale: 60 %
+   :align: center
+   
+   *Load-displacement curve with relatively small displacement excursions (on the left) and corresponding SEM observation.*
 
 Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
 
@@ -272,13 +286,19 @@ Rupture of a hard brittle film on an elastic-plastic substrate
 
 In the case of indentation made into a hard brittle film (e.g.: native or thermally/anodically grown oxide, ALD coatings ...)
 on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film 
-[#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_.
+[#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_ and a real example from [#Mercier_2017]_ is given below.
 
 .. figure:: ./_pictures/load-disp_curve_popin_load_sub.png
    :scale: 60 %
    :align: center
 
    *Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
+   
+.. figure:: ./_pictures/load-disp_curve_popin_al2O3.png
+   :scale: 60 %
+   :align: center
+
+   *Example of load-displacement curves with a pop-in event (on the left) and the corresponding SEM observations substrate (on the right).*
 
 Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
 The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation:
@@ -331,6 +351,7 @@ References
 .. [#Crosby_2015] `Crosby T. et al., "The origin of strain avalanches in sub-micron plasticity of fcc metals" (2015). <https://doi.org/10.1016/j.actamat.2015.02.003>`_
 .. [#Fu_2016] `Fu K. et al., "Toughness Assessment and Fracture Mechanism of Brittle Thin Films Under Nano-Indentation" (2016). <https://doi.org/10.5772/64117>`_
 .. [#Hainsworth_1995] `Hainsworth S.V. et al., "Analysis of nanoindentation load-displacement loading curves." (1996). <https://doi.org/10.1557/JMR.1996.0250>`_
+.. [#Hull_2021] `Hull K.L. and Abousleiman Y.N., "SEM analysis of pop-ins manifested in layered porous geological material" (2021). <https://doi.org/10.1557/s43579-021-00102-3>`_
 .. [#Jang_2007] `Jang J.-I. et al., "Rate-dependent inhomogeneous-to-homogeneous transition of plastic flows during nanoindentation of bulk metallic glasses: Fact or artifact?" (2007). <https://doi.org/10.1063/1.2742286>`_
 .. [#Johnson_1987] `Johnson K.L., "Contact Mechanics" (1987). <http://www.cambridge.org/us/academic/subjects/engineering/solid-mechanics-and-materials/contact-mechanics>`_
 .. [#Kraft_2010] `Kraft O. et al., "Plasticity in Confined Dimensions" (2010). <https://doi.org/10.1146/annurev-matsci-082908-145409>`_
@@ -338,6 +359,7 @@ References
 .. [#Lu_2012] `Lu J.-Y. et al. "Thermally activated pop-in and indentation size effects in GaN films" (2012). <https://doi.org/10.1088/0022-3727/45/8/085301>`_
 .. [#Mason_2006] `Mason J. et al., "Determining the activation energy and volume for the onset of plasticity during nanoindentation" (2006). <https://doi.org/10.1103/PhysRevB.73.054102>`_
 .. [#Mercier_2015] `Mercier D. et al. "A Matlab toolbox to analyze slip transfer through grain boundaries" (2015). <https://doi.org/10.1088/1757-899X/82/1/012090>`_
+.. [#Mercier_2017] `Mercier D. et al. "Investigation of the fracture of very thin amorphous alumina film during spherical nanoindentation" (2017). <https://doi.org/10.1016/j.tsf.2017.07.040>`_
 .. [#Morash_2007] `Morash K.R. and Bahr D.F., "An energy method to analyze through thickness thin film fracture during indentation" (2007). <https://doi.org/10.1016/j.tsf.2006.01.043>`_
 .. [#Morris_2011] `Morris J.R. et al., "Size Effects and Stochastic Behavior of Nanoindentation Pop In" (2011). <https://doi.org/10.1103/PhysRevLett.106.165502>`_
 .. [#Nieh_2002] `Nieh T.G. et al., "Strain rate-dependent deformation in bulk metallic glasses" (2002). <https://doi.org/10.1016/S0966-9795(02)00146-2>`_
@@ -355,3 +377,4 @@ References
 .. [#Wo_2006] `Wo P.C. et al., "Time-dependent incipient plasticity in Ni3Al as observed in nanoindentation" (2006). <https://doi.org/10.1557/JMR.2005.0056>`_
 .. [#Wu_2014_1] `Wu D. et al., "Effect of tip radius on the incipient plasticity of chromium studied by nanoindentation" (2014). <https://doi.org/10.1016/j.scriptamat.2014.09.017>`_
 .. [#Wu_2014_2] `Wu D. and Nieh T.G., "Incipient plasticity and dislocation nucleation in body-centered cubic chromium" (2014). <https://doi.org/10.1016/j.msea.2014.04.107>`_
+.. [#Xia_2016] `Xia Y. et al., "Single versus successive pop-in modes in nanoindentation tests of single crystals" (2016). <https://doi.org/10.1557/jmr.2016.193>`_
