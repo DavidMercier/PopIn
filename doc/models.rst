@@ -74,7 +74,7 @@ According to the litterature, such sliding pop-in are detected during experiment
 For the serie of little plateaus, it is more often observed in the case of successive failures of brittle thin film on elastic-plastic substrate [#Mercier_2017]_ (see picture below),
 but it can be also observed for crystals deformation [#Xia_2016]_.
 
-.. figure:: ./_pictures/load-disp_curve_popin_sliding.png
+.. figure:: ./_pictures/load-load_disp_curve_multiple_popin.png
    :name: load_disp_curve_multiple_popin
    :scale: 60 %
    :align: center
