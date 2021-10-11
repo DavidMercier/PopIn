@@ -56,13 +56,10 @@ and the experimental conditions (time, temperature, geometry of the indenter...)
     
 It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004]_, [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004]_, [#Nieh_2002]_.
 
-In parallel, pop-in event is not always a perfect plateau (with a null slope) on the load-displacement curve. Sometimes, sliding pop-in are occuring with no observable end point, or for example pop-in can be
-a serie of little plateaus. In the literature, some authors classified the different pop-in shapes [#Hull_2021]_ (in the case of load-controlled measurement):
-    * Type I = slope dF/dh = 0, wwhch are often described as a sudden instantaneous elastic perfectly plastic “Coulomb-type” failure and sudden grain dislodging
-    * Type II = slope dF/dh > 0, which can be related to shear band progressive failure and/or grain sliding or progressive pile-up
-    * Type III = slope dF/dh < 0, which should not appears given the load-control of the indentation test. If it is happening, it should be more related to wrong setting of the control loop.
-
-According to the litterature, such sliding pop-in are detected during experiments given the high-resolution of transducer [#Fu_2016]_.	
+In parallel, pop-in event is not always a perfect plateau (with a null slope) on the load-displacement curve. Sometimes, sliding pop-in are occuring with no observable end point, or for example pop-in can be a serie of little plateaus. In the literature, some authors classified the different pop-in shapes [#Hull_2021]_ (in the case of load-controlled measurement):
+    * Type I = slope :math:`dF_\text{c}/dh = 0`, corresponding to the "perfect" plateau, which are often described as a sudden instantaneous elastic perfectly plastic “Coulomb-type” failure and sudden grain dislodging
+    * Type II = slope :math:`dF_\text{c}/dh > 0`, corresponding to a sliding pop-in, which can be related to shear band progressive failure and/or grain sliding or progressive pile-up. According to the litterature, such sliding pop-in are detected during experiments given the high-resolution of transducer [#Fu_2016]_.	
+    * Type III = :math:`dF_\text{c}/dh < 0`, which should not appears in the case of load-control indentation tests. If it is happening, it should be more related to wrong setting of the control loop or an acquisition bug.
 
 .. figure:: ./_pictures/load-disp_curve_popin_sliding.png
    :name: load_disp_curve_popin_sliding
