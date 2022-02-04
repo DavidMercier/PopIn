@@ -316,6 +316,7 @@ Statistics and mathematical analysis of pop-in
 * `Zhang W. et al., "Indentation Schmid factor and incipient plasticity by nanoindentation pop-in tests in hexagonal close-packed single crystals" (2017). <https://doi.org/10.1016/j.actamat.2017.05.058>`_
 * `Srikanth K. and Ananthakrishna G., "Dynamical approach to displacement jumps in nanoindentation experiments" (2017). <https://doi.org/10.1103/PhysRevB.95.014107>`_
 * `Sudharshan Phani P. and Oliver W.C., "Critical examination of experimental data on strain bursts(pop-in) during spherical indentation" (2020). <https://doi.org/10.1557/jmr.2019.416>`_
+* `Kossman S. and Bigerelle M., "Pop-In Identification in Nanoindentation Curves with Deep Learning Algorithms" (2021). <https://doi.org/10.3390/ma14227027>`_
 
 Softwares
 ###########
