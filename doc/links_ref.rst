@@ -45,8 +45,8 @@ Plasticity or Fracture?
 
 * `Fang X. et al., "Nanoindentation pop-in in oxides at room temperature: dislocation activation or crack formation?" (2021). <https://doi.org/10.1111/JACE.17806>`_
 
-Dislocation nucleation during (nano)indentation
--------------------------------------------------
+Dislocation nucleation/initiation during (nano)indentation
+------------------------------------------------------------------
 
 * `Page T.F. et al., "The deformation behavior of ceramic crystals subjected to very low load (nano)indentations" (1992). <https://doi.org/10.1557/JMR.1992.0450>`_
 * `Venkataraman S.K. et al., "Continuous microindentation of passivating surfaces" (1993). <https://doi.org/10.1557/JMR.1993.0685>`_
@@ -164,6 +164,8 @@ Dislocation nucleation during (nano)indentation
 * `Pöhl F., "Orientation-Dependent Deformation Behavior of316L Steel Manufactured by Laser Metal Depositionand Casting under Local Scratch and Indentation Load" (2020). <https://doi.org/10.3390/ma13071765>`_
 * `Ohmura T. and Wakeda M., "Pop-In Phenomenon as a Fundamental Plasticity Probed by Nanoindentation Technique" (2021). <https://doi.org/10.3390/ma14081879>`_
 * `Wang D. et al., "Understanding the hydrogen effect on pop-in behavior of an equiatomic high-entropy alloy during in-situ nanoindentation", Journal of Materials Science & Technology (2021). <https://doi.org/10.1016/j.jmst.2021.04.060>`_
+* `Zhang H. et al., "Deformation mechanism of WC single crystals under nanoindentation: Effects of surface defects and orientation on pop-in and hysteresis", International Journal of Refractory Metals and Hard Materials (2022). <https://doi.org/10.1016/j.ijrmhm.2022.105850>`_
+
 
 Dislocation nucleation during compression of pillar
 -----------------------------------------------------
