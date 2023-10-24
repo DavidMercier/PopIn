@@ -30,8 +30,8 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
-    'sphinx_rtd_theme',
 ]
+#    'sphinx_rtd_theme',
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -106,13 +106,13 @@ numfig_format = {'figure': 'Figure %s', 'table': 'Table %s', 'code-block': 'Code
 # a list of builtin themes.
 # See http://sphinx-doc.org/theming.html
 #html_theme = 'default'
-html_theme = "sphinx_rtd_theme"
+#html_theme = "sphinx_rtd_theme"
 #html_theme = 'classic'
 #html_theme = 'alabaster'
 #html_theme = 'agogo'
 #html_theme =  'traditional'
 #html_theme =  'pyramid'
-#html_theme =  'sphinxdoc'
+html_theme =  'sphinxdoc'
 #html_theme = 'nature' # no option !
 #html_theme_options{}
 #html_theme = 'bootstrap'
