@@ -30,7 +30,7 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.mathjax',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -117,6 +117,9 @@ html_theme = "sphinx_rtd_theme"
 #html_theme_options{}
 #html_theme = 'bootstrap'
 #html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_static_path = ["_static", f"{docset}/_static"]
+html_css_files = ["css/custom.css", "css/sphinx_prompt_css.css"]
+html_js_files = ["js/expand_tabs.js"]
 
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'                           
