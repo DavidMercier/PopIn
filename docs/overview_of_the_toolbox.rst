@@ -7,22 +7,22 @@
    :scale: 65 %
    :align: center
 
-* 1) Import your (nano)indentation results. See here an `example file <http://popin.readthedocs.org/en/latest/examples.html>`_.
+* 1) Import your (nano)indentation results. See the `example file <http://popin.readthedocs.org/en/latest/examples.html>`_.
 
-* 2) Set units, set the criterion of pop-in detection, set temperature of experiments, set the minimum and maximum indentation depths, set the pop-in to analyze and select the critical parameter to use for the Weibull distribution.
+* 2) Set the units, pop-in detection criterion, experiment temperature, minimum and maximum indentation depths, and pop-in event to analyze. Then select the critical parameter for the Weibull distribution.
 
 * 3) Run the calculations and plot results.
 
 * 4) Set the plots.
 
-* 5) Save a picture of the main interface or quit this interface.
+* 5) Save an image of the main interface or close it.
 
-* 6) Load-displacement curves with pop-in and Hertzian fit.
+* 6) Load-displacement curves showing pop-in events and the Hertz fit.
 
 * 7) Cumulative distribution of the pop-in.
 
 ..  note::
-    It is possible to modify YAML configuration files directly from the menu of this interface.
+    You can modify the YAML configuration files directly from this interface's menu.
     
 ..  note::
-    Documentation is reachable from the button 'HELP' or the menu.
+    You can open the documentation from the **HELP** button or the menu.

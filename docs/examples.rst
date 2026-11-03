@@ -6,16 +6,16 @@
 Format of data
 ###############
 
-* Only 'Sample' sheet of a .xls files obtained from MTS software - Analyst are accepted.
+* Only the `Sample` sheet in `.xls` files obtained from MTS Analyst software is accepted.
 
-* You data must only have the loading part from the load-displacement curves of your (nano)indentation results, or it is necessary to have a 'Hold Segment Type' to detect when the loading part is over.
+* Your data must contain only the loading portion of the load-displacement curves from your (nano)indentation tests. Alternatively, the file must include a `Hold Segment Type` to indicate when loading ends.
 
 ..  warning::
-    It is advised to do at least 30 indentation tests to have consistent results.
+    We recommend performing at least 30 indentation tests to obtain consistent results.
 
 Example
 ########
 
 * `mts-XP_Indcon5um_Al2O3-40nm.xls <https://github.com/DavidMercier/PopIn/blob/master/indentation_data/mts-XP_Indcon5um_Al2O3-40nm.xls>`_
-    - Data obtained for a sample of ALD-Alumina (40nm) on a substrate of PVD-Aluminum (500nm) deposited on a oxidized silicon substrate.
-    - Tests were performed on a Nanoindenter XP MTS with a sphero-conical indenter (radius 5microns), without CSM mode at room temperature.
+    - Data were obtained from a sample of ALD alumina (40 nm) on a 500 nm PVD aluminum substrate deposited on an oxidized silicon substrate.
+    - Tests were performed at room temperature using an MTS Nanoindenter XP with a 5-micron sphero-conical indenter, without CSM mode.

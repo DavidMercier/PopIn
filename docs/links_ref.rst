@@ -8,8 +8,8 @@ Links
 
 * `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_
 * `dfittool - Open Distribution Fitting app <http://de.mathworks.com/help/stats/dfittool.html>`_
-* `Visit the YAML website for more informations. <http://www.yaml.org/>`_
-* `Visit the YAML code for Matlab. <http://code.google.com/p/yamlmatlab/>`_
+* `Visit the YAML website for more information. <http://www.yaml.org/>`_
+* `Visit the YAML for MATLAB project page. <http://code.google.com/p/yamlmatlab/>`_
 
 Other interesting Matlab toolboxes about indentation
 ##############################################################

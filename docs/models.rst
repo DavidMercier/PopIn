@@ -3,89 +3,88 @@
 
 .. include:: includes.rst
 
-The nanoindentation (or instrumented or depth sensing indentation) is a variety
-of indentation hardness tests applied to small volumes. During nanoindentation,
-an indenter is brought into contact with a sample and mechanically loaded.
+Nanoindentation, also known as instrumented or depth-sensing indentation, is a
+type of indentation hardness test applied to small volumes. During a test, an
+indenter is brought into contact with a sample and mechanically loaded.
 
-The following parts give a short overview of models existing in the
-literature used for the extraction of mechanical properties of homogeneous 
-bulk materials from indentation experiments with conical indenters.
+The following sections provide a brief overview of models from the literature
+that are used to extract the mechanical properties of homogeneous bulk
+materials from indentation experiments with conical indenters.
 
-Parameters such as contact load :math:`F_\text{c}` and depth of penetration :math:`h` are recorded
-at a rapid rate (normally 10Hz) during loading and unloading steps of the indentation test.
-Usually, the depth resolution is around the fraction of :math:`\text{nm}`-level and the resolution is around :math:`\text{nN}`-level.
+Parameters such as contact load :math:`F_\text{c}` and penetration depth :math:`h` are recorded
+at a high rate (typically 10 Hz) during the loading and unloading steps of the indentation test.
+Depth resolution is typically on the order of fractions of a nanometer, and load resolution is typically on the order of nanonewtons.
 
 During the loading step of nanoindentation, a discontinuity in the measured depth is commonly referred to as a pop-in event.
 
 The pop-in event
 ###################
 
-A pop-in (event) is a sudden (load or displacement) burst during the loading of an indenter on a sample.
-If the nanoindentation experiment is load-controlled, an horizontal plateau is also observed on the 
-load-displacement curve, when a pop-in occurs at the critical load :math:`F_\text{crit}` and
-critical displacement :math:`h_\text{crit}` (see :numref:`load_disp_curve_popin`). In the case of a displacement-controlled
-nanoindentation experiments, a vertical drop of the load is observed on the load-displacement curve.
+A pop-in is a sudden burst in load or displacement as an indenter is pressed into a sample.
+In a load-controlled nanoindentation experiment, a horizontal plateau appears on the
+load-displacement curve when a pop-in occurs at the critical load :math:`F_\text{crit}` and
+critical displacement :math:`h_\text{crit}` (see :numref:`load_disp_curve_popin`). In a displacement-controlled
+nanoindentation experiment, the load drops vertically on the load-displacement curve.
 
 .. figure:: ./_pictures/load-disp_curve_popin.png
    :name: load_disp_curve_popin
    :scale: 60 %
    :align: center
    
-   *Schematics of indentation load-displacement curve with a pop-in: a) load-controlled and b) displacement-controlled nanoindentation experiments.*
+        *Schematic load-displacement curves showing a pop-in in (a) a load-controlled and (b) a displacement-controlled nanoindentation experiment.*
 
 :math:`F_\text{c,max}` is the maximum applied load, :math:`h_\text{t}` is the total indentation depth and
 :math:`h_\text{r}` is the residual indentation depth.
 
-Find here the |matlab| function to quantify pop-in by peak detection:
+The |matlab| function used to detect pop-in events by peak detection is:
 `peakdet.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/third_party_codes/peakdet.m>`_.
 
 .. warning::
     In this toolbox, only load-controlled nanoindentation experiments are analyzed.
 
-Many authors observed pop-in events on metals or metallic thin films, ceramics, metallic glasses, semiconductors, hard brittle thin films deposited on a soft elastoplastic substrate...
+Many authors have observed pop-in events in metals and metallic thin films, ceramics, metallic glasses, semiconductors, and hard, brittle thin films deposited on soft elastoplastic substrates.
 
-The pop-in event is often explained by on of the following mechanisms as a function of the indented specimen (ceramic, metal, semiconductor, coated or multilayer specimen...)
-and the experimental conditions (time, temperature, geometry of the indenter...) :
+Pop-in events are often explained by one of the following mechanisms, depending on the specimen (ceramic, metal, semiconductor, coated, or multilayer) and the experimental conditions (time, temperature, indenter geometry, etc.):
 
-    * :ref:`dislocation_nucleation` (= sudden yielding of a material under load) ;
-    * :ref:`film_fracture` ;
-    * :ref:`strain_transfer` ;
-    * crack(s) formation ; 
-    * phase transformation ;
-    * amorphization, densification...
+        * :ref:`dislocation_nucleation` (sudden yielding of a material under load);
+        * :ref:`film_fracture`;
+        * :ref:`strain_transfer`;
+        * crack formation;
+        * phase transformation;
+        * amorphization, densification...
     
-It is really important to mention that pop-in events are function of the indenter shape [#Schuh_2004]_, [#Jang_2007]_, the temperature [#Schuh_2005]_ and the strain rate [#Schuh_2004]_, [#Nieh_2002]_.
+It is important to note that pop-in events depend on the indenter shape [#Schuh_2004]_, [#Jang_2007]_, temperature [#Schuh_2005]_, and strain rate [#Schuh_2004]_, [#Nieh_2002]_.
 
-In parallel, pop-in event is not always a perfect plateau (with a null slope) on the load-displacement curve. Sometimes, sliding pop-in are occuring with no observable end point, or for example pop-in can be a serie of little plateaus. In the literature, some authors classified the different pop-in shapes [#Hull_2021]_ (in the case of load-controlled measurement):
-    * Type I = slope :math:`dF_\text{c}/dh = 0`, corresponding to the "perfect" plateau, which are often described as a sudden instantaneous elastic perfectly plastic “Coulomb-type” failure and sudden grain dislodging
-    * Type II = slope :math:`dF_\text{c}/dh > 0`, corresponding to a sliding pop-in, which can be related to shear band progressive failure and/or grain sliding or progressive pile-up. According to the litterature, such sliding pop-in are detected during experiments given the high-resolution of transducer [#Fu_2016]_.	
-    * Type III = :math:`dF_\text{c}/dh < 0`, which should not appears in the case of load-control indentation tests. If it is happening, it should be more related to wrong setting of the control loop or an acquisition bug.
+However, a pop-in is not always a perfect plateau (with zero slope) on the load-displacement curve. Sliding pop-ins sometimes occur without a clearly observable endpoint. A pop-in can also consist of a series of small plateaus. Some authors have classified pop-in shapes in load-controlled measurements [#Hull_2021]_:
+        * Type I: slope :math:`dF_\text{c}/dh = 0`, corresponding to a "perfect" plateau. This is often described as sudden, instantaneous, elastic-perfectly-plastic ("Coulomb-type") failure or sudden grain dislodging.
+        * Type II: slope :math:`dF_\text{c}/dh > 0`, corresponding to a sliding pop-in. This may be related to progressive shear-band failure, grain sliding, or progressive pile-up. According to the literature, high-resolution transducers can detect these sliding pop-ins during experiments [#Fu_2016]_.
+        * Type III: :math:`dF_\text{c}/dh < 0`, which should not occur in load-controlled indentation tests. If observed, it may indicate an incorrectly configured control loop or an acquisition bug.
 
 .. figure:: ./_pictures/load-disp_curve_popin_sliding.png
    :name: load_disp_curve_popin_sliding
    :scale: 60 %
    :align: center
    
-   *Schematics of indentation load-displacement curve with a sliding pop-in.*
+        *Schematic load-displacement curve showing a sliding pop-in.*
 	
-For the serie of little plateaus, it is more often observed in the case of successive failures of brittle thin film on elastic-plastic substrate [#Mercier_2017]_ (see picture below),
-but it can be also observed for crystals deformation [#Xia_2016]_.
+Series of small plateaus are most often observed during successive failures of a brittle thin film on an elastic-plastic substrate [#Mercier_2017]_ (see the figure below),
+but they can also occur during crystal deformation [#Xia_2016]_.
 
 .. figure:: ./_pictures/load-disp_curve_multiple_popin.png
    :name: load_disp_curve_multiple_popin
    :scale: 60 %
    :align: center
    
-   *Load-displacement curve with relatively small displacement excursions (on the left) and corresponding SEM observation.*
+        *Load-displacement curve with relatively small displacement excursions (left) and the corresponding SEM image.*
 
-Some authors proposed to describe the statistics of the pop-in event with a cumulative Weibull-type distribution [#Chechenin_1995]_ or with a cumulative fraction function based on a rate equation, when a time or a temperature dependence of the pop-in is demonstrated.
+Some authors have described pop-in statistics using a cumulative Weibull-type distribution [#Chechenin_1995]_ or a cumulative fraction function based on a rate equation when the pop-in behavior depends on time or temperature.
 
 Weibull-type distribution
 #################################
 
 The `cumulative Weibull distribution function <https://en.wikipedia.org/wiki/Weibull_distribution>`_
-with 2 parameters :math:`(\lambda, m)` is a continuous probability distribution
-and is often used in the description of particle size distribution and in survival or failure analysis [#Weibull_1951]_.
+with two parameters, :math:`(\lambda, m)`, is a continuous probability distribution
+often used to describe particle-size distributions and in survival or failure analysis [#Weibull_1951]_.
 
     .. math:: V\left(x, \lambda, m\right) = exp\left(\left(\frac{x}{\lambda}\right)^m\right)
             :label: weibull_survival
@@ -93,29 +92,29 @@ and is often used in the description of particle size distribution and in surviv
     .. math:: W\left(x, \lambda, m\right) = 1 - exp\left(\left(\frac{x}{\lambda}\right)^m\right)
             :label: weibull_mortality
 
-With :math:`V` the survival probability function and :math:`W` the mortal probability function.
-:math:`m` is a dimensionless material-dependent constant, often named the Weibull modulus (from 0 to usually 50) [#Afferante_2006]_.
-If :math:`m=1`, the rate of failure remains constant and there is random failure occurring.
+Here, :math:`V` is the survival probability function and :math:`W` is the failure probability function.
+:math:`m` is a dimensionless, material-dependent constant, often called the Weibull modulus (usually ranging from 0 to 50) [#Afferante_2006]_.
+If :math:`m=1`, the failure rate remains constant, and failures occur randomly.
 
-In the case of several indentations performed on the same sample,
+For multiple indentations performed on the same sample,
 :math:`x` can be the distribution of the critical loads :math:`F_\text{crit}` or the critical displacements :math:`h_\text{crit}`,
-at which the pop-in events appear on the corresponding load-displacement curves. In this case, 
-higher is :math:`m`, more homogeneous is the distribution of the pop-in.
+at which pop-in events occur on the corresponding load-displacement curves. In this case,
+the higher :math:`m` is, the more homogeneous the pop-in distribution is.
 
 :math:`\lambda` is the scale parameter of the cumulative Weibull distribution.
-In the case of indentations, :math:`\lambda` is the mean critical load :math:`F^0_{crit}` or
-the mean critical displacement :math:`h^0_{crit}` at which the pop-in event appears for a given material.
+For indentation tests, :math:`\lambda` is the mean critical load :math:`F^0_{crit}` or
+the mean critical displacement :math:`h^0_{crit}` at which a pop-in event occurs for a given material.
 
-Find here the |matlab| function to calculate the cumulative mortal Weibull distribution:
+The |matlab| function for calculating the cumulative Weibull failure distribution is:
 `weibull_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf.m>`_.
 
-Find here the |matlab| function to calculate the complementary cumulative survival Weibull distribution:
+The |matlab| function for calculating the complementary cumulative Weibull survival distribution is:
 `weibull_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_cdf_survival.m>`_.
 
-Chechenin et al. proposed to use a modified cumulative Weibull distribution function for
-the description of the statistics of the pop-in event [#Chechenin_1995]_.
-This function is set to have a probability of 0.5, when :math:`F_{crit}` (the critical load)
-is equal to :math:`F^0_{crit}` (the mean critical load).
+Chechenin et al. proposed using a modified cumulative Weibull distribution function
+to describe pop-in statistics [#Chechenin_1995]_.
+This function is defined so that the probability is 0.5 when :math:`F_{crit}` (the critical load)
+equals :math:`F^0_{crit}` (the mean critical load).
 
     .. math:: W\left(\frac{F_\text{crit}}{F^0_\text{crit}}\right) = 1 - exp\left(-ln2\left(\frac{F_\text{crit}}{F^0_\text{crit}}\right)^m\right)
             :label: weibull_modified
@@ -123,48 +122,48 @@ is equal to :math:`F^0_{crit}` (the mean critical load).
 The cumulative Weibull distribution [#Weibull_1951]_ and the modified cumulative Weibull distribution [#Chechenin_1995]_
 are implemented in the PopIn toolbox.
 
-Find here the |matlab| function to calculate the cumulative modified mortal Weibull distribution:
+The |matlab| function for calculating the modified cumulative Weibull failure distribution is:
 `weibull_modified_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf.m>`_.
 
-Find here the |matlab| function to calculate the complementary cumulative modified survival Weibull distribution:
+The |matlab| function for calculating the complementary cumulative modified Weibull survival distribution is:
 `weibull_modified_cdf_survival.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/weibull/weibull_modified_cdf_survival.m>`_.
 
 .. _dislocation_nucleation:
 
-Dislocations nucleation
+Dislocation nucleation
 ###############################
 
-According to many authors, pop-in corresponds to the nucleation of at least one dislocation, during indentation
+Many authors have suggested that pop-in corresponds to the nucleation of at least one dislocation during indentation
 of crystalline materials (see :numref:`popin_mechanisms_1`) [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_, [#Wo_2006]_, [#Morris_2011]_,
-[#Lu_2012]_, [#Ramalingam_2012]_, [#Wu_2014_1]_ and [#Wu_2014_2]_. Before the pop-in event, the indentation load-displacement
-obtained with a spherical indenter, can be fitted with the Hertz equation (see :numref:`load_disp_curve_two_popin_Hertzian_fit`) [#Johnson_1987]_:
+[#Lu_2012]_, [#Ramalingam_2012]_, [#Wu_2014_1]_, and [#Wu_2014_2]_. Before the pop-in event, the load-displacement curve
+obtained with a spherical indenter can be fitted with the Hertz equation (see :numref:`load_disp_curve_two_popin_Hertzian_fit`) [#Johnson_1987]_:
 
     .. math:: F_\text{c}  = (4/3) E^{*} \sqrt{R^{*}} h_\text{crit}^{1.5}
             :label: Hertz_equation
 
-With :math:`E^{*}` the reduced Young's modulus calculated from indentation test defined by :eq:`reduced_youngs_modulus` and 
-:math:`R^{*}` the reduced radius of the spherical indenter defined by :eq:`reduced_radius`.
+Here, :math:`E^{*}` is the reduced Young's modulus calculated from the indentation test, as defined by :eq:`reduced_youngs_modulus`, and
+:math:`R^{*}` is the reduced radius of the spherical indenter, as defined by :eq:`reduced_radius`.
 
     .. math:: \frac{1}{E^{*}} = \frac{1}{E_\text{s}^{'}} + \frac{1}{E_\text{i}^{'}}
             :label: reduced_youngs_modulus
 
-With :math:`E_\text{s}^{'}` the reduced Young's modulus of the sample and :math:`E_\text{i}^{'}` the reduced Young's modulus of the indenter.
+Here, :math:`E_\text{s}^{'}` is the reduced Young's modulus of the sample, and :math:`E_\text{i}^{'}` is the reduced Young's modulus of the indenter.
 
     .. math:: \frac{1}{R^{*}} = \frac{1}{R_\text{s}} + \frac{1}{R_\text{i}}
             :label: reduced_radius
 
-With :math:`R_\text{s}` the radius of the sample (usually :math:`+\infty`) and :math:`R_\text{i}` the radius of the indenter.
+Here, :math:`R_\text{s}` is the radius of the sample (usually :math:`+\infty`), and :math:`R_\text{i}` is the radius of the indenter.
 
-Find here the |matlab| function to calculate the load with the Hertz equation:
+The |matlab| function for calculating the load using the Hertz equation is:
 `elasticLoad.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/elasticLoad.m>`_.
 
-Find here the |matlab| function to calculate the displacement with the Hertz equation:
+The |matlab| function for calculating the displacement using the Hertz equation is:
 `elasticDisp.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/elasticDisp.m>`_.
 
-Find here the |matlab| function to calculate the contact radius with the Hertz equation:
+The |matlab| function for calculating the contact radius using the Hertz equation is:
 `elasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/elasticRadius.m>`_.
 
-Find here the |matlab| function to calculate the reduced value of a variable:
+The |matlab| function for calculating the reduced value of a variable is:
 `reducedValue.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/reducedValue.m>`_.
 
 .. figure:: ./_pictures/popin_mechanisms_1.png
@@ -172,23 +171,23 @@ Find here the |matlab| function to calculate the reduced value of a variable:
    :scale: 30 %
    :align: center
 
-   *Schematics cross section of deformation profile of an elastic-plastic substrate under indentation :
-   1) elastic deformation, 2) elastoplastic deformation (nucleation of dislocation) and 3) transfer of dislocations across a grain boundary.*
+        *Schematic cross-section of the deformation profile of an elastic-plastic substrate under indentation:
+        (1) elastic deformation, (2) elastoplastic deformation (dislocation nucleation), and (3) dislocation transfer across a grain boundary.*
             
 .. figure:: ./_pictures/load-disp_curve_two_popin_Hertzian_fit.png
    :name: load_disp_curve_two_popin_Hertzian_fit
    :scale: 60 %
    :align: center
    
-   *Schematic of indentation load-displacement curve with two pop-in events (the 1st for the nucleation of dislocation and the 2nd for the strain transfer across a grain boundary).*
+        *Schematic load-displacement curve with two pop-in events: the first associated with dislocation nucleation and the second with strain transfer across a grain boundary.*
    
 The elastic-plastic transition is often studied statistically as a function of temperature :math:`T` and indentation rate :math:`F(t)`.
-Schuh C.A. et al. observed a good consistency between experimental results and a thermally activated mechanism of incipient plasticity 
+Schuh C.A. et al. found good agreement between experimental results and a thermally activated mechanism of incipient plasticity
 [#Schuh_2004]_, [#Schuh_2005]_, [#Schuh_2006]_, [#Mason_2006]_. They also proposed to use a statistical thermal activation model (see following equations) 
-with a stress-biasing term. Based on this model, it is possible to extract the activation energy :math:`\epsilon-\sigma V`, activation volume :math:`V`,
-and attempt frequency for the rate-limiting event that controls yield :math:`W(F_\text{c})`. The activation energy :math:`\epsilon-\sigma V` is separated into a
-term characterizing the activation enthalpy :math:`\epsilon`, and a term giving the stress bias :math:`\sigma V`,
-where :math:`\sigma` is the biasing stress over the activation volume :math:`V`.
+with a stress-biasing term. This model can be used to extract the activation energy :math:`\epsilon-\sigma V`, activation volume :math:`V`,
+and attempt frequency for the rate-limiting event that controls yielding :math:`W(F_\text{c})`. The activation energy :math:`\epsilon-\sigma V` consists of
+the activation enthalpy :math:`\epsilon` and the stress-bias term :math:`\sigma V`,
+where :math:`\sigma` is the biasing stress acting over the activation volume :math:`V`.
 
     .. math:: \dot{n} = \eta exp\left(-\frac{\epsilon-\sigma V}{kT}\right)
             :label: rate_equation
@@ -211,20 +210,20 @@ where :math:`\sigma` is the biasing stress over the activation volume :math:`V`.
     .. math:: F_\text{c} = \dot{F_\text{c}}\cdot t
             :label: loadrate
 
-With :math:`\dot{n}` is the local rate at which the critical event occurs per unit volume of material, 
-:math:`\eta` the pre-exponential frequency factor, :math:`k` the Boltzmann constant, :math:`\tau_\text{max}` the maximun shear stress
-obtained for the maximum pressure :math:`p_\text{max}`, at a single point beneath the indenter given for an elastic Hertzian contact [#Johnson_1987]_. :math:`K` is a proportionality constant of order :math:`\pi`.
+Here, :math:`\dot{n}` is the local rate at which the critical event occurs per unit volume of material;
+:math:`\eta` is the pre-exponential frequency factor, :math:`k` is the Boltzmann constant, and :math:`\tau_\text{max}` is the maximum shear stress
+under the maximum pressure :math:`p_\text{max}` at a point beneath the indenter in an elastic Hertzian contact [#Johnson_1987]_. :math:`K` is a proportionality constant of order :math:`\pi`.
 
-Find here the |matlab| function to calculate the maximum shear stress:
+The |matlab| function for calculating the maximum shear stress is:
 `maxShearStress.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/maxShearStress.m>`_.
 
-Find here the |matlab| function to calculate the maximum pressure:
+The |matlab| function for calculating the maximum pressure is:
 `maxPressure.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/maxPressure.m>`_.
 
-Find here the |matlab| function to calculate the mean pressure:
+The |matlab| function for calculating the mean pressure is:
 `meanPressure.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/elastic_contact/meanPressure.m>`_.
 
-Finally, a statistical expression of the onset of plasticity can be formulated by combining previous equations, giving the cumulative fraction function :math:`W(F_\text{c})` :
+Finally, combining the preceding equations gives a statistical expression for the onset of plasticity in the form of the cumulative fraction function :math:`W(F_\text{c})`:
 
     .. math:: W(F_\text{c}) = 1-exp\left(-\frac{9KR^{*}\eta}{4E^{*}\dot{F_\text{c}}\alpha^6}exp\left(-\frac{\epsilon}{kT}\right)\left(\beta(\alpha,F_\text{c})\right)\right)
             :label: first_order_analytical_solution
@@ -235,102 +234,102 @@ Finally, a statistical expression of the onset of plasticity can be formulated b
     .. math:: \beta = 120exp(-F_\text{c}^{1/3}\alpha) + F_\text{c}^{5/3}\alpha^5 - 5F_\text{c}^{4/3}\alpha^4 + 20F_\text{c}\alpha^3-60F_\text{c}^{2/3}\alpha^2+120F_\text{c}^{1/3}\alpha-120
             :label: beta_function
 
-Find here the |matlab| function to calculate the cumulative survival distribution as a function of the load rate and the temperature of nanoindentation tests:
+The |matlab| function for calculating the cumulative survival distribution as a function of load rate and nanoindentation test temperature is:
 `mason_cdf.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/mason_cdf.m>`_.
 
-Find here the |matlab| function to calculate the :math:`\alpha` function:
+The |matlab| function for calculating :math:`\alpha` is:
 `alphaMason.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/alphaMason.m>`_.
 
-Find here the |matlab| function to calculate the :math:`\beta` function:
+The |matlab| function for calculating :math:`\beta` is:
 `betaMason.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/statistics/mason/betaMason.m>`_.
 
 .. note::
-    The surface mechanical state (presence of dislocations after polishing steps or surface free of dislocation)
-    can modified the statistics of pop-in behavior [#Wang_2012]_.
+        The mechanical state of the surface (whether dislocations are present after polishing or the surface is dislocation-free)
+        can affect pop-in statistics [#Wang_2012]_.
     
 .. note::
-    See this `Github repository <https://github.com/DavidMercier/Matlab_functions/tree/master/mechanicalContact/hertzEquations>`_ for the plot of stress distributions at the surface and along the axis of symmetry,
-    caused by Hertz pressure acting on a circular area radius.
+        See this `GitHub repository <https://github.com/DavidMercier/Matlab_functions/tree/master/mechanicalContact/hertzEquations>`_ for plots of stress distributions at the surface and along the axis of symmetry,
+        caused by Hertz pressure acting on a circular area.
 
-In the case of prismatic dislocation loops beneath the indenter generated during pop-in, an energy balance model was also proposed by Wang D. et al. in 2021 [#Wang_2021]_.
+Wang D. et al. also proposed an energy-balance model in 2021 for prismatic dislocation loops generated beneath the indenter during pop-in [#Wang_2021]_.
 
-Finally, after a short survey of the literature, it appears that pop-in or strain burst events are observed as well,
-on the load-displacement or stress-strain curves obtained during compression tests of metallic nano- or micro-pillar [#Bei_2008]_, [#Crosby_2015]_ and [#Kraft_2010]_. This strain burst is most of the time, attributed to the nucleation of dislocations into the pillar, initially dislocation-free.
+The literature also reports pop-in or strain-burst events
+on load-displacement or stress-strain curves from compression tests of metallic nanopillars or micropillars [#Bei_2008]_, [#Crosby_2015]_, and [#Kraft_2010]_. These strain bursts are most often attributed to dislocation nucleation in pillars that were initially dislocation-free.
 
 .. _strain_transfer:
     
 Strain transfer across grain boundaries in metals
 ####################################################
 
-Some authors observed sometimes two pop-in on the load-displacement curve during indentation performed close to a grain boundary
+Some authors have observed two pop-in events on the load-displacement curve during indentation near a grain boundary
 (see :numref:`popin_mechanisms_1` and :numref:`load_disp_curve_two_popin_Hertzian_fit`).
-The first pop-in is usually attributed to the nucleation of dislocation in a metallic material
-(see previous section of this documentation), and the second pop-in is related to the presence nearby of the grain boundary.
+The first pop-in is usually attributed to dislocation nucleation in the metal
+(see the previous section), while the second is related to the nearby grain boundary.
  
-The occurrence of such a strain burst is found to be related to the slip activity (function of the phase material and the grain orientation),
-to the grain boundary resistance (function of the grain boundary misorientation [#Wang_2004]_, 
-to the local chemistry [#Britton_2011]_ (impurities, embrittled hydrogen...), to the prior plastic deformation [#Britton_2011]_, to
+The occurrence of such a strain burst is related to slip activity (which depends on the material phase and grain orientation),
+grain-boundary resistance (which depends on grain-boundary misorientation [#Wang_2004]_),
+local chemistry [#Britton_2011]_ (including impurities and hydrogen embrittlement), prior plastic deformation [#Britton_2011]_,
 the distance between the indenter and the grain boundary [#Wang_2004]_,
-or other experimental parameters like the shape of the indenter and the grain boundary inclination...
+and other experimental parameters, such as indenter shape and grain-boundary inclination.
 
-Recently, the `STABiX Matlab toolbox <https://github.com/stabix/stabix>`_
-was developed to analyse in simple way slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_ and [#StabixRepo_2015]_.
+The `STABiX MATLAB toolbox <https://github.com/stabix/stabix>`_
+was developed to analyze slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_, and [#StabixRepo_2015]_.
 
 .. _film_fracture:
 
-Rupture of a hard brittle film on an elastic-plastic substrate
+Fracture of a hard, brittle film on an elastic-plastic substrate
 ################################################################
 
-In the case of indentation made into a hard brittle film (e.g.: native or thermally/anodically grown oxide, ALD coatings ...)
-on an elastic-plastic (ductile) substrate, pop-in were observed experimentally and linked to the fracture of the brittle film 
-[#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_ and [#Stauffer_2012]_ and a real example from [#Mercier_2017]_ is given below.
+When indenting a hard, brittle film (e.g., a native or thermally/anodically grown oxide or an ALD coating)
+on an elastic-plastic (ductile) substrate, pop-in events have been observed and linked to film fracture
+[#Kramer_2001]_, [#Bahr_2003]_, [#Morash_2007]_, and [#Stauffer_2012]_. A real example from [#Mercier_2017]_ is shown below.
 
 .. figure:: ./_pictures/load-disp_curve_popin_load_sub.png
    :scale: 60 %
    :align: center
 
-   *Schematic of indentation load-displacement curve with a pop-in event and the plot of the load carried by the elastic-plastic substrate.*
+        *Schematic load-displacement curve showing a pop-in event and the load carried by the elastic-plastic substrate.*
    
 .. figure:: ./_pictures/load-disp_curve_popin_al2O3.png
    :scale: 60 %
    :align: center
 
-   *Example of load-displacement curves with a pop-in event (on the left) and the corresponding SEM observations substrate (on the right).*
+        *Load-displacement curves showing a pop-in event (left) and the corresponding SEM observations of the substrate (right).*
 
-Some authors explained that a circumferential crack appears at the location of the elastic–plastic boundary in the substrate [#Bahr_2003]_ and [#Morash_2007]_.
+Some authors have explained that a circumferential crack forms at the elastic-plastic boundary in the substrate [#Bahr_2003]_, [#Morash_2007]_.
 The radius :math:`c` of this plastic zone in the ductile substrate is defined by the following equation:
 
     .. math:: c = \sqrt{\frac{3F_\text{crit,s}}{2\pi\sigma_\text{e}}}
             :label: plastic_zone_radius
 
-With :math:`F_\text{crit,s}` the load carried by the substrate at the critical indentation depth at which pop-in occurs,
-obtained usually with the power law relationship :eq:`critical_load_substrate`.
+Here, :math:`F_\text{crit,s}` is the load carried by the substrate at the critical indentation depth at which pop-in occurs.
+It is usually obtained from the power-law relationship :eq:`critical_load_substrate`.
 :math:`\sigma_\text{e}` is the yield stress of the ductile substrate [#Hainsworth_1995]_.
 
     .. math:: F_\text{crit,s} = Kh_\text{crit}^n
             :label: critical_load_substrate
 
-With :math:`h_\text{crit}` the critical displacement at which the pop-in appears.
-The two constants :math:`K` and :math:`n` are obtained from a fitting procedure of the load-displacement curve
-obtained from nanoindentation tests performed on the substrate without the brittle film.
+Here, :math:`h_\text{crit}` is the critical displacement at which the pop-in occurs.
+The constants :math:`K` and :math:`n` are obtained by fitting the load-displacement curve
+from nanoindentation tests performed on the substrate without the brittle film.
 
 .. figure:: ./_pictures/popin_mechanisms_2.png
    :name: popin_mechanisms_2
    :scale: 30 %
    :align: center
 
-   *Schematic cross section of deformation profile of a hard brittle film on an elastic-plastic substrate under indentation.*
+        *Schematic cross-section of the deformation profile of a hard, brittle film on an elastic-plastic substrate under indentation.*
    
-In the :numref:`popin_mechanisms_2`, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, :math:`F_\text{c}` is the applied load,
-:math:`h` is the indentation displacement, :math:`c` the radius of the plastic zone in the substrate and :math:`a_\text{c}` the contact radius between the indenter and the thin film.
+In :numref:`popin_mechanisms_2`, :math:`R` is the radius of the spherical indenter, :math:`t` is the thickness of the thin film, and :math:`F_\text{c}` is the applied load.
+:math:`h` is the indentation displacement, :math:`c` is the radius of the plastic zone in the substrate, and :math:`a_\text{c}` is the contact radius between the indenter and the thin film.
 
-Find here the |matlab| function to calculate the plastic radius :math:`c`:
+The |matlab| function for calculating the plastic radius :math:`c` is:
 `plasticRadius.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/plastic_contact/plasticRadius.m>`_.
 
-Find here the |matlab| function to fit a load-displacement curve:
+The |matlab| function for fitting a load-displacement curve is:
 `load_displacement_fit.m <https://github.com/DavidMercier/PopIn/blob/master/matlab_code/plastic_contact/load_displacement_fit.m>`_.
 
-Matlab functions to fit probability distributions
+MATLAB functions to fit probability distributions
 ###################################################
 
 * `disttool - Interactive density and distribution plots <http://de.mathworks.com/help/stats/disttool.html>`_

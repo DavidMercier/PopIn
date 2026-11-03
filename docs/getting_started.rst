@@ -3,20 +3,20 @@
 
 .. include:: includes.rst
 
-First of all, download the source code of the |matlab| toolbox.
+First, download the source code for the |matlab| toolbox.
 
-`Source code is hosted at Github. <https://github.com/DavidMercier/PopIn>`_
+`The source code is hosted on GitHub. <https://github.com/DavidMercier/PopIn>`_
 
-To have more details about the use of the toolbox, please have a look to :
+For more information about using the toolbox, see:
 
 .. code-block:: matlab
 
-   README.txt
+   README.rst
 
-How to use the GUI for "pop-in" analysis from indentation tests ?
+How to use the GUI for pop-in analysis of indentation tests
 #################################################################
 
-First of all a GUI is a Graphical User Interface.
+GUI stands for Graphical User Interface.
 
 * Run the following |matlab| script :
 
@@ -24,7 +24,7 @@ First of all a GUI is a Graphical User Interface.
 
    demo.m
    
-* Answer 'y' or 'yes' (or press 'Enter') to add path to the |matlab| search paths, using this script:
+* Answer 'y' or 'yes' (or press 'Enter') to add the toolbox to the |matlab| search path by running this script:
 
 .. code-block:: matlab
 
@@ -38,28 +38,28 @@ First of all a GUI is a Graphical User Interface.
    
    *Screenshot of the main window of the PopIn toolbox.*
 
-* Import your (nano)indentation results (.xls file obtained from MTS software with at least more than 20 indentation tests for statistics), by pressing the button 'Select file'.
-* Select the end segment (if segments exist), in order to set the maximum indentation depth.
-* Set units and criterion to detect pop-in.
-* Once the dataset is loaded and parameters set, run calculations by pressing the green button 'RUN CALCULATIONS and PLOT'.
-* Load-displacement curves and selected cumulative distribution function (cdf) are plotted respectively on the left graphic and the right graphic.
-* A picture of the main window as .png file is created and cdf fit results are stored in a .txt file when you press the button 'SAVE'.
-* Results are accessible by typing in the Matlab command window (here for 50 indentation tests) : 
+* Import your (nano)indentation results by pressing **Select file**. The toolbox accepts `.xls` files from MTS software and requires at least 20 indentation tests for statistical analysis.
+* If segments are present, select the final segment to set the maximum indentation depth.
+* Set the units and the criterion for detecting pop-in events.
+* Once the dataset is loaded and the parameters are set, run the calculations by pressing the green **RUN CALCULATIONS and PLOT** button.
+* The load-displacement curves and selected cumulative distribution function (CDF) are plotted in the left and right graphs, respectively.
+* Press **SAVE** to create a `.png` image of the main window and save the CDF fit results to a `.txt` file.
+* To access the results, enter the following in the MATLAB command window (shown here for 50 indentation tests):
 
 .. code-block:: matlab
 
    gui = guidata(gcf)
    
    gui =
-        config: [1x1 struct]                % config. of the GUI
-        data_xls: [1x1 struct]              % details about .xls file
-        handles: [1x1 struct]               % handles of the GUI = buttons, boxes...
-        settings: [1x1 struct]              % settings of the GUI
-        flag: [1x1 struct]                  % flags for errors, calculations
-        data: [1x50 struct]                 % data cropped
-        results: [50x1 struct]              % results obtained after calculations
-        Hertz: [1x1 struct]                 % details about hertzian fit
-        cumulativeFunction: [1x1 struct]    % cdf fit results
+      config: [1x1 struct]                % GUI configuration
+      data_xls: [1x1 struct]              % details about the .xls file
+      handles: [1x1 struct]               % GUI handles: buttons, boxes, etc.
+      settings: [1x1 struct]              % GUI settings
+      flag: [1x1 struct]                  % error and calculation flags
+      data: [1x50 struct]                 % cropped data
+      results: [50x1 struct]              % calculation results
+      Hertz: [1x1 struct]                 % details about the Hertz fit
+      cumulativeFunction: [1x1 struct]    % CDF fit results
 
 .. figure:: ./_pictures/GUI_select_segment.png
    :scale: 40 %
@@ -71,34 +71,34 @@ First of all a GUI is a Graphical User Interface.
    :scale: 30 %
    :align: center
    
-   *Plot of the load-displacement curves and the mortal Weibull cdf after loading of data.*
+   *Load-displacement curves and the Weibull cumulative distribution function after data loading.*
    
 .. figure:: ./_pictures/GUI_Main_Window_survival.png
    :scale: 30 %
    :align: center
    
-   *Plot of the load-displacement curves and the survival Weibull cdf.*
+   *Load-displacement curves and the Weibull survival function.*
    
 .. figure:: ./_pictures/GUI_Main_Window_chechenin.png
    :scale: 30 %
    :align: center
    
-   *Plot of the load-displacement curves and the mortal modified Weibull cdf (Chechenin's model).*
+   *Load-displacement curves and the modified Weibull cumulative distribution function (Chechenin's model).*
    
 The YAML configuration files
 #################################
 
-Default YAML configuration files, stored in the folder `yaml_config_files <https://github.com/DavidMercier/PopIn/tree/master/yaml_config_files>`_, are loaded automatically to set the GUI:
+The default YAML configuration files, stored in the `yaml_config_files <https://github.com/DavidMercier/PopIn/tree/master/yaml_config_files>`_ folder, are loaded automatically to configure the GUI:
 
 * `data_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/data_config_popin.yaml>`_
 * `indenters_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/indenter_config_popin.yaml>`_
 * `numerics_config.yaml <https://github.com/DavidMercier/PopIn/blob/master/yaml_config_files/numerics_config_popin.yaml>`_
 
-You have to update these YAML config. files, if you want to change indenter properties, constant parameters of models and constant parameters of the least-square method used to solve nonlinear curve-fitting and the path to your datasets.
+Update these YAML configuration files to change the indenter properties, model parameters, least-squares fitting parameters, or the path to your datasets.
 
-`Visit the YAML website for more informations <http://www.yaml.org/>`_.
+`Visit the YAML website for more information. <http://www.yaml.org/>`_
 
-`Visit the YAML code for Matlab <http://code.google.com/p/yamlmatlab/>`_.
+`Visit the YAML for MATLAB project page. <http://code.google.com/p/yamlmatlab/>`_
 
 Links
 #######
