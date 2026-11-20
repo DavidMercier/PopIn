@@ -54,7 +54,7 @@ MATLAB ; Graphical User Interface (GUI) ; pop-in ; nanoindentation ; statistics 
 Screenshot
 -------------
 
-.. figure:: ./doc/_pictures/GUI_Main_Window.png
+.. figure:: ./docs/_pictures/GUI_Main_Window.png
    :scale: 40 %
    :align: center
    
