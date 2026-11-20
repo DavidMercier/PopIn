@@ -14,6 +14,7 @@ else
     
     set_param_GUI;
     gui = guidata(gcf); guidata(gcf, gui);
+    gui.flag.flag_cleaned_data = 1;
     
     % Preallocation
     umax = NaN(length(gui.data_xls.sheets_xls));

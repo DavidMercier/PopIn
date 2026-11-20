@@ -2,14 +2,38 @@
 function gui_handle = demo
 %% Function to run the Matlab GUI for the analysis of the pop-in statistics
 
-%% Check License of Optimization Toolbox
-license_msg = ['Sorry, no license found for the Matlab ', ...
-    'Optimization Toolbox™ !'];
-if  license('checkout', 'Optimization_Toolbox') == 0
-    warning(license_msg);
-    licenceFlag = 0;
+%% Check installation and license of Optimization Toolbox
+licenceFlag = 0;
+if isempty(ver('optim')) || isempty(which('lsqcurvefit'))
+    warning('PopIn:OptimizationToolboxUnavailable', ...
+        ['Optimization Toolbox or lsqcurvefit is not installed on the ', ...
+        'MATLAB path. CDF fits will use fminsearch without parameter ', ...
+        'bounds. A license alone does not install the toolbox.']);
 else
-    licenceFlag = 1;
+    [licenceFlag, license_msg] = license('checkout', 'Optimization_Toolbox');
+    if ~licenceFlag
+        warning('PopIn:OptimizationToolboxUnavailable', ...
+            ['Cannot check out Optimization Toolbox: %s\n', ...
+            'CDF fits will use fminsearch without parameter bounds.'], ...
+            license_msg);
+    else
+        % A toolbox stub can exist even when the solver cannot be used.
+        try
+            lsqcurvefit(@(p, x) p .* x, 1, [1; 2], [1; 2], [], [], ...
+                optimset('Display', 'off'));
+        catch err
+            if strcmp(err.identifier, 'MATLAB:UndefinedFunction') || ...
+                    strcmp(err.identifier, 'MATLAB:license:checkouterror')
+                licenceFlag = 0;
+                warning('PopIn:OptimizationToolboxUnavailable', ...
+                    ['lsqcurvefit is unavailable: %s\n', ...
+                    'CDF fits will use fminsearch without parameter bounds.'], ...
+                    err.message);
+            else
+                rethrow(err);
+            end
+        end
+    end
 end
 
 %% Define gui structure variable
@@ -38,7 +62,7 @@ end
 
 %% Set Toolbox version and help paths
 gui.config.name_toolbox = 'PopIn';
-gui.config.version_toolbox = '3.2';
+gui.config.version_toolbox = '4.0';
 gui.config.url_help = 'http://popin.readthedocs.org/en/latest/';
 gui.config.pdf_help = 'https://media.readthedocs.org/pdf/popin/latest/popin.pdf';
 gui.config.licenceFlag = licenceFlag;
@@ -95,6 +119,6 @@ else
         'https://code.google.com/p/yamlmatlab/'], 'Error');
 end
 
-java_icon_popin;
+java_icon_popin(gui.handles.MainWindows);
 
 end

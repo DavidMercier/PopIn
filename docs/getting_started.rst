@@ -30,6 +30,37 @@ GUI stands for Graphical User Interface.
 
    path_management.m
 
+The path setup loads its helper functions from ``matlab_code/util``.
+Keep this directory name lowercase: MATLAB Online and other case-sensitive
+environments distinguish it from ``Matlab_Code``.
+
+Optimization Toolbox is optional for CDF fitting. PopIn checks that the
+toolbox is installed, that ``lsqcurvefit`` is on the MATLAB path, and that
+its license can be checked out, then runs a small solver availability check.
+A successful license check alone does not mean that the toolbox is installed
+or usable. If an installation or license check fails, PopIn warns and uses
+``fminsearch`` for CDF fits, without parameter bounds. Loading-curve
+models that use ``lsqcurvefit`` still require Optimization Toolbox.
+
+If MATLAB reports that ``lsqcurvefit`` requires Optimization Toolbox, check
+the installation and active MATLAB path in the same session:
+
+.. code-block:: matlab
+
+   ver optim
+   which lsqcurvefit -all
+   [status, message] = license('checkout', 'Optimization_Toolbox')
+
+Install or enable Optimization Toolbox for that MATLAB environment if it
+is missing. In MATLAB Online, verify the license selected for the session
+and restart the session after changing toolbox access. Restart PopIn after
+correcting the installation or license so its fitting mode is checked again.
+
+On current MATLAB releases, PopIn uses the supported figure ``Icon``
+property rather than the removed ``JavaFrame`` property. Older desktop
+releases retain the legacy icon implementation; environments without
+either icon API keep the default icon and display a warning.
+
 * The following window opens:
 
 .. figure:: ./_pictures/GUI_Main_Window_empty.png
@@ -39,7 +70,14 @@ GUI stands for Graphical User Interface.
    *Screenshot of the main window of the PopIn toolbox.*
 
 * Import your (nano)indentation results by pressing **Select file**. The toolbox accepts `.xls` files from MTS software and requires at least 20 indentation tests for statistical analysis.
+  Worksheets are read by name, so import also works in MATLAB Online's
+  basic spreadsheet-reading mode without Microsoft Excel.
 * If segments are present, select the final segment to set the maximum indentation depth.
+  The minimum and maximum depth fields are initialized from the finite
+  displacement samples common to the imported curves. The text Segment
+  column is not used as displacement. To narrow the range, edit the depth
+  fields and press **RUN CALCULATIONS and PLOT**; valid inputs can be retried
+  after an input error without reloading the workbook.
 * Set the units and the criterion for detecting pop-in events.
 * Once the dataset is loaded and the parameters are set, run the calculations by pressing the green **RUN CALCULATIONS and PLOT** button.
 * The load-displacement curves and selected cumulative distribution function (CDF) are plotted in the left and right graphs, respectively.

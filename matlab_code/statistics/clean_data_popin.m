@@ -24,6 +24,7 @@ else
                     && gui.settings.max_data_h_average - 1 <= gui.settings.max_bound_h_init
                 gui.settings.min_bound_h = gui.settings.min_data_h_average;
                 gui.settings.max_bound_h = gui.settings.max_data_h_average;
+                gui.flag.flag_cleaned_data = 1;
             else
                 gui.flag.flag_cleaned_data = 0;
             end
@@ -33,44 +34,16 @@ else
         end
         
         if gui.flag.flag_cleaned_data
-            %% Remove data below a minimum displacement
-            h_set_min = (gui.data(ii_sheet).data_h(:, 1) >=  gui.settings.min_bound_h);
-            
-            clear [row, col];
-            for ii = 1:length(h_set_min)
-                [row, col] = find(h_set_min >= 1);
+            h = gui.data(ii_sheet).data_h(:, 1);
+            load = gui.data(ii_sheet).data_L(:, 1);
+            selected = isfinite(h) & isfinite(load) & ...
+                h >= gui.settings.min_bound_h & h < gui.settings.max_bound_h;
+            if nnz(selected) < 3
+                error('PopIn:InsufficientDepthRange', ...
+                    'Select a depth range containing at least three finite displacement/load samples.');
             end
-            
-            % Preallocation
-            h_int = NaN(max(row), 1);
-            L_int = NaN(max(row), 1);
-            
-            for ii = row(1):(max(row))
-                h_int(ii-row(1)+1) = gui.data(ii_sheet).data_h(ii, 1);
-                L_int(ii-row(1)+1) = gui.data(ii_sheet).data_L(ii, 1);
-            end
-            
-            %% Remove data below a maximum displacement
-            h_set_max = (h_int <  gui.settings.max_bound_h);
-            
-            clear [row, col];
-            for ii = 1:length(h_set_max)
-                [row, col] = find(h_set_max == 1);
-                
-            end
-            
-            % Preallocation
-            h_final = NaN(max(row), 1);
-            L_final = NaN(max(row), 1);
-            
-            for ii = row(1):(max(row))
-                h_final(ii) = h_int(ii);
-                L_final(ii) = L_int(ii);
-                
-            end
-            
-            gui.data(ii_sheet).data_h_cleaned(:, 1) = h_final; % in nm
-            gui.data(ii_sheet).data_L_cleaned(:, 1) = L_final; % in mN
+            gui.data(ii_sheet).data_h_cleaned = h(selected); % in nm
+            gui.data(ii_sheet).data_L_cleaned = load(selected); % in mN
             gui.flag.flag_cleaned_data = 1;
         else
             delete(gui.handles.h_waitbar);

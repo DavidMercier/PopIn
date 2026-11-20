@@ -1,5 +1,5 @@
-PopIn
-=======
+PopIn 4.0
+=========
 To get started with PopIn, clone the repository, then run Matlab, and cd into the folder containing this README file.
 Finally you can start the launcher by typing "demo" at the Matlab command prompt.
 

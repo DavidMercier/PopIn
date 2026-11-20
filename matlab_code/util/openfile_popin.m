@@ -43,7 +43,7 @@ if strcmp (ext, '.nul') == 1
 elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     
     for ii_sheet = 1:1:length(sheets_xls)
-        [data_ind, txt_ind] = xlsread(fullname_data, ii_sheet);
+        [data_ind, txt_ind] = read_popin_sheet(fullname_data, sheets_xls{ii_sheet});
         str_endsegment = txt_ind(:,1); %limite
         if ~isempty(str_endsegment)
             break
@@ -69,7 +69,7 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     y_index = NaN(length(sheets_xls), 1);
     
     % Check and remove empty sheets
-    notEmpty_data = NaN(length(sheets_xls));
+    notEmpty_data = NaN(length(sheets_xls), 1);
     gui.handles.h_waitbar = ...
         waitbar(0, 'Check Excel file (remove empty sheets) and import data...'); % Don't move into the for loop
     
@@ -78,7 +78,7 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
         
         [gui.raw_data(ii_sheet).data(:,:), ...
             gui.raw_data(ii_sheet).txt(:,:)] = ...
-            xlsread(fullname_data, ii_sheet);
+            read_popin_sheet(fullname_data, sheets_xls{ii_sheet});
         
         if ~isempty(gui.raw_data(ii_sheet).txt)
             raw_str_endsegment = gui.raw_data(ii_sheet).txt(:,1);
@@ -93,29 +93,33 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
                         y_index(ii_sheet) = y_index(ii_sheet)-1;
                     end
                 else
-                    y_index(ii_sheet) = [];
+                    y_index(ii_sheet) = NaN;
                 end
             else
-                y_index(ii_sheet) = [];
+                y_index(ii_sheet) = NaN;
             end
             
             if ~isempty(y_index(ii_sheet)) && ~isnan(y_index(ii_sheet))
                 notEmpty_data(ii_sheet) = ii_sheet;
             else
-                notEmpty_data(ii_sheet) = [];
+                notEmpty_data(ii_sheet) = NaN;
                 display(strcat('Missing segment for the sheet number_', ...
                     num2str(ii_sheet)));
             end
             
         else
             display('Empty Excel sheet !');
-            notEmpty_data(ii_sheet) = [];
+            notEmpty_data(ii_sheet) = NaN;
         end
     end
     delete(gui.handles.h_waitbar);
     
     notEmpty_data(isnan(notEmpty_data)) = [];
     gui.data_xls.sheets_xls_notEmpty = length(notEmpty_data);
+    if isempty(notEmpty_data)
+        error('PopIn:NoMatchingSegments', ...
+            'No worksheets contain the selected segment.');
+    end
     
     % Preallocation and initialization
     gui.data = struct();
@@ -123,25 +127,26 @@ elseif strcmp (ext, '.xls') == 1 || strcmp (ext, '.xlsx') == 1
     gui.cumulativeFunction = struct();
     gui.Hertz = struct();
     
-    min_data_h = NaN(gui.data_xls.sheets_xls_notEmpty);
-    max_data_h = NaN(gui.data_xls.sheets_xls_notEmpty);
-    min_data_L = NaN(gui.data_xls.sheets_xls_notEmpty);
-    max_data_L = NaN(gui.data_xls.sheets_xls_notEmpty);
+    min_data_h = NaN(gui.data_xls.sheets_xls_notEmpty, 1);
+    max_data_h = NaN(gui.data_xls.sheets_xls_notEmpty, 1);
+    min_data_L = NaN(gui.data_xls.sheets_xls_notEmpty, 1);
+    max_data_L = NaN(gui.data_xls.sheets_xls_notEmpty, 1);
     
     % Import data
     for ii_sheet = 1:1:gui.data_xls.sheets_xls_notEmpty
         
         ii_sheet2read = notEmpty_data(ii_sheet);
         
-        if y_index(ii_sheet) ~= 0 && ~isempty(gui.raw_data(ii_sheet2read).data)
-            gui.data(ii_sheet).data_h = ...
-                gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),1);
-            gui.data(ii_sheet).data_L = ...
-                gui.raw_data(ii_sheet2read).data(1:y_index(ii_sheet),2);
-        else
-            gui.data(ii_sheet).data_h = NaN;
-            gui.data(ii_sheet).data_L = NaN;
+        rows = y_index(ii_sheet2read);
+        samples = gui.raw_data(ii_sheet2read).data(1:rows, 1:2);
+        samples = samples(all(isfinite(samples), 2), :);
+        if size(samples, 1) < 3
+            error('PopIn:InsufficientData', ...
+                'Worksheet "%s" has fewer than three finite displacement/load samples in the selected segment.', ...
+                sheets_xls{ii_sheet2read});
         end
+        gui.data(ii_sheet).data_h = samples(:, 1);
+        gui.data(ii_sheet).data_L = samples(:, 2);
         min_data_h(ii_sheet) = round(min(gui.data(ii_sheet).data_h));
         max_data_h(ii_sheet) = round(max(gui.data(ii_sheet).data_h));
         min_data_L(ii_sheet) = min(gui.data(ii_sheet).data_L);
