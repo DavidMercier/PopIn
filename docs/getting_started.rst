@@ -130,6 +130,73 @@ either icon API keep the default icon and display a warning.
    
    *Load-displacement curves and the modified Weibull cumulative distribution function (Chechenin's model).*
    
+Pop-in length, work and conditional fracture estimate
+######################################################
+
+After running calculations, click **Pop-in energy / KIc** and choose a curve.
+Inspect displacement and load against the cleaned sample index in the preview.
+Confirm the start and end samples of the complete burst. The suggested start
+uses the first detected peak as a hint only; the end sample must be supplied.
+Derivative peaks are not automatic burst boundaries. The nonmodal input dialog
+allows zooming and inspecting the preview before confirming the interval.
+Click any **blue input label** to open its explanation in a separate help window.
+Each link explains the term, units, required values and how to obtain the input;
+opening help does not submit the form or change entered values. Help is included
+with the toolbox and does not require the documentation website to be published.
+Samples are numbered after the current depth crop.
+Enter **whole-number sample indices**, not displacement values in nm: for example,
+samples ``39`` and ``41``, not their depths ``7.7997`` and ``17.8037``.
+Both fields are required, with ``1 <= start < end <= number of samples``.
+Invalid boundaries display an explanation and reopen the dialog with all entered
+values preserved for correction; they are never silently rounded.
+
+The result window highlights the chosen interval and reports its penetration
+length (nm) and trapezoidal applied work (nJ). **Extract another interval** lets
+you review a different burst or revise the boundaries. Existing CDF/PDF results
+and fitting parameters are not changed.
+
+Leave unknown energy inputs blank: no dissipation or toughness is inferred from
+missing information. Dissipation requires an independently estimated change in
+stored elastic energy, entered as ``U_after - U_before`` in nJ. Entering zero is
+an explicit assumption, not a measured default. A conditional toughness estimate
+also requires the incremental projected crack area (um^2), the fraction of
+dissipation allocated to fracture (0 to 1), specimen modulus (GPa), Poisson's
+ratio, and plane-stress or plane-strain constraint. The material values are
+prefilled from the GUI for review; they must describe the cracking material.
+Supplying either fracture area or fracture fraction requires all three energy
+inputs (elastic energy change, fracture area and fracture fraction). If any are
+missing, the GUI lists them and reopens the form with your entries preserved.
+For dissipation only, supply elastic energy change and leave **both** fracture
+area and fracture fraction blank. For applied work only, leave all three blank.
+Do not invent values for unknown inputs just to obtain a toughness estimate.
+
+The **Elastic energy change** and **Incremental projected fracture area** links
+include these **illustrative examples, not measured or suggested values for your
+sample**:
+
+* Elastic energy change ``-0.0001`` nJ means 0.1 pJ of stored elastic energy is
+  released; ``0.0002`` nJ means stored elastic energy increases by 0.2 pJ.
+  Entering ``0`` assumes no change and is not a substitute for an unknown value.
+  For applied work of 0.000605 nJ and an assumed elastic energy change of
+  -0.0001 nJ, the arithmetic gives dissipation
+  ``0.000605 - (-0.0001) = 0.000705`` nJ. The correction must still come from an
+  independently justified model or measurement.
+* For a suitable through-thickness film-crack geometry, new projected area may
+  be modelled as film thickness times total newly formed crack length.
+  A 40 nm (0.04 um) film with 1 um of new crack length gives ``0.04`` um^2;
+  2 um gives ``0.08`` um^2. Do not double the area for the two crack faces or
+  substitute penetration length for crack length. Delamination requires a
+  different area geometry.
+
+Leave unknown quantities blank rather than adopting these example values.
+
+**Export event CSV** saves the current event, curve number, source path, interval,
+energy inputs, stress state and results. Unknown numerical quantities are NaN
+in the CSV and shown as ``not calculated`` in the table. Each window represents
+one event; export it before closing if you want to retain it.
+
+See :ref:`popin_energy_balance` for the equations and important limitations.
+
 The YAML configuration files
 #################################
 

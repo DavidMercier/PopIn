@@ -275,6 +275,67 @@ and other experimental parameters, such as indenter shape and grain-boundary inc
 The `STABiX MATLAB toolbox <https://github.com/stabix/stabix>`_
 was developed to analyze slip transmission in a bicrystal [#Mercier_2015]_, [#StabixDoc_2015]_, and [#StabixRepo_2015]_.
 
+.. _popin_energy_balance:
+
+Pop-in length and energy balance
+################################
+
+For user-confirmed samples :math:`i` to :math:`j`, PopIn calculates the
+penetration length :math:`\Delta h=h_j-h_i` and the applied work
+
+.. math::
+
+   W_\mathrm{ext}=\int_{h_i}^{h_j}P\,\mathrm{d}h .
+
+The integral uses all samples in acquisition order (trapezoidal integration),
+including any small unloading segments. The length is a penetration increment,
+**not a crack length**. Detector extrema do not establish burst boundaries.
+
+If an independent estimate of the stored elastic energy change is supplied,
+the quasi-static dissipated energy is
+
+.. math::
+
+   Q=W_\mathrm{ext}-(U_\mathrm{after}-U_\mathrm{before}) .
+
+This balance assumes negligible kinetic energy and other unaccounted energy
+transfers. Instrument compliance, dynamic overshoot and depth resolution can
+invalidate it. Negative inferred dissipation is rejected rather than clipped.
+Neither zero elastic change nor purely fracture-related dissipation is assumed.
+
+With an explicitly supplied fracture fraction :math:`0\leq\eta\leq1` and
+incremental projected fracture area :math:`\Delta A>0`, the optional estimate is
+
+.. math::
+
+   W_\mathrm{fracture}=\eta Q,\qquad
+   G_\mathrm{est}=\frac{W_\mathrm{fracture}}{\Delta A},\qquad
+   K_\mathrm{est}=\sqrt{E'G_\mathrm{est}} .
+
+Here :math:`E'=E` in plane stress and :math:`E'=E/(1-\nu^2)` in plane strain.
+The area convention is projected crack extension (e.g. thickness times crack
+advance for a through-thickness crack), **not the sum of both new crack faces**.
+No crack geometry, area or fracture fraction is inferred from penetration.
+The equivalent energy per area is reported as ``Gc_J_m2`` in the exported table;
+the name does not establish that a critical fracture condition was measured.
+
+This conversion requires homogeneous isotropic mode-I linear-elastic fracture
+mechanics, an independently justified fracture mechanism, energy partition and
+constraint. It is not automatically applicable to coating/substrate interfaces,
+mixed-mode cracks, substrate plasticity, dislocation pop-ins or delamination.
+It is a **conditional estimate, not a validated measurement of** :math:`K_\mathrm{Ic}`.
+The GUI's spherical-indentation settings do not by themselves establish LEFM
+validity. Missing physical inputs leave the corresponding outputs uncalculated.
+
+The indentation-fracture papers linked in `issue #6
+<https://github.com/DavidMercier/PopIn/issues/6>`_ discuss specific mechanisms and
+geometries: `Li et al. (1997) <https://doi.org/10.1016/S1359-6454(97)00143-2>`_,
+`Li and Bhushan (1998) <https://doi.org/10.1016/S0040-6090(97)00788-8>`_,
+the `2012 thin-coating review <https://doi.org/10.1088/0022-3727/45/20/203001>`_,
+and a `2015 scratch/coating study <https://doi.org/10.1016/j.wear.2015.01.081>`_.
+This initial workflow implements the explicit energy balance above, not an
+unverified geometry-specific equation from those papers.
+
 .. _film_fracture:
 
 Fracture of a hard, brittle film on an elastic-plastic substrate
