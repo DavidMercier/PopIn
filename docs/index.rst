@@ -14,7 +14,10 @@ With this Matlab toolbox, it is possible to:
     
    * plot load-displacement curves;
    * fit load-displacement curves with the Hertz model;
-   * plot cumulative distributions (Weibull or time- and temperature-dependent) of the first or second pop-in.
+   * plot cumulative distributions (Weibull or time- and temperature-dependent) of the first or second pop-in, with an optional
+     probability-density histogram;
+   * calculate pop-in work and, when the required inputs are available,
+     dissipation and a conditional fracture-toughness estimate.
 
 .. figure:: ./_pictures/GUI_Main_Window_overview.png
    :scale: 35 %

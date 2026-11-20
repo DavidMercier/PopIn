@@ -7,14 +7,17 @@ See the full documentation at http://popin.readthedocs.org/en/latest/.
 
 Features
 ----------
-This Matlab toolbox has been developed to :
-    * plot load-displacement curves ;
-    * plot cumulative (Weibull or time/temperature dependent) distribution of the 1st or the 2nd pop-in.
+The MATLAB graphical user interface can:
+    * plot load-displacement curves and fit them with the Hertz model;
+    * detect and analyze the first or second pop-in using Weibull, modified Weibull, or time- and temperature-dependent Mason distributions, including survival functions;
+    * overlay a probability-density histogram (PDF) on the cumulative distribution plot;
+    * calculate pop-in work and, when the required measured inputs are provided, estimate dissipation and fracture toughness.
 
 Python notebook
 ----------------
-The ``python`` folder contains a Jupyter notebook for loading MTS Excel
-workbooks, detecting pop-ins, and plotting a Weibull cumulative distribution.
+The ``python`` folder contains an independent Jupyter notebook for loading MTS
+Excel workbooks, detecting pop-ins, and plotting a Weibull cumulative
+distribution.
 From the repository root, create a Python environment, then run::
 
     python -m pip install -r python/requirements.txt
@@ -49,7 +52,12 @@ I would like also to acknowledge Eli Billauer for the function `peakdet <https:/
 
 Keywords
 -----------
-MATLAB ; Graphical User Interface (GUI) ; pop-in ; nanoindentation ; statistics ; Weibull ; cumulative distribution.
+MATLAB ; Python ; Jupyter notebook ; Graphical User Interface (GUI) ;
+nanoindentation ; pop-in detection ; load-displacement curve ; Hertz model ;
+Weibull ; modified Weibull ; time- and temperature-dependent Mason model ;
+cumulative distribution (CDF) ;
+survival function ; probability density (PDF) ; histogram ; pop-in energy ;
+dissipated energy ; fracture toughness ; KIc ; MTS Excel.
 
 Screenshot
 -------------

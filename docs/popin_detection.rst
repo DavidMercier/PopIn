@@ -95,10 +95,50 @@ The plots below show the different criteria, normalized by their maximum values,
    
    *Plot of the normalized 6th criterion.*
 
+Pop-in energy and conditional fracture estimate
+################################################
+
+The MATLAB GUI can calculate the applied work over a selected pop-in interval.
+For selected samples :math:`i` to :math:`j`, the applied work is
+
+.. math::
+
+   W_\mathrm{ext}=\int_{h_i}^{h_j}P\,\mathrm{d}h .
+
+If the change in stored elastic energy is supplied, dissipated energy is
+
+.. math::
+
+   Q=W_\mathrm{ext}-(U_\mathrm{after}-U_\mathrm{before}) .
+
+A conditional fracture estimate requires the incremental projected fracture
+area :math:`\Delta A`, a supplied fracture fraction :math:`0\leq\eta\leq1`,
+specimen elastic properties, and the stress state:
+
+.. math::
+
+   W_\mathrm{fracture}=\eta Q,\qquad
+   G_\mathrm{est}=\frac{W_\mathrm{fracture}}{\Delta A},\qquad
+   K_\mathrm{est}=\sqrt{E'G_\mathrm{est}} ,
+
+where :math:`E'=E` in plane stress and :math:`E'=E/(1-\nu^2)` in plane strain.
+The resulting ``KIc`` is a model-dependent estimate, not a validated toughness
+measurement; leave unknown inputs blank rather than assuming values. See
+:ref:`popin_energy_balance` for assumptions and limitations, and
+:doc:`getting_started` for the GUI workflow and input definitions. For
+background on indentation-based thin-film toughness and coating fracture, see
+Li et al. [#Li_1997_fracture]_, Li and Bhushan
+[#Li_1998_toughness]_, Chen [#Chen_2012_toughness]_, and Favache et al.
+[#Favache_2015_fracture]_.
+
 References
 #############
 
 .. [#Askari] `Pop-in Detection by Askari H. et al. (2014) <https://nanohub.org/resources/20804>`_
 .. [#Juliano_2004] `Juliano T. et al., "Numerical derivative analysis of load-displacement curves in depth-sensing indentation" (2004). <https://doi.org/10.1557/PROC-791-Q7.5>`_
+.. [#Li_1997_fracture] `Li X., Diao D. and Bhushan B., "Fracture mechanisms of thin amorphous carbon films in nanoindentation" (1997). <https://doi.org/10.1016/S1359-6454(97)00143-2>`_
+.. [#Li_1998_toughness] `Li X. and Bhushan B., "Measurement of fracture toughness of ultra-thin amorphous carbon films" (1998). <https://doi.org/10.1016/S0040-6090(97)00788-8>`_
 .. [#Malzbender_2001] `Malzbender J. and de With  G., "The use of the indentation loading curve to detect fracture of coatings" (2001). <https://doi.org/10.1016/S0257-8972(00)01091-4>`_
 .. [#Nayyeri_2016] Nayyeri G., "Examination of deformation in magnesium using instrumented spherical indentation", University of British Columbia, PhD thesis (2016).
+.. [#Chen_2012_toughness] `Chen J., "Indentation-based methods to assess fracture toughness for thin coatings" (2012), Journal of Physics D: Applied Physics, 45(20), 203001. <https://doi.org/10.1088/0022-3727/45/20/203001>`_
+.. [#Favache_2015_fracture] `Favache A. et al., "Fracture mechanics based analysis of the scratch resistance of thin brittle coatings on a soft interlayer" (2015), Wear, 330-331, 461-468. <https://doi.org/10.1016/j.wear.2015.01.081>`_
