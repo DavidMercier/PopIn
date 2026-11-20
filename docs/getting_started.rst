@@ -81,6 +81,13 @@ either icon API keep the default icon and display a warning.
 * Set the units and the criterion for detecting pop-in events.
 * Once the dataset is loaded and the parameters are set, run the calculations by pressing the green **RUN CALCULATIONS and PLOT** button.
 * The load-displacement curves and selected cumulative distribution function (CDF) are plotted in the left and right graphs, respectively.
+* Tick **PDF** above the right-hand plot to overlay a probability-density
+  histogram of the selected pop-in load or displacement samples. The CDF
+  keeps its left-hand scale; histogram density uses the right-hand scale.
+  The histogram uses the same normalized x coordinates as the experimental
+  CDF and has unit area, not unit total bar height. Bin widths are selected
+  automatically using the Freedman-Diaconis rule. Untick **PDF** to return
+  to the CDF-only view. Toggling PDF redraws the plot without refitting.
 * Press **SAVE** to create a `.png` image of the main window and save the CDF fit results to a `.txt` file.
 * To access the results, enter the following in the MATLAB command window (shown here for 50 indentation tests):
 

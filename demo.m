@@ -96,7 +96,7 @@ gui = guidata(gcf); guidata(gcf, gui);
 positionVector1 = [0.25 0.06 0.325 0.8];
 gui.handles.AxisPlot_1 = subplot('Position', positionVector1);
 
-positionVector2 = [0.65 0.06 0.325 0.8];
+positionVector2 = [0.65 0.06 0.30 0.8];
 gui.handles.AxisPlot_2 = subplot('Position', positionVector2);
 
 %% YAML and Help menus

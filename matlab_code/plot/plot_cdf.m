@@ -3,6 +3,12 @@ function plot_cdf
 %% Function to plot the probability density function or the cumulative distribution function
 gui = guidata(gcf);
 
+if ~isfield(gui, 'cumulativeFunction') || ...
+        ~isfield(gui.cumulativeFunction, 'coefEsts')
+    helpdlg('Run calculations before plotting the distribution.', 'Info');
+    return;
+end
+
 %% New plot on second axis
 set(gui.handles.MainWindows, 'CurrentAxes', gui.handles.AxisPlot_2);
 
@@ -18,7 +24,7 @@ elseif max([gui.results.ydata]) == 0
 end
 
 % Plot of experimental results
-plot(gui.handles.AxisPlot_2, ...
+h_data = plot(gui.handles.AxisPlot_2, ...
     [gui.results.xdata], [gui.results.ydata], ...
     'b+', 'MarkerSize', 10);
 
@@ -61,7 +67,7 @@ else
 end
 
 % Plot of fitting distribution function
-line(gui.cumulativeFunction.xdata_cdf./gui.cumulativeFunction.coefEsts(2), ...
+h_fit = line(gui.cumulativeFunction.xdata_cdf./gui.cumulativeFunction.coefEsts(2), ...
     gui.cumulativeFunction.ydata_cdf, ...
     'Color', 'r', 'LineWidth', 2);
 
@@ -71,22 +77,37 @@ value_legendLocation = get(gui.handles.value_legendLocation, 'Value');
 
 Func = gui.settings.cumulFunction;
 FuncList = gui.settings.cumulFunctionList;
+legend_handles = [h_data, h_fit];
 
 if strcmp(Func, FuncList(1,:)) || ...
         strcmp(Func, FuncList(2,:))
-    h_legend = legend({'Row data' 'Weibull model'}, ...
-        'Location', char(listLoc(value_legendLocation)));
+    legend_labels = {'Row data', 'Weibull model'};
 elseif strcmp(Func, FuncList(3,:)) || ...
         strcmp(Func, FuncList(4,:))
-    h_legend = legend({'Row data' 'Weibull model modified by Chechenin'}, ...
-        'Location', char(listLoc(value_legendLocation)));
+    legend_labels = {'Row data', 'Weibull model modified by Chechenin'};
 else
-    h_legend = legend({'Row data' 'Mason''s model'}, ...
-        'Location', char(listLoc(value_legendLocation)));
+    legend_labels = {'Row data', 'Mason''s model'};
 end
-try
-    legend('AutoUpdate','off');
-catch
+
+if get(gui.handles.cb_pdf_plot, 'Value')
+    yyaxis(gui.handles.AxisPlot_2, 'right');
+    h_pdf = histogram(gui.handles.AxisPlot_2, [gui.results.xdata], ...
+        'Normalization', 'pdf', 'BinMethod', 'fd', ...
+        'FaceColor', [0.2 0.6 0.8], 'FaceAlpha', 0.25, ...
+        'EdgeColor', [0.2 0.6 0.8]);
+    ylabel(gui.handles.AxisPlot_2, 'Probability density');
+    ylim(gui.handles.AxisPlot_2, 'auto');
+    xlim(gui.handles.AxisPlot_2, ...
+        [min(0, h_pdf.BinEdges(1)), max(max_gui_results_xdata, h_pdf.BinEdges(end))]);
+    legend_handles(end+1) = h_pdf;
+    legend_labels{end+1} = 'PDF histogram';
+    yyaxis(gui.handles.AxisPlot_2, 'left');
+end
+
+h_legend = legend(legend_handles, legend_labels, ...
+    'Location', char(listLoc(value_legendLocation)));
+if isprop(h_legend, 'AutoUpdate')
+    set(h_legend, 'AutoUpdate', 'off');
 end
 
 h_xlabel = xlabel(str_xlabel);
