@@ -8,3 +8,8 @@ doc/_build
 # ppt for pictures
 *.pptx
 *.ppt
+
+# Python and Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/

@@ -11,6 +11,20 @@ This Matlab toolbox has been developed to :
     * plot load-displacement curves ;
     * plot cumulative (Weibull or time/temperature dependent) distribution of the 1st or the 2nd pop-in.
 
+Python notebook
+----------------
+The ``python`` folder contains a Jupyter notebook for loading MTS Excel
+workbooks, detecting pop-ins, and plotting a Weibull cumulative distribution.
+From the repository root, create a Python environment, then run::
+
+    python -m pip install -r python/requirements.txt
+    jupyter lab python/popin_detection.ipynb
+
+Run the notebook cells in order and adjust their settings for your data. The
+notebook is independent of MATLAB but does not implement the complete MATLAB
+GUI or all its models. See the `Python notebook guide <docs/getting_started.rst#python-notebook>`_
+for input format, limitations and interpretation.
+
 Authors
 ---------
 :Author: `David Mercier <david9684@gmail.com>`_ [1,2,3]

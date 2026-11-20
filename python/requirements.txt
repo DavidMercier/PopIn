@@ -1,0 +1,8 @@
+ipykernel>=6
+jupyterlab>=4
+matplotlib>=3.8
+numpy>=1.26
+openpyxl>=3.1
+pandas>=2.1
+scipy>=1.11
+xlrd>=2.0.1

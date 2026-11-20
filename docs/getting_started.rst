@@ -13,6 +13,50 @@ For more information about using the toolbox, see:
 
    README.rst
 
+Python notebook
+###############
+
+The independent Python workflow loads MTS Excel worksheets, detects the
+first or second pop-in using the MATLAB criteria and plots the curves and
+an empirical and fitted Weibull cumulative distribution. It does not require
+MATLAB. It does not implement the GUI, Hertz fitting, modified Weibull,
+Mason, survival functions or the pop-in energy workflow.
+
+From the repository root, create and activate a Python environment, then run:
+
+.. code-block:: shell
+
+   python -m pip install -r python/requirements.txt
+   jupyter lab python/popin_detection.ipynb
+
+Run all cells in order. The default workbook is the included example. Change
+the path and settings in the notebook to use another file. Both ``.xls`` and
+``.xlsx`` files are supported: each test worksheet must start with Segment,
+Displacement and Load columns and two header rows, followed by samples. The
+selected segment marker must occur exactly once in every nonempty worksheet.
+The notebook includes the marker row as the final sample; the default
+``Hold Segment Type`` therefore selects the loading portion. Set a different
+marker only when it represents the intended end of loading. Check the source
+units and update the axis labels; no unit conversion is performed.
+
+The default criterion is the MATLAB GUI's second displacement difference with
+delta ``max - 2*mean``. Optional depth bounds use an inclusive minimum and
+exclusive maximum; unlike the GUI, the notebook does not automatically crop
+to the common depth range. Peak indices are zero-based after cleaning and
+cropping. The MATLAB-style peak detector needs a subsequent drop greater than
+delta to confirm a positive peak, so an unconfirmed final peak is not counted.
+Derivative criteria with non-finite values and invalid deltas cause an error:
+inspect the data or change the settings rather than interpreting an invalid
+result.
+
+The notebook lists curves without the requested event and detected events with
+nonpositive critical values, excluding them from the Weibull fit. Exclusion
+can bias the distribution; inspect the events and curves before interpreting
+results. Fitting requires at least two positive values. The empirical
+probabilities follow the MATLAB toolbox's plotting positions and the fit is
+least-squares; the fitted Weibull scale is not the arithmetic mean. The
+notebook is not a substitute for validating the physical origin of each event.
+
 How to use the GUI for pop-in analysis of indentation tests
 #################################################################
 
